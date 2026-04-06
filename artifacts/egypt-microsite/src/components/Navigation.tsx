@@ -2,6 +2,7 @@ import { Link, useLocation } from "wouter";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
+import logoSrc from "@assets/live_site_logo_black_(1)_1775484379388.webp";
 
 export function Navigation() {
   const [location] = useLocation();
@@ -35,8 +36,13 @@ export function Navigation() {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-2xl font-serif text-primary font-bold tracking-wider hover:opacity-80 transition-opacity" data-testid="link-home-logo">
-            ☥ EGYPT 2026
+          <Link href="/" className="hover:opacity-80 transition-opacity" data-testid="link-home-logo">
+            <img
+              src={logoSrc}
+              alt="Egypt 2026"
+              className="h-10 w-auto"
+              style={{ filter: "brightness(0) invert(1)" }}
+            />
           </Link>
 
           {/* Desktop Nav */}
