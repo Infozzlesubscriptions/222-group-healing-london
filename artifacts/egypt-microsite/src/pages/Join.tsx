@@ -98,10 +98,10 @@ export default function Join() {
                 </div>
 
                 <div className="flex flex-col gap-4">
-                  <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-xl py-8 rounded-none shadow-xl shadow-primary/20" data-testid="btn-apply-now">
+                  <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-xl py-2 rounded-none shadow-xl shadow-primary/20" data-testid="btn-apply-now">
                     Apply Now
                   </Button>
-                  <Button size="lg" variant="outline" className="w-full border-primary text-primary hover:bg-primary/10 font-bold text-lg py-8 rounded-none" data-testid="btn-view-details">
+                  <Button size="lg" variant="outline" className="w-full border-primary text-primary hover:bg-primary/10 font-bold text-lg py-2 rounded-none" data-testid="btn-view-details">
                     View Full Details & Pricing
                   </Button>
                 </div>

@@ -139,7 +139,7 @@ export default function Journey() {
         >
           <h3 className="text-3xl font-serif mb-8 text-foreground">Ready to walk this path?</h3>
           <Link href="/join-2027">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-10 py-6 rounded-none" data-testid="btn-journey-cta">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-10 py-2 rounded-none" data-testid="btn-journey-cta">
               Explore 2027 Journey
             </Button>
           </Link>
