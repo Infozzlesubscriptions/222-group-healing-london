@@ -149,7 +149,7 @@ export default function Transformations() {
         >
           <h2 className="text-4xl font-serif text-foreground mb-8">Ready for your own transformation?</h2>
           <Link href="/join-2027">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-xl font-bold px-12 py-2 rounded-none">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-xl font-bold px-12 py-2">
               Be Part of the Next Journey
             </Button>
           </Link>
