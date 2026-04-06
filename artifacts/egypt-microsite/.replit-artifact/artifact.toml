@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Egypt Ascension Journey 2026"
+version = "1.0.0"
+id = "artifacts/egypt-microsite"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22372
+
+[services.development]
+run = "pnpm --filter @workspace/egypt-microsite run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/egypt-microsite", "run", "build" ]
+publicDir = "artifacts/egypt-microsite/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22372"
+BASE_PATH = "/"

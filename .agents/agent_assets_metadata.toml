@@ -1,0 +1,74 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "Uu14zEbK2ck6wXsrWoiUV"
+uri = "file://artifacts/egypt-microsite/src/assets/pyramids-sunset.png"
+type = "image"
+title = "Egypt pyramids at sunset"
+
+[[generated]]
+id = "lsVXcj57J28l63Rto517y"
+uri = "file://artifacts/egypt-microsite/src/assets/luxor-night.png"
+type = "image"
+title = "Luxor temple night"
+
+[[generated]]
+id = "O1RpQ808-ngVms4CKsGOH"
+uri = "file://artifacts/egypt-microsite/src/assets/nile-reflection.png"
+type = "image"
+title = "Nile river reflection"
+
+[[generated]]
+id = "GTYHFHn1bE3dY23OtjKIc"
+uri = "file://artifacts/egypt-microsite/src/assets/abu-simbel.png"
+type = "image"
+title = "Abu Simbel sunrise"
+
+[[generated]]
+id = "Hdv_fPS-khDq5Zt3kWgxk"
+uri = "file://artifacts/egypt-microsite/src/assets/temple-ceremony.png"
+type = "image"
+title = "Group ceremony in temple"
+
+[[generated]]
+id = "fDxobBk0_y73B2rz9DJix"
+uri = "file://artifacts/egypt-microsite/src/assets/karnak-columns.png"
+type = "image"
+title = "Karnak columns"
+
+[[generated]]
+id = "i-bNtvRJuZRfw8mNZEMRz"
+uri = "file://artifacts/egypt-microsite/src/assets/sacred-light.png"
+type = "image"
+title = "Sacred light beams"
+
+[[generated]]
+id = "a0RGDPAuqkSINhRK3EqIU"
+uri = "file://artifacts/egypt-microsite/src/assets/spiritual-activation.png"
+type = "image"
+title = "Spiritual activation scene"
+
+[[generated]]
+id = "zYMXn5Jw-rW7I8p7XT3Dx"
+uri = "file://artifacts/egypt-microsite/src/assets/ancient-codes.png"
+type = "image"
+title = "Ancient codes wall"
+
+[[generated]]
+id = "hz1f6HPwuqVGGbpCyRgAB"
+uri = "file://artifacts/egypt-microsite/src/assets/desert-dune.png"
+type = "image"
+title = "Abstract desert dune"
+
+[[generated]]
+id = "Ngtn_A45zbo9J2cUZM2J_"
+uri = "file://artifacts/egypt-microsite/src/assets/papyrus.png"
+type = "image"
+title = "Ancient papyrus scroll"
+
+[[generated]]
+id = "eOXbjXsVZf4sGbN_uSafL"
+uri = "file://artifacts/egypt-microsite/src/assets/sphinx.png"
+type = "image"
+title = "Sphinx statue"
