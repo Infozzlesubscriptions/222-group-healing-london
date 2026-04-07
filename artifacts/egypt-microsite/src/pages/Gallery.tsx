@@ -20,34 +20,60 @@ import dockMoment from "@assets/image_1775544334838.png";
 import nileInterview from "@assets/image_1775544341300.png";
 import groupGiza from "@assets/image_1775544348592.png";
 import saqqaraStand from "@assets/image_1775544356457.png";
+import tombSilhouette from "@assets/image_1775544506523.png";
+import valleyWalk from "@assets/image_1775544513175.png";
+import nileHealing from "@assets/image_1775544524365.png";
+import nileBoatSession from "@assets/image_1775544543060.png";
+import busWindow from "@assets/image_1775544551567.png";
+import nilePrayer from "@assets/image_1775544558366.png";
+import templeDoorway from "@assets/image_1775544566285.png";
+import sunsetSilhouette from "@assets/image_1775544582548.png";
+import nileGazing from "@assets/image_1775544591650.png";
+import karnakPrayer from "@assets/image_1775544599912.png";
+import nightCelebration from "@assets/image_1775544606258.png";
+import robesCelebration from "@assets/image_1775544618875.png";
 
 const allImages = [
   { id: 1, src: groupGiza, category: "Group Moments", alt: "The Tribe — All Three Pyramids of Giza" },
-  { id: 2, src: groupPyramid, category: "Group Moments", alt: "Star Magic Tribe at the Pyramid" },
-  { id: 3, src: karnakWalk, category: "Temples", alt: "Walking the Great Hypostyle Hall, Karnak" },
-  { id: 4, src: saqqaraStand, category: "Temples", alt: "At the Step Pyramid of Saqqara" },
-  { id: 5, src: hatshepsutTemple, category: "Temples", alt: "Temple of Hatshepsut, Valley of the Kings" },
-  { id: 6, src: eyeOfHorus, category: "Temples", alt: "Eye of Horus — Ancient Stone Carving" },
-  { id: 7, src: dockMoment, category: "Group Moments", alt: "By the Nile in Aswan" },
-  { id: 8, src: nileInterview, category: "Ceremonies", alt: "Nile Night Interview — One Love, One Heart" },
-  { id: 9, src: productionScreen, category: "Ceremonies", alt: "Live Production — Star Magic Recording" },
-  { id: 10, src: pyramidsSunset, category: "Temples", alt: "Pyramids at Sunset" },
-  { id: 11, src: luxorNight, category: "Temples", alt: "Luxor Temple at Night" },
-  { id: 12, src: nileReflection, category: "Nile Experience", alt: "Nile River Reflection" },
-  { id: 13, src: abuSimbel, category: "Temples", alt: "Abu Simbel Sunrise" },
-  { id: 14, src: templeCeremony, category: "Ceremonies", alt: "Group Ceremony in Temple" },
-  { id: 15, src: karnakColumns, category: "Temples", alt: "Karnak Columns" },
-  { id: 16, src: sacredLight, category: "Ceremonies", alt: "Sacred Light Beams" },
-  { id: 17, src: spiritualActivation, category: "Ceremonies", alt: "Spiritual Activation" },
-  { id: 18, src: ancientCodes, category: "Temples", alt: "Ancient Codes Wall" },
-  { id: 19, src: desertDune, category: "Nile Experience", alt: "Desert at Dawn" },
+  { id: 2, src: sunsetSilhouette, category: "Group Moments", alt: "Tribe Silhouettes at Sunset" },
+  { id: 3, src: karnakPrayer, category: "Ceremonies", alt: "Opening to the Sky at Karnak" },
+  { id: 4, src: robesCelebration, category: "Ceremonies", alt: "Celebration in Egyptian Robes" },
+  { id: 5, src: tombSilhouette, category: "Temples", alt: "Silhouette in the Ancient Tomb" },
+  { id: 6, src: nileHealing, category: "Ceremonies", alt: "Healing on the Nile" },
+  { id: 7, src: karnakWalk, category: "Temples", alt: "Walking the Great Hypostyle Hall, Karnak" },
+  { id: 8, src: nileBoatSession, category: "Ceremonies", alt: "Group Session on the Nile Boat" },
+  { id: 9, src: groupPyramid, category: "Group Moments", alt: "Star Magic Tribe at the Pyramid" },
+  { id: 10, src: templeDoorway, category: "Temples", alt: "Through the Temple Doorway" },
+  { id: 11, src: nilePrayer, category: "Ceremonies", alt: "Prayer on the Nile" },
+  { id: 12, src: saqqaraStand, category: "Temples", alt: "At the Step Pyramid of Saqqara" },
+  { id: 13, src: nightCelebration, category: "Ceremonies", alt: "Night Celebration" },
+  { id: 14, src: valleyWalk, category: "Temples", alt: "Walking the Valley of the Kings" },
+  { id: 15, src: busWindow, category: "Group Moments", alt: "First Glimpse of the Pyramid" },
+  { id: 16, src: hatshepsutTemple, category: "Temples", alt: "Temple of Hatshepsut" },
+  { id: 17, src: eyeOfHorus, category: "Temples", alt: "Eye of Horus — Ancient Stone Carving" },
+  { id: 18, src: dockMoment, category: "Group Moments", alt: "By the Nile in Aswan" },
+  { id: 19, src: nileInterview, category: "Ceremonies", alt: "Nile Night Interview — One Love, One Heart" },
+  { id: 20, src: nileGazing, category: "Nile Experience", alt: "Gazing Over the Nile" },
+  { id: 21, src: productionScreen, category: "Ceremonies", alt: "Live Production — Star Magic Recording" },
+  { id: 22, src: pyramidsSunset, category: "Temples", alt: "Pyramids at Sunset" },
+  { id: 23, src: luxorNight, category: "Temples", alt: "Luxor Temple at Night" },
+  { id: 24, src: nileReflection, category: "Nile Experience", alt: "Nile River Reflection" },
+  { id: 25, src: abuSimbel, category: "Temples", alt: "Abu Simbel Sunrise" },
+  { id: 26, src: templeCeremony, category: "Ceremonies", alt: "Group Ceremony in Temple" },
+  { id: 27, src: karnakColumns, category: "Temples", alt: "Karnak Columns" },
+  { id: 28, src: sacredLight, category: "Ceremonies", alt: "Sacred Light Beams" },
+  { id: 29, src: desertDune, category: "Nile Experience", alt: "Desert at Dawn" },
 ];
 
 const scrollerImages = [
-  groupGiza, groupPyramid, karnakWalk, saqqaraStand, hatshepsutTemple,
-  eyeOfHorus, dockMoment, nileInterview, productionScreen,
-  groupGiza, groupPyramid, karnakWalk, saqqaraStand, hatshepsutTemple,
-  eyeOfHorus, dockMoment, nileInterview, productionScreen,
+  groupGiza, sunsetSilhouette, karnakPrayer, robesCelebration, tombSilhouette,
+  nileHealing, karnakWalk, nileBoatSession, groupPyramid, templeDoorway,
+  nilePrayer, saqqaraStand, nightCelebration, valleyWalk, busWindow,
+  karnakPrayer, nileGazing, dockMoment, nileInterview, productionScreen,
+  groupGiza, sunsetSilhouette, karnakPrayer, robesCelebration, tombSilhouette,
+  nileHealing, karnakWalk, nileBoatSession, groupPyramid, templeDoorway,
+  nilePrayer, saqqaraStand, nightCelebration, valleyWalk, busWindow,
+  karnakPrayer, nileGazing, dockMoment, nileInterview, productionScreen,
 ];
 
 const categories = ["All", "Temples", "Group Moments", "Ceremonies", "Nile Experience"];
