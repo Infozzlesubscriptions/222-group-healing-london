@@ -101,7 +101,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
               >
-                <Card className="bg-card/50 border-border/50 hover:border-primary/50 transition-colors h-full rounded-none">
+                <Card className="bg-card/50 border-border/50 hover:border-primary/50 transition-colors h-full rounded-xl">
                   <CardContent className="p-8 text-center flex flex-col items-center">
                     <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
                       <item.icon className="w-8 h-8 text-primary" />
