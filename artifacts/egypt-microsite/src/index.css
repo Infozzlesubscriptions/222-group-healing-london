@@ -341,6 +341,22 @@
   }
 }
 
+/* GOLDEN GRADIENT BUTTONS */
+button.bg-primary,
+a > button.bg-primary,
+button.border-primary {
+  background: linear-gradient(90deg, #B8975C 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #B8985D 100%) !important;
+  color: #1a0e00 !important;
+  border-color: #B8975C !important;
+}
+
+button.bg-primary:hover,
+a > button.bg-primary:hover,
+button.border-primary:hover {
+  background: linear-gradient(90deg, #a07840 0%, #f5e0a0 24.52%, #e8c870 51.93%, #f5e0a0 76.93%, #a07840 100%) !important;
+  color: #1a0e00 !important;
+}
+
 /* GLOBAL HEADING STYLES */
 h1 {
   font-family: 'Poppins', sans-serif;
