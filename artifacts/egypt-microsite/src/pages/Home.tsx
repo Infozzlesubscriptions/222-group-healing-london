@@ -1,9 +1,12 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Map, Zap, Sparkles, Heart, Globe, Users } from "lucide-react";
+import { Globe, Users } from "lucide-react";
 import pyramidsImage from "@/assets/pyramids-sunset.png";
+import nileImg from "@/assets/nile-reflection.png";
+import sphinxImg from "@/assets/sphinx.png";
+import activationImg from "@/assets/spiritual-activation.png";
+import ceremonyImg from "@/assets/temple-ceremony.png";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -11,10 +14,10 @@ export default function Home() {
   const opacity = useTransform(scrollY, [0, 500], [1, 0]);
 
   const highlights = [
-    { icon: Map, title: "10 Days Across Sacred Egypt", desc: "A curated path through ancient power centers." },
-    { icon: Zap, title: "Pyramid Activations", desc: "Private access and deep resonance work." },
-    { icon: Sparkles, title: "Deep Energy Work", desc: "Guided sessions to unlock dormant codes." },
-    { icon: Heart, title: "Lifelong Transformations", desc: "Leave the old self behind in the sands." },
+    { img: nileImg,       title: "10 Days Across Sacred Egypt", desc: "A curated path through ancient power centers." },
+    { img: sphinxImg,     title: "Pyramid Activations",          desc: "Private access and deep resonance work." },
+    { img: activationImg, title: "Deep Energy Work",             desc: "Guided sessions to unlock dormant codes." },
+    { img: ceremonyImg,   title: "Lifelong Transformations",     desc: "Leave the old self behind in the sands." },
   ];
 
   return (
@@ -101,16 +104,22 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="flex flex-col rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 bg-card"
               >
-                <Card className="bg-card/50 border-border/50 hover:border-primary/50 transition-colors h-full rounded-xl">
-                  <CardContent className="p-8 text-center flex flex-col items-center">
-                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
-                      <item.icon className="w-8 h-8 text-primary" />
-                    </div>
-                    <h3 className="text-xl font-sans text-foreground mb-3">{item.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
-                  </CardContent>
-                </Card>
+                {/* Image */}
+                <div className="relative h-52 overflow-hidden">
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                </div>
+                {/* Text box */}
+                <div className="flex flex-col flex-1 p-6">
+                  <h3 className="text-lg font-semibold font-sans text-foreground mb-2 leading-snug">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+                </div>
               </motion.div>
             ))}
           </div>
