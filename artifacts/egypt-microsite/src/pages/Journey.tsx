@@ -123,12 +123,11 @@ export default function Journey() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-4">The Journey</h1>
+        <h1 className="md:text-7xl font-bold text-foreground mb-4 text-[56px]">The Journey</h1>
         <p className="text-xl text-primary font-light italic">
           "Each day unfolded a new layer of awakening…"
         </p>
       </motion.div>
-
       {/* Book Container */}
       <div className="flex-1 flex flex-col items-center justify-center px-4 md:px-8">
         <div className="w-full max-w-6xl">
@@ -392,7 +391,6 @@ export default function Journey() {
           </AnimatePresence>
         </div>
       </div>
-
       {/* CTA */}
       <div className="text-center mt-16 px-4 border-t border-border pt-12">
         <h3 className="text-3xl font-bold mb-6 text-foreground">Ready to walk this path?</h3>
