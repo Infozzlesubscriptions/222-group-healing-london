@@ -45,7 +45,7 @@ export default function Home() {
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-foreground font-bold mb-6 leading-tight drop-shadow-2xl">
               Egypt Ascension<br />Journey 2027
             </h1>
-            <p className="text-lg md:text-2xl text-foreground/90 font-light mb-10 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+            <p className="text-lg md:text-2xl text-foreground/90 mb-10 max-w-2xl mx-auto leading-relaxed drop-shadow-md font-normal">
               A transformational experience through ancient temples, energy activations, and deep inner awakening.
             </p>
             
@@ -67,7 +67,6 @@ export default function Home() {
         {/* Floating particles simplified as a decorative element */}
         <div className="absolute inset-0 pointer-events-none z-0 opacity-30" style={{ background: 'radial-gradient(circle, transparent 20%, var(--background) 120%)' }} />
       </section>
-
       {/* Intro Section */}
       <section className="py-24 md:py-32 px-4 relative z-20 bg-background">
         <div className="max-w-4xl mx-auto text-center">
@@ -88,7 +87,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       {/* Highlights */}
       <section className="py-20 px-4 bg-secondary/30 relative">
         <div className="max-w-6xl mx-auto">
@@ -115,7 +113,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* What We Do — Planetary Grid Work & Healing */}
       <section className="py-24 md:py-32 px-4 bg-background relative">
         <div className="max-w-5xl mx-auto">
@@ -202,7 +199,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Testimonial Preview */}
       <section className="py-24 md:py-32 px-4 relative bg-background">
         <div className="max-w-5xl mx-auto text-center">
@@ -228,7 +224,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       {/* Final CTA */}
       <section className="py-32 px-4 relative overflow-hidden bg-secondary">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 mix-blend-overlay"></div>
