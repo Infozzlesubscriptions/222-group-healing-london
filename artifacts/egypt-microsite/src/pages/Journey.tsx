@@ -1,10 +1,17 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import templeCeremony from "@/assets/temple-ceremony.png";
 import karnakColumns from "@/assets/karnak-columns.png";
 import luxorNight from "@/assets/luxor-night.png";
 import abuSimbel from "@/assets/abu-simbel.png";
 import nileReflection from "@/assets/nile-reflection.png";
+import sphinxImg from "@/assets/sphinx.png";
+import ancientCodes from "@/assets/ancient-codes.png";
+import sacredLight from "@/assets/sacred-light.png";
+import spiritualActivation from "@/assets/spiritual-activation.png";
+import desertDune from "@/assets/desert-dune.png";
+import papyrus from "@/assets/papyrus.png";
+import pyramidsSunset from "@/assets/pyramids-sunset.png";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -391,18 +398,296 @@ export default function Journey() {
           </AnimatePresence>
         </div>
       </div>
-      {/* CTA */}
-      <div className="text-center mt-16 px-4 border-t border-border pt-12">
-        <h3 className="text-3xl font-bold mb-6 text-foreground">Ready to walk this path?</h3>
-        <Link href="/join-2027">
-          <Button
-            size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-10 py-2"
-            data-testid="btn-journey-cta"
+      {/* ─── THE EXPERIENCE ─── */}
+      <div className="mt-24 w-full">
+
+        {/* Section hero */}
+        <div className="text-center px-4 mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.8 }}
           >
-            Explore 2027 Journey
-          </Button>
-        </Link>
+            <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">The Journey Within</span>
+            <h2 className="text-5xl md:text-7xl font-bold text-foreground leading-none mb-6">The Experience</h2>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto font-light leading-relaxed">
+              A 15-day immersion into the most powerful sacred sites on Earth. Every moment is designed to deepen initiation and activate your highest potential.
+            </p>
+            <div className="h-px w-20 bg-primary mx-auto mt-10" />
+          </motion.div>
+        </div>
+
+        {/* 1 — Planetary Grid Work */}
+        <section className="py-16 px-4 bg-secondary/20">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              className="flex flex-col md:flex-row gap-10 items-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="flex-1 min-w-0">
+                <span className="text-primary tracking-[0.3em] text-xs font-bold uppercase block mb-3">Sacred Activation</span>
+                <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4 leading-snug">Planetary Grid Work</h3>
+                <div className="h-px w-12 bg-primary mb-6" />
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  The Planetary Grid Work is not merely physical — it is the art of connecting with lines of energy that run through the planet's core. At these vortex points we anchor higher-dimensional consciousness into the globe, activating dormant codes that humanity is now ready to receive.
+                </p>
+                <ul className="space-y-3">
+                  {[
+                    "Group activations at Egypt's most powerful energy vortices",
+                    "Anchoring light codes into the planetary grid through ceremony",
+                    "Connecting with Earth's crystalline energy matrix",
+                    "Contributing to the collective awakening of humanity",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-muted-foreground text-sm">
+                      <span className="text-primary mt-0.5 shrink-0">✦</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="flex-1 min-w-0 w-full">
+                <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[4/3]">
+                  <img src={nileReflection} alt="Planetary Grid Work" className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* 2 — Ancient Wisdom Reawakened */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+            >
+              <span className="text-primary tracking-[0.3em] text-xs font-bold uppercase block mb-3">Ancient Knowledge</span>
+              <h3 className="text-3xl md:text-5xl font-bold text-foreground italic">Ancient Wisdom<br />Reawakened</h3>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {[
+                {
+                  img: ancientCodes,
+                  title: "Dragon Ley Lines",
+                  text: "The ancients built their temples by tracking these very lines of energy. Dragon Lines create a living system of power that crosses continents, and Egypt sits at the most concentrated intersection of this planetary web. Walking these lines awakens memory in the body that no teaching can replicate.",
+                },
+                {
+                  img: sphinxImg,
+                  title: "The Great Encased",
+                  text: "During our time at the Giza Plateau we step into an encased field of energy unlike anything on Earth. The monuments here were not built by hands alone — they were encoded with cosmic intelligence that still broadcasts today. Every cell in your body responds to its frequency.",
+                },
+              ].map((card, i) => (
+                <motion.div
+                  key={i}
+                  className="rounded-2xl overflow-hidden shadow-md bg-card flex flex-col"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: i * 0.12 }}
+                >
+                  <div className="relative h-56 overflow-hidden shrink-0">
+                    <img src={card.img} alt={card.title} className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                    <div className="absolute bottom-4 left-5">
+                      <h4 className="text-white text-xl font-bold">{card.title}</h4>
+                    </div>
+                  </div>
+                  <div className="p-7 flex-1">
+                    <p className="text-muted-foreground leading-relaxed text-sm">{card.text}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 3 — The Healing Experience */}
+        <section className="py-16 px-4 bg-secondary/20">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              className="flex flex-col md:flex-row-reverse gap-10 items-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="flex-1 min-w-0">
+                <span className="text-primary tracking-[0.3em] text-xs font-bold uppercase block mb-3">Deep Renewal</span>
+                <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4 leading-snug italic">The Healing<br />Experience</h3>
+                <div className="h-px w-12 bg-primary mb-6" />
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  The healing dimension of this journey works at the deepest levels — emotional, ancestral, and energetic. Facilitated sessions investigate the mergence points between three different energies, making space for profound inner renewal that transforms participants' lives for years afterwards.
+                </p>
+                <ul className="space-y-3">
+                  {[
+                    "Trauma-release breathwork in sacred temple spaces",
+                    "Group sharing circles — held with love and intention",
+                    "Emotional alchemy and ancestral healing ceremonies",
+                    "Sacred sound healing at dawn within ancient chambers",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-muted-foreground text-sm">
+                      <span className="text-primary mt-0.5 shrink-0">✦</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="flex-1 min-w-0 w-full">
+                <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[4/3]">
+                  <img src={sacredLight} alt="The Healing Experience" className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* 4 — Sacred Practices */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+            >
+              <span className="text-primary tracking-[0.3em] text-xs font-bold uppercase block mb-3">Daily Practices</span>
+              <h3 className="text-3xl md:text-5xl font-bold text-foreground">Sacred Practices</h3>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {[
+                {
+                  img: spiritualActivation,
+                  title: "Light Code Activation",
+                  text: "Light Code grid work uses the ancient planetary codes embedded within Egypt's sacred geometry. By placing our awareness and intention at specific sites, we become conduits for frequencies that unlock dormant strands of human potential — igniting a cellular awakening that continues long after you return home.",
+                },
+                {
+                  img: desertDune,
+                  title: "Breathwork & Qigong",
+                  text: "Using the art of fire breathing, transformational breathwork, and moving qigong meditations, we build the energetic body daily. These practices amplify every activation experienced in the temples, ensuring the codes received are fully integrated into your physical, emotional, and energetic systems.",
+                },
+              ].map((card, i) => (
+                <motion.div
+                  key={i}
+                  className="rounded-2xl overflow-hidden shadow-md bg-card flex flex-col"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: i * 0.12 }}
+                >
+                  <div className="relative h-56 overflow-hidden shrink-0">
+                    <img src={card.img} alt={card.title} className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                    <div className="absolute bottom-4 left-5">
+                      <h4 className="text-white text-xl font-bold">{card.title}</h4>
+                    </div>
+                  </div>
+                  <div className="p-7 flex-1">
+                    <p className="text-muted-foreground leading-relaxed text-sm">{card.text}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 5 — The Ultimate Transformation */}
+        <section className="py-16 px-4 bg-secondary/20">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+            >
+              <span className="text-primary tracking-[0.3em] text-xs font-bold uppercase block mb-3">Your Ascension</span>
+              <h3 className="text-3xl md:text-5xl font-bold text-foreground italic">The Ultimate<br />Transformation</h3>
+              <p className="text-muted-foreground mt-5 max-w-2xl mx-auto leading-relaxed">
+                The culmination of everything we do in Egypt is the expansion of your entire being — body, mind, soul and spirit — together and at your highest ascension.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {[
+                {
+                  img: karnakColumns,
+                  title: "DNA Activation",
+                  text: "We as a species carry dormant codes within our DNA — sequences that modern science is only beginning to acknowledge. Through sound, sacred geometry, intention, and the field of Egypt's most potent sites, these dormant strands are activated. Participants report permanent shifts in perception, health, and intuition in the months following the journey.",
+                },
+                {
+                  img: papyrus,
+                  title: "Consciousness Expansion",
+                  text: "Consciousness expansion is not a concept here — it is a lived, felt reality. Each day in Egypt dismantles another layer of conditioned identity, revealing the infinite awareness beneath. You leave not just changed but revealed: remembering who you were before the world told you who to be.",
+                },
+              ].map((card, i) => (
+                <motion.div
+                  key={i}
+                  className="rounded-2xl overflow-hidden shadow-md bg-card flex flex-col"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: i * 0.12 }}
+                >
+                  <div className="relative h-56 overflow-hidden shrink-0">
+                    <img src={card.img} alt={card.title} className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                    <div className="absolute bottom-4 left-5">
+                      <h4 className="text-white text-xl font-bold">{card.title}</h4>
+                    </div>
+                  </div>
+                  <div className="p-7 flex-1">
+                    <p className="text-muted-foreground leading-relaxed text-sm">{card.text}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Final CTA */}
+        <section className="relative py-32 px-4 text-center overflow-hidden">
+          <div className="absolute inset-0">
+            <img src={pyramidsSunset} alt="Egypt" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-black/60" />
+          </div>
+          <motion.div
+            className="relative z-10 max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-4 leading-snug italic">
+              This will be like nothing<br />
+              <span className="text-primary">you've ever experienced</span>
+            </h2>
+            <p className="text-white/70 text-lg mb-10 font-light">
+              15 days. Ancient Egypt. A transformation that lasts a lifetime.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/join-2027">
+                <Button size="lg" className="bg-primary text-primary-foreground font-bold text-lg px-10 py-2" data-testid="btn-journey-cta">
+                  Book Your Spot
+                </Button>
+              </Link>
+              <Link href="/join-2027">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 font-semibold text-lg px-10 py-2">
+                  Book Discovery Call
+                </Button>
+              </Link>
+            </div>
+          </motion.div>
+        </section>
+
       </div>
     </div>
   );
