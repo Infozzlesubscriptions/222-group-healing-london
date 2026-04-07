@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import pyramidsImage from "@/assets/pyramids-sunset.png";
+import groupPyramidsImage from "@/assets/group-pyramids.png";
 import nileImg from "@/assets/nile-reflection.png";
 import sphinxImg from "@/assets/sphinx.png";
 import activationImg from "@/assets/spiritual-activation.png";
@@ -30,11 +31,12 @@ export default function Home() {
           className="absolute inset-0 z-0"
           style={{ y: y1, opacity }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background z-10" />
+          <div className="absolute inset-0 bg-black/55 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-background z-10" />
           <img 
-            src={pyramidsImage} 
-            alt="Pyramids at sunset" 
-            className="w-full h-full object-cover"
+            src={groupPyramidsImage} 
+            alt="The tribe at the Pyramids of Giza" 
+            className="w-full h-full object-cover object-top"
           />
         </motion.div>
 
@@ -47,13 +49,13 @@ export default function Home() {
             <span className="text-primary text-xl md:text-2xl font-sans tracking-[0.3em] mb-4 block uppercase">
               Calling all Planetary Guardians
             </span>
-            <h1 className="md:text-7xl lg:text-8xl font-sans text-foreground font-bold mb-3 drop-shadow-2xl text-[56px]">
+            <h1 className="md:text-7xl lg:text-8xl font-sans text-white font-bold mb-3 drop-shadow-2xl text-[56px]">
               Cosmic Ascension<br />Tour of Egypt
             </h1>
-            <p className="text-base md:text-xl text-primary/90 mb-3 font-semibold tracking-wide drop-shadow-md">
+            <p className="text-base md:text-xl text-primary mb-3 font-semibold tracking-wide drop-shadow-md">
               An Epic Journey of Cosmic Activation.
             </p>
-            <p className="text-lg md:text-2xl text-foreground/80 mb-10 max-w-2xl mx-auto leading-relaxed drop-shadow-md font-normal">
+            <p className="text-lg md:text-2xl text-white/85 mb-10 max-w-2xl mx-auto leading-relaxed drop-shadow-md font-normal">
               16th–30th March 2027.
             </p>
             
