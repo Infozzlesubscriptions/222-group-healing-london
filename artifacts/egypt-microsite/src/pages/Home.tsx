@@ -43,7 +43,7 @@ export default function Home() {
               ✦ The Initiation ✦
             </span>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-foreground font-bold mb-6 leading-tight drop-shadow-2xl">
-              Egypt Ascension<br />Journey 2026
+              Egypt Ascension<br />Journey 2027
             </h1>
             <p className="text-lg md:text-2xl text-foreground/90 font-light mb-10 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
               A transformational experience through ancient temples, energy activations, and deep inner awakening.
