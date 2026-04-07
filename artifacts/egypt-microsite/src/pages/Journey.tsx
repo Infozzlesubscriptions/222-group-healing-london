@@ -111,7 +111,7 @@ export default function Journey() {
     touchStartX.current = null;
   };
 
-  const displayDay = itinerary[flip ? flip.to : current];
+  const displayDay = itinerary[current];
   const fromDay = flip ? itinerary[flip.from] : null;
 
   return (
@@ -173,7 +173,7 @@ export default function Journey() {
               <div className="w-full md:w-1/2 min-h-[300px] md:min-h-[520px] relative z-10">
                 <AnimatePresence mode="wait">
                   <motion.div
-                    key={`left-${flip ? flip.to : current}`}
+                    key={`left-${current}`}
                     className="absolute inset-0"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -189,16 +189,16 @@ export default function Journey() {
               <div className="w-full md:w-1/2 min-h-[300px] md:min-h-[520px] relative z-10">
                 <AnimatePresence mode="wait">
                   <motion.div
-                    key={`right-static-${flip ? flip.to : current}`}
+                    key={`right-static-${current}`}
                     className="absolute inset-0"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 0.2, delay: flip ? 0.35 : 0 }}
+                    transition={{ duration: 0.25 }}
                   >
                     <RightPageContent
                       day={displayDay}
-                      pageNum={flip ? flip.to + 1 : current + 1}
+                      pageNum={current + 1}
                       total={itinerary.length}
                     />
                   </motion.div>
@@ -206,7 +206,7 @@ export default function Journey() {
 
                 {/* Page number */}
                 <div className="absolute bottom-4 right-6 text-muted-foreground/30 text-xs z-20 pointer-events-none">
-                  {(flip ? flip.to : current) + 1} / {itinerary.length}
+                  {current + 1} / {itinerary.length}
                 </div>
               </div>
             </div>
@@ -333,7 +333,7 @@ export default function Journey() {
                   disabled={isAnimating}
                   data-testid={`btn-day-dot-${i}`}
                   className={`transition-all duration-300 rounded-full focus:outline-none disabled:cursor-wait ${
-                    i === (flip ? flip.to : current)
+                    i === current
                       ? "w-6 h-2 bg-primary"
                       : "w-2 h-2 bg-border hover:bg-primary/50"
                   }`}
