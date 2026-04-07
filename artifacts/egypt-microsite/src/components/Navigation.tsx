@@ -23,6 +23,7 @@ export function Navigation() {
     { href: "/", label: "Home" },
     { href: "/journey", label: "The Journey" },
     { href: "/transformations", label: "Transformations" },
+    { href: "/past-journeys", label: "Past Journeys" },
     { href: "/gallery", label: "Gallery" },
     { href: "/about", label: "About" },
     { href: "/join-2027", label: "Join 2027" },

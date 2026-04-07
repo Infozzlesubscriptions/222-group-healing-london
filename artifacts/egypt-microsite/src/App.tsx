@@ -12,6 +12,7 @@ import Transformations from "@/pages/Transformations";
 import Gallery from "@/pages/Gallery";
 import About from "@/pages/About";
 import Join from "@/pages/Join";
+import PastJourneys from "@/pages/PastJourneys";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ function Router() {
       <Route path="/gallery" component={Gallery} />
       <Route path="/about" component={About} />
       <Route path="/join-2027" component={Join} />
+      <Route path="/past-journeys" component={PastJourneys} />
       <Route component={NotFound} />
     </Switch>
   );
