@@ -46,7 +46,7 @@ export function Navigation() {
             <img
               src={logoSrc}
               alt="Egypt 2026"
-              className="h-10 w-auto transition-all duration-500"
+              className="h-16 w-auto transition-all duration-500"
               style={{ filter: logoFilter }}
             />
           </Link>
