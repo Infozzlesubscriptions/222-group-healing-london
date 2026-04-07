@@ -1,15 +1,13 @@
 import { Link, useLocation } from "wouter";
 import { useState, useEffect } from "react";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import logoSrc from "@assets/live_site_logo_black_(1)_1775484379388.webp";
-import { useTheme } from "@/context/ThemeContext";
 
 export function Navigation() {
   const [location] = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,10 +27,6 @@ export function Navigation() {
     { href: "/join-2027", label: "Join 2027" },
   ];
 
-  const logoFilter = theme === "light"
-    ? "brightness(0)"
-    : "brightness(0) invert(1)";
-
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent ${
@@ -48,7 +42,7 @@ export function Navigation() {
               src={logoSrc}
               alt="Egypt 2026"
               className="h-16 w-auto transition-all duration-500"
-              style={{ filter: logoFilter }}
+              style={{ filter: "brightness(0)" }}
             />
           </Link>
 
@@ -66,42 +60,9 @@ export function Navigation() {
                 {link.label}
               </Link>
             ))}
-
-            {/* Theme Toggle */}
-            <button
-              onClick={toggleTheme}
-              data-testid="btn-theme-toggle"
-              aria-label="Toggle theme"
-              className="relative w-14 h-7 rounded-full border border-border/60 bg-secondary/60 hover:border-primary/50 transition-all duration-300 flex items-center px-1 shrink-0"
-            >
-              <span
-                className={`absolute transition-all duration-400 ease-in-out flex items-center justify-center w-5 h-5 rounded-full bg-primary shadow-sm ${
-                  theme === "light" ? "translate-x-7" : "translate-x-0"
-                }`}
-              >
-                {theme === "light"
-                  ? <Sun className="w-3 h-3 text-primary-foreground" />
-                  : <Moon className="w-3 h-3 text-primary-foreground" />
-                }
-              </span>
-              <Sun className={`w-3 h-3 ml-0.5 transition-opacity duration-300 ${theme === "light" ? "opacity-0" : "opacity-40 text-foreground"}`} />
-              <Moon className={`w-3 h-3 ml-auto mr-0.5 transition-opacity duration-300 ${theme === "light" ? "opacity-40 text-foreground" : "opacity-0"}`} />
-            </button>
           </nav>
 
           <div className="flex items-center gap-3 md:hidden">
-            {/* Mobile theme toggle */}
-            <button
-              onClick={toggleTheme}
-              data-testid="btn-theme-toggle-mobile"
-              aria-label="Toggle theme"
-              className="w-10 h-10 flex items-center justify-center rounded-full border border-border/50 bg-secondary/40 text-foreground hover:border-primary/50 hover:text-primary transition-all"
-            >
-              {theme === "light"
-                ? <Sun className="w-4 h-4" />
-                : <Moon className="w-4 h-4" />
-              }
-            </button>
 
             {/* Mobile Menu Toggle */}
             <Button
