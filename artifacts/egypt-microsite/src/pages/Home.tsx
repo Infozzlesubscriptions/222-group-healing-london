@@ -7,6 +7,8 @@ import nileImg from "@/assets/nile-reflection.png";
 import sphinxImg from "@/assets/sphinx.png";
 import activationImg from "@/assets/spiritual-activation.png";
 import ceremonyImg from "@/assets/temple-ceremony.png";
+import karnakImg from "@/assets/karnak-columns.png";
+import sacredLightImg from "@/assets/sacred-light.png";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -150,30 +152,38 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.8 }}
-              className="bg-card/50 border border-border/50 rounded-2xl p-8 md:p-10"
+              className="rounded-2xl overflow-hidden shadow-md bg-card flex flex-col"
             >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                  <Globe className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="text-2xl font-sans text-foreground">Planetary Grid Work</h3>
+              {/* Image */}
+              <div className="relative h-60 overflow-hidden shrink-0">
+                <img src={karnakImg} alt="Karnak columns" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               </div>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                What we call "codes," "light," and "the planetary grid" are expressions of <span className="text-foreground/80">energy, intention, and consciousness work</span> — anchored at the most powerful sacred sites on Earth. In practice, participants engaged in:
-              </p>
-              <ul className="space-y-3">
-                {[
-                  "Group meditations at the Pyramids and ancient temples",
-                  "Guided visualisations to connect with Earth's energy",
-                  "Intention-setting ceremonies at power centres",
-                  "Contributing to collective spiritual growth and awareness",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-muted-foreground">
-                    <span className="text-primary mt-1 shrink-0">✦</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+              {/* Text box */}
+              <div className="p-8 md:p-10 flex flex-col flex-1">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                    <Globe className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-2xl font-sans text-foreground">Planetary Grid Work</h3>
+                </div>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  What we call "codes," "light," and "the planetary grid" are expressions of <span className="text-foreground/80">energy, intention, and consciousness work</span> — anchored at the most powerful sacred sites on Earth. In practice, participants engaged in:
+                </p>
+                <ul className="space-y-3">
+                  {[
+                    "Group meditations at the Pyramids and ancient temples",
+                    "Guided visualisations to connect with Earth's energy",
+                    "Intention-setting ceremonies at power centres",
+                    "Contributing to collective spiritual growth and awareness",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-muted-foreground">
+                      <span className="text-primary mt-1 shrink-0">✦</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </motion.div>
 
             {/* Healing */}
@@ -182,30 +192,38 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="bg-card/50 border border-border/50 rounded-2xl p-8 md:p-10"
+              className="rounded-2xl overflow-hidden shadow-md bg-card flex flex-col"
             >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                  <Users className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="text-2xl font-sans text-foreground">Healing & Transformation</h3>
+              {/* Image */}
+              <div className="relative h-60 overflow-hidden shrink-0">
+                <img src={sacredLightImg} alt="Sacred healing light" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               </div>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                The healing dimension of the journey centred on <span className="text-foreground/80">emotional release, self-reflection, and deep inner renewal</span> — supported by a community of like-minded souls. Practically, this included:
-              </p>
-              <ul className="space-y-3">
-                {[
-                  "Sharing circles — open, witnessed, and held with care",
-                  "Meditation-based relaxation and nervous system reset",
-                  "Coaching-style guidance for personal breakthroughs",
-                  "Letting go of past stress and old patterns in sacred space",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-muted-foreground">
-                    <span className="text-primary mt-1 shrink-0">✦</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+              {/* Text box */}
+              <div className="p-8 md:p-10 flex flex-col flex-1">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                    <Users className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="text-2xl font-sans text-foreground">Healing & Transformation</h3>
+                </div>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  The healing dimension of the journey centred on <span className="text-foreground/80">emotional release, self-reflection, and deep inner renewal</span> — supported by a community of like-minded souls. Practically, this included:
+                </p>
+                <ul className="space-y-3">
+                  {[
+                    "Sharing circles — open, witnessed, and held with care",
+                    "Meditation-based relaxation and nervous system reset",
+                    "Coaching-style guidance for personal breakthroughs",
+                    "Letting go of past stress and old patterns in sacred space",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-muted-foreground">
+                      <span className="text-primary mt-1 shrink-0">✦</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </motion.div>
 
           </div>
