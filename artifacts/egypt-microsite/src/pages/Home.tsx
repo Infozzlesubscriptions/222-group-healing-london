@@ -7,6 +7,8 @@ import sphinxImg from "@/assets/sphinx.png";
 import activationImg from "@/assets/spiritual-activation.png";
 import ceremonyImg from "@/assets/temple-ceremony.png";
 import karnakImg from "@/assets/karnak-columns.png";
+import luxorNightImg from "@/assets/luxor-night.png";
+import abuSimbelImg from "@/assets/abu-simbel.png";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -249,6 +251,208 @@ export default function Home() {
             </motion.div>
 
           </div>
+        </div>
+      </section>
+
+      {/* ─── WHAT'S INCLUDED ─── */}
+      <section className="py-24 md:py-32 px-4 bg-background">
+        <div className="max-w-6xl mx-auto">
+
+          {/* Header */}
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.8 }}
+          >
+            <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Full Transparency</span>
+            <h2 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">What's Included</h2>
+            <div className="h-px w-20 bg-primary mx-auto mt-6" />
+          </motion.div>
+
+          {/* Included / Not Included two-column */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+
+            {/* Included */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.7 }}
+              className="rounded-3xl overflow-hidden border border-primary/20 bg-card shadow-lg"
+            >
+              {/* Card header */}
+              <div className="px-8 py-6 border-b border-primary/15" style={{ background: "linear-gradient(135deg, hsl(42 87% 96%), hsl(38 72% 92%))" }}>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0 shadow-md">
+                    <span className="text-white font-bold text-lg">✓</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-foreground">Included in Your Investment</h3>
+                    <p className="text-muted-foreground text-sm">Everything covered from day one</p>
+                  </div>
+                </div>
+              </div>
+              {/* Items */}
+              <div className="p-8">
+                <ul className="space-y-4">
+                  {[
+                    "Seven (7) private-access guided site tours, plus additional public-access visits",
+                    "Seven (7) day Nile River cruise",
+                    "Shared accommodation for the full tour duration",
+                    "Breakfast, Lunch & Dinner — unlimited water, snacks & fruits",
+                    "All internal flights within the tour",
+                    "Ground transportation throughout the tour",
+                    "Airport transfers on designated arrival & departure dates",
+                  ].map((item, i) => (
+                    <motion.li
+                      key={i}
+                      className="flex items-start gap-3"
+                      initial={{ opacity: 0, x: -10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: i * 0.06 }}
+                    >
+                      <span className="mt-0.5 shrink-0 w-5 h-5 rounded-full bg-primary/15 flex items-center justify-center">
+                        <span className="text-primary text-xs font-bold">✓</span>
+                      </span>
+                      <span className="text-muted-foreground text-sm leading-snug">{item}</span>
+                    </motion.li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+
+            {/* Not Included */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+              className="rounded-3xl overflow-hidden border border-border/50 bg-card shadow-md"
+            >
+              {/* Card header */}
+              <div className="px-8 py-6 border-b border-border/30 bg-secondary/40">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center shrink-0">
+                    <span className="text-muted-foreground font-bold text-lg">○</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-foreground">Not Included</h3>
+                    <p className="text-muted-foreground text-sm">Arrange these separately</p>
+                  </div>
+                </div>
+              </div>
+              {/* Items */}
+              <div className="p-8">
+                <ul className="space-y-4">
+                  {[
+                    "International airfare to and from Egypt",
+                    "Travel insurance (strongly recommended)",
+                    "Entry visa costs",
+                    "Airport transfers outside designated arrival & departure dates",
+                    "Mandatory tour gratuity fee (€150 per person)",
+                    "Two optional site tours",
+                    "Personal expenses — souvenirs, laundry, minibar & incidentals",
+                    "Optional upgrades — private rooms or private healing sessions",
+                  ].map((item, i) => (
+                    <motion.li
+                      key={i}
+                      className="flex items-start gap-3"
+                      initial={{ opacity: 0, x: 10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: i * 0.06 }}
+                    >
+                      <span className="mt-0.5 shrink-0 w-5 h-5 rounded-full bg-border/60 flex items-center justify-center">
+                        <span className="text-muted-foreground text-xs font-bold">–</span>
+                      </span>
+                      <span className="text-muted-foreground text-sm leading-snug">{item}</span>
+                    </motion.li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* ─── Accommodation ─── */}
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <span className="text-primary tracking-[0.3em] text-xs font-bold uppercase block mb-3">Where You'll Stay</span>
+            <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Accommodation</h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Experience 4★ and 5★ hotels and several nights cruising in style down the Nile. Accommodation is shared — however <span className="text-foreground font-semibold">15 private rooms</span> are available at an upgrade. Last year they sold out fast.
+            </p>
+          </motion.div>
+
+          {/* 3 accommodation photo cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { img: nileImg,       label: "On the Nile",        caption: "Morning Qi-Gong on the cruise deck" },
+              { img: luxorNightImg, label: "Hotel in Cairo",     caption: "Luxurious 4★ & 5★ hotel stays throughout" },
+              { img: ceremonyImg,   label: "Dining in Style",    caption: "Delicious authentic Egyptian cuisine, served with ceremony" },
+            ].map((card, i) => (
+              <motion.div
+                key={i}
+                className="group relative rounded-2xl overflow-hidden shadow-lg aspect-[4/5]"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.12 }}
+              >
+                <img
+                  src={card.img}
+                  alt={card.label}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                {/* Top badge */}
+                <div className="absolute top-4 left-4">
+                  <span
+                    className="text-xs font-bold tracking-[0.2em] uppercase px-3 py-1.5 rounded-full"
+                    style={{ background: "linear-gradient(90deg, #B8975C, #F3D696, #B8985D)", color: "#1a1208" }}
+                  >
+                    {card.label}
+                  </span>
+                </div>
+                {/* Bottom text */}
+                <div className="absolute bottom-0 left-0 right-0 px-6 pb-6">
+                  <p className="text-white font-semibold text-base leading-snug">{card.caption}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Private room urgency nudge */}
+          <motion.div
+            className="mt-10 rounded-2xl border border-primary/30 px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-4"
+            style={{ background: "linear-gradient(135deg, hsl(42 87% 97%), hsl(38 72% 93%))" }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <div className="flex items-center gap-4">
+              <span className="text-primary text-2xl shrink-0">🛏️</span>
+              <div>
+                <p className="font-bold text-foreground text-base">Only 15 Private Rooms Available</p>
+                <p className="text-muted-foreground text-sm">Upgrade from shared accommodation — these sold out quickly last year.</p>
+              </div>
+            </div>
+            <Link href="/join-2027" className="shrink-0">
+              <Button className="bg-primary text-primary-foreground font-semibold px-6 whitespace-nowrap">
+                Enquire About Private Room
+              </Button>
+            </Link>
+          </motion.div>
+
         </div>
       </section>
 
