@@ -55,12 +55,12 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Link href="/journey" className="w-full sm:w-auto">
                 <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-8 py-2 tracking-wide" data-testid="btn-watch-journey">
-                  Watch the Journey
+                  Book Your Spot
                 </Button>
               </Link>
               <Link href="/join-2027" className="w-full sm:w-auto">
                 <Button size="lg" variant="outline" className="w-full sm:w-auto border-primary text-primary hover:bg-primary/10 font-semibold text-lg px-8 py-2 tracking-wide" data-testid="btn-join-2027-hero">
-                  Join 2027 Experience
+                  Book Discovery Call
                 </Button>
               </Link>
             </div>
