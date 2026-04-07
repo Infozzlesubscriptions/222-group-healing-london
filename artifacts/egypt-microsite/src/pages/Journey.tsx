@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import templeCeremony from "@/assets/temple-ceremony.png";
 import karnakColumns from "@/assets/karnak-columns.png";
 import luxorNight from "@/assets/luxor-night.png";
@@ -6,6 +7,7 @@ import abuSimbel from "@/assets/abu-simbel.png";
 import nileReflection from "@/assets/nile-reflection.png";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const itinerary = [
   {
@@ -81,28 +83,28 @@ const itinerary = [
   {
     day: "Day 11",
     title: "Dandara Temple & Sacred Tombs",
-    desc: "Journey to the Hathor Temple at Dandara — one of the most complete and visually stunning temple complexes in Egypt. The mysterious zodiac ceiling and the hidden underground crypts make this a deeply activating experience. Visit the surrounding sacred tombs along the Nile.",
+    desc: "Journey to the Hathor Temple at Dandara — one of the most complete and visually stunning temple complexes in Egypt. The mysterious zodiac ceiling and the hidden underground crypts make this a deeply activating experience.",
     quote: "\"Hathor looked at me through every carving on that ceiling. I wept without knowing why.\"",
     image: abuSimbel,
   },
   {
     day: "Day 12",
-    title: "Egyptian Museum & Abu Serga Church",
-    desc: "Immerse yourself in the Egyptian Museum in Cairo — home to Tutankhamun's golden treasures and thousands of artefacts spanning millennia. Afternoon visit to Abu Serga Church in ancient Coptic Cairo, one of the earliest Christian sites in Egypt.",
+    title: "Egyptian Museum & Abu Serga",
+    desc: "Immerse yourself in the Egyptian Museum in Cairo — home to Tutankhamun's golden treasures. Afternoon visit to Abu Serga Church in ancient Coptic Cairo, one of the earliest Christian sites in Egypt.",
     quote: "\"History became lived experience. I am part of this ancient lineage.\"",
     image: karnakColumns,
   },
   {
     day: "Day 13",
     title: "Sphinx, Pyramids & Constellation Activation",
-    desc: "The apex of the journey — a private ceremony at the Giza Plateau. We stood before the Great Sphinx at sunrise, then entered the Pyramid complex for a profound activation aligned with the star constellations above. Overnight in Giza.",
+    desc: "The apex of the journey — a private ceremony at the Giza Plateau. We stood before the Great Sphinx at sunrise, then entered the Pyramid complex for a profound activation aligned with the star constellations above.",
     quote: "\"The pyramid meditation cracked something open in me I didn't know existed.\"",
     image: templeCeremony,
   },
   {
     day: "Day 14",
     title: "Saqqara & Pyramids of Dahshur",
-    desc: "Visit the ancient necropolis of Saqqara — home to the Step Pyramid of Djoser and the deep healing hospital of the ancients. Continue to the Bent and Red Pyramids of Dahshur, the earliest true pyramids ever built, holding extraordinary geometric power.",
+    desc: "Visit the ancient necropolis of Saqqara — home to the Step Pyramid of Djoser and the deep healing hospital of the ancients. Continue to the Bent and Red Pyramids of Dahshur, the earliest true pyramids ever built.",
     quote: "\"I saw past lives flash before my eyes in the healing sanctuaries of Saqqara.\"",
     image: nileReflection,
   },
@@ -115,77 +117,207 @@ const itinerary = [
   },
   {
     day: "Days 16–20",
-    title: "Optional Extension: Sinai & Sharm El-Sheikh",
-    desc: "For those called to go deeper — an optional extension to the Sinai Peninsula and Sharm El-Sheikh. Hike Mount Sinai at dawn, float in the Red Sea, and let the desert silence complete the integration of everything Egypt has gifted you.",
+    title: "Optional: Sinai & Sharm El-Sheikh",
+    desc: "For those called to go deeper — an optional extension to the Sinai Peninsula. Hike Mount Sinai at dawn, float in the Red Sea, and let the desert silence complete the integration of everything Egypt has gifted you.",
     quote: "\"The Red Sea washed clean everything that Egypt had unravelled. I was whole.\"",
     image: abuSimbel,
   },
 ];
 
-export default function Journey() {
-  return (
-    <div className="min-h-screen bg-background pt-24 pb-20">
-      <div className="max-w-5xl mx-auto px-4">
-        
-        <motion.div 
-          className="text-center mb-24"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1 className="text-5xl md:text-7xl font-serif text-foreground mb-6">The Journey</h1>
-          <p className="text-xl text-primary font-light italic max-w-2xl mx-auto">
-            "Each day unfolded a new layer of awakening…"
-          </p>
-        </motion.div>
+const pageVariants = {
+  enter: (dir: number) => ({
+    x: dir > 0 ? 80 : -80,
+    opacity: 0,
+    scale: 0.97,
+  }),
+  center: {
+    x: 0,
+    opacity: 1,
+    scale: 1,
+  },
+  exit: (dir: number) => ({
+    x: dir > 0 ? -80 : 80,
+    opacity: 0,
+    scale: 0.97,
+  }),
+};
 
-        <div className="space-y-32">
-          {itinerary.map((day, index) => (
-            <motion.div 
-              key={day.day}
-              className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-12 items-center`}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8 }}
+export default function Journey() {
+  const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState(1);
+
+  const goTo = (index: number) => {
+    setDirection(index > current ? 1 : -1);
+    setCurrent(index);
+  };
+
+  const prev = () => {
+    if (current > 0) goTo(current - 1);
+  };
+
+  const next = () => {
+    if (current < itinerary.length - 1) goTo(current + 1);
+  };
+
+  const day = itinerary[current];
+
+  return (
+    <div className="min-h-screen bg-background pt-24 pb-16 flex flex-col">
+      {/* Header */}
+      <motion.div
+        className="text-center mb-10 px-4"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <h1 className="text-5xl md:text-7xl font-serif text-foreground mb-4">The Journey</h1>
+        <p className="text-xl text-primary font-light italic">
+          "Each day unfolded a new layer of awakening…"
+        </p>
+      </motion.div>
+
+      {/* Book Container */}
+      <div className="flex-1 flex flex-col items-center justify-center px-4 md:px-8">
+        <div className="w-full max-w-6xl">
+
+          {/* Book */}
+          <div
+            className="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-border/40"
+            style={{ boxShadow: "0 30px 80px rgba(0,0,0,0.6), 0 0 0 1px hsl(var(--border)/0.3)" }}
+          >
+            {/* Spine line */}
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-primary/30 z-20 -translate-x-px" />
+            {/* Spine glow */}
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-6 -translate-x-3 z-10 pointer-events-none"
+              style={{ background: "linear-gradient(to right, transparent, hsl(var(--primary)/0.08), transparent)" }}
+            />
+
+            <AnimatePresence mode="wait" custom={direction}>
+              <motion.div
+                key={current}
+                custom={direction}
+                variants={pageVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{ duration: 0.45, ease: [0.4, 0, 0.2, 1] }}
+                className="flex flex-col md:flex-row w-full min-h-[520px]"
+              >
+                {/* Left Page — Image */}
+                <div className="w-full md:w-1/2 relative overflow-hidden min-h-[300px] md:min-h-[520px]">
+                  <img
+                    src={day.image}
+                    alt={day.title}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-background/10 via-transparent to-background/40" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+
+                  {/* Day badge on image */}
+                  <div className="absolute bottom-6 left-6 z-10">
+                    <div className="inline-flex items-center gap-2 bg-primary/90 backdrop-blur-sm px-4 py-1.5 rounded-full">
+                      <span className="text-primary-foreground text-xs font-bold tracking-[0.2em] uppercase">{day.day}</span>
+                    </div>
+                  </div>
+
+                  {/* Page number left */}
+                  <div className="absolute top-4 left-4 text-foreground/20 text-xs font-serif italic">
+                    ✦ Star Magic Egypt
+                  </div>
+                </div>
+
+                {/* Right Page — Content */}
+                <div className="w-full md:w-1/2 bg-card flex flex-col justify-center px-8 md:px-12 py-10 md:py-12 relative">
+                  {/* Decorative corner */}
+                  <div className="absolute top-4 right-4 text-primary/20 text-2xl font-serif select-none">☥</div>
+
+                  <span className="text-primary tracking-[0.25em] text-xs font-bold mb-3 uppercase block">
+                    {day.day}
+                  </span>
+                  <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-4 leading-snug">
+                    {day.title}
+                  </h2>
+                  <div className="h-px w-10 bg-primary mb-6" />
+                  <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8">
+                    {day.desc}
+                  </p>
+                  <blockquote className="border-l-2 border-primary pl-5 text-foreground/75 italic font-serif text-base md:text-lg">
+                    {day.quote}
+                  </blockquote>
+
+                  {/* Page number right */}
+                  <div className="absolute bottom-4 right-6 text-muted-foreground/30 text-xs font-serif">
+                    {current + 1} / {itinerary.length}
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Navigation */}
+          <div className="flex items-center justify-between mt-8 px-2">
+            {/* Prev */}
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={prev}
+              disabled={current === 0}
+              className="border-border/60 text-foreground hover:border-primary hover:text-primary disabled:opacity-20 h-10 w-10"
+              data-testid="btn-prev-day"
             >
-              <div className="w-full md:w-1/2 relative group overflow-hidden border border-border/50">
-                <div className="absolute inset-0 bg-primary/20 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-700 z-10"></div>
-                <img 
-                  src={day.image} 
-                  alt={day.title} 
-                  className="w-full h-[400px] object-cover filter grayscale-[30%] contrast-125 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700"
-                />
-              </div>
-              
-              <div className="w-full md:w-1/2 flex flex-col justify-center">
-                <span className="text-primary tracking-[0.2em] text-sm font-bold mb-2 uppercase">{day.day}</span>
-                <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-4">{day.title}</h2>
-                <div className="h-px w-12 bg-primary mb-6"></div>
-                <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                  {day.desc}
-                </p>
-                <blockquote className="border-l-2 border-primary pl-4 text-foreground/80 italic font-serif text-lg">
-                  {day.quote}
-                </blockquote>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-        
-        <motion.div 
-          className="mt-32 text-center border-t border-border pt-20"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-3xl font-serif mb-8 text-foreground">Ready to walk this path?</h3>
-          <Link href="/join-2027">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-10 py-2" data-testid="btn-journey-cta">
-              Explore 2027 Journey
+              <ChevronLeft className="h-5 w-5" />
             </Button>
-          </Link>
-        </motion.div>
+
+            {/* Day dots */}
+            <div className="flex items-center gap-1.5 flex-wrap justify-center max-w-sm mx-4">
+              {itinerary.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => goTo(i)}
+                  data-testid={`btn-day-dot-${i}`}
+                  className={`transition-all duration-300 rounded-full focus:outline-none ${
+                    i === current
+                      ? "w-6 h-2 bg-primary"
+                      : "w-2 h-2 bg-border hover:bg-primary/50"
+                  }`}
+                />
+              ))}
+            </div>
+
+            {/* Next */}
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={next}
+              disabled={current === itinerary.length - 1}
+              className="border-border/60 text-foreground hover:border-primary hover:text-primary disabled:opacity-20 h-10 w-10"
+              data-testid="btn-next-day"
+            >
+              <ChevronRight className="h-5 w-5" />
+            </Button>
+          </div>
+
+          {/* Day label below dots */}
+          <motion.p
+            key={current}
+            initial={{ opacity: 0, y: 4 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            className="text-center text-muted-foreground text-sm mt-3 font-light tracking-wide"
+          >
+            {day.day} — {day.title}
+          </motion.p>
+        </div>
+      </div>
+
+      {/* CTA */}
+      <div className="text-center mt-16 px-4 border-t border-border pt-12">
+        <h3 className="text-3xl font-serif mb-6 text-foreground">Ready to walk this path?</h3>
+        <Link href="/join-2027">
+          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-10 py-2" data-testid="btn-journey-cta">
+            Explore 2027 Journey
+          </Button>
+        </Link>
       </div>
     </div>
   );
