@@ -6,6 +6,7 @@ import nileImg from "@/assets/nile-reflection.png";
 import sphinxImg from "@/assets/sphinx.png";
 import activationImg from "@/assets/spiritual-activation.png";
 import ceremonyImg from "@/assets/temple-ceremony.png";
+import karnakImg from "@/assets/karnak-columns.png";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -124,6 +125,133 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* ─── TRIP HIGHLIGHTS ─── */}
+      <section className="relative py-0 overflow-hidden">
+        {/* Full-bleed background */}
+        <div className="absolute inset-0">
+          <img src={karnakImg} alt="Karnak columns" className="w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-black/72" />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, transparent 60%, hsl(var(--background)) 100%)" }} />
+        </div>
+
+        <div className="relative z-10 max-w-6xl mx-auto px-4 py-24 md:py-32">
+
+          {/* Section label */}
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.8 }}
+          >
+            <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">What's Included</span>
+            <h2 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-4">
+              Highlights of the Trip
+            </h2>
+            <div className="h-px w-20 mx-auto mt-6" style={{ background: "linear-gradient(90deg, transparent, #F3D696, transparent)" }} />
+          </motion.div>
+
+          {/* Two-column layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+            {/* Left — highlights list */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.8 }}
+            >
+              <ul className="space-y-5">
+                {[
+                  { icon: "🔺", text: "4 Hours Private Access in the Great Pyramid" },
+                  { icon: "🏛️", text: "7 Private Access Visits to Egypt's most sacred sites" },
+                  { icon: "✈️", text: "Inland Flight — Cairo to Luxor and back" },
+                  { icon: "🛏️", text: "4 & 5 Star shared accommodation — luxurious comfort after each day's adventures" },
+                  { icon: "⛵", text: "Sailing on the Nile with breathtaking cuisine and on-board accommodation" },
+                  { icon: "🚌", text: "Airport transfers included throughout the journey" },
+                  { icon: "🗝️", text: "Exclusive private tours: Grand Egyptian Museum, Osiris Tomb, Giza Plateau, Mysteries of the Sphinx, Temple of Isis, Osiris Temple & more" },
+                  { icon: "🌟", text: "Spiritual guidance from local Egyptian guides who know the most sacred places" },
+                  { icon: "🍽️", text: "Delicious authentic Egyptian cuisine showcasing the diverse flavours of the region" },
+                  { icon: "🎈", text: "Optional hot air balloon ride over the Valley of the Kings" },
+                  { icon: "🧘", text: "Optional early morning Qi-Gong sessions with Jerry whilst cruising the Nile" },
+                  { icon: "✦",  text: "…and much more!" },
+                ].map((item, i) => (
+                  <motion.li
+                    key={i}
+                    className="flex items-start gap-4"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: i * 0.05 }}
+                  >
+                    <span className="text-xl shrink-0 mt-0.5">{item.icon}</span>
+                    <span className="text-white/85 text-base leading-snug">{item.text}</span>
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Right — price card */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.8, delay: 0.15 }}
+              className="lg:sticky lg:top-32"
+            >
+              <div
+                className="rounded-3xl overflow-hidden shadow-2xl"
+                style={{ background: "rgba(255,255,255,0.06)", backdropFilter: "blur(20px)", border: "1px solid rgba(243,214,150,0.25)" }}
+              >
+                {/* Card header */}
+                <div className="px-8 pt-10 pb-8 text-center border-b border-white/10">
+                  <div className="text-primary text-3xl mb-3">☥</div>
+                  <p className="text-white/60 text-xs tracking-[0.3em] uppercase mb-2">Cosmic Ascension Tour 2027</p>
+                  <h3 className="text-white text-2xl font-bold mb-1">Secure Your Spot Now</h3>
+                  <p className="text-white/60 text-sm">Don't miss the adventure of a lifetime with Jerry and the Tribe.</p>
+                </div>
+
+                {/* Pricing */}
+                <div className="px-8 py-8 text-center">
+                  <p className="text-white/50 text-sm mb-1 uppercase tracking-widest">Total Investment</p>
+                  <div className="flex items-end justify-center gap-2 mb-2">
+                    <span className="text-5xl md:text-6xl font-bold text-white">£8,444</span>
+                  </div>
+                  <div
+                    className="inline-block rounded-2xl px-6 py-4 mt-4 w-full"
+                    style={{ background: "linear-gradient(135deg, rgba(184,151,92,0.25), rgba(243,214,150,0.12))", border: "1px solid rgba(243,214,150,0.3)" }}
+                  >
+                    <p className="text-primary text-xs tracking-[0.2em] uppercase mb-1">Reserve Your Space For Only</p>
+                    <p className="text-4xl font-bold" style={{ background: "linear-gradient(90deg, #B8975C, #FFECBA, #F3D696, #B8985D)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+                      £1,500 Deposit
+                    </p>
+                    <p className="text-white/50 text-xs mt-2">Balance payable in flexible instalments</p>
+                  </div>
+                </div>
+
+                {/* CTA buttons */}
+                <div className="px-8 pb-10 flex flex-col gap-3">
+                  <Link href="/join-2027">
+                    <Button size="lg" className="w-full bg-primary text-primary-foreground font-bold text-lg py-3" data-testid="btn-highlights-book">
+                      Reserve Your Place
+                    </Button>
+                  </Link>
+                  <Link href="/join-2027">
+                    <Button size="lg" variant="outline" className="w-full border-white/30 text-white hover:bg-white/10 font-semibold text-base py-3">
+                      Book a Discovery Call
+                    </Button>
+                  </Link>
+                  <p className="text-center text-white/40 text-xs mt-2">
+                    Limited spaces available · Payment plans available · Full T&Cs at booking
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
+
       {/* Testimonial Preview */}
       <section className="py-24 md:py-32 px-4 relative bg-background">
         <div className="max-w-5xl mx-auto text-center">
