@@ -367,41 +367,43 @@ h1 {
 
 /* LIGHT THEME OVERRIDE */
 .light-theme {
-  --button-outline: rgba(0,0,0, .12);
-  --badge-outline: rgba(0,0,0, .06);
-  --opaque-button-border-intensity: -8;
-  --elevate-1: rgba(0,0,0, .03);
-  --elevate-2: rgba(0,0,0, .07);
+  --button-outline: rgba(0,0,0, .14);
+  --badge-outline: rgba(0,0,0, .07);
+  --opaque-button-border-intensity: -10;
+  --elevate-1: rgba(0,0,0, .04);
+  --elevate-2: rgba(0,0,0, .08);
 
-  --background: 38 50% 96%;
-  --foreground: 265 55% 12%;
-  --card: 38 40% 100%;
-  --card-foreground: 265 50% 15%;
-  --primary: 42 70% 62%;
-  --primary-foreground: 38 50% 97%;
-  --secondary: 38 30% 90%;
-  --secondary-foreground: 265 50% 18%;
-  --muted: 38 25% 88%;
-  --muted-foreground: 265 30% 38%;
-  --accent: 42 70% 62%;
-  --accent-foreground: 38 50% 97%;
-  --border: 38 25% 82%;
-  --input: 38 30% 90%;
-  --ring: 42 70% 62%;
-  --card-border: 38 25% 82%;
+  /* #f5f2f0 = hsl(24 20% 95%) — warm off-white base, used behind bg images */
+  --background: 24 20% 95%;
+  --foreground: 240 25% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 25% 12%;
+  /* Gold primary — visible on white */
+  --primary: 38 72% 48%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 24 15% 90%;
+  --secondary-foreground: 240 25% 18%;
+  --muted: 24 12% 86%;
+  --muted-foreground: 240 15% 40%;
+  --accent: 38 72% 48%;
+  --accent-foreground: 0 0% 100%;
+  --border: 24 15% 84%;
+  --input: 24 15% 90%;
+  --ring: 38 72% 48%;
+  --card-border: 24 15% 88%;
   --destructive: 0 63% 40%;
-  --destructive-foreground: 38 50% 97%;
-  --popover: 38 40% 100%;
-  --popover-foreground: 265 50% 15%;
-  --popover-border: 38 25% 82%;
-  --sidebar: 38 40% 98%;
-  --sidebar-foreground: 265 50% 15%;
-  --sidebar-border: 38 25% 82%;
-  --sidebar-primary: 42 70% 62%;
-  --sidebar-primary-foreground: 38 50% 97%;
-  --sidebar-accent: 38 30% 90%;
-  --sidebar-accent-foreground: 265 50% 18%;
-  --sidebar-ring: 42 70% 62%;
+  --destructive-foreground: 0 0% 100%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 25% 12%;
+  --popover-border: 24 15% 84%;
+  --sidebar: 24 20% 97%;
+  --sidebar-foreground: 240 25% 12%;
+  --sidebar-border: 24 15% 84%;
+  --sidebar-primary: 38 72% 48%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 24 15% 90%;
+  --sidebar-accent-foreground: 240 25% 18%;
+  --sidebar-ring: 38 72% 48%;
 }
 
 @keyframes marquee {
