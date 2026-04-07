@@ -52,7 +52,7 @@ export default function Home() {
             <h1 className="md:text-7xl lg:text-8xl font-sans text-white font-bold mb-3 drop-shadow-2xl text-[56px]">
               Cosmic Ascension<br />Tour of Egypt
             </h1>
-            <p className="text-base md:text-xl text-primary mb-3 font-semibold tracking-wide drop-shadow-md">
+            <p className="text-base md:text-xl mb-3 font-semibold tracking-wide drop-shadow-md text-[#ffffff]">
               An Epic Journey of Cosmic Activation.
             </p>
             <p className="text-lg md:text-2xl text-white/85 mb-10 max-w-2xl mx-auto leading-relaxed drop-shadow-md font-normal">
