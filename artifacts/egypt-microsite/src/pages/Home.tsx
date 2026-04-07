@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Map, Zap, Sparkles, Heart } from "lucide-react";
+import { Map, Zap, Sparkles, Heart, Globe, Users } from "lucide-react";
 import pyramidsImage from "@/assets/pyramids-sunset.png";
 
 export default function Home() {
@@ -112,6 +112,93 @@ export default function Home() {
                 </Card>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What We Do — Planetary Grid Work & Healing */}
+      <section className="py-24 md:py-32 px-4 bg-background relative">
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.8 }}
+          >
+            <span className="text-primary tracking-[0.3em] text-xs font-bold uppercase block mb-4">What We Did in 2026</span>
+            <h2 className="text-3xl md:text-5xl font-serif text-foreground leading-snug">
+              The Work of the Initiation
+            </h2>
+            <div className="h-px w-16 bg-primary mx-auto mt-6" />
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+            {/* Planetary Grid Work */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.8 }}
+              className="bg-card/50 border border-border/50 rounded-2xl p-8 md:p-10"
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <Globe className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-2xl font-serif text-foreground">Planetary Grid Work</h3>
+              </div>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                What we call "codes," "light," and "the planetary grid" are expressions of <span className="text-foreground/80">energy, intention, and consciousness work</span> — anchored at the most powerful sacred sites on Earth. In practice, participants engaged in:
+              </p>
+              <ul className="space-y-3">
+                {[
+                  "Group meditations at the Pyramids and ancient temples",
+                  "Guided visualisations to connect with Earth's energy",
+                  "Intention-setting ceremonies at power centres",
+                  "Contributing to collective spiritual growth and awareness",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-muted-foreground">
+                    <span className="text-primary mt-1 shrink-0">✦</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Healing */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="bg-card/50 border border-border/50 rounded-2xl p-8 md:p-10"
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <Users className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-2xl font-serif text-foreground">Healing & Transformation</h3>
+              </div>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                The healing dimension of the journey centred on <span className="text-foreground/80">emotional release, self-reflection, and deep inner renewal</span> — supported by a community of like-minded souls. Practically, this included:
+              </p>
+              <ul className="space-y-3">
+                {[
+                  "Sharing circles — open, witnessed, and held with care",
+                  "Meditation-based relaxation and nervous system reset",
+                  "Coaching-style guidance for personal breakthroughs",
+                  "Letting go of past stress and old patterns in sacred space",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-muted-foreground">
+                    <span className="text-primary mt-1 shrink-0">✦</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
           </div>
         </div>
       </section>
