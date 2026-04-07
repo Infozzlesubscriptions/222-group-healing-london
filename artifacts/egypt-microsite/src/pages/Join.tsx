@@ -29,10 +29,10 @@ export default function Join() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <span className="text-primary text-xl md:text-2xl font-serif tracking-[0.3em] mb-4 block uppercase">
+            <span className="text-primary text-xl md:text-2xl font-sans tracking-[0.3em] mb-4 block uppercase">
               The Next Gateway
             </span>
-            <h1 className="text-5xl md:text-7xl font-serif text-foreground font-bold mb-6 drop-shadow-2xl">
+            <h1 className="text-5xl md:text-7xl font-sans text-foreground font-bold mb-6 drop-shadow-2xl">
               Egypt Awakening Journey<br />
               <span className="text-primary italic font-light">March 2027</span>
             </h1>
@@ -50,7 +50,7 @@ export default function Join() {
               viewport={{ once: true }}
               className="space-y-8"
             >
-              <h2 className="text-4xl font-serif text-foreground">Why Answer the Call?</h2>
+              <h2 className="text-4xl font-sans text-foreground">Why Answer the Call?</h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
                 The 2026 journey catalyzed massive energetic shifts for every participant. We witnessed profound physical healings, the dissolving of deep-seated ancestral traumas, and the activation of latent intuitive gifts.
               </p>
@@ -59,7 +59,7 @@ export default function Join() {
               </p>
               
               <div className="bg-secondary/50 p-8 border-l-4 border-primary mt-8">
-                <h3 className="text-2xl font-serif text-foreground mb-4">Journey Details</h3>
+                <h3 className="text-2xl font-sans text-foreground mb-4">Journey Details</h3>
                 <ul className="space-y-4">
                   <li className="flex justify-between border-b border-border/50 pb-2">
                     <span className="text-muted-foreground">Dates</span>
@@ -86,7 +86,7 @@ export default function Join() {
               <div className="bg-card border border-border p-10 text-center relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-1 bg-primary"></div>
                 
-                <h3 className="text-3xl font-serif text-foreground mb-6">Secure Your Place</h3>
+                <h3 className="text-3xl font-sans text-foreground mb-6">Secure Your Place</h3>
                 
                 <div className="mb-10 p-6 bg-background/50 rounded-lg border border-border/50">
                   <div className="text-primary text-sm font-bold tracking-widest uppercase mb-2">Urgency</div>

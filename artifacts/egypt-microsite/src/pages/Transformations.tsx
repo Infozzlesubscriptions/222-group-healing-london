@@ -29,7 +29,7 @@ export default function Transformations() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-7xl font-serif text-foreground mb-6">Transformations</h1>
+            <h1 className="text-5xl md:text-7xl font-sans text-foreground mb-6">Transformations</h1>
             <p className="text-xl text-muted-foreground font-light max-w-2xl mx-auto">
               Real Experiences. Real Awakenings.
             </p>
@@ -41,7 +41,7 @@ export default function Transformations() {
       <section className="py-16 bg-secondary/20">
         <div className="max-w-5xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-serif text-primary">The Shift</h2>
+            <h2 className="text-3xl font-sans text-primary">The Shift</h2>
             <div className="h-px w-16 bg-primary mx-auto mt-4"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -58,7 +58,7 @@ export default function Transformations() {
                 <p className="text-foreground mb-8">{item.before}</p>
                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-primary">⟁</div>
                 <div className="text-primary text-sm font-bold mb-4 tracking-widest uppercase">After</div>
-                <p className="text-foreground font-serif text-lg">{item.after}</p>
+                <p className="text-foreground font-sans text-lg">{item.after}</p>
               </motion.div>
             ))}
           </div>
@@ -78,7 +78,7 @@ export default function Transformations() {
               <img src={spiritualActivation} alt="Spiritual Activation" className="w-full h-[400px] object-cover border border-primary/20 p-2" />
             </div>
             <div className="w-full md:w-2/3">
-              <h3 className="text-3xl font-serif text-foreground mb-4">"I found the missing piece of my soul."</h3>
+              <h3 className="text-3xl font-sans text-foreground mb-4">"I found the missing piece of my soul."</h3>
               <p className="text-muted-foreground leading-relaxed text-lg mb-6">
                 For years, I felt a low-grade anxiety, a sense that I was forgetting something vital. The moment my feet touched the sands of Giza, my body knew it was home. During the private activation in the King's Chamber, a frequency moved through the group that shattered my illusions. I wept for an hour—not from sadness, but from profound relief. I finally remembered.
               </p>
@@ -96,7 +96,7 @@ export default function Transformations() {
               <img src={sacredLight} alt="Sacred Light" className="w-full h-[400px] object-cover border border-primary/20 p-2" />
             </div>
             <div className="w-full md:w-2/3">
-              <h3 className="text-3xl font-serif text-foreground mb-4">"The chronic pain simply vanished."</h3>
+              <h3 className="text-3xl font-sans text-foreground mb-4">"The chronic pain simply vanished."</h3>
               <p className="text-muted-foreground leading-relaxed text-lg mb-6">
                 I came to Egypt seeking spiritual depth, but I didn't expect physical healing. On Day 6 at Karnak Temple, we stood in the sanctuary of Sekhmet. The energetic heat was palpable. Whatever blockage I had been carrying in my lower back for a decade was pulled from me. It's been 6 months, and the pain has never returned. This journey operates on levels beyond human comprehension.
               </p>
@@ -121,11 +121,11 @@ export default function Transformations() {
                 <Card className="bg-card border-border/40 rounded-none h-full">
                   <CardContent className="p-8">
                     <div className="text-primary text-3xl mb-4">"</div>
-                    <p className="text-foreground/90 font-serif text-xl italic mb-6 leading-relaxed">
+                    <p className="text-foreground/90 font-sans text-xl italic mb-6 leading-relaxed">
                       {t.quote}
                     </p>
                     <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary font-serif font-bold">
+                      <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary font-sans font-bold">
                         {t.name.charAt(0)}
                       </div>
                       <div>
@@ -147,7 +147,7 @@ export default function Transformations() {
            whileInView={{ opacity: 1, y: 0 }}
            viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-serif text-foreground mb-8">Ready for your own transformation?</h2>
+          <h2 className="text-4xl font-sans text-foreground mb-8">Ready for your own transformation?</h2>
           <Link href="/join-2027">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-xl font-bold px-12 py-2">
               Be Part of the Next Journey

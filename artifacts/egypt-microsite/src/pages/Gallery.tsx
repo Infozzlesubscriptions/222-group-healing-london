@@ -97,7 +97,7 @@ export default function Gallery() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md:text-7xl font-serif text-foreground mb-6">Sacred Moments</h1>
+          <h1 className="text-5xl md:text-7xl font-sans text-foreground mb-6">Sacred Moments</h1>
           <p className="text-xl text-muted-foreground font-light max-w-2xl mx-auto">
             Glimpses of the unseen. Echoes of the eternal.
           </p>
@@ -109,7 +109,7 @@ export default function Gallery() {
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`px-6 py-2 rounded-full font-serif tracking-widest text-sm uppercase transition-all duration-300 ${
+              className={`px-6 py-2 rounded-full font-sans tracking-widest text-sm uppercase transition-all duration-300 ${
                 filter === cat
                   ? "bg-primary text-primary-foreground font-bold shadow-lg shadow-primary/20"
                   : "bg-secondary text-secondary-foreground hover:bg-secondary/80 border border-border"
@@ -145,7 +145,7 @@ export default function Gallery() {
                 loading="lazy"
               />
               <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-background via-background/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
-                <p className="text-primary font-serif italic">{img.alt}</p>
+                <p className="text-primary font-sans italic">{img.alt}</p>
               </div>
             </motion.div>
           ))}

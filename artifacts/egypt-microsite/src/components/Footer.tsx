@@ -43,7 +43,7 @@ export function Footer() {
 
           {/* Navigation */}
           <div>
-            <h4 className="font-serif text-foreground text-lg mb-5 tracking-wide">Navigate</h4>
+            <h4 className="font-sans text-foreground text-lg mb-5 tracking-wide">Navigate</h4>
             <ul className="space-y-3">
               {navLinks.map((link) => (
                 <li key={link.href}>
@@ -60,7 +60,7 @@ export function Footer() {
 
           {/* Journey Call */}
           <div>
-            <h4 className="font-serif text-foreground text-lg mb-5 tracking-wide">The Next Gateway</h4>
+            <h4 className="font-sans text-foreground text-lg mb-5 tracking-wide">The Next Gateway</h4>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
               The Egypt Ascension Journey 2027 opens in March. Answer the call and step into your next awakening.
             </p>
@@ -81,7 +81,7 @@ export function Footer() {
           <p className="text-muted-foreground/40 text-xs">
             © {new Date().getFullYear()} Star Magic. All rights reserved.
           </p>
-          <p className="text-muted-foreground/40 text-xs italic font-serif">
+          <p className="text-muted-foreground/40 text-xs italic font-sans">
             "Egypt didn't change me. It revealed me."
           </p>
         </div>

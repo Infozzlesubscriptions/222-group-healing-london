@@ -39,10 +39,10 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            <span className="text-primary text-xl md:text-2xl font-serif tracking-[0.3em] mb-4 block uppercase">
+            <span className="text-primary text-xl md:text-2xl font-sans tracking-[0.3em] mb-4 block uppercase">
               ✦ The Initiation ✦
             </span>
-            <h1 className="md:text-7xl lg:text-8xl font-serif text-foreground font-bold mb-6 drop-shadow-2xl text-[56px]">
+            <h1 className="md:text-7xl lg:text-8xl font-sans text-foreground font-bold mb-6 drop-shadow-2xl text-[56px]">
               Egypt Ascension<br />Journey 2027
             </h1>
             <p className="text-lg md:text-2xl text-foreground/90 mb-10 max-w-2xl mx-auto leading-relaxed drop-shadow-md font-normal">
@@ -77,7 +77,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <div className="text-primary text-4xl mb-6">☥</div>
-            <h2 className="text-3xl md:text-5xl font-serif text-foreground mb-8 leading-snug">
+            <h2 className="text-3xl md:text-5xl font-sans text-foreground mb-8 leading-snug">
               In March 2026, a group of souls gathered in Egypt… <br className="hidden md:block"/>
               <span className="text-primary italic">Not just to travel, but to awaken.</span>
             </h2>
@@ -104,7 +104,7 @@ export default function Home() {
                     <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
                       <item.icon className="w-8 h-8 text-primary" />
                     </div>
-                    <h3 className="text-xl font-serif text-foreground mb-3">{item.title}</h3>
+                    <h3 className="text-xl font-sans text-foreground mb-3">{item.title}</h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
                   </CardContent>
                 </Card>
@@ -124,7 +124,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <span className="text-primary tracking-[0.3em] text-xs font-bold uppercase block mb-4">What We Did in 2026</span>
-            <h2 className="text-3xl md:text-5xl font-serif text-foreground leading-snug">
+            <h2 className="text-3xl md:text-5xl font-sans text-foreground leading-snug">
               The Work of the Initiation
             </h2>
             <div className="h-px w-16 bg-primary mx-auto mt-6" />
@@ -144,7 +144,7 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                   <Globe className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-2xl font-serif text-foreground">Planetary Grid Work</h3>
+                <h3 className="text-2xl font-sans text-foreground">Planetary Grid Work</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 What we call "codes," "light," and "the planetary grid" are expressions of <span className="text-foreground/80">energy, intention, and consciousness work</span> — anchored at the most powerful sacred sites on Earth. In practice, participants engaged in:
@@ -176,7 +176,7 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                   <Users className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-2xl font-serif text-foreground">Healing & Transformation</h3>
+                <h3 className="text-2xl font-sans text-foreground">Healing & Transformation</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 The healing dimension of the journey centred on <span className="text-foreground/80">emotional release, self-reflection, and deep inner renewal</span> — supported by a community of like-minded souls. Practically, this included:
@@ -209,7 +209,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <div className="text-primary text-4xl mb-8">◈</div>
-            <blockquote className="text-2xl md:text-4xl font-serif text-foreground italic leading-relaxed mb-8">
+            <blockquote className="text-2xl md:text-4xl font-sans text-foreground italic leading-relaxed mb-8">
               "The pyramid meditation cracked something open in me I didn't know existed. This was not a trip. This was a resurrection."
             </blockquote>
             <p className="text-primary tracking-widest uppercase text-sm">— David K., USA</p>
@@ -234,7 +234,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-6xl font-serif text-foreground mb-6">
+            <h2 className="text-4xl md:text-6xl font-sans text-foreground mb-6">
               Your journey might begin where theirs did.
             </h2>
             <p className="text-lg text-muted-foreground mb-10">

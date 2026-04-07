@@ -13,7 +13,7 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-7xl font-serif text-foreground mb-6">About the Experience</h1>
+            <h1 className="text-5xl md:text-7xl font-sans text-foreground mb-6">About the Experience</h1>
             <p className="text-xl text-primary font-bold tracking-widest uppercase mb-10">
               Not tourism. Not retreat. A spiritual activation experience.
             </p>
@@ -39,7 +39,7 @@ export default function About() {
                  whileInView={{ opacity: 1, x: 0 }}
                  viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-serif text-primary mb-4">What Makes It Different</h2>
+                <h2 className="text-3xl font-sans text-primary mb-4">What Makes It Different</h2>
                 <ul className="space-y-6">
                   <li className="flex items-start gap-4">
                     <span className="text-primary mt-1 text-xl">☥</span>
@@ -81,7 +81,7 @@ export default function About() {
           
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl font-serif text-primary mb-6">Who It's For</h3>
+              <h3 className="text-2xl font-sans text-primary mb-6">Who It's For</h3>
               <ul className="space-y-3 text-left">
                 <li className="flex items-center gap-2"><span className="text-primary text-xs">✦</span> <span className="text-foreground">Spiritual Seekers & Healers</span></li>
                 <li className="flex items-center gap-2"><span className="text-primary text-xs">✦</span> <span className="text-foreground">Conscious Leaders</span></li>
@@ -90,7 +90,7 @@ export default function About() {
               </ul>
             </div>
             <div>
-              <h3 className="text-2xl font-serif text-destructive mb-6">Who It's NOT For</h3>
+              <h3 className="text-2xl font-sans text-destructive mb-6">Who It's NOT For</h3>
               <ul className="space-y-3 text-left">
                 <li className="flex items-center gap-2"><span className="text-destructive text-xs">✕</span> <span className="text-foreground/70">Those seeking luxury tourism</span></li>
                 <li className="flex items-center gap-2"><span className="text-destructive text-xs">✕</span> <span className="text-foreground/70">Those looking for a relaxing vacation</span></li>
@@ -106,7 +106,7 @@ export default function About() {
       <section className="py-24 bg-background">
         <div className="max-w-5xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif text-foreground mb-4">The Route of Ascension</h2>
+            <h2 className="text-4xl font-sans text-foreground mb-4">The Route of Ascension</h2>
             <div className="h-px w-20 bg-primary mx-auto"></div>
           </div>
           
@@ -126,7 +126,7 @@ export default function About() {
                   transition={{ delay: i * 0.2 }}
                 >
                   <div className="w-6 h-6 rounded-full bg-primary mb-4 shadow-[0_0_15px_rgba(201,162,39,0.6)]"></div>
-                  <h4 className="text-lg font-serif text-foreground font-bold whitespace-nowrap">{stop}</h4>
+                  <h4 className="text-lg font-sans text-foreground font-bold whitespace-nowrap">{stop}</h4>
                 </motion.div>
               ))}
             </div>
