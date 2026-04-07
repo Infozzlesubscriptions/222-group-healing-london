@@ -55,9 +55,7 @@ export default function Home() {
             <p className="text-base md:text-xl mb-3 font-semibold tracking-wide drop-shadow-md text-[#ffffff]">
               An Epic Journey of Cosmic Activation.
             </p>
-            <p className="text-lg md:text-2xl text-white/85 mb-10 max-w-2xl mx-auto leading-relaxed drop-shadow-md font-normal">
-              16th–30th March 2027.
-            </p>
+            <p className="text-lg md:text-2xl text-white/85 mb-10 max-w-2xl mx-auto leading-relaxed drop-shadow-md font-semibold">16th–30th March 2027</p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Link href="/journey" className="w-full sm:w-auto">
