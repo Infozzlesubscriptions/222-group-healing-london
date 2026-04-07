@@ -42,7 +42,7 @@ export default function Home() {
             <span className="text-primary text-xl md:text-2xl font-serif tracking-[0.3em] mb-4 block uppercase">
               ✦ The Initiation ✦
             </span>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-foreground font-bold mb-6 leading-tight drop-shadow-2xl">
+            <h1 className="md:text-7xl lg:text-8xl font-serif text-foreground font-bold mb-6 drop-shadow-2xl text-[56px]">
               Egypt Ascension<br />Journey 2027
             </h1>
             <p className="text-lg md:text-2xl text-foreground/90 mb-10 max-w-2xl mx-auto leading-relaxed drop-shadow-md font-normal">
