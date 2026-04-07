@@ -13,7 +13,7 @@ export function Navigation() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -30,20 +30,20 @@ export function Navigation() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-md border-border/50 py-3 shadow-lg"
-          : "bg-transparent py-5"
+          ? "bg-background/90 backdrop-blur-md border-border/50 py-3 shadow-lg"
+          : "bg-transparent border-transparent py-5"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex items-center justify-between text-[#ffffff] border-t-[#ffffff] border-r-[#ffffff] border-b-[#ffffff] border-l-[#ffffff]">
+        <div className="flex items-center justify-between">
           <Link href="/" className="hover:opacity-80 transition-opacity" data-testid="link-home-logo">
             <img
               src={logoSrc}
-              alt="Egypt 2026"
+              alt="Star Magic"
               className="h-16 w-auto transition-all duration-500"
-              style={{ filter: "brightness(0)" }}
+              style={{ filter: isScrolled ? "brightness(0)" : "brightness(0) invert(1)" }}
             />
           </Link>
 
@@ -53,8 +53,12 @@ export function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm tracking-wide transition-colors hover:text-primary ${
-                  location === link.href ? "text-primary font-semibold" : "text-foreground/80"
+                className={`text-sm tracking-wide transition-colors duration-300 hover:text-primary ${
+                  location === link.href
+                    ? "text-primary font-semibold"
+                    : isScrolled
+                    ? "text-foreground/80"
+                    : "text-white/90"
                 }`}
                 data-testid={`link-nav-${link.label.toLowerCase().replace(" ", "-")}`}
               >
@@ -63,13 +67,12 @@ export function Navigation() {
             ))}
           </nav>
 
+          {/* Mobile Menu Toggle */}
           <div className="flex items-center gap-3 md:hidden">
-
-            {/* Mobile Menu Toggle */}
             <Button
               variant="ghost"
               size="icon"
-              className="text-foreground hover:text-primary"
+              className={`transition-colors duration-300 hover:text-primary ${isScrolled ? "text-foreground" : "text-white"}`}
               onClick={() => setIsOpen(!isOpen)}
               data-testid="button-mobile-menu"
             >
@@ -78,6 +81,7 @@ export function Navigation() {
           </div>
         </div>
       </div>
+
       {/* Mobile Nav */}
       {isOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-border shadow-xl">
