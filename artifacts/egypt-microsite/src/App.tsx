@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { ThemeProvider } from "@/context/ThemeContext";
 import Home from "@/pages/Home";
 import Journey from "@/pages/Journey";
 import Transformations from "@/pages/Transformations";
@@ -32,16 +33,18 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
-          <div className="bg-background min-h-screen text-foreground font-sans">
-            <Navigation />
-            <main>
-              <Router />
-            </main>
-            <Footer />
-          </div>
-        </WouterRouter>
-        <Toaster />
+        <ThemeProvider>
+          <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+            <div className="bg-background min-h-screen text-foreground font-sans transition-colors duration-500">
+              <Navigation />
+              <main>
+                <Router />
+              </main>
+              <Footer />
+            </div>
+          </WouterRouter>
+          <Toaster />
+        </ThemeProvider>
       </TooltipProvider>
     </QueryClientProvider>
   );

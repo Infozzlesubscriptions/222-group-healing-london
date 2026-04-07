@@ -340,6 +340,45 @@
   }
 }
 
+/* LIGHT THEME OVERRIDE */
+.light-theme {
+  --button-outline: rgba(0,0,0, .12);
+  --badge-outline: rgba(0,0,0, .06);
+  --opaque-button-border-intensity: -8;
+  --elevate-1: rgba(0,0,0, .03);
+  --elevate-2: rgba(0,0,0, .07);
+
+  --background: 38 50% 96%;
+  --foreground: 265 55% 12%;
+  --card: 38 40% 100%;
+  --card-foreground: 265 50% 15%;
+  --primary: 43 74% 40%;
+  --primary-foreground: 38 50% 97%;
+  --secondary: 38 30% 90%;
+  --secondary-foreground: 265 50% 18%;
+  --muted: 38 25% 88%;
+  --muted-foreground: 265 30% 38%;
+  --accent: 43 74% 40%;
+  --accent-foreground: 38 50% 97%;
+  --border: 38 25% 82%;
+  --input: 38 30% 90%;
+  --ring: 43 74% 40%;
+  --card-border: 38 25% 82%;
+  --destructive: 0 63% 40%;
+  --destructive-foreground: 38 50% 97%;
+  --popover: 38 40% 100%;
+  --popover-foreground: 265 50% 15%;
+  --popover-border: 38 25% 82%;
+  --sidebar: 38 40% 98%;
+  --sidebar-foreground: 265 50% 15%;
+  --sidebar-border: 38 25% 82%;
+  --sidebar-primary: 43 74% 40%;
+  --sidebar-primary-foreground: 38 50% 97%;
+  --sidebar-accent: 38 30% 90%;
+  --sidebar-accent-foreground: 265 50% 18%;
+  --sidebar-ring: 43 74% 40%;
+}
+
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }

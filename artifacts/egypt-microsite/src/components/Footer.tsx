@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import logoSrc from "@assets/live_site_logo_black_(1)_1775484379388.webp";
+import { useTheme } from "@/context/ThemeContext";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -11,6 +12,9 @@ const navLinks = [
 ];
 
 export function Footer() {
+  const { theme } = useTheme();
+  const logoFilter = theme === "light" ? "brightness(0)" : "brightness(0) invert(1)";
+
   return (
     <footer className="bg-secondary/40 border-t border-border/40 mt-0">
       <div className="max-w-6xl mx-auto px-6 py-16">
@@ -21,8 +25,8 @@ export function Footer() {
             <img
               src={logoSrc}
               alt="Star Magic"
-              className="h-12 w-auto"
-              style={{ filter: "brightness(0) invert(1)" }}
+              className="h-12 w-auto transition-all duration-500"
+              style={{ filter: logoFilter }}
             />
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
               A transformational journey through Egypt's ancient temples — guided by Star Magic.
