@@ -81,11 +81,11 @@ export default function Home() {
           >
             <div className="text-primary text-4xl mb-6">☥</div>
             <h2 className="text-3xl md:text-5xl font-sans text-foreground mb-8 leading-snug">
-              In March 2026, a group of souls gathered in Egypt… <br className="hidden md:block"/>
-              <span className="text-primary italic">Not just to travel, but to awaken.</span>
+              This is not a holiday.<br className="hidden md:block"/>
+              <span className="text-primary italic">It is an initiation.</span>
             </h2>
             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
-              We walked the paths of the ancients, felt the resonance of the stones, and remembered who we truly are. This is the story of that initiation.
+              A soul-stirring once-in-a-lifetime sacred pilgrimage to Egypt. We are calling the spiritually advanced, the energetically sensitive, the wayshowers — to step into the ancient temples before dawn and remember who you are.
             </p>
           </motion.div>
         </div>
