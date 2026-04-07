@@ -37,7 +37,7 @@ export function Navigation() {
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between text-[#ffffff] border-t-[#ffffff] border-r-[#ffffff] border-b-[#ffffff] border-l-[#ffffff]">
           <Link href="/" className="hover:opacity-80 transition-opacity" data-testid="link-home-logo">
             <img
               src={logoSrc}
@@ -78,7 +78,6 @@ export function Navigation() {
           </div>
         </div>
       </div>
-
       {/* Mobile Nav */}
       {isOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-border shadow-xl">
