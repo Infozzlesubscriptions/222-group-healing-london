@@ -4,6 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
 import Home from "@/pages/Home";
 import Journey from "@/pages/Journey";
 import Transformations from "@/pages/Transformations";
@@ -37,6 +38,7 @@ function App() {
             <main>
               <Router />
             </main>
+            <Footer />
           </div>
         </WouterRouter>
         <Toaster />
