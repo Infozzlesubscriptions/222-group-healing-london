@@ -21,7 +21,6 @@ const testimonials = [
 export default function Transformations() {
   return (
     <div className="min-h-screen bg-background pt-24 pb-20">
-      
       <section className="relative py-20 overflow-hidden">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <motion.div
@@ -29,14 +28,13 @@ export default function Transformations() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-7xl font-sans text-foreground mb-6">Transformations</h1>
+            <h1 className="md:text-7xl font-sans text-foreground mb-6 text-[56px] font-bold">Transformations</h1>
             <p className="text-xl text-muted-foreground font-light max-w-2xl mx-auto">
               Real Experiences. Real Awakenings.
             </p>
           </motion.div>
         </div>
       </section>
-
       {/* Before / After */}
       <section className="py-16 bg-secondary/20">
         <div className="max-w-5xl mx-auto px-4">
@@ -64,7 +62,6 @@ export default function Transformations() {
           </div>
         </div>
       </section>
-
       {/* Deep Narratives */}
       <section className="py-24 max-w-5xl mx-auto px-4">
         <div className="space-y-20">
@@ -105,7 +102,6 @@ export default function Transformations() {
           </motion.div>
         </div>
       </section>
-
       {/* Grid of Testimonials */}
       <section className="py-20 bg-secondary/10 border-t border-border">
         <div className="max-w-6xl mx-auto px-4">
@@ -140,7 +136,6 @@ export default function Transformations() {
           </div>
         </div>
       </section>
-
       <section className="py-32 text-center px-4">
         <motion.div
            initial={{ opacity: 0, y: 20 }}
@@ -155,7 +150,6 @@ export default function Transformations() {
           </Link>
         </motion.div>
       </section>
-
     </div>
   );
 }
