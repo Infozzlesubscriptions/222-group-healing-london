@@ -6,6 +6,7 @@ import NotFound from "@/pages/not-found";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "@/context/ThemeContext";
+import { Chatbot } from "@/components/Chatbot";
 import Home from "@/pages/Home";
 import Journey from "@/pages/Journey";
 import Transformations from "@/pages/Transformations";
@@ -45,6 +46,7 @@ function App() {
                 <Router />
               </main>
               <Footer />
+              <Chatbot />
             </div>
           </WouterRouter>
           <Toaster />
