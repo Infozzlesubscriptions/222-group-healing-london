@@ -180,7 +180,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       {/* ─── TRIP HIGHLIGHTS ─── */}
       <section className="relative py-0 overflow-hidden">
         {/* Full-bleed background */}
@@ -277,7 +276,7 @@ export default function Home() {
                     className="inline-block rounded-2xl px-6 py-4 mt-4 w-full"
                     style={{ background: "linear-gradient(135deg, rgba(184,151,92,0.25), rgba(243,214,150,0.12))", border: "1px solid rgba(243,214,150,0.3)" }}
                   >
-                    <p className="text-primary text-xs tracking-[0.2em] uppercase mb-1">Reserve Your Space For Only</p>
+                    <p className="text-xs tracking-[0.2em] uppercase mb-1 text-[#000000]">Reserve Your Space For Only</p>
                     <p className="text-4xl font-bold" style={{ background: "linear-gradient(90deg, #B8975C, #FFECBA, #F3D696, #B8985D)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
                       £1,500 Deposit
                     </p>
@@ -307,7 +306,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* ─── WHAT'S INCLUDED ─── */}
       <section className="py-24 md:py-32 px-4 bg-background">
         <div className="max-w-6xl mx-auto">
@@ -509,7 +507,6 @@ export default function Home() {
 
         </div>
       </section>
-
       {/* Testimonial Preview */}
       <section className="py-24 md:py-32 px-4 relative bg-background">
         <div className="max-w-5xl mx-auto text-center">
