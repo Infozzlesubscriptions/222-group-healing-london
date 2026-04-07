@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import templeCeremony from "@/assets/temple-ceremony.png";
 import karnakColumns from "@/assets/karnak-columns.png";
@@ -145,10 +145,13 @@ const pageVariants = {
 export default function Journey() {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(1);
+  const [hintVisible, setHintVisible] = useState(true);
+  const touchStartX = useRef<number | null>(null);
 
   const goTo = (index: number) => {
     setDirection(index > current ? 1 : -1);
     setCurrent(index);
+    setHintVisible(false);
   };
 
   const prev = () => {
@@ -157,6 +160,19 @@ export default function Journey() {
 
   const next = () => {
     if (current < itinerary.length - 1) goTo(current + 1);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const delta = touchStartX.current - e.changedTouches[0].clientX;
+    if (Math.abs(delta) > 40) {
+      delta > 0 ? next() : prev();
+    }
+    touchStartX.current = null;
   };
 
   const day = itinerary[current];
@@ -184,6 +200,8 @@ export default function Journey() {
           <div
             className="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-border/40"
             style={{ boxShadow: "0 30px 80px rgba(0,0,0,0.6), 0 0 0 1px hsl(var(--border)/0.3)" }}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
           >
             {/* Spine line */}
             <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-primary/30 z-20 -translate-x-px" />
@@ -307,6 +325,36 @@ export default function Journey() {
           >
             {day.day} — {day.title}
           </motion.p>
+
+          {/* Swipe hint */}
+          <AnimatePresence>
+            {hintVisible && (
+              <motion.div
+                initial={{ opacity: 0, y: 6 }}
+                animate={{ opacity: 1, y: 0, transition: { delay: 0.8, duration: 0.6 } }}
+                exit={{ opacity: 0, transition: { duration: 0.4 } }}
+                className="flex items-center justify-center gap-2 mt-5"
+              >
+                <motion.span
+                  animate={{ x: [-4, 4, -4] }}
+                  transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
+                  className="text-primary/60 text-base select-none"
+                >
+                  ←
+                </motion.span>
+                <span className="text-muted-foreground/50 text-xs tracking-widest uppercase font-light">
+                  swipe or use arrows to turn pages
+                </span>
+                <motion.span
+                  animate={{ x: [4, -4, 4] }}
+                  transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
+                  className="text-primary/60 text-base select-none"
+                >
+                  →
+                </motion.span>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
 
