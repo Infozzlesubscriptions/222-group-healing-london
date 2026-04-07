@@ -40,13 +40,16 @@ export default function Home() {
             transition={{ duration: 1, delay: 0.2 }}
           >
             <span className="text-primary text-xl md:text-2xl font-sans tracking-[0.3em] mb-4 block uppercase">
-              ✦ The Initiation ✦
+              Calling all Planetary Guardians
             </span>
-            <h1 className="md:text-7xl lg:text-8xl font-sans text-foreground font-bold mb-6 drop-shadow-2xl text-[56px]">
-              Egypt Ascension<br />Journey 2027
+            <h1 className="md:text-7xl lg:text-8xl font-sans text-foreground font-bold mb-3 drop-shadow-2xl text-[56px]">
+              Cosmic Ascension<br />Tour of Egypt
             </h1>
-            <p className="text-lg md:text-2xl text-foreground/90 mb-10 max-w-2xl mx-auto leading-relaxed drop-shadow-md font-normal">
-              A transformational experience through ancient temples, energy activations, and deep inner awakening.
+            <p className="text-base md:text-xl text-primary/90 mb-3 font-semibold tracking-wide drop-shadow-md">
+              An Epic Journey of Cosmic Activation.
+            </p>
+            <p className="text-lg md:text-2xl text-foreground/80 mb-10 max-w-2xl mx-auto leading-relaxed drop-shadow-md font-normal">
+              16th–30th March 2027.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
