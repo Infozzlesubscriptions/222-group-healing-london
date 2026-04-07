@@ -127,6 +127,58 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* ─── VIDEO ─── */}
+      <section className="py-24 md:py-32 px-4 bg-background">
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.8 }}
+          >
+            <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Feel It Before You Arrive</span>
+            <h2 className="text-4xl md:text-6xl font-bold text-foreground leading-tight mb-4">
+              Watch the Journey Unfold
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-xl mx-auto font-light">
+              A glimpse into the sacred sites, the tribe, and the transformation that awaits you in Egypt 2027.
+            </p>
+            <div className="h-px w-20 bg-primary mx-auto mt-8" />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 40, scale: 0.97 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.9 }}
+            className="relative"
+          >
+            {/* Decorative glow ring */}
+            <div
+              className="absolute -inset-1 rounded-3xl blur-2xl opacity-30 pointer-events-none"
+              style={{ background: "linear-gradient(135deg, #B8975C, #F3D696, #B8985D)" }}
+            />
+            {/* Video frame */}
+            <div
+              className="relative rounded-3xl overflow-hidden shadow-2xl"
+              style={{
+                border: "1px solid rgba(243,214,150,0.35)",
+                aspectRatio: "16/9",
+              }}
+            >
+              <iframe
+                src="https://player.vimeo.com/video/1128847726?badge=0&autopause=0&quality_selector=1&player_id=0&app_id=58479"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                className="absolute inset-0 w-full h-full"
+                title="Cosmic Ascension Tour of Egypt"
+                style={{ border: 0 }}
+              />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ─── TRIP HIGHLIGHTS ─── */}
       <section className="relative py-0 overflow-hidden">
         {/* Full-bleed background */}
