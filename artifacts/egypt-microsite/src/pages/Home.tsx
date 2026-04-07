@@ -14,7 +14,7 @@ export default function Home() {
   const opacity = useTransform(scrollY, [0, 500], [1, 0]);
 
   const highlights = [
-    { img: nileImg,       title: "10 Days Across Sacred Egypt", desc: "A curated path through ancient power centers." },
+    { img: nileImg,       title: "15 Days Across Sacred Egypt", desc: "A curated path through ancient power centers." },
     { img: sphinxImg,     title: "Pyramid Activations",          desc: "Private access and deep resonance work." },
     { img: activationImg, title: "Deep Energy Work",             desc: "Guided sessions to unlock dormant codes." },
     { img: ceremonyImg,   title: "Lifelong Transformations",     desc: "Leave the old self behind in the sands." },
