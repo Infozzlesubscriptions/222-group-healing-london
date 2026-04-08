@@ -11,6 +11,7 @@ import cairoPyramidsImg from "@/assets/cairo-nile-pyramids.png";
 import setiTempleImg from "@/assets/seti-temple.png";
 import obeliskImg from "@/assets/obelisk.png";
 import luxorFacadeImg from "@/assets/luxor-temple-facade.png";
+import abuSimbelAerialImg from "@/assets/abu-simbel-aerial.png";
 import ancientCodes from "@/assets/ancient-codes.png";
 import sacredLight from "@/assets/sacred-light.png";
 import spiritualActivation from "@/assets/spiritual-activation.png";
@@ -74,8 +75,8 @@ function LeftPageContent({ day }: { day: typeof itinerary[0] }) {
   return (
     <div className="w-full h-full relative overflow-hidden select-none">
       <img
-        src={luxorFacadeImg}
-        alt="Luxor Temple facade"
+        src={abuSimbelAerialImg}
+        alt="Abu Simbel temples from above"
         className="absolute inset-0 w-full h-full object-cover object-center"
         draggable={false}
       />
