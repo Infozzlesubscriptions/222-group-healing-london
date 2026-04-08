@@ -34,7 +34,7 @@ export default function Join() {
             </span>
             <h1 className="text-5xl md:text-7xl font-sans text-white font-bold mb-6 drop-shadow-2xl">
               Egypt Awakening Journey<br />
-              <span className="text-primary italic font-light">March 2027</span>
+              <span className="italic font-semibold text-[#f2ad3a]">March 2027</span>
             </h1>
           </motion.div>
         </div>
