@@ -58,8 +58,8 @@ export default function Home() {
             <p className="text-lg md:text-2xl text-white/85 mb-10 max-w-2xl mx-auto leading-relaxed drop-shadow-md font-semibold">16th–30th March 2027</p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Link href="/journey" className="w-full sm:w-auto">
-                <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-8 py-2 tracking-wide" data-testid="btn-watch-journey">
+              <Link href="/join-2027" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-8 py-2 tracking-wide" data-testid="btn-book-spot">
                   Book Your Spot
                 </Button>
               </Link>
