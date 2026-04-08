@@ -62,7 +62,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            <span className="text-primary text-xl md:text-2xl font-sans tracking-[0.3em] mb-4 block uppercase">
+            <span className="text-primary text-xl md:text-2xl font-sans tracking-[0.3em] mb-4 block uppercase font-semibold">
               Calling all Planetary Guardians
             </span>
             <h1 className="md:text-7xl lg:text-8xl font-sans text-white font-bold mb-3 drop-shadow-2xl text-[56px]">
