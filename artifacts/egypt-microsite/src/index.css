@@ -222,10 +222,12 @@
 @layer base {
   * {
     @apply border-border;
+    font-family: 'Poppins', sans-serif;
   }
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
   }
 }
 
