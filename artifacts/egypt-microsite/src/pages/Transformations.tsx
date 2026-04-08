@@ -326,7 +326,7 @@ export default function Transformations() {
           <h2 className="text-4xl font-sans text-foreground mb-4">Ready for your own transformation?</h2>
           <p className="text-muted-foreground text-lg mb-10">The next gateway opens in March 2027.</p>
           <Link href="/join-2027">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-xl font-bold px-12 py-2 cursor-pointer">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-xl px-12 py-2 cursor-pointer font-semibold">
               Be Part of the Next Journey
             </Button>
           </Link>
