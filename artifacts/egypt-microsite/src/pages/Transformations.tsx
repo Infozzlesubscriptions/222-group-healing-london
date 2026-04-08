@@ -190,9 +190,16 @@ export default function Transformations() {
               <p className="text-muted-foreground text-sm">A cinematic journey through 15 days of transformation with the tribe.</p>
             </div>
             <Link href="/">
-              <Button className="bg-primary text-primary-foreground font-semibold px-6 whitespace-nowrap cursor-pointer shrink-0">
+              <button
+                className="font-semibold px-6 py-2.5 rounded-md whitespace-nowrap cursor-pointer shrink-0 transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98]"
+                style={{
+                  background: "linear-gradient(90deg, #B8975C 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #B8985D 100%)",
+                  color: "#1a1208",
+                  border: "none",
+                }}
+              >
                 Watch Documentary →
-              </Button>
+              </button>
             </Link>
           </motion.div>
         </div>
