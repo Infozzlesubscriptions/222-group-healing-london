@@ -459,13 +459,14 @@ export default function Home() {
               <div className="h-px w-16 bg-primary mx-auto mt-6" />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Featured layout: Jerry big left, 3 smaller right */}
+            <div className="flex flex-col md:flex-row gap-4" style={{ minHeight: "480px" }}>
 
-              {/* Jerry Sargeant */}
+              {/* Jerry — featured large card */}
               <motion.div
-                className="relative rounded-3xl overflow-hidden shadow-xl group"
-                style={{ border: "1px solid rgba(184,151,92,0.35)" }}
-                initial={{ opacity: 0, x: -20 }}
+                className="relative rounded-3xl overflow-hidden shadow-2xl group md:flex-[2]"
+                style={{ border: "1px solid rgba(184,151,92,0.4)", minHeight: "480px" }}
+                initial={{ opacity: 0, x: -24 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7 }}
@@ -473,68 +474,75 @@ export default function Home() {
                 <img
                   src={jerryTempleImg}
                   alt="Jerry Sargeant"
-                  className="w-full h-72 object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-7">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-8">
                   <span
-                    className="inline-block text-xs font-bold tracking-[0.25em] uppercase px-3 py-1 rounded-full mb-3"
+                    className="inline-block text-xs font-bold tracking-[0.25em] uppercase px-3 py-1 rounded-full mb-4"
                     style={{ background: "linear-gradient(90deg, #B8975C, #F3D696)", color: "#1a1208" }}
                   >
-                    Spiritual Guide & Founder
+                    ✦ Spiritual Guide & Founder
                   </span>
-                  <h4 className="text-white text-2xl font-bold mb-2">Jerry Sargeant</h4>
-                  <p className="text-white/70 text-sm leading-relaxed">
-                    Star Magic founder and world-renowned energy healer — present for every single day of the pilgrimage, leading activations, meditations, and daily Qi-Gong.
+                  <h4 className="text-white text-3xl font-bold mb-3 leading-tight">Jerry Sargeant</h4>
+                  <p className="text-white/70 text-sm leading-relaxed max-w-sm">
+                    Star Magic founder and world-renowned energy healer — present for every single day of the pilgrimage, leading activations, meditations, and daily Qi-Gong on the Nile.
                   </p>
                 </div>
               </motion.div>
 
-              {/* Expert Egyptologist */}
-              <motion.div
-                className="relative rounded-3xl overflow-hidden shadow-xl group"
-                style={{ border: "1px solid rgba(184,151,92,0.35)" }}
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: 0.1 }}
-              >
-                <img
-                  src={karnakImg}
-                  alt="Expert Egyptologist"
-                  className="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-7">
-                  <span
-                    className="inline-block text-xs font-bold tracking-[0.25em] uppercase px-3 py-1 rounded-full mb-3"
-                    style={{ background: "linear-gradient(90deg, #B8975C, #F3D696)", color: "#1a1208" }}
+              {/* 3 smaller team cards */}
+              <div className="flex flex-col gap-4 md:flex-1">
+                {[
+                  {
+                    img: abuSimbelImg,
+                    role: "Expert Egyptologist",
+                    name: "Accredited Egypt Scholar",
+                    desc: "Guides every site with deep historical and symbolic knowledge.",
+                  },
+                  {
+                    img: womanTempleImg,
+                    role: "Energy Facilitator",
+                    name: "Star Magic Healer",
+                    desc: "Holds sacred space for healing and group activations.",
+                  },
+                  {
+                    img: activationImg,
+                    role: "Local Expert",
+                    name: "Egyptian Experience Lead",
+                    desc: "Opens doors to sacred sites and hidden ceremonial spaces.",
+                  },
+                ].map((person, i) => (
+                  <motion.div
+                    key={i}
+                    className="relative rounded-2xl overflow-hidden shadow-lg group flex-1"
+                    style={{ border: "1px solid rgba(184,151,92,0.3)", minHeight: "140px" }}
+                    initial={{ opacity: 0, x: 24 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.1 + i * 0.1 }}
                   >
-                    Expert Egyptologist
-                  </span>
-                  <h4 className="text-white text-2xl font-bold mb-2">Accredited Egypt Scholar</h4>
-                  <p className="text-white/70 text-sm leading-relaxed">
-                    An experienced, accredited Egyptologist accompanies every site visit — unveiling the hidden history, sacred symbolism, and ancient knowledge encoded in every temple and tomb.
-                  </p>
-                </div>
-              </motion.div>
+                    <img
+                      src={person.img}
+                      alt={person.name}
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/20" />
+                    <div className="absolute inset-0 flex flex-col justify-center px-5 py-4">
+                      <span
+                        className="text-[10px] font-bold tracking-[0.2em] uppercase px-2.5 py-0.5 rounded-full mb-2 self-start"
+                        style={{ background: "linear-gradient(90deg, #B8975C, #F3D696)", color: "#1a1208" }}
+                      >
+                        {person.role}
+                      </span>
+                      <h4 className="text-white font-bold text-base leading-tight mb-1">{person.name}</h4>
+                      <p className="text-white/60 text-xs leading-snug">{person.desc}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
 
             </div>
-
-            {/* Combined promise banner */}
-            <motion.div
-              className="mt-6 rounded-2xl px-8 py-5 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left"
-              style={{ background: "linear-gradient(135deg, hsl(42 87% 96%), hsl(38 72% 92%))", border: "1px solid rgba(184,151,92,0.4)" }}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <div className="text-2xl shrink-0">𓂀</div>
-              <p className="text-foreground/80 text-sm leading-relaxed">
-                <span className="font-bold text-foreground">Spiritual depth meets scholarly expertise.</span> You will not just visit these temples — you will understand them, feel them, and be changed by them.
-              </p>
-            </motion.div>
           </motion.div>
 
           {/* ─── Accommodation ─── */}
