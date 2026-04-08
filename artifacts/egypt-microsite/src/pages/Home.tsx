@@ -7,6 +7,7 @@ import nileImg from "@/assets/nile-reflection.png";
 import sphinxImg from "@/assets/sphinx.png";
 import hatshepsutImg from "@/assets/hatshepsut-temple.png";
 import activationImg from "@/assets/spiritual-activation.png";
+import jerryTempleImg from "@/assets/jerry-temple.png";
 import ceremonyImg from "@/assets/temple-ceremony.png";
 import karnakImg from "@/assets/karnak-columns.png";
 import luxorNightImg from "@/assets/luxor-night.png";
@@ -20,7 +21,7 @@ export default function Home() {
   const highlights = [
     { img: nileImg,       title: "15 Days Across Sacred Egypt", desc: "A curated path through ancient power centers." },
     { img: hatshepsutImg, title: "Pyramid Activations",          desc: "Private access and deep resonance work." },
-    { img: activationImg, title: "Deep Energy Work",             desc: "Guided sessions to unlock dormant codes." },
+    { img: jerryTempleImg, title: "Deep Energy Work",             desc: "Guided sessions to unlock dormant codes." },
     { img: ceremonyImg,   title: "Lifelong Transformations",     desc: "Leave the old self behind in the sands." },
   ];
 
