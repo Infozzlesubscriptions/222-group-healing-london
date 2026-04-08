@@ -7,6 +7,7 @@ import groupPyramidsImage from "@/assets/group-pyramids.png";
 import cosmicPyramidImg from "@/assets/cosmic-pyramid.png";
 import nileImg from "@/assets/nile-reflection.png";
 import nileFeluccaImg from "@/assets/nile-felucca-sunset.png";
+import jerryStepPyramidImg from "@/assets/jerry-step-pyramid.png";
 import sphinxImg from "@/assets/sphinx.png";
 import hatshepsutImg from "@/assets/hatshepsut-temple.png";
 import activationImg from "@/assets/spiritual-activation.png";
@@ -33,7 +34,7 @@ export default function Home() {
   }
 
   const highlights = [
-    { img: nileFeluccaImg, title: "15 Days Across Sacred Egypt", desc: "A curated path through ancient power centers." },
+    { img: jerryStepPyramidImg, title: "15 Days Across Sacred Egypt", desc: "A curated path through ancient power centers." },
     { img: hatshepsutImg, title: "Pyramid Activations",          desc: "Private access and deep resonance work." },
     { img: womanTempleImg, title: "Deep Energy Work",              desc: "Guided sessions to unlock dormant codes." },
     { img: pyramidNightImg, title: "Lifelong Transformations",   desc: "Leave the old self behind in the sands." },
