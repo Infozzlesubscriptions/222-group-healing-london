@@ -29,7 +29,7 @@ export default function Join() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <span className="text-primary text-xl md:text-2xl font-sans tracking-[0.3em] mb-4 block uppercase">
+            <span className="text-xl md:text-2xl font-sans tracking-[0.3em] mb-4 block uppercase font-semibold text-[#ffffff]">
               The Next Gateway
             </span>
             <h1 className="text-5xl md:text-7xl font-sans text-white font-bold mb-6 drop-shadow-2xl">
@@ -39,7 +39,6 @@ export default function Join() {
           </motion.div>
         </div>
       </section>
-
       <section className="py-20 bg-background relative z-20">
         <div className="max-w-5xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
