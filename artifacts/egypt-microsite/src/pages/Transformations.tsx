@@ -225,7 +225,6 @@ export default function Transformations() {
               >
                 <div className="text-muted-foreground text-sm italic mb-4">"Before"</div>
                 <p className="text-foreground mb-8">{item.before}</p>
-                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-primary">⟁</div>
                 <div className="text-primary text-sm font-bold mb-4 tracking-widest uppercase">After</div>
                 <p className="text-foreground font-sans text-lg">{item.after}</p>
               </motion.div>
