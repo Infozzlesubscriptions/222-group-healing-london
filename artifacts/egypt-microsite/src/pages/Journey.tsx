@@ -7,6 +7,7 @@ import abuSimbel from "@/assets/abu-simbel.png";
 import nileReflection from "@/assets/nile-reflection.png";
 import sphinxImg from "@/assets/sphinx.png";
 import sphinxSunsetImg from "@/assets/sphinx-sunset.png";
+import cairoPyramidsImg from "@/assets/cairo-nile-pyramids.png";
 import ancientCodes from "@/assets/ancient-codes.png";
 import sacredLight from "@/assets/sacred-light.png";
 import spiritualActivation from "@/assets/spiritual-activation.png";
@@ -18,8 +19,8 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const itinerary = [
-  { day: "Day 1", title: "Arrival in Cairo", desc: "Arrive in Cairo and meet the Star Magic Team. Transfers to your hotel in Memphis, where the journey of a lifetime begins. Settle in and share an evening al fresco meal together as a tribe.", quote: "\"I felt an instant soul recognition with strangers who quickly became family.\"", image: templeCeremony },
-  { day: "Day 2", title: "Tribe Meeting & Sphinx Sunset", desc: "Breakfast together as a group, then spend the morning in deep connection and intention-setting with the tribe. In the afternoon, be guided into the presence of the Great Sphinx of Giza — a moment of ancient recognition that words cannot capture.", quote: "\"Standing before the Sphinx, I understood why I had come.\"", image: luxorNight },
+  { day: "Day 1", title: "Arrival in Cairo", desc: "Arrive in Cairo and meet the Star Magic Team. Transfers to your hotel in Memphis, where the journey of a lifetime begins. Settle in and share an evening al fresco meal together as a tribe.", quote: "\"I felt an instant soul recognition with strangers who quickly became family.\"", image: cairoPyramidsImg },
+  { day: "Day 2", title: "Tribe Meeting & Sphinx Sunset", desc: "Breakfast together as a group, then spend the morning in deep connection and intention-setting with the tribe. In the afternoon, be guided into the presence of the Great Sphinx of Giza — a moment of ancient recognition that words cannot capture.", quote: "\"Standing before the Sphinx, I understood why I had come.\"", image: sphinxSunsetImg },
   { day: "Day 3", title: "Luxor Temple & Seti Temple", desc: "Fly to Luxor and step into one of the most celebrated sacred sites in the world. The illuminated columns of Luxor Temple hold thousands of years of initiation energy. An evening visit to Seti Temple deepens the transmission.", quote: "\"The temple felt alive, as if the stones themselves were breathing with us.\"", image: karnakColumns },
   { day: "Day 4", title: "Unfinished Obelisk & Aswan Market", desc: "An afternoon visit to the famous Unfinished Obelisk reveals the hidden mastery of ancient builders. Explore the Nubian market, where authentic spices, herbs, and local crafts carry the living spirit of this land.", quote: "\"Every stone here holds a story older than memory.\"", image: abuSimbel },
   { day: "Day 5", title: "Abu Simbel Temples", desc: "An early morning journey to the monumental Abu Simbel Temples — carved into the cliffside and aligned perfectly with the sun twice a year. Standing before the great statues of Ramses II, we anchored solar codes of sovereignty and power.", quote: "\"I have never felt so small, yet so infinitely powerful.\"", image: abuSimbel },
@@ -70,8 +71,8 @@ function LeftPageContent({ day }: { day: typeof itinerary[0] }) {
   return (
     <div className="w-full h-full relative overflow-hidden select-none">
       <img
-        src={sphinxSunsetImg}
-        alt="The Great Sphinx of Giza at sunset"
+        src={day.image}
+        alt={day.title}
         className="absolute inset-0 w-full h-full object-cover object-center"
         draggable={false}
       />
