@@ -5,7 +5,6 @@ import karnakColumns from "@/assets/karnak-columns.png";
 export default function About() {
   return (
     <div className="min-h-screen bg-background pt-24 pb-20">
-      
       <section className="relative py-20 overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
@@ -20,7 +19,6 @@ export default function About() {
           </motion.div>
         </div>
       </section>
-
       <section className="py-16 bg-secondary/30">
         <div className="max-w-5xl mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-16 items-center">
@@ -59,7 +57,7 @@ export default function About() {
                     <span className="text-primary mt-1 text-xl">◈</span>
                     <div>
                       <h4 className="text-xl font-bold text-foreground mb-1">Small Intimate Group</h4>
-                      <p className="text-muted-foreground leading-relaxed">Capped at 12 participants to ensure deep personal attention and a safe container for emotional alchemy.</p>
+                      <p className="text-muted-foreground leading-relaxed">Capped at 30-40 participants to ensure deep personal attention and a safe container for emotional alchemy.</p>
                     </div>
                   </li>
                 </ul>
@@ -68,7 +66,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       <section className="py-24 max-w-4xl mx-auto px-4 text-center">
         <motion.div
            initial={{ opacity: 0, y: 30 }}
@@ -101,7 +98,6 @@ export default function About() {
           </div>
         </motion.div>
       </section>
-
       {/* Map Section */}
       <section className="py-24 bg-background">
         <div className="max-w-5xl mx-auto px-4">
@@ -133,7 +129,6 @@ export default function About() {
           </div>
         </div>
       </section>
-      
     </div>
   );
 }
