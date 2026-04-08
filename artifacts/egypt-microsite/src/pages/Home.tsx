@@ -546,70 +546,112 @@ export default function Home() {
         </div>
       </section>
       {/* Final CTA — Discovery Call */}
-      <section className="relative py-0 overflow-hidden">
-        {/* Full-bleed background photo */}
-        <div className="absolute inset-0">
-          <img src={groupPyramidsImage} alt="Group at Pyramids" className="w-full h-full object-cover object-center" />
-          <div className="absolute inset-0 bg-black/65" />
-          <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, hsl(var(--background)) 0%, transparent 12%, transparent 88%, hsl(var(--background)) 100%)" }} />
-        </div>
+      <section className="relative py-24 md:py-32 px-4 overflow-hidden bg-background">
+        {/* Soft radial gold glow */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: "radial-gradient(ellipse 80% 60% at 50% 100%, rgba(243,214,150,0.18) 0%, transparent 70%)" }}
+        />
 
-        <div className="relative z-10 max-w-2xl mx-auto px-4 py-28 md:py-36 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.9 }}
-          >
-            {/* Ankh glyph */}
-            <div className="text-primary text-4xl mb-6">☥</div>
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-            {/* Eyebrow */}
-            <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-5">
-              Ready to Take the Next Step?
-            </span>
-
-            {/* Headline */}
-            <h2 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-5">
-              Book Your Egypt<br />Discovery Call
-            </h2>
-
-            {/* Sub-copy */}
-            <p className="text-white/70 text-lg leading-relaxed mb-10 max-w-lg mx-auto">
-              Connect one-to-one with a specialist to receive personalised clarity and guidance for your Egypt 2027 journey.
-            </p>
-
-            {/* Divider */}
-            <div className="h-px w-20 mx-auto mb-10" style={{ background: "linear-gradient(90deg, transparent, #F3D696, transparent)" }} />
-
-            {/* Form card */}
-            {!submitted ? (
-              <motion.form
-                onSubmit={handleDiscoverySubmit}
-                className="rounded-3xl overflow-hidden shadow-2xl mx-auto max-w-md"
-                style={{ background: "rgba(255,255,255,0.07)", backdropFilter: "blur(24px)", border: "1px solid rgba(243,214,150,0.25)" }}
-                initial={{ opacity: 0, scale: 0.97 }}
+            {/* Left — photo + trust signals */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              {/* Photo with gold frame */}
+              <div
+                className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5]"
+                style={{ border: "1px solid rgba(243,214,150,0.4)" }}
+              >
+                <img
+                  src={groupPyramidsImage}
+                  alt="Star Magic group at the Pyramids"
+                  className="w-full h-full object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                {/* Badge overlay */}
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div
+                    className="rounded-2xl px-5 py-4"
+                    style={{ background: "rgba(0,0,0,0.55)", backdropFilter: "blur(12px)", border: "1px solid rgba(243,214,150,0.3)" }}
+                  >
+                    <p className="text-white font-bold text-base mb-0.5">Egypt 2026 — Sold Out</p>
+                    <p className="text-white/60 text-xs tracking-wide">2027 registration now open · Limited spaces</p>
+                  </div>
+                </div>
+              </div>
+              {/* Floating trust badge */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: 0.2 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="absolute -top-4 -right-4 rounded-2xl px-5 py-4 shadow-xl"
+                style={{ background: "linear-gradient(135deg, hsl(42 87% 96%), hsl(38 72% 92%))", border: "1px solid rgba(184,151,92,0.4)" }}
               >
-                <div className="px-8 pt-8 pb-2">
-                  <label className="block text-left text-white/70 text-xs tracking-[0.2em] uppercase mb-2 font-semibold">
-                    Your Email Address
-                  </label>
-                  <input
-                    type="email"
-                    required
-                    value={email}
-                    onChange={e => setEmail(e.target.value)}
-                    placeholder="you@example.com"
-                    className="w-full rounded-xl px-4 py-3 text-base outline-none transition-all duration-200 bg-white/10 text-white placeholder-white/35 border border-white/20 focus:border-primary focus:ring-2 focus:ring-primary/30"
-                  />
-                </div>
-                <div className="px-8 pb-8 pt-5">
+                <p className="text-primary font-bold text-2xl leading-none">★ 4.9</p>
+                <p className="text-foreground/60 text-xs mt-1">from 200+ pilgrims</p>
+              </motion.div>
+            </motion.div>
+
+            {/* Right — form */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+            >
+              <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">
+                Ready to Take the Next Step?
+              </span>
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight mb-4">
+                Book Your Egypt<br />Discovery Call
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-md">
+                Connect one-to-one with a specialist to receive personalised clarity and guidance for your Egypt 2027 journey.
+              </p>
+              <div className="h-px w-16 bg-primary mb-8" />
+
+              {/* Perks row */}
+              <div className="flex flex-wrap gap-3 mb-8">
+                {["Free 30-min call", "No commitment", "Limited slots"].map((perk) => (
+                  <span
+                    key={perk}
+                    className="text-xs font-semibold px-4 py-2 rounded-full"
+                    style={{ background: "linear-gradient(135deg, hsl(42 87% 96%), hsl(38 72% 93%))", border: "1px solid rgba(184,151,92,0.35)", color: "#7a5c2e" }}
+                  >
+                    ✓ {perk}
+                  </span>
+                ))}
+              </div>
+
+              {!submitted ? (
+                <form onSubmit={handleDiscoverySubmit} className="space-y-4">
+                  <div>
+                    <label className="block text-foreground/60 text-xs tracking-[0.2em] uppercase mb-2 font-semibold">
+                      Your Email Address
+                    </label>
+                    <input
+                      type="email"
+                      required
+                      value={email}
+                      onChange={e => setEmail(e.target.value)}
+                      placeholder="you@example.com"
+                      className="w-full rounded-xl px-4 py-3.5 text-base outline-none transition-all duration-200 bg-white text-foreground placeholder-foreground/30 shadow-sm"
+                      style={{ border: "1.5px solid rgba(184,151,92,0.3)" }}
+                      onFocus={e => { e.currentTarget.style.border = "1.5px solid #B8975C"; e.currentTarget.style.boxShadow = "0 0 0 3px rgba(184,151,92,0.15)"; }}
+                      onBlur={e => { e.currentTarget.style.border = "1.5px solid rgba(184,151,92,0.3)"; e.currentTarget.style.boxShadow = "none"; }}
+                    />
+                  </div>
                   <button
                     type="submit"
-                    className="w-full rounded-xl py-4 text-base font-bold tracking-wide transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+                    className="w-full rounded-xl py-4 text-base font-bold tracking-wide transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-lg shadow-primary/20"
                     style={{
                       background: "linear-gradient(90deg, #B8975C 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #B8985D 100%)",
                       color: "#1a1208",
@@ -619,36 +661,32 @@ export default function Home() {
                   >
                     Start Booking
                   </button>
-                  <p className="text-white/35 text-xs mt-4 text-center">
-                    No commitment · Free 30-minute call · Limited slots
+                  <div className="pt-2">
+                    <Link href="/join-2027">
+                      <Button variant="link" className="text-muted-foreground hover:text-primary text-sm px-0" data-testid="btn-join-2027-footer">
+                        Or view full booking details →
+                      </Button>
+                    </Link>
+                  </div>
+                </form>
+              ) : (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="rounded-2xl px-8 py-8 shadow-lg"
+                  style={{ background: "linear-gradient(135deg, hsl(42 87% 96%), hsl(38 72% 93%))", border: "1px solid rgba(184,151,92,0.4)" }}
+                >
+                  <div className="text-primary text-3xl mb-3">✦</div>
+                  <h3 className="text-foreground text-xl font-bold mb-2">You're on the list.</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Thank you — a member of the Star Magic team will be in touch shortly to schedule your discovery call.
                   </p>
-                </div>
-              </motion.form>
-            ) : (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-                className="rounded-3xl px-8 py-10 mx-auto max-w-md shadow-2xl"
-                style={{ background: "rgba(255,255,255,0.07)", backdropFilter: "blur(24px)", border: "1px solid rgba(243,214,150,0.35)" }}
-              >
-                <div className="text-primary text-4xl mb-4">✦</div>
-                <h3 className="text-white text-2xl font-bold mb-2">You're on the list.</h3>
-                <p className="text-white/60 text-sm leading-relaxed">
-                  Thank you — a member of the Star Magic team will be in touch shortly to schedule your discovery call.
-                </p>
-              </motion.div>
-            )}
+                </motion.div>
+              )}
+            </motion.div>
 
-            {/* Or link to full join page */}
-            <div className="mt-8">
-              <Link href="/join-2027">
-                <Button variant="link" className="text-white/50 hover:text-white text-sm uppercase tracking-widest" data-testid="btn-join-2027-footer">
-                  Or view full booking details →
-                </Button>
-              </Link>
-            </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>
