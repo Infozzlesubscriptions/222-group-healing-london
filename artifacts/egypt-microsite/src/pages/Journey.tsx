@@ -6,6 +6,7 @@ import luxorNight from "@/assets/luxor-night.png";
 import abuSimbel from "@/assets/abu-simbel.png";
 import nileReflection from "@/assets/nile-reflection.png";
 import sphinxImg from "@/assets/sphinx.png";
+import sphinxSunsetImg from "@/assets/sphinx-sunset.png";
 import ancientCodes from "@/assets/ancient-codes.png";
 import sacredLight from "@/assets/sacred-light.png";
 import spiritualActivation from "@/assets/spiritual-activation.png";
@@ -69,17 +70,18 @@ function LeftPageContent({ day }: { day: typeof itinerary[0] }) {
   return (
     <div className="w-full h-full relative overflow-hidden select-none">
       <img
-        src={day.image}
-        alt={day.title}
-        className="absolute inset-0 w-full h-full object-cover"
+        src={sphinxSunsetImg}
+        alt="The Great Sphinx of Giza at sunset"
+        className="absolute inset-0 w-full h-full object-cover object-center"
         draggable={false}
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-background/10 via-transparent to-background/50" />
-      <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
-      <div className="absolute bottom-6 left-6 z-10">
-        <div className="inline-flex items-center gap-2 bg-primary/90 backdrop-blur-sm px-4 py-1.5 rounded-full">
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-black/30" />
+      <div className="absolute bottom-6 left-6 right-6 z-10">
+        <div className="inline-flex items-center gap-2 bg-primary/90 backdrop-blur-sm px-4 py-1.5 rounded-full mb-3">
           <span className="text-primary-foreground text-xs font-bold tracking-[0.2em] uppercase">{day.day}</span>
         </div>
+        <p className="text-white/80 text-xs italic leading-relaxed line-clamp-2">{day.quote}</p>
       </div>
     </div>
   );
