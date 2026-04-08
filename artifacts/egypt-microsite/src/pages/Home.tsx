@@ -1,4 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import pyramidsImage from "@/assets/pyramids-sunset.png";
@@ -20,6 +21,15 @@ export default function Home() {
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 1000], [0, 300]);
   const opacity = useTransform(scrollY, [0, 500], [1, 0]);
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  function handleDiscoverySubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (email.trim()) {
+      setSubmitted(true);
+    }
+  }
 
   const highlights = [
     { img: nileFeluccaImg, title: "15 Days Across Sacred Egypt", desc: "A curated path through ancient power centers." },
@@ -535,27 +545,109 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-      {/* Final CTA */}
-      <section className="py-32 px-4 relative overflow-hidden bg-secondary">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 mix-blend-overlay"></div>
-        <div className="max-w-3xl mx-auto text-center relative z-10">
+      {/* Final CTA — Discovery Call */}
+      <section className="relative py-0 overflow-hidden">
+        {/* Full-bleed background photo */}
+        <div className="absolute inset-0">
+          <img src={groupPyramidsImage} alt="Group at Pyramids" className="w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-black/65" />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, hsl(var(--background)) 0%, transparent 12%, transparent 88%, hsl(var(--background)) 100%)" }} />
+        </div>
+
+        <div className="relative z-10 max-w-2xl mx-auto px-4 py-28 md:py-36 text-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.9 }}
           >
-            <h2 className="text-4xl md:text-6xl font-sans text-foreground mb-6">
-              Your journey might begin where theirs did.
+            {/* Ankh glyph */}
+            <div className="text-primary text-4xl mb-6">☥</div>
+
+            {/* Eyebrow */}
+            <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-5">
+              Ready to Take the Next Step?
+            </span>
+
+            {/* Headline */}
+            <h2 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-5">
+              Book Your Egypt<br />Discovery Call
             </h2>
-            <p className="text-lg text-muted-foreground mb-10">
-              The next gateway opens in March 2027. Will you answer the call?
+
+            {/* Sub-copy */}
+            <p className="text-white/70 text-lg leading-relaxed mb-10 max-w-lg mx-auto">
+              Connect one-to-one with a specialist to receive personalised clarity and guidance for your Egypt 2027 journey.
             </p>
-            <Link href="/join-2027">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-xl px-12 py-2 shadow-2xl shadow-primary/20" data-testid="btn-join-2027-footer">
-                Join Egypt 2027
-              </Button>
-            </Link>
+
+            {/* Divider */}
+            <div className="h-px w-20 mx-auto mb-10" style={{ background: "linear-gradient(90deg, transparent, #F3D696, transparent)" }} />
+
+            {/* Form card */}
+            {!submitted ? (
+              <motion.form
+                onSubmit={handleDiscoverySubmit}
+                className="rounded-3xl overflow-hidden shadow-2xl mx-auto max-w-md"
+                style={{ background: "rgba(255,255,255,0.07)", backdropFilter: "blur(24px)", border: "1px solid rgba(243,214,150,0.25)" }}
+                initial={{ opacity: 0, scale: 0.97 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.2 }}
+              >
+                <div className="px-8 pt-8 pb-2">
+                  <label className="block text-left text-white/70 text-xs tracking-[0.2em] uppercase mb-2 font-semibold">
+                    Your Email Address
+                  </label>
+                  <input
+                    type="email"
+                    required
+                    value={email}
+                    onChange={e => setEmail(e.target.value)}
+                    placeholder="you@example.com"
+                    className="w-full rounded-xl px-4 py-3 text-base outline-none transition-all duration-200 bg-white/10 text-white placeholder-white/35 border border-white/20 focus:border-primary focus:ring-2 focus:ring-primary/30"
+                  />
+                </div>
+                <div className="px-8 pb-8 pt-5">
+                  <button
+                    type="submit"
+                    className="w-full rounded-xl py-4 text-base font-bold tracking-wide transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+                    style={{
+                      background: "linear-gradient(90deg, #B8975C 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #B8985D 100%)",
+                      color: "#1a1208",
+                      border: "none",
+                    }}
+                    data-testid="btn-start-booking"
+                  >
+                    Start Booking
+                  </button>
+                  <p className="text-white/35 text-xs mt-4 text-center">
+                    No commitment · Free 30-minute call · Limited slots
+                  </p>
+                </div>
+              </motion.form>
+            ) : (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="rounded-3xl px-8 py-10 mx-auto max-w-md shadow-2xl"
+                style={{ background: "rgba(255,255,255,0.07)", backdropFilter: "blur(24px)", border: "1px solid rgba(243,214,150,0.35)" }}
+              >
+                <div className="text-primary text-4xl mb-4">✦</div>
+                <h3 className="text-white text-2xl font-bold mb-2">You're on the list.</h3>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  Thank you — a member of the Star Magic team will be in touch shortly to schedule your discovery call.
+                </p>
+              </motion.div>
+            )}
+
+            {/* Or link to full join page */}
+            <div className="mt-8">
+              <Link href="/join-2027">
+                <Button variant="link" className="text-white/50 hover:text-white text-sm uppercase tracking-widest" data-testid="btn-join-2027-footer">
+                  Or view full booking details →
+                </Button>
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
