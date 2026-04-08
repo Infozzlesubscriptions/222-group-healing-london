@@ -13,10 +13,17 @@ const navLinks = [
   { href: "/faq", label: "FAQ" },
 ];
 
+// Pages where the hero background is dark — nav can start transparent with white text
+const DARK_HERO_PAGES = ["/", "/join-2027"];
+
 export function Navigation() {
   const [location] = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
+  const hasDarkHero = DARK_HERO_PAGES.includes(location);
+  // On light pages always show the opaque/solid state regardless of scroll
+  const showSolid = isScrolled || !hasDarkHero;
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -31,7 +38,7 @@ export function Navigation() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b ${
-        isScrolled
+        showSolid
           ? "bg-background/95 backdrop-blur-md border-border/30 py-2 shadow-sm"
           : "bg-transparent border-transparent py-4"
       }`}
@@ -44,8 +51,8 @@ export function Navigation() {
             <img
               src={logoSrc}
               alt="Star Magic"
-              className={`w-auto transition-all duration-500 ${isScrolled ? "h-10" : "h-14"}`}
-              style={{ filter: isScrolled ? "brightness(0)" : "brightness(0) invert(1)" }}
+              className={`w-auto transition-all duration-500 ${showSolid ? "h-10" : "h-14"}`}
+              style={{ filter: showSolid ? "brightness(0)" : "brightness(0) invert(1)" }}
             />
           </Link>
 
@@ -60,7 +67,7 @@ export function Navigation() {
                   className={`relative text-sm font-medium tracking-wide transition-colors duration-300 group ${
                     active
                       ? "text-primary"
-                      : isScrolled
+                      : showSolid
                       ? "text-foreground/70 hover:text-foreground"
                       : "text-white/80 hover:text-white"
                   }`}
@@ -97,7 +104,7 @@ export function Navigation() {
             {/* Mobile hamburger */}
             <button
               className={`lg:hidden p-2 rounded-lg transition-colors duration-300 ${
-                isScrolled ? "text-foreground hover:bg-secondary" : "text-white hover:bg-white/10"
+                showSolid ? "text-foreground hover:bg-secondary" : "text-white hover:bg-white/10"
               }`}
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
