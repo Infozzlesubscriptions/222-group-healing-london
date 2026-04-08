@@ -48,7 +48,7 @@ export default function Home() {
           style={{ y: y1, opacity }}
         >
           <div className="absolute inset-0 bg-black/55 z-10" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-background z-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black z-10" />
           <img 
             src={groupPyramidsImage} 
             alt="The tribe at the Pyramids of Giza" 
