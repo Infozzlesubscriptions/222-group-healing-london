@@ -442,6 +442,101 @@ export default function Home() {
             </motion.div>
           </div>
 
+          {/* ─── Your Expert Guides ─── */}
+          <motion.div
+            className="mb-20"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="text-center mb-10">
+              <span className="text-primary tracking-[0.3em] text-xs font-bold uppercase block mb-3">In Expert Hands</span>
+              <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Your Expert Guides</h3>
+              <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                This journey is led with both spiritual depth and historical mastery — combining ancient wisdom with world-class Egyptological expertise.
+              </p>
+              <div className="h-px w-16 bg-primary mx-auto mt-6" />
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+              {/* Jerry Sargeant */}
+              <motion.div
+                className="relative rounded-3xl overflow-hidden shadow-xl group"
+                style={{ border: "1px solid rgba(184,151,92,0.35)" }}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+              >
+                <img
+                  src={jerryTempleImg}
+                  alt="Jerry Sargeant"
+                  className="w-full h-72 object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-7">
+                  <span
+                    className="inline-block text-xs font-bold tracking-[0.25em] uppercase px-3 py-1 rounded-full mb-3"
+                    style={{ background: "linear-gradient(90deg, #B8975C, #F3D696)", color: "#1a1208" }}
+                  >
+                    Spiritual Guide & Founder
+                  </span>
+                  <h4 className="text-white text-2xl font-bold mb-2">Jerry Sargeant</h4>
+                  <p className="text-white/70 text-sm leading-relaxed">
+                    Star Magic founder and world-renowned energy healer — present for every single day of the pilgrimage, leading activations, meditations, and daily Qi-Gong.
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Expert Egyptologist */}
+              <motion.div
+                className="relative rounded-3xl overflow-hidden shadow-xl group"
+                style={{ border: "1px solid rgba(184,151,92,0.35)" }}
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.1 }}
+              >
+                <img
+                  src={karnakImg}
+                  alt="Expert Egyptologist"
+                  className="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-7">
+                  <span
+                    className="inline-block text-xs font-bold tracking-[0.25em] uppercase px-3 py-1 rounded-full mb-3"
+                    style={{ background: "linear-gradient(90deg, #B8975C, #F3D696)", color: "#1a1208" }}
+                  >
+                    Expert Egyptologist
+                  </span>
+                  <h4 className="text-white text-2xl font-bold mb-2">Accredited Egypt Scholar</h4>
+                  <p className="text-white/70 text-sm leading-relaxed">
+                    An experienced, accredited Egyptologist accompanies every site visit — unveiling the hidden history, sacred symbolism, and ancient knowledge encoded in every temple and tomb.
+                  </p>
+                </div>
+              </motion.div>
+
+            </div>
+
+            {/* Combined promise banner */}
+            <motion.div
+              className="mt-6 rounded-2xl px-8 py-5 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left"
+              style={{ background: "linear-gradient(135deg, hsl(42 87% 96%), hsl(38 72% 92%))", border: "1px solid rgba(184,151,92,0.4)" }}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <div className="text-2xl shrink-0">𓂀</div>
+              <p className="text-foreground/80 text-sm leading-relaxed">
+                <span className="font-bold text-foreground">Spiritual depth meets scholarly expertise.</span> You will not just visit these temples — you will understand them, feel them, and be changed by them.
+              </p>
+            </motion.div>
+          </motion.div>
+
           {/* ─── Accommodation ─── */}
           <motion.div
             className="text-center mb-12"
