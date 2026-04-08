@@ -59,12 +59,12 @@ export default function Home() {
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Link href="/join-2027" className="w-full sm:w-auto">
-                <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-8 py-2 tracking-wide" data-testid="btn-book-spot">
+                <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg px-8 py-2 tracking-wide cursor-pointer" data-testid="btn-book-spot">
                   Book Your Spot
                 </Button>
               </Link>
               <Link href="/join-2027" className="w-full sm:w-auto">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto border-primary text-primary hover:bg-primary/10 font-semibold text-lg px-8 py-2 tracking-wide" data-testid="btn-join-2027-hero">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto border-primary text-primary hover:bg-primary/10 font-semibold text-lg px-8 py-2 tracking-wide cursor-pointer" data-testid="btn-join-2027-hero">
                   Book Discovery Call
                 </Button>
               </Link>
