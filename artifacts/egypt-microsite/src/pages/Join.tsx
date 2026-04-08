@@ -15,7 +15,7 @@ export default function Join() {
           className="absolute inset-0 z-0"
           style={{ y: y1 }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background z-10" />
+          <div className="absolute inset-0 z-10" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.45) 50%, hsl(var(--background)) 100%)" }} />
           <img 
             src={pyramidsSunset} 
             alt="Pyramids" 
@@ -32,7 +32,7 @@ export default function Join() {
             <span className="text-primary text-xl md:text-2xl font-sans tracking-[0.3em] mb-4 block uppercase">
               The Next Gateway
             </span>
-            <h1 className="text-5xl md:text-7xl font-sans text-foreground font-bold mb-6 drop-shadow-2xl">
+            <h1 className="text-5xl md:text-7xl font-sans text-white font-bold mb-6 drop-shadow-2xl">
               Egypt Awakening Journey<br />
               <span className="text-primary italic font-light">March 2027</span>
             </h1>
