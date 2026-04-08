@@ -513,9 +513,16 @@ export default function Home() {
               </div>
             </div>
             <Link href="/join-2027" className="shrink-0">
-              <Button className="bg-primary text-primary-foreground font-semibold px-6 whitespace-nowrap">
+              <button
+                className="text-sm font-semibold px-6 py-2.5 rounded-lg tracking-wide whitespace-nowrap transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97] cursor-pointer shadow-md shadow-primary/20"
+                style={{
+                  background: "linear-gradient(90deg, #B8975C 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #B8985D 100%)",
+                  color: "#1a1208",
+                  border: "none",
+                }}
+              >
                 Enquire About Private Room
-              </Button>
+              </button>
             </Link>
           </motion.div>
 
