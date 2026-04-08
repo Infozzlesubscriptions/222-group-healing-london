@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import pyramidsImage from "@/assets/pyramids-sunset.png";
 import groupPyramidsImage from "@/assets/group-pyramids.png";
+import cosmicPyramidImg from "@/assets/cosmic-pyramid.png";
 import nileImg from "@/assets/nile-reflection.png";
 import nileFeluccaImg from "@/assets/nile-felucca-sunset.png";
 import sphinxImg from "@/assets/sphinx.png";
@@ -570,8 +571,8 @@ export default function Home() {
                 style={{ border: "1px solid rgba(243,214,150,0.4)" }}
               >
                 <img
-                  src={groupPyramidsImage}
-                  alt="Star Magic group at the Pyramids"
+                  src={cosmicPyramidImg}
+                  alt="Cosmic pyramid activation"
                   className="w-full h-full object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
