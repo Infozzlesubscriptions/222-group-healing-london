@@ -175,7 +175,7 @@ export default function Home() {
               Watch the Journey Unfold
             </h2>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto font-light">
-              A glimpse into the sacred sites, the tribe, and the transformation that awaits you in Egypt 2027.
+              This tour is intentionally designed to be private, precise, and energetically held.
             </p>
             <div className="h-px w-20 bg-primary mx-auto mt-8" />
           </motion.div>
