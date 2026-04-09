@@ -496,7 +496,11 @@ export default function Home() {
               <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                 This journey is led with both spiritual depth and historical mastery — combining ancient wisdom with world-class Egyptological expertise.
               </p>
-              <div className="h-px w-16 bg-primary mx-auto mt-6" />
+              <div className="h-px w-16 bg-primary mx-auto mt-6 mb-6" />
+              <p className="text-foreground/70 italic text-lg max-w-xl mx-auto leading-relaxed">
+                If your heart is responding, even quietly, trust it.<br className="hidden md:block" />
+                <span className="text-primary font-semibold not-italic">Those impulses are coordinates.</span>
+              </p>
             </div>
 
             {/* Jerry big left + 2×2 team grid right */}
