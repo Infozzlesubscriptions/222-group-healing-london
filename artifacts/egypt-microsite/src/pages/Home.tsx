@@ -21,6 +21,7 @@ import karnakImg from "@/assets/karnak-columns.png";
 import luxorNightImg from "@/assets/luxor-night.png";
 import abuSimbelImg from "@/assets/abu-simbel.png";
 import nicoleBellImg from "@/assets/nicole-bell.png";
+import joshSargeantImg from "@/assets/josh-sargeant.png";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -534,7 +535,7 @@ export default function Home() {
                     desc: "Holds sacred space for healing and group activations.",
                   },
                   {
-                    img: activationImg,
+                    img: joshSargeantImg,
                     role: "Local Expert",
                     name: "Josh Sargeant",
                     desc: "Opens doors to sacred sites and hidden ceremonial spaces.",
