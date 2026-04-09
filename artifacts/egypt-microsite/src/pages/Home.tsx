@@ -22,6 +22,7 @@ import luxorNightImg from "@/assets/luxor-night.png";
 import abuSimbelImg from "@/assets/abu-simbel.png";
 import nicoleBellImg from "@/assets/nicole-bell.png";
 import joshSargeantImg from "@/assets/josh-sargeant.png";
+import tylerBellImg from "@/assets/tyler-bell.png";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -543,10 +544,11 @@ export default function Home() {
                     objPos: "top",
                   },
                   {
-                    img: groupPyramidsImage,
+                    img: tylerBellImg,
                     role: "Sacred Ceremony Lead",
                     name: "Tyler Bell",
                     desc: "Orchestrates ceremony and collective ritual at each sacred site.",
+                    objPos: "top",
                   },
                 ].map((person, i) => (
                   <motion.div
