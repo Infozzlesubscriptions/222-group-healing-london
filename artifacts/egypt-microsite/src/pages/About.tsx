@@ -66,35 +66,71 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className="py-24 max-w-4xl mx-auto px-4 text-center">
+      <section className="py-24 max-w-5xl mx-auto px-4">
+        {/* Who It's For — hero treatment */}
         <motion.div
-           initial={{ opacity: 0, y: 30 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           viewport={{ once: true }}
-           className="bg-card border border-border p-12 relative overflow-hidden"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-10"
         >
-          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
-          
-          <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-sans text-primary mb-6">Who It's For</h3>
-              <ul className="space-y-3 text-left">
-                <li className="flex items-center gap-2"><span className="text-primary text-xs">✦</span> <span className="text-foreground">Spiritual Seekers & Healers</span></li>
-                <li className="flex items-center gap-2"><span className="text-primary text-xs">✦</span> <span className="text-foreground">Conscious Leaders</span></li>
-                <li className="flex items-center gap-2"><span className="text-primary text-xs">✦</span> <span className="text-foreground">Those experiencing an awakening</span></li>
-                <li className="flex items-center gap-2"><span className="text-primary text-xs">✦</span> <span className="text-foreground">Individuals ready for deep shadow work</span></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-sans text-destructive mb-6">Who It's NOT For</h3>
-              <ul className="space-y-3 text-left">
-                <li className="flex items-center gap-2"><span className="text-destructive text-xs">✕</span> <span className="text-foreground/70">Those seeking luxury tourism</span></li>
-                <li className="flex items-center gap-2"><span className="text-destructive text-xs">✕</span> <span className="text-foreground/70">Those looking for a relaxing vacation</span></li>
-                <li className="flex items-center gap-2"><span className="text-destructive text-xs">✕</span> <span className="text-foreground/70">Individuals unwilling to process emotion</span></li>
-                <li className="flex items-center gap-2"><span className="text-destructive text-xs">✕</span> <span className="text-foreground/70">Those attached to rigid religious dogma</span></li>
-              </ul>
-            </div>
+          <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-3">This Journey Is Designed For</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-2">Who It's For</h2>
+          <div className="h-px w-20 bg-primary mx-auto mt-4" />
+        </motion.div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-16">
+          {[
+            { icon: "✦", title: "Spiritual Seekers & Healers", desc: "Those called to deepen their connection with ancient energy and sacred wisdom." },
+            { icon: "✦", title: "Conscious Leaders", desc: "Visionaries ready to activate their highest potential and lead from the heart." },
+            { icon: "✦", title: "Those Experiencing an Awakening", desc: "Souls at a pivotal turning point, sensing there is far more to life than the ordinary." },
+            { icon: "✦", title: "Ready for Deep Shadow Work", desc: "Courageous individuals willing to dissolve what no longer serves and be reborn." },
+          ].map((item, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+              className="relative rounded-2xl p-7 text-left overflow-hidden"
+              style={{
+                background: "linear-gradient(135deg, hsl(42 87% 97%), hsl(38 72% 93%))",
+                border: "1px solid rgba(184,151,92,0.3)",
+              }}
+            >
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl pointer-events-none" />
+              <div
+                className="w-10 h-10 rounded-full flex items-center justify-center text-base mb-4"
+                style={{ background: "linear-gradient(135deg, #B8975C, #F3D696)", color: "#1a1208" }}
+              >
+                {item.icon}
+              </div>
+              <h4 className="text-foreground font-bold text-lg mb-2 leading-snug">{item.title}</h4>
+              <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Who It's NOT For — small, muted */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="rounded-2xl border border-border/50 px-8 py-6 bg-card"
+        >
+          <p className="text-foreground/40 text-[10px] tracking-[0.3em] uppercase font-semibold mb-4">This may not be the right fit if…</p>
+          <div className="flex flex-wrap gap-x-8 gap-y-2">
+            {[
+              "You're seeking luxury tourism",
+              "You want a relaxing holiday",
+              "You're unwilling to process emotion",
+              "You're attached to rigid religious dogma",
+            ].map((item, i) => (
+              <span key={i} className="flex items-center gap-1.5 text-foreground/40 text-xs">
+                <span className="text-[10px]">✕</span> {item}
+              </span>
+            ))}
           </div>
         </motion.div>
       </section>
