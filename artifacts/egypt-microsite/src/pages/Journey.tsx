@@ -698,7 +698,7 @@ export default function Journey() {
                 </Button>
               </Link>
               <Link href="/join-2027">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 font-semibold text-lg px-10 py-2">
+                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 font-semibold text-lg px-10 py-2">
                   Book Discovery Call
                 </Button>
               </Link>
