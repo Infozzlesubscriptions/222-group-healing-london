@@ -533,12 +533,14 @@ export default function Home() {
                     role: "Energy Facilitator",
                     name: "Nicole Bell",
                     desc: "Holds sacred space for healing and group activations.",
+                    objPos: "center",
                   },
                   {
                     img: joshSargeantImg,
                     role: "Local Expert",
                     name: "Josh Sargeant",
                     desc: "Opens doors to sacred sites and hidden ceremonial spaces.",
+                    objPos: "top",
                   },
                   {
                     img: groupPyramidsImage,
@@ -561,7 +563,8 @@ export default function Home() {
                       <img
                         src={person.img}
                         alt={person.name}
-                        className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        style={{ objectPosition: (person as any).objPos ?? "center" }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                       {/* Role badge */}
