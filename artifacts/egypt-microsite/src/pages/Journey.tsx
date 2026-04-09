@@ -153,50 +153,6 @@ export default function Journey() {
           "Each day unfolded a new layer of awakening…"
         </p>
       </motion.div>
-      {/* ─── Guide Banner ─── */}
-      <motion.div
-        className="flex flex-col sm:flex-row items-stretch justify-center gap-4 mb-10 px-4 max-w-3xl mx-auto w-full"
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.4 }}
-      >
-        {[
-          {
-            icon: "✦",
-            role: "Spiritual Guide & Founder",
-            name: "Jerry Sargeant",
-            desc: "Present every single day — leading activations, meditations & Qi-Gong",
-          },
-          {
-            icon: "𓂀",
-            role: "Expert Egyptologist",
-            name: "Accredited Egypt Scholar",
-            desc: "Guiding every site visit with deep historical and symbolic expertise",
-          },
-        ].map((guide, i) => (
-          <div
-            key={i}
-            className="flex items-start gap-4 rounded-2xl px-6 py-5 flex-1"
-            style={{
-              background: "linear-gradient(135deg, hsl(42 87% 97%), hsl(38 72% 93%))",
-              border: "1px solid rgba(184,151,92,0.4)",
-            }}
-          >
-            <div
-              className="w-10 h-10 rounded-full flex items-center justify-center text-base shrink-0 mt-0.5 shadow-sm"
-              style={{ background: "linear-gradient(135deg, #B8975C, #F3D696, #B8985D)", color: "#1a1208" }}
-            >
-              {guide.icon}
-            </div>
-            <div>
-              <p className="text-xs font-bold tracking-[0.2em] uppercase mb-0.5" style={{ color: "#7a5c2e" }}>{guide.role}</p>
-              <p className="text-foreground font-bold text-base leading-tight mb-1">{guide.name}</p>
-              <p className="text-muted-foreground text-xs leading-snug">{guide.desc}</p>
-            </div>
-          </div>
-        ))}
-      </motion.div>
-
       {/* Book Container */}
       <div className="flex-1 flex flex-col items-center justify-center px-4 md:px-8">
         <div className="w-full max-w-6xl">
