@@ -23,6 +23,7 @@ import abuSimbelImg from "@/assets/abu-simbel.png";
 import nicoleBellImg from "@/assets/nicole-bell.png";
 import joshSargeantImg from "@/assets/josh-sargeant.png";
 import tylerBellImg from "@/assets/tyler-bell.png";
+import egyptDiningImg from "@/assets/egypt-dining.png";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -610,7 +611,7 @@ export default function Home() {
             {[
               { img: nileImg,       label: "On the Nile",        caption: "Morning Qi-Gong on the cruise deck" },
               { img: luxorNightImg, label: "Hotel in Cairo",     caption: "Luxurious 4★ & 5★ hotel stays throughout" },
-              { img: ceremonyImg,   label: "Dining in Style",    caption: "Delicious authentic Egyptian cuisine, served with ceremony" },
+              { img: egyptDiningImg, label: "Dining in Style",    caption: "Delicious authentic Egyptian cuisine, served with ceremony" },
             ].map((card, i) => (
               <motion.div
                 key={i}
