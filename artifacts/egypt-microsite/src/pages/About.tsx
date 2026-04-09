@@ -134,37 +134,6 @@ export default function About() {
           </div>
         </motion.div>
       </section>
-      {/* Map Section */}
-      <section className="py-24 bg-background">
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-sans text-foreground mb-4">The Route of Ascension</h2>
-            <div className="h-px w-20 bg-primary mx-auto"></div>
-          </div>
-          
-          <div className="relative pt-10 pb-20 px-4 md:px-0">
-            {/* The line */}
-            <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent -translate-y-1/2 hidden md:block"></div>
-            <div className="absolute top-0 bottom-0 left-1/2 w-1 bg-gradient-to-b from-transparent via-primary/50 to-transparent -translate-x-1/2 md:hidden"></div>
-            
-            <div className="flex flex-col md:flex-row justify-between items-center gap-12 relative z-10">
-              {['Cairo / Giza', 'Luxor / Karnak', 'Aswan', 'Abu Simbel'].map((stop, i) => (
-                <motion.div 
-                  key={stop}
-                  className="flex flex-col items-center bg-background p-4 rounded-full"
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.2 }}
-                >
-                  <div className="w-6 h-6 rounded-full bg-primary mb-4 shadow-[0_0_15px_rgba(201,162,39,0.6)]"></div>
-                  <h4 className="text-lg font-sans text-foreground font-bold whitespace-nowrap">{stop}</h4>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
