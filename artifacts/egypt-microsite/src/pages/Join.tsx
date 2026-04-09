@@ -97,7 +97,7 @@ export default function Join() {
                 </div>
 
                 <div className="flex flex-col gap-4">
-                  <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-xl py-2 shadow-xl shadow-primary/20" data-testid="btn-apply-now">
+                  <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-xl py-2 shadow-xl shadow-primary/20 font-semibold" data-testid="btn-apply-now">
                     Apply Now
                   </Button>
                   <Button size="lg" variant="outline" className="w-full border-primary text-primary hover:bg-primary/10 font-bold text-lg py-2" data-testid="btn-view-details">
