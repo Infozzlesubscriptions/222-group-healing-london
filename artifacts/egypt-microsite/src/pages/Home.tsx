@@ -485,68 +485,101 @@ export default function Home() {
               <div className="h-px w-16 bg-primary mx-auto mt-6" />
             </div>
 
-            {/* 4-card equal grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[
-                {
-                  img: jerryTempleImg,
-                  role: "Spiritual Guide & Founder",
-                  name: "Jerry Sargeant",
-                  desc: "Star Magic founder — present every single day leading activations, meditations & Qi-Gong.",
-                },
-                {
-                  img: abuSimbelImg,
-                  role: "Expert Egyptologist",
-                  name: "Accredited Egypt Scholar",
-                  desc: "Guides every site with deep historical and symbolic knowledge.",
-                },
-                {
-                  img: womanTempleImg,
-                  role: "Energy Facilitator",
-                  name: "Star Magic Healer",
-                  desc: "Holds sacred space for healing and group activations.",
-                },
-                {
-                  img: activationImg,
-                  role: "Local Expert",
-                  name: "Egyptian Experience Lead",
-                  desc: "Opens doors to sacred sites and hidden ceremonial spaces.",
-                },
-              ].map((person, i) => (
-                <motion.div
-                  key={i}
-                  className="group rounded-2xl overflow-hidden shadow-md flex flex-col"
-                  style={{ border: "1px solid rgba(184,151,92,0.3)" }}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.08 }}
-                >
-                  {/* Photo */}
-                  <div className="relative aspect-[3/4] overflow-hidden">
-                    <img
-                      src={person.img}
-                      alt={person.name}
-                      className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                    {/* Role badge */}
-                    <div className="absolute top-3 left-3">
-                      <span
-                        className="text-[9px] font-bold tracking-[0.18em] uppercase px-2 py-1 rounded-full"
-                        style={{ background: "linear-gradient(90deg, #B8975C, #F3D696)", color: "#1a1208" }}
-                      >
-                        {person.role}
-                      </span>
+            {/* Jerry big left + 2×2 team grid right */}
+            <div className="flex flex-col lg:flex-row gap-5" style={{ minHeight: "520px" }}>
+
+              {/* Jerry — featured tall card */}
+              <motion.div
+                className="relative rounded-3xl overflow-hidden shadow-2xl group lg:w-[42%] shrink-0"
+                style={{ border: "1px solid rgba(184,151,92,0.4)", minHeight: "420px" }}
+                initial={{ opacity: 0, x: -24 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+              >
+                <img
+                  src={jerryTempleImg}
+                  alt="Jerry Sargeant"
+                  className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-7">
+                  <span
+                    className="inline-block text-[10px] font-bold tracking-[0.22em] uppercase px-3 py-1 rounded-full mb-3"
+                    style={{ background: "linear-gradient(90deg, #B8975C, #F3D696)", color: "#1a1208" }}
+                  >
+                    ✦ Spiritual Guide & Founder
+                  </span>
+                  <h4 className="text-white text-2xl font-bold mb-2 leading-tight">Jerry Sargeant</h4>
+                  <p className="text-white/65 text-sm leading-relaxed">
+                    Star Magic founder and world-renowned energy healer — present every single day, leading activations, meditations, and Qi-Gong on the Nile.
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* 2×2 team cards */}
+              <div className="grid grid-cols-2 gap-4 flex-1">
+                {[
+                  {
+                    img: abuSimbelImg,
+                    role: "Expert Egyptologist",
+                    name: "Accredited Egypt Scholar",
+                    desc: "Guides every site with deep historical and symbolic knowledge.",
+                  },
+                  {
+                    img: womanTempleImg,
+                    role: "Energy Facilitator",
+                    name: "Star Magic Healer",
+                    desc: "Holds sacred space for healing and group activations.",
+                  },
+                  {
+                    img: activationImg,
+                    role: "Local Expert",
+                    name: "Egyptian Experience Lead",
+                    desc: "Opens doors to sacred sites and hidden ceremonial spaces.",
+                  },
+                  {
+                    img: groupPyramidsImage,
+                    role: "Sacred Ceremony Lead",
+                    name: "Group Initiation Guide",
+                    desc: "Orchestrates ceremony and collective ritual at each sacred site.",
+                  },
+                ].map((person, i) => (
+                  <motion.div
+                    key={i}
+                    className="group rounded-2xl overflow-hidden shadow-md flex flex-col"
+                    style={{ border: "1px solid rgba(184,151,92,0.25)" }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}
+                  >
+                    {/* Photo */}
+                    <div className="relative overflow-hidden flex-1" style={{ minHeight: "160px" }}>
+                      <img
+                        src={person.img}
+                        alt={person.name}
+                        className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                      {/* Role badge */}
+                      <div className="absolute top-2.5 left-2.5">
+                        <span
+                          className="text-[8px] font-bold tracking-[0.16em] uppercase px-2 py-0.5 rounded-full"
+                          style={{ background: "linear-gradient(90deg, #B8975C, #F3D696)", color: "#1a1208" }}
+                        >
+                          {person.role}
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                  {/* Text */}
-                  <div className="bg-card px-4 py-4 flex-1">
-                    <h4 className="text-foreground font-bold text-sm leading-tight mb-1">{person.name}</h4>
-                    <p className="text-muted-foreground text-xs leading-snug">{person.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
+                    {/* Text */}
+                    <div className="bg-card px-3.5 py-3 shrink-0">
+                      <h4 className="text-foreground font-bold text-xs leading-tight mb-0.5">{person.name}</h4>
+                      <p className="text-muted-foreground text-[11px] leading-snug">{person.desc}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </motion.div>
 
