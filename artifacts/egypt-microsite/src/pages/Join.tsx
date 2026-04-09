@@ -100,7 +100,7 @@ export default function Join() {
                   <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-xl py-2 shadow-xl shadow-primary/20 font-semibold" data-testid="btn-apply-now">
                     Apply Now
                   </Button>
-                  <Button size="lg" variant="outline" className="w-full border-primary text-primary hover:bg-primary/10 font-bold text-lg py-2" data-testid="btn-view-details">
+                  <Button size="lg" variant="outline" className="w-full border-primary text-primary hover:bg-primary/10 text-lg py-2 font-semibold" data-testid="btn-view-details">
                     View Full Details & Pricing
                   </Button>
                 </div>
