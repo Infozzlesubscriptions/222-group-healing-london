@@ -485,89 +485,68 @@ export default function Home() {
               <div className="h-px w-16 bg-primary mx-auto mt-6" />
             </div>
 
-            {/* Featured layout: Jerry big left, 3 smaller right */}
-            <div className="flex flex-col md:flex-row gap-4" style={{ minHeight: "480px" }}>
-
-              {/* Jerry — featured large card */}
-              <motion.div
-                className="relative rounded-3xl overflow-hidden shadow-2xl group md:flex-[2]"
-                style={{ border: "1px solid rgba(184,151,92,0.4)", minHeight: "480px" }}
-                initial={{ opacity: 0, x: -24 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7 }}
-              >
-                <img
-                  src={jerryTempleImg}
-                  alt="Jerry Sargeant"
-                  className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-8">
-                  <span
-                    className="inline-block text-xs font-bold tracking-[0.25em] uppercase px-3 py-1 rounded-full mb-4"
-                    style={{ background: "linear-gradient(90deg, #B8975C, #F3D696)", color: "#1a1208" }}
-                  >
-                    ✦ Spiritual Guide & Founder
-                  </span>
-                  <h4 className="text-white text-3xl font-bold mb-3 leading-tight">Jerry Sargeant</h4>
-                  <p className="text-white/70 text-sm leading-relaxed max-w-sm">
-                    Star Magic founder and world-renowned energy healer — present for every single day of the pilgrimage, leading activations, meditations, and daily Qi-Gong on the Nile.
-                  </p>
-                </div>
-              </motion.div>
-
-              {/* 3 smaller team cards */}
-              <div className="flex flex-col gap-4 md:flex-1">
-                {[
-                  {
-                    img: abuSimbelImg,
-                    role: "Expert Egyptologist",
-                    name: "Accredited Egypt Scholar",
-                    desc: "Guides every site with deep historical and symbolic knowledge.",
-                  },
-                  {
-                    img: womanTempleImg,
-                    role: "Energy Facilitator",
-                    name: "Star Magic Healer",
-                    desc: "Holds sacred space for healing and group activations.",
-                  },
-                  {
-                    img: activationImg,
-                    role: "Local Expert",
-                    name: "Egyptian Experience Lead",
-                    desc: "Opens doors to sacred sites and hidden ceremonial spaces.",
-                  },
-                ].map((person, i) => (
-                  <motion.div
-                    key={i}
-                    className="relative rounded-2xl overflow-hidden shadow-lg group flex-1"
-                    style={{ border: "1px solid rgba(184,151,92,0.3)", minHeight: "140px" }}
-                    initial={{ opacity: 0, x: 24 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.1 + i * 0.1 }}
-                  >
+            {/* 4-card equal grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                {
+                  img: jerryTempleImg,
+                  role: "Spiritual Guide & Founder",
+                  name: "Jerry Sargeant",
+                  desc: "Star Magic founder — present every single day leading activations, meditations & Qi-Gong.",
+                },
+                {
+                  img: abuSimbelImg,
+                  role: "Expert Egyptologist",
+                  name: "Accredited Egypt Scholar",
+                  desc: "Guides every site with deep historical and symbolic knowledge.",
+                },
+                {
+                  img: womanTempleImg,
+                  role: "Energy Facilitator",
+                  name: "Star Magic Healer",
+                  desc: "Holds sacred space for healing and group activations.",
+                },
+                {
+                  img: activationImg,
+                  role: "Local Expert",
+                  name: "Egyptian Experience Lead",
+                  desc: "Opens doors to sacred sites and hidden ceremonial spaces.",
+                },
+              ].map((person, i) => (
+                <motion.div
+                  key={i}
+                  className="group rounded-2xl overflow-hidden shadow-md flex flex-col"
+                  style={{ border: "1px solid rgba(184,151,92,0.3)" }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.08 }}
+                >
+                  {/* Photo */}
+                  <div className="relative aspect-[3/4] overflow-hidden">
                     <img
                       src={person.img}
                       alt={person.name}
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/20" />
-                    <div className="absolute inset-0 flex flex-col justify-center px-5 py-4">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    {/* Role badge */}
+                    <div className="absolute top-3 left-3">
                       <span
-                        className="text-[10px] font-bold tracking-[0.2em] uppercase px-2.5 py-0.5 rounded-full mb-2 self-start"
+                        className="text-[9px] font-bold tracking-[0.18em] uppercase px-2 py-1 rounded-full"
                         style={{ background: "linear-gradient(90deg, #B8975C, #F3D696)", color: "#1a1208" }}
                       >
                         {person.role}
                       </span>
-                      <h4 className="text-white font-bold text-base leading-tight mb-1">{person.name}</h4>
-                      <p className="text-white/60 text-xs leading-snug">{person.desc}</p>
                     </div>
-                  </motion.div>
-                ))}
-              </div>
-
+                  </div>
+                  {/* Text */}
+                  <div className="bg-card px-4 py-4 flex-1">
+                    <h4 className="text-foreground font-bold text-sm leading-tight mb-1">{person.name}</h4>
+                    <p className="text-muted-foreground text-xs leading-snug">{person.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
 
