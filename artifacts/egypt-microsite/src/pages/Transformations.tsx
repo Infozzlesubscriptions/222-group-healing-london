@@ -133,9 +133,9 @@ function VideoCard({ video, index }: { video: typeof videoTestimonials[0]; index
 
 export default function Transformations() {
   return (
-    <div className="min-h-screen bg-background pt-24 pb-20">
+    <div className="min-h-screen bg-background pb-20">
       {/* Hero */}
-      <section className="relative py-36 md:py-48 overflow-hidden">
+      <section className="relative pt-0 pb-36 md:pb-48 min-h-[60vh] overflow-hidden">
         {/* Full-bleed background */}
         <div className="absolute inset-0">
           <img
@@ -150,7 +150,7 @@ export default function Transformations() {
           />
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 text-center pt-36 md:pt-44">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
