@@ -60,8 +60,8 @@ function VideoCard({ video, index }: { video: typeof videoTestimonials[0]; index
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.7, delay: index * 0.12 }}
-      className="flex flex-col rounded-2xl overflow-hidden shadow-2xl"
-      style={{ border: "1px solid rgba(243,214,150,0.18)", background: "#0d0b08" }}
+      className="flex flex-col rounded-2xl overflow-hidden shadow-md"
+      style={{ border: "1px solid rgba(184,151,92,0.2)", background: "white" }}
     >
       {/* Video / Thumbnail */}
       <div className="relative aspect-video bg-black overflow-hidden">
@@ -108,7 +108,7 @@ function VideoCard({ video, index }: { video: typeof videoTestimonials[0]; index
       </div>
 
       {/* Card footer */}
-      <div className="px-5 py-4 flex items-center justify-between" style={{ background: "#1a1510" }}>
+      <div className="px-5 py-4 flex items-center justify-between bg-card border-t border-border/40">
         <div className="flex items-center gap-3">
           <div
             className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold shrink-0"
@@ -117,8 +117,8 @@ function VideoCard({ video, index }: { video: typeof videoTestimonials[0]; index
             {video.name.charAt(0)}
           </div>
           <div>
-            <p className="text-white font-semibold text-sm leading-none mb-0.5">{video.name}</p>
-            <p className="text-white/40 text-xs tracking-wide">{video.loc}</p>
+            <p className="text-foreground font-semibold text-sm leading-none mb-0.5">{video.name}</p>
+            <p className="text-muted-foreground text-xs tracking-wide">{video.loc}</p>
           </div>
         </div>
         <div className="flex gap-0.5">
@@ -172,7 +172,7 @@ export default function Transformations() {
       </section>
 
       {/* ─── DOCUMENTARY VIDEOS ─── */}
-      <section className="py-20 px-4" style={{ background: "#0d0b08" }}>
+      <section className="py-20 px-4 bg-background">
         <div className="max-w-6xl mx-auto">
 
           {/* Section header */}
@@ -183,20 +183,14 @@ export default function Transformations() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span
-              className="tracking-[0.35em] text-xs font-bold uppercase block mb-3"
-              style={{ color: "#F3D696" }}
-            >
+            <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-3">
               Egypt 2026 — On Film
             </span>
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Documentary & Testimonials</h2>
-            <p className="text-white/50 max-w-xl mx-auto text-base font-light">
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">Documentary & Testimonials</h2>
+            <p className="text-muted-foreground max-w-xl mx-auto text-base font-light">
               Unscripted. Unfiltered. Witness the journey as it happened — from within the sacred sites themselves.
             </p>
-            <div
-              className="h-px w-20 mx-auto mt-6"
-              style={{ background: "linear-gradient(90deg, transparent, #F3D696, transparent)" }}
-            />
+            <div className="h-px w-20 bg-primary mx-auto mt-6" />
           </motion.div>
 
           {/* ── Featured Documentary ── */}
@@ -215,21 +209,21 @@ export default function Transformations() {
               >
                 ▶ Full Documentary
               </span>
-              <div className="flex-1 h-px" style={{ background: "rgba(243,214,150,0.15)" }} />
-              <span className="text-white/30 text-xs">Egypt 2026</span>
+              <div className="flex-1 h-px bg-border" />
+              <span className="text-muted-foreground text-xs">Egypt 2026</span>
             </div>
 
             {/* Video frame */}
             <div className="relative">
               <div
-                className="absolute -inset-1 rounded-3xl blur-2xl opacity-25 pointer-events-none"
+                className="absolute -inset-1 rounded-3xl blur-2xl opacity-20 pointer-events-none"
                 style={{ background: "linear-gradient(135deg, #B8975C, #F3D696, #B8985D)" }}
               />
               <div
-                className="relative rounded-2xl overflow-hidden"
+                className="relative rounded-2xl overflow-hidden shadow-lg"
                 style={{
                   aspectRatio: "16/9",
-                  border: "1px solid rgba(243,214,150,0.25)",
+                  border: "1px solid rgba(184,151,92,0.3)",
                 }}
               >
                 <iframe
@@ -244,11 +238,11 @@ export default function Transformations() {
 
             <div className="mt-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
-                <p className="text-white font-semibold text-base">The Cosmic Ascension Tour — Egypt 2026</p>
-                <p className="text-white/40 text-sm mt-0.5">A cinematic journey through 15 days of initiation with the tribe</p>
+                <p className="text-foreground font-semibold text-base">The Cosmic Ascension Tour — Egypt 2026</p>
+                <p className="text-muted-foreground text-sm mt-0.5">A cinematic journey through 15 days of initiation with the tribe</p>
               </div>
-              <div className="flex items-center gap-2 text-white/30 text-xs shrink-0">
-                <span>★★★★★</span>
+              <div className="flex items-center gap-2 text-muted-foreground text-xs shrink-0">
+                <span className="text-primary">★★★★★</span>
                 <span>200+ pilgrims</span>
               </div>
             </div>
@@ -265,11 +259,11 @@ export default function Transformations() {
             <div className="flex items-center gap-3 mb-8">
               <span
                 className="text-xs font-bold tracking-[0.25em] uppercase px-3 py-1.5 rounded-full"
-                style={{ background: "rgba(243,214,150,0.12)", color: "#F3D696", border: "1px solid rgba(243,214,150,0.25)" }}
+                style={{ background: "linear-gradient(135deg, hsl(42 87% 96%), hsl(38 72% 93%))", color: "#7a5c2e", border: "1px solid rgba(184,151,92,0.35)" }}
               >
                 ✦ Pilgrim Stories
               </span>
-              <div className="flex-1 h-px" style={{ background: "rgba(243,214,150,0.1)" }} />
+              <div className="flex-1 h-px bg-border" />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
