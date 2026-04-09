@@ -536,7 +536,7 @@ export default function Home() {
                   {
                     img: activationImg,
                     role: "Local Expert",
-                    name: "Egyptian Experience Lead",
+                    name: "Josh Sargeant",
                     desc: "Opens doors to sacred sites and hidden ceremonial spaces.",
                   },
                   {
