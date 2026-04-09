@@ -541,7 +541,7 @@ export default function Home() {
                   {
                     img: abuSimbelImg,
                     role: "Expert Egyptologist",
-                    name: "Accredited Egypt Scholar",
+                    name: "Hisham Basyouny",
                     desc: "Guides every site with deep historical and symbolic knowledge.",
                   },
                   {
