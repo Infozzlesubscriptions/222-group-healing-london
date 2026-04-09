@@ -529,7 +529,7 @@ export default function Home() {
                   {
                     img: womanTempleImg,
                     role: "Energy Facilitator",
-                    name: "Star Magic Healer",
+                    name: "Nicole Bell",
                     desc: "Holds sacred space for healing and group activations.",
                   },
                   {
