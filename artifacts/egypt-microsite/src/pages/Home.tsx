@@ -701,7 +701,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <div className="text-primary text-4xl mb-8">◈</div>
-            <blockquote className="text-2xl md:text-4xl text-foreground italic leading-relaxed mb-8" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            <blockquote className="md:text-4xl text-foreground italic mb-8 text-[30px]" style={{ fontFamily: "'Poppins', sans-serif" }}>
               "The pyramid meditation cracked something open in me I didn't know existed. This was not a trip. This was a resurrection."
             </blockquote>
             <p className="text-primary tracking-widest uppercase text-sm">— David K., USA</p>
