@@ -124,28 +124,30 @@ export default function Gallery() {
           ))}
         </div>
 
-        {/* Masonry Grid */}
-        <motion.div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6" layout>
+        {/* Instagram Grid */}
+        <motion.div className="grid grid-cols-3 gap-0.5 sm:gap-1" layout>
           {filteredImages.map((img) => (
             <motion.div
               key={img.id}
               layout
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.4 }}
-              className="relative overflow-hidden group cursor-pointer break-inside-avoid border border-border/30"
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.35 }}
+              className="relative aspect-square overflow-hidden group cursor-pointer"
               onClick={() => setSelectedImage(img.src)}
             >
-              <div className="absolute inset-0 bg-background/30 group-hover:bg-transparent transition-colors duration-500 z-10" />
               <img
                 src={img.src}
                 alt={img.alt}
-                className="w-full h-auto object-cover filter grayscale-[10%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 loading="lazy"
               />
-              <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-background via-background/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
-                <p className="text-primary font-sans italic">{img.alt}</p>
+              {/* Hover overlay */}
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
+                <p className="text-white text-xs font-semibold text-center px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 leading-snug drop-shadow">
+                  {img.alt}
+                </p>
               </div>
             </motion.div>
           ))}
