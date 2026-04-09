@@ -135,16 +135,35 @@ export default function Transformations() {
   return (
     <div className="min-h-screen bg-background pt-24 pb-20">
       {/* Hero */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="max-w-5xl mx-auto px-4 text-center">
+      <section className="relative py-36 md:py-48 overflow-hidden">
+        {/* Full-bleed background */}
+        <div className="absolute inset-0">
+          <img
+            src={pyramidNightImg}
+            alt="Pyramids at night"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/60" />
+          <div
+            className="absolute inset-0"
+            style={{ background: "linear-gradient(to bottom, transparent 40%, hsl(var(--background)) 100%)" }}
+          />
+        </div>
+
+        <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Real Experiences. Real Awakenings.</span>
-            <h1 className="md:text-7xl font-sans text-foreground mb-6 text-[56px] font-bold">Transformations</h1>
-            <p className="text-xl text-muted-foreground font-light max-w-2xl mx-auto">
+            <span
+              className="tracking-[0.35em] text-xs font-bold uppercase block mb-4"
+              style={{ color: "#F3D696" }}
+            >
+              Real Experiences. Real Awakenings.
+            </span>
+            <h1 className="md:text-7xl font-sans text-white mb-6 text-[56px] font-bold">Transformations</h1>
+            <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
               Hear directly from the pilgrims whose lives were changed forever by the Egypt journey.
             </p>
             <div className="h-px w-20 bg-primary mx-auto mt-8" />
