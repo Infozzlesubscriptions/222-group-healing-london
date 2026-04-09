@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import logoSrc from "@assets/live_site_logo_black_(1)_1775484379388.webp";
 import { useTheme } from "@/context/ThemeContext";
+import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -65,9 +66,9 @@ export function Footer() {
               The Egypt Ascension Journey 2027 opens in March. Answer the call and step into your next awakening.
             </p>
             <Link href="/join-2027">
-              <span className="inline-block bg-primary hover:bg-primary/80 text-primary-foreground text-sm font-bold px-6 py-2.5 rounded-full tracking-widest uppercase transition-colors cursor-pointer">
+              <Button size="lg" className="font-bold tracking-widest uppercase">
                 Join 2027
-              </span>
+              </Button>
             </Link>
           </div>
 
