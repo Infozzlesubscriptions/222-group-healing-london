@@ -545,7 +545,7 @@ export default function Home() {
                   {
                     img: groupPyramidsImage,
                     role: "Sacred Ceremony Lead",
-                    name: "Group Initiation Guide",
+                    name: "Tyler Bell",
                     desc: "Orchestrates ceremony and collective ritual at each sacred site.",
                   },
                 ].map((person, i) => (
