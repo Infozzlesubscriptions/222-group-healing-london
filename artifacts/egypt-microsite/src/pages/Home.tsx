@@ -108,13 +108,22 @@ export default function Home() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
           >
-            <div className="text-primary text-4xl mb-6">☥</div>
-            <h2 className="text-3xl md:text-5xl font-sans text-foreground mb-8 leading-snug">
-              This is not a holiday.<br className="hidden md:block"/>
-              <span className="text-primary italic">It is an initiation.</span>
+            <div className="text-primary text-4xl mb-8">☥</div>
+            <p className="text-lg md:text-xl text-muted-foreground italic leading-relaxed mb-6 max-w-2xl mx-auto">
+              If you're here, you already know this isn't about travel.
+            </p>
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-8 leading-snug max-w-3xl mx-auto">
+              This is about standing on land<br className="hidden md:block" /> your soul recognises.
             </h2>
-            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
-              A soul-stirring once-in-a-lifetime sacred pilgrimage to Egypt. We are calling the spiritually advanced, the energetically sensitive, the wayshowers — to step into the ancient temples before dawn and remember who you are.
+            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-6">
+              Walking corridors where humanity once remembered its divinity. And participating, consciously, in the reactivation of something ancient and alive.
+            </p>
+            <div className="h-px w-20 bg-border mx-auto my-8" />
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-xl mx-auto mb-4">
+              Egypt isn't calling everyone.
+            </p>
+            <p className="text-foreground font-semibold text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+              It's calling those ready to activate what is <span className="text-primary italic">ancient and unstoppable</span> within you.
             </p>
           </motion.div>
         </div>
