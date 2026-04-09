@@ -80,13 +80,8 @@ const scrollerImages = [
   karnakPrayer, nileGazing, dockMoment, nileInterview, productionScreen,
 ];
 
-const categories = ["All", "Temples", "Group Moments", "Ceremonies", "Nile Experience"];
-
 export default function Gallery() {
-  const [filter, setFilter] = useState("All");
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
-  const filteredImages = filter === "All" ? allImages : allImages.filter((img) => img.category === filter);
 
   return (
     <div className="min-h-screen bg-background pt-24 pb-0">
@@ -106,27 +101,9 @@ export default function Gallery() {
           </p>
         </motion.div>
 
-        {/* Filters */}
-        <div className="flex flex-wrap justify-center gap-4 mb-16">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setFilter(cat)}
-              className={`px-6 py-2 rounded-full font-sans tracking-widest text-sm uppercase transition-all duration-300 ${
-                filter === cat
-                  ? "bg-primary text-primary-foreground font-bold shadow-lg shadow-primary/20"
-                  : "bg-secondary text-secondary-foreground hover:bg-secondary/80 border border-border"
-              }`}
-              data-testid={`filter-${cat.toLowerCase().replace(" ", "-")}`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-
         {/* Instagram Grid */}
         <motion.div className="grid grid-cols-3 gap-0.5 sm:gap-1" layout>
-          {filteredImages.map((img) => (
+          {allImages.map((img) => (
             <motion.div
               key={img.id}
               layout
