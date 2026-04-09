@@ -285,15 +285,38 @@ export default function Home() {
 
                 {/* Pricing */}
                 <div className="px-8 py-8 text-center">
-                  <p className="text-white/50 text-sm mb-1 uppercase tracking-widest">Total Investment</p>
-                  <div className="flex items-end justify-center gap-2 mb-2">
-                    <span className="text-5xl md:text-6xl font-bold text-white">£8,444</span>
-                  </div>
+                  {/* Early Bird Banner */}
                   <div
-                    className="inline-block rounded-2xl px-6 py-4 mt-4 w-full"
+                    className="rounded-xl px-4 py-2 mb-5 inline-flex items-center gap-2"
+                    style={{ background: "linear-gradient(90deg, #B8975C, #F3D696, #B8985D)" }}
+                  >
+                    <span className="text-[#1a1208] text-xs font-bold tracking-[0.2em] uppercase">⚡ Early Bird — Valid Until 1st Aug 2026</span>
+                  </div>
+
+                  {/* Struck-through original */}
+                  <p className="text-white/40 text-sm mb-1 uppercase tracking-widest">Full Price</p>
+                  <div className="flex items-center justify-center gap-3 mb-4">
+                    <span className="text-3xl font-bold text-white/35 line-through decoration-white/50">£8,444</span>
+                  </div>
+
+                  {/* Early bird price */}
+                  <p className="text-white/60 text-xs mb-1 uppercase tracking-widest">Early Bird Price</p>
+                  <div className="flex items-end justify-center gap-2 mb-2">
+                    <span
+                      className="text-5xl md:text-6xl font-bold"
+                      style={{ background: "linear-gradient(90deg, #B8975C, #FFECBA, #F3D696, #B8985D)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}
+                    >
+                      £7,444
+                    </span>
+                  </div>
+                  <p className="text-white/40 text-xs mb-5">Save £1,000 · Offer ends 1st August 2026</p>
+
+                  {/* Deposit box */}
+                  <div
+                    className="inline-block rounded-2xl px-6 py-4 w-full"
                     style={{ background: "linear-gradient(135deg, rgba(184,151,92,0.25), rgba(243,214,150,0.12))", border: "1px solid rgba(243,214,150,0.3)" }}
                   >
-                    <p className="text-xs tracking-[0.2em] uppercase mb-1 text-[#000000]">Reserve Your Space For Only</p>
+                    <p className="text-xs tracking-[0.2em] uppercase mb-1 text-white/60">Reserve Your Space For Only</p>
                     <p className="text-4xl font-bold" style={{ background: "linear-gradient(90deg, #B8975C, #FFECBA, #F3D696, #B8985D)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
                       £1,500 Deposit
                     </p>
