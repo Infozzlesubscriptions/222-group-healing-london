@@ -20,6 +20,7 @@ import pyramidNightImg from "@/assets/pyramid-night.png";
 import karnakImg from "@/assets/karnak-columns.png";
 import luxorNightImg from "@/assets/luxor-night.png";
 import abuSimbelImg from "@/assets/abu-simbel.png";
+import hishamImg from "@/assets/hisham-basyouny.jpg";
 import nicoleBellImg from "@/assets/nicole-bell.png";
 import joshSargeantImg from "@/assets/josh-sargeant.png";
 import tylerBellImg from "@/assets/tyler-bell.png";
@@ -539,10 +540,11 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-4 flex-1">
                 {[
                   {
-                    img: abuSimbelImg,
+                    img: hishamImg,
                     role: "Expert Egyptologist",
                     name: "Hisham Basyouny",
                     desc: "Guides every site with deep historical and symbolic knowledge.",
+                    objPos: "top",
                   },
                   {
                     img: nicoleBellImg,
