@@ -20,6 +20,7 @@ import pyramidNightImg from "@/assets/pyramid-night.png";
 import karnakImg from "@/assets/karnak-columns.png";
 import luxorNightImg from "@/assets/luxor-night.png";
 import abuSimbelImg from "@/assets/abu-simbel.png";
+import nicoleBellImg from "@/assets/nicole-bell.png";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -527,7 +528,7 @@ export default function Home() {
                     desc: "Guides every site with deep historical and symbolic knowledge.",
                   },
                   {
-                    img: womanTempleImg,
+                    img: nicoleBellImg,
                     role: "Energy Facilitator",
                     name: "Nicole Bell",
                     desc: "Holds sacred space for healing and group activations.",
