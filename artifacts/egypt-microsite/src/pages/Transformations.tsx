@@ -146,7 +146,7 @@ export default function Transformations() {
           <div className="absolute inset-0 bg-black/60" />
           <div
             className="absolute inset-0"
-            style={{ background: "linear-gradient(to bottom, transparent 40%, hsl(var(--background)) 100%)" }}
+            style={{ background: "linear-gradient(to bottom, transparent 40%, #0d0b08 100%)" }}
           />
         </div>
 
