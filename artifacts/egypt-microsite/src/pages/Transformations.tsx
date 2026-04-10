@@ -10,7 +10,7 @@ import groupPyramidsImage from "@/assets/group-pyramids.png";
 import hatshepsutImg from "@/assets/hatshepsut-temple.png";
 import jerryTempleImg from "@/assets/jerry-temple.png";
 import womanTempleImg from "@/assets/woman-temple-prayer.png";
-import pyramidNightImg from "@/assets/pyramid-night.png";
+import transformationsBannerImg from "@/assets/image_1775822597040.png";
 
 const beforeAfter = [
   { before: "Seeking direction and deeply disconnected from intuition.", after: "Anchored in purpose, trusting inner guidance completely." },
@@ -141,8 +141,8 @@ export default function Transformations() {
         {/* Full-bleed background */}
         <div className="absolute inset-0 overflow-hidden">
           <img
-            src={pyramidNightImg}
-            alt="Pyramids at night"
+            src={transformationsBannerImg}
+            alt="Walking through the temples of Egypt"
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-black/60" />
