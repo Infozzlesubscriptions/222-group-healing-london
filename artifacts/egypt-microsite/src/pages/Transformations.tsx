@@ -344,7 +344,7 @@ export default function Transformations() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
             <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-3">More Stories</span>
-            <h2 className="text-3xl font-bold text-foreground">Written Testimonials</h2>
+            <h2 className="text-3xl font-bold text-foreground">Testimonials</h2>
             <div className="h-px w-16 bg-primary mx-auto mt-4" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
