@@ -326,21 +326,21 @@ export default function Home() {
                 style={{ background: "rgba(255,255,255,0.06)", backdropFilter: "blur(20px)", border: "1px solid rgba(243,214,150,0.25)" }}
               >
                 {/* Card header */}
-                <div className="px-8 pt-10 pb-8 text-center border-b border-white/10">
+                <div className="px-5 sm:px-8 pt-8 sm:pt-10 pb-6 sm:pb-8 text-center border-b border-white/10">
                   <div className="text-primary text-3xl mb-3">☥</div>
-                  <p className="text-white/60 text-xs tracking-[0.3em] uppercase mb-2">Cosmic Ascension Tour 2027</p>
+                  <p className="text-white/60 text-xs tracking-[0.2em] uppercase mb-2">Cosmic Ascension Tour 2027</p>
                   <h3 className="text-white text-2xl font-bold mb-1">Secure Your Spot Now</h3>
                   <p className="text-white/60 text-sm">Don't miss the adventure of a lifetime with Jerry and the Tribe.</p>
                 </div>
 
                 {/* Pricing */}
-                <div className="px-8 py-8 text-center">
+                <div className="px-5 sm:px-8 py-6 sm:py-8 text-center">
                   {/* Early Bird Banner */}
                   <div
-                    className="rounded-xl px-4 py-2 mb-5 inline-flex items-center gap-2"
+                    className="rounded-xl px-3 py-2 mb-5 inline-flex items-center justify-center gap-1.5 w-full sm:w-auto"
                     style={{ background: "linear-gradient(90deg, #B8975C, #F3D696, #B8985D)" }}
                   >
-                    <span className="text-[#1a1208] text-xs font-bold tracking-[0.2em] uppercase">⚡ Early Bird — Valid Until 1st Aug 2026</span>
+                    <span className="text-[#1a1208] text-[10px] sm:text-xs font-bold tracking-wide uppercase text-center leading-snug">⚡ Early Bird — Valid Until 1st Aug 2026</span>
                   </div>
 
                   {/* Struck-through original */}
@@ -363,11 +363,11 @@ export default function Home() {
 
                   {/* Deposit box */}
                   <div
-                    className="inline-block rounded-2xl px-6 py-4 w-full"
+                    className="block rounded-2xl px-4 sm:px-6 py-4 w-full"
                     style={{ background: "linear-gradient(135deg, rgba(184,151,92,0.25), rgba(243,214,150,0.12))", border: "1px solid rgba(243,214,150,0.3)" }}
                   >
-                    <p className="text-xs tracking-[0.2em] uppercase mb-1 text-white/60">Reserve Your Space For Only</p>
-                    <p className="text-4xl font-bold" style={{ background: "linear-gradient(90deg, #B8975C, #FFECBA, #F3D696, #B8985D)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+                    <p className="text-xs tracking-wide uppercase mb-1 text-white/60">Reserve Your Space For Only</p>
+                    <p className="text-3xl sm:text-4xl font-bold" style={{ background: "linear-gradient(90deg, #B8975C, #FFECBA, #F3D696, #B8985D)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
                       £1,500 Deposit
                     </p>
                     <p className="text-white/50 text-xs mt-2">Balance payable in flexible instalments</p>
@@ -375,7 +375,7 @@ export default function Home() {
                 </div>
 
                 {/* CTA buttons */}
-                <div className="px-8 pb-10 flex flex-col gap-3">
+                <div className="px-5 sm:px-8 pb-8 sm:pb-10 flex flex-col gap-3">
                   <Link href="/join-2027">
                     <Button size="lg" className="w-full bg-primary text-primary-foreground font-bold text-lg py-3" data-testid="btn-highlights-book">
                       Reserve Your Place
