@@ -156,9 +156,7 @@ export function Navigation() {
                       border: "none",
                     }}
                     data-testid="link-mobile-join-2027"
-                  >
-                    Join Egypt 2027
-                  </button>
+                  >Answer Egypt's Call</button>
                 </Link>
               </div>
             </div>
