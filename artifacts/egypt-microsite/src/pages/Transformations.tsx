@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import videoThumbnailImg from "@/assets/video-thumbnail.png";
 import spiritualActivation from "@/assets/spiritual-activation.png";
 import sacredLight from "@/assets/sacred-light.png";
 import groupPyramidsImage from "@/assets/group-pyramids.png";
@@ -132,6 +133,7 @@ function VideoCard({ video, index }: { video: typeof videoTestimonials[0]; index
 }
 
 export default function Transformations() {
+  const [docVideoPlaying, setDocVideoPlaying] = useState(false);
   return (
     <div className="min-h-screen bg-background pb-20">
       {/* Hero */}
@@ -225,13 +227,40 @@ export default function Transformations() {
                   border: "1px solid rgba(184,151,92,0.3)",
                 }}
               >
-                <iframe
-                  src="https://player.vimeo.com/video/1128847726?badge=0&autopause=0&quality_selector=1&player_id=0&app_id=58479"
-                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                  className="absolute inset-0 w-full h-full"
-                  title="Egypt 2026 Documentary"
-                  style={{ border: 0 }}
-                />
+                {docVideoPlaying ? (
+                  <iframe
+                    src="https://player.vimeo.com/video/1128847726?badge=0&autopause=0&autoplay=1&quality_selector=1&player_id=0&app_id=58479"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                    className="absolute inset-0 w-full h-full"
+                    title="Egypt 2026 Documentary"
+                    style={{ border: 0 }}
+                  />
+                ) : (
+                  <button
+                    className="absolute inset-0 w-full h-full group cursor-pointer"
+                    onClick={() => setDocVideoPlaying(true)}
+                    aria-label="Play documentary"
+                  >
+                    <img
+                      src={videoThumbnailImg}
+                      alt="Watch the Egypt documentary"
+                      className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <motion.div
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="w-20 h-20 rounded-full flex items-center justify-center shadow-2xl"
+                        style={{ background: "linear-gradient(135deg, #B8975C, #FFECBA, #F3D696, #B8985D)" }}
+                      >
+                        <svg className="w-8 h-8 ml-1" viewBox="0 0 24 24" fill="#1a1208">
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </motion.div>
+                    </div>
+                  </button>
+                )}
               </div>
             </div>
 
