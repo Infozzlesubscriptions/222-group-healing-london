@@ -58,22 +58,22 @@ type FlipState = {
 
 function RightPageContent({ day }: { day: typeof itinerary[0]; pageNum: number; total: number }) {
   return (
-    <div className="w-full h-full bg-card flex flex-col justify-center px-5 sm:px-8 md:px-12 py-8 sm:py-10 md:py-12 relative select-none">
-      <div className="absolute top-4 right-4 text-primary/20 text-2xl select-none">☥</div>
-      <div className="absolute top-4 left-6 text-muted-foreground/25 text-xs tracking-widest uppercase">
+    <div className="w-full h-full bg-card flex flex-col justify-center px-5 sm:px-8 md:px-12 py-5 sm:py-8 md:py-12 relative select-none overflow-hidden">
+      <div className="absolute top-3 right-3 text-primary/20 text-2xl select-none">☥</div>
+      <div className="absolute top-3 left-5 text-muted-foreground/25 text-xs tracking-widest uppercase">
         Star Magic Egypt
       </div>
-      <span className="text-primary tracking-[0.25em] text-xs font-bold mb-3 uppercase block mt-6">
+      <span className="text-primary tracking-[0.25em] text-xs font-bold mb-2 uppercase block mt-5">
         {day.day}
       </span>
-      <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 leading-snug">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-3 leading-snug">
         {day.title}
       </h2>
-      <div className="h-px w-10 bg-primary mb-6" />
-      <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-8">
+      <div className="h-px w-10 bg-primary mb-4 md:mb-6" />
+      <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-4 md:mb-8 line-clamp-4 md:line-clamp-none">
         {day.desc}
       </p>
-      <blockquote className="border-l-2 border-primary pl-5 text-foreground/70 italic text-sm md:text-base">
+      <blockquote className="hidden sm:block border-l-2 border-primary pl-5 text-foreground/70 italic text-sm md:text-base">
         {day.quote}
       </blockquote>
     </div>
@@ -209,7 +209,7 @@ export default function Journey() {
               </div>
 
               {/* Right page static — shows destination */}
-              <div className="w-full md:w-1/2 min-h-[280px] sm:min-h-[340px] md:min-h-[520px] relative z-10">
+              <div className="w-full md:w-1/2 min-h-[280px] sm:min-h-[340px] md:min-h-[520px] relative z-10 overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={`right-static-${current}`}
