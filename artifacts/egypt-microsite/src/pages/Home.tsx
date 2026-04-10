@@ -368,7 +368,7 @@ export default function Home() {
                     style={{ background: "linear-gradient(135deg, rgba(184,151,92,0.25), rgba(243,214,150,0.12))", border: "1px solid rgba(243,214,150,0.3)" }}
                   >
                     <p className="text-xs tracking-wide uppercase mb-1 text-white/60">Reserve Your Space For Only</p>
-                    <p className="text-3xl sm:text-4xl font-bold" style={{ background: "linear-gradient(90deg, #B8975C, #FFECBA, #F3D696, #B8985D)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+                    <p className="text-3xl sm:text-4xl font-bold text-[#ffffff]" style={{ background: "linear-gradient(90deg, #B8975C, #FFECBA, #F3D696, #B8985D)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
                       £1,500 Deposit
                     </p>
                     <p className="text-white/50 text-xs mt-2">Balance payable in flexible instalments</p>
