@@ -816,7 +816,7 @@ export default function Home() {
                 style={{ background: "linear-gradient(135deg, hsl(42 87% 96%), hsl(38 72% 92%))", border: "1px solid rgba(184,151,92,0.4)" }}
               >
                 <p className="text-primary font-bold text-2xl leading-none">★ 4.9</p>
-                <p className="text-foreground/60 text-xs mt-1">from 200+ pilgrims</p>
+                <p className="text-foreground/60 text-xs mt-1">from 200+ souls</p>
               </motion.div>
             </motion.div>
 
