@@ -254,7 +254,7 @@ export default function Home() {
         <div className="absolute inset-0">
           <img src={karnakImg} alt="Karnak columns" className="w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-black/60" />
-          <div className="absolute inset-0 bg-[#00000057]" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.55) 60%, hsl(var(--background)) 100%)" }} />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.55) 60%, rgba(28,24,20,0.97) 100%)" }} />
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 py-20 md:py-32">
