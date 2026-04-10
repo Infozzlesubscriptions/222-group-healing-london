@@ -4,8 +4,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import videoThumbnailImg from "@/assets/video-thumbnail.png";
-import spiritualActivation from "@/assets/spiritual-activation.png";
-import sacredLight from "@/assets/sacred-light.png";
 import groupPyramidsImage from "@/assets/group-pyramids.png";
 import hatshepsutImg from "@/assets/hatshepsut-temple.png";
 import jerryTempleImg from "@/assets/jerry-temple.png";
@@ -325,46 +323,6 @@ export default function Transformations() {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-      {/* Deep Narratives */}
-      <section className="py-24 max-w-5xl mx-auto px-4">
-        <div className="space-y-20">
-          <motion.div
-            className="flex flex-col md:flex-row gap-10 items-center"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-          >
-            <div className="w-full md:w-1/3">
-              <img src={spiritualActivation} alt="Spiritual Activation" className="w-full h-56 sm:h-72 md:h-[400px] object-cover border border-primary/20 p-2 rounded-xl" />
-            </div>
-            <div className="w-full md:w-2/3">
-              <h3 className="text-3xl font-sans text-foreground mb-4">"I found the missing piece of my soul."</h3>
-              <p className="text-muted-foreground leading-relaxed text-lg mb-6">
-                For years, I felt a low-grade anxiety, a sense that I was forgetting something vital. The moment my feet touched the sands of Giza, my body knew it was home. During the private activation in the King's Chamber, a frequency moved through the group that shattered my illusions. I wept for an hour—not from sadness, but from profound relief. I finally remembered.
-              </p>
-              <div className="text-primary font-bold">— Marcus J., Healer</div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            className="flex flex-col md:flex-row-reverse gap-10 items-center"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-          >
-            <div className="w-full md:w-1/3">
-              <img src={sacredLight} alt="Sacred Light" className="w-full h-56 sm:h-72 md:h-[400px] object-cover border border-primary/20 p-2 rounded-xl" />
-            </div>
-            <div className="w-full md:w-2/3">
-              <h3 className="text-3xl font-sans text-foreground mb-4">"The chronic pain simply vanished."</h3>
-              <p className="text-muted-foreground leading-relaxed text-lg mb-6">
-                I came to Egypt seeking spiritual depth, but I didn't expect physical healing. On Day 6 at Karnak Temple, we stood in the sanctuary of Sekhmet. The energetic heat was palpable. Whatever blockage I had been carrying in my lower back for a decade was pulled from me. It's been 6 months, and the pain has never returned. This journey operates on levels beyond human comprehension.
-              </p>
-              <div className="text-primary font-bold">— Sarah W., Yoga Teacher</div>
-            </div>
-          </motion.div>
         </div>
       </section>
       {/* Grid of Text Testimonials */}
