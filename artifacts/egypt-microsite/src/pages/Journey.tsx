@@ -22,7 +22,7 @@ import obeliskImg from "@/assets/obelisk.png";
 import luxorFacadeImg from "@/assets/luxor-temple-facade.png";
 import abuSimbelAerialImg from "@/assets/abu-simbel-aerial.png";
 import setiTempleDay2Img from "@/assets/seti-temple-day2.png";
-import sacredLight from "@/assets/sacred-light.png";
+import sacredLight from "@/assets/image_1775822169993.png";
 import spiritualActivation from "@/assets/image_1775821429322.png";
 import desertDune from "@/assets/image_1775821969438.png";
 import papyrus from "@/assets/image_1775822092163.png";
