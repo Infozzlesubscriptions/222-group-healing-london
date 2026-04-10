@@ -66,7 +66,7 @@ export default function Join() {
                   </li>
                   <li className="flex justify-between border-b border-border/50 pb-2">
                     <span className="text-muted-foreground">Duration</span>
-                    <span className="text-foreground font-bold">10 Days, 9 Nights</span>
+                    <span className="text-foreground font-bold">15 Days, 14 Nights</span>
                   </li>
                   <li className="flex justify-between pb-2">
                     <span className="text-muted-foreground">Locations</span>
