@@ -22,6 +22,7 @@ import obeliskImg from "@/assets/obelisk.png";
 import luxorFacadeImg from "@/assets/luxor-temple-facade.png";
 import abuSimbelAerialImg from "@/assets/abu-simbel-aerial.png";
 import setiTempleDay2Img from "@/assets/seti-temple-day2.png";
+import planetaryGrid from "@/assets/image_1775822461691.png";
 import sacredLight from "@/assets/image_1775822169993.png";
 import spiritualActivation from "@/assets/image_1775821429322.png";
 import desertDune from "@/assets/image_1775821969438.png";
@@ -473,7 +474,7 @@ export default function Journey() {
               </div>
               <div className="flex-1 min-w-0 w-full">
                 <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[4/3]">
-                  <img src={nileReflection} alt="Planetary Grid Work" className="w-full h-full object-cover" />
+                  <img src={planetaryGrid} alt="Planetary Grid Work" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 </div>
               </div>
