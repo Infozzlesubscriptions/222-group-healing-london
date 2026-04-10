@@ -257,7 +257,7 @@ export default function Home() {
           <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.55) 60%, rgba(28,24,20,0.97) 100%)" }} />
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-4 py-20 md:py-32">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 py-20 md:py-32 bg-[#87878724]">
 
           {/* Section header */}
           <motion.div
