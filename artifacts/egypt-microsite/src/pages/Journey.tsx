@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import templeCeremony from "@/assets/temple-ceremony.png";
-import karnakColumns from "@/assets/karnak-columns.png";
+import karnakColumns from "@/assets/image_1775822045185.png";
 import luxorSetiTempleImg from "@/assets/luxor-seti-temple.png";
 import obeliskKarnakImg from "@/assets/obelisk-karnak.png";
 import abuSimbelFacadeImg from "@/assets/abu-simbel-facade.png";
