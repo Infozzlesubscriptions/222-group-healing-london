@@ -619,7 +619,7 @@ export default function Home() {
                   },
                   {
                     img: tylerBellImg,
-                    role: "Sacred Ceremony Lead",
+                    role: "Energy Facilitator",
                     name: "Tyler Bell",
                     desc: "Orchestrates ceremony and collective ritual at each sacred site.",
                     objPos: "top",
