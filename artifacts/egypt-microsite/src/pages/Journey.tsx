@@ -25,7 +25,7 @@ import setiTempleDay2Img from "@/assets/seti-temple-day2.png";
 import sacredLight from "@/assets/sacred-light.png";
 import spiritualActivation from "@/assets/image_1775821429322.png";
 import desertDune from "@/assets/image_1775821969438.png";
-import papyrus from "@/assets/papyrus.png";
+import papyrus from "@/assets/image_1775822092163.png";
 import pyramidsSunset from "@/assets/pyramids-sunset.png";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
