@@ -6,6 +6,7 @@ import videoThumbnailImg from "@/assets/video-thumbnail.png";
 import pyramidsImage from "@/assets/pyramids-sunset.png";
 import groupPyramidsImage from "@/assets/group-pyramids.png";
 import cosmicPyramidImg from "@/assets/cosmic-pyramid.png";
+import ramessesLuxorImg from "@/assets/ramesses-luxor.png";
 import nileImg from "@/assets/nile-reflection.png";
 import nileCruiseDeckImg from "@/assets/nile-cruise-deck.png";
 import nileFeluccaImg from "@/assets/nile-felucca-sunset.png";
@@ -778,8 +779,8 @@ export default function Home() {
                 style={{ border: "1px solid rgba(243,214,150,0.4)" }}
               >
                 <img
-                  src={cosmicPyramidImg}
-                  alt="Cosmic pyramid activation"
+                  src={ramessesLuxorImg}
+                  alt="Ramesses statue at Luxor Temple"
                   className="w-full h-full object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
