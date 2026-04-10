@@ -7,6 +7,7 @@ import pyramidsImage from "@/assets/pyramids-sunset.png";
 import groupPyramidsImage from "@/assets/group-pyramids.png";
 import cosmicPyramidImg from "@/assets/cosmic-pyramid.png";
 import nileImg from "@/assets/nile-reflection.png";
+import nileCruiseDeckImg from "@/assets/nile-cruise-deck.png";
 import nileFeluccaImg from "@/assets/nile-felucca-sunset.png";
 import jerryStepPyramidImg from "@/assets/jerry-step-pyramid.png";
 import tribeCirclePyramidImg from "@/assets/tribe-circle-pyramid.png";
@@ -659,7 +660,7 @@ export default function Home() {
           {/* 3 accommodation photo cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { img: nileImg,       label: "On the Nile",        caption: "Morning Qi-Gong on the cruise deck" },
+              { img: nileCruiseDeckImg, label: "On the Nile",        caption: "Morning Qi-Gong on the cruise deck" },
               { img: cairoHotelImg, label: "Hotel in Cairo",     caption: "Luxurious 4★ & 5★ hotel stays throughout" },
               { img: egyptDiningImg, label: "Dining in Style",    caption: "Delicious authentic Egyptian cuisine, served with ceremony" },
             ].map((card, i) => (
