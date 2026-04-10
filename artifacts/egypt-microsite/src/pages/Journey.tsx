@@ -241,36 +241,41 @@ export default function Journey() {
               <div
                 className="absolute top-0 z-30 pointer-events-none"
                 style={{
-                  left: "50%",
+                  /* Forward: sits on right half. Backward: sits on left half */
+                  left: flip.dir > 0 ? "50%" : 0,
                   width: "50%",
                   height: "100%",
                   transformStyle: "preserve-3d",
                 }}
               >
-                {/* The flipping page — dual face card */}
+                {/* The flipping page — no overflow-hidden on wrapper (causes 3D clip glitch) */}
                 <motion.div
-                  className="absolute inset-0 rounded-r-2xl overflow-hidden"
+                  className="absolute inset-0"
                   style={{
                     transformStyle: "preserve-3d",
+                    /* Forward: pivot at spine (left edge of right half).
+                       Backward: pivot at spine (right edge of left half). */
                     transformOrigin: flip.dir > 0 ? "left center" : "right center",
                     willChange: "transform",
                   }}
-                  initial={{ rotateY: flip.dir > 0 ? 0 : 180 }}
-                  animate={{ rotateY: flip.dir > 0 ? -180 : 0 }}
+                  initial={{ rotateY: 0 }}
+                  animate={{ rotateY: flip.dir > 0 ? -180 : 180 }}
                   transition={{ duration: 0.75, ease: [0.4, 0, 0.25, 1] }}
                   onAnimationComplete={onFlipComplete}
                 >
-                  {/* Front face — "from" right content */}
+                  {/* Front face — what's visible before the turn */}
                   <div
-                    className="absolute inset-0 rounded-r-2xl overflow-hidden border-l border-border/20"
-                    style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}
+                    className="absolute inset-0 overflow-hidden"
+                    style={{
+                      backfaceVisibility: "hidden",
+                      WebkitBackfaceVisibility: "hidden",
+                      borderRadius: flip.dir > 0 ? "0 0.75rem 0.75rem 0" : "0.75rem 0 0 0.75rem",
+                    }}
                   >
-                    <RightPageContent
-                      day={fromDay!}
-                      pageNum={flip.from + 1}
-                      total={itinerary.length}
-                    />
-                    {/* Sweep shadow on front during flip */}
+                    {flip.dir > 0
+                      ? <RightPageContent day={fromDay!} pageNum={flip.from + 1} total={itinerary.length} />
+                      : <LeftPageContent day={fromDay!} />
+                    }
                     <motion.div
                       className="absolute inset-0 pointer-events-none"
                       initial={{ opacity: 0 }}
@@ -284,25 +289,24 @@ export default function Journey() {
                     />
                   </div>
 
-                  {/* Back face — "to" right content (counter-rotated so it reads correctly) */}
+                  {/* Back face — revealed after the turn (pre-rotated 180° so it reads correctly) */}
                   <div
-                    className="absolute inset-0 rounded-r-2xl overflow-hidden border-r border-border/20"
+                    className="absolute inset-0 overflow-hidden"
                     style={{
                       backfaceVisibility: "hidden",
                       WebkitBackfaceVisibility: "hidden",
                       transform: "rotateY(180deg)",
+                      borderRadius: flip.dir > 0 ? "0.75rem 0 0 0.75rem" : "0 0.75rem 0.75rem 0",
                     }}
                   >
-                    <RightPageContent
-                      day={itinerary[flip.to]}
-                      pageNum={flip.to + 1}
-                      total={itinerary.length}
-                    />
-                    {/* Sweep shadow on back */}
+                    {flip.dir > 0
+                      ? <RightPageContent day={itinerary[flip.to]} pageNum={flip.to + 1} total={itinerary.length} />
+                      : <LeftPageContent day={itinerary[flip.to]} />
+                    }
                     <motion.div
                       className="absolute inset-0 pointer-events-none"
-                      initial={{ opacity: 0.5 }}
-                      animate={{ opacity: [0.5, 0] }}
+                      initial={{ opacity: 0.45 }}
+                      animate={{ opacity: [0.45, 0] }}
                       transition={{ duration: 0.75, ease: "easeInOut" }}
                       style={{
                         background: flip.dir > 0
@@ -313,7 +317,7 @@ export default function Journey() {
                   </div>
                 </motion.div>
 
-                {/* Spine crease shadow during flip */}
+                {/* Spine crease shadow */}
                 <motion.div
                   className="absolute top-0 bottom-0 w-8 pointer-events-none"
                   style={{
