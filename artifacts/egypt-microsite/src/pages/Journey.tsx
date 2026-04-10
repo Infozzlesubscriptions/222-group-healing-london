@@ -143,7 +143,12 @@ export default function Journey() {
     touchStartX.current = null;
   };
 
-  const displayDay = itinerary[current];
+  // Pre-load destination content on whichever side the flip wrapper is covering,
+  // so the moment the wrapper disappears the static book already has the right content.
+  // Forward flip covers the RIGHT half → pre-show TO day on right, keep FROM on left.
+  // Backward flip covers the LEFT half → pre-show TO day on left, keep FROM on right.
+  const leftDay = flip && flip.dir < 0 ? itinerary[flip.to] : itinerary[current];
+  const rightDay = flip && flip.dir > 0 ? itinerary[flip.to] : itinerary[current];
   const fromDay = flip ? itinerary[flip.from] : null;
 
   return (
@@ -201,40 +206,22 @@ export default function Journey() {
                 style={{ background: "linear-gradient(to right, transparent, hsl(var(--primary)/0.06), transparent)" }}
               />
 
-              {/* Left page */}
+              {/* Left page — switches instantly; flip wrapper handles the visual transition */}
               <div className="w-full md:w-1/2 min-h-[220px] sm:min-h-[280px] md:min-h-[520px] relative z-10">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={`left-${current}`}
-                    className="absolute inset-0"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.25 }}
-                  >
-                    <LeftPageContent day={displayDay} />
-                  </motion.div>
-                </AnimatePresence>
+                <div className="absolute inset-0">
+                  <LeftPageContent day={leftDay} />
+                </div>
               </div>
 
-              {/* Right page static — shows destination */}
+              {/* Right page — pre-loads destination on forward flip (covered by wrapper) */}
               <div className="w-full md:w-1/2 min-h-[280px] sm:min-h-[340px] md:min-h-[520px] relative z-10 overflow-hidden">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={`right-static-${current}`}
-                    className="absolute inset-0"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.25 }}
-                  >
-                    <RightPageContent
-                      day={displayDay}
-                      pageNum={current + 1}
-                      total={itinerary.length}
-                    />
-                  </motion.div>
-                </AnimatePresence>
+                <div className="absolute inset-0">
+                  <RightPageContent
+                    day={rightDay}
+                    pageNum={current + 1}
+                    total={itinerary.length}
+                  />
+                </div>
 
                 {/* Page number */}
                 <div className="absolute bottom-4 right-6 text-muted-foreground/30 text-xs z-20 pointer-events-none">
@@ -269,7 +256,7 @@ export default function Journey() {
                   }}
                   initial={{ rotateY: 0 }}
                   animate={{ rotateY: flip.dir > 0 ? -180 : 180 }}
-                  transition={{ duration: 0.75, ease: [0.4, 0, 0.25, 1] }}
+                  transition={{ duration: 0.85, ease: [0.35, 0.0, 0.25, 1.0] }}
                   onAnimationComplete={onFlipComplete}
                 >
                   {/* Front face — what's visible before the turn */}
@@ -291,7 +278,7 @@ export default function Journey() {
                       className="absolute inset-0 pointer-events-none"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: [0, 0.5, 0] }}
-                      transition={{ duration: 0.75, ease: "easeInOut" }}
+                      transition={{ duration: 0.85, ease: "easeInOut" }}
                       style={{
                         background: flip.dir > 0
                           ? "linear-gradient(to left, rgba(0,0,0,0.6) 0%, transparent 80%)"
@@ -320,7 +307,7 @@ export default function Journey() {
                       className="absolute inset-0 pointer-events-none"
                       initial={{ opacity: 0.45 }}
                       animate={{ opacity: [0.45, 0] }}
-                      transition={{ duration: 0.75, ease: "easeInOut" }}
+                      transition={{ duration: 0.85, ease: "easeInOut" }}
                       style={{
                         background: flip.dir > 0
                           ? "linear-gradient(to right, rgba(0,0,0,0.5) 0%, transparent 70%)"
@@ -339,7 +326,7 @@ export default function Journey() {
                   }}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: [0, 0.8, 0] }}
-                  transition={{ duration: 0.75, ease: "easeInOut" }}
+                  transition={{ duration: 0.85, ease: "easeInOut" }}
                 >
                   <div
                     className="w-full h-full"
@@ -403,7 +390,7 @@ export default function Journey() {
             transition={{ duration: 0.3 }}
             className="text-center text-muted-foreground text-sm mt-3 font-light tracking-wide"
           >
-            {displayDay.day} — {displayDay.title}
+            {itinerary[current].day} — {itinerary[current].title}
           </motion.p>
 
           {/* Swipe hint */}
