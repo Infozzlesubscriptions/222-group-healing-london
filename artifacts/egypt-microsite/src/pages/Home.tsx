@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import videoThumbnailImg from "@/assets/video-thumbnail.png";
 import pyramidsImage from "@/assets/pyramids-sunset.png";
 import groupPyramidsImage from "@/assets/group-pyramids.png";
 import cosmicPyramidImg from "@/assets/cosmic-pyramid.png";
@@ -33,6 +34,7 @@ export default function Home() {
   const opacity = useTransform(scrollY, [0, 500], [1, 0]);
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [videoPlaying, setVideoPlaying] = useState(false);
 
   function handleDiscoverySubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -201,13 +203,45 @@ export default function Home() {
                 aspectRatio: "16/9",
               }}
             >
-              <iframe
-                src="https://player.vimeo.com/video/1128847726?badge=0&autopause=0&quality_selector=1&player_id=0&app_id=58479"
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                className="absolute inset-0 w-full h-full"
-                title="Cosmic Ascension Tour of Egypt"
-                style={{ border: 0 }}
-              />
+              {videoPlaying ? (
+                <iframe
+                  src="https://player.vimeo.com/video/1128847726?badge=0&autopause=0&autoplay=1&quality_selector=1&player_id=0&app_id=58479"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                  className="absolute inset-0 w-full h-full"
+                  title="Cosmic Ascension Tour of Egypt"
+                  style={{ border: 0 }}
+                />
+              ) : (
+                <button
+                  className="absolute inset-0 w-full h-full group cursor-pointer"
+                  onClick={() => setVideoPlaying(true)}
+                  aria-label="Play video"
+                >
+                  {/* Thumbnail image */}
+                  <img
+                    src={videoThumbnailImg}
+                    alt="Watch the Egypt journey"
+                    className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  />
+                  {/* Dark overlay */}
+                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300" />
+                  {/* Play button */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <motion.div
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="w-20 h-20 rounded-full flex items-center justify-center shadow-2xl"
+                      style={{
+                        background: "linear-gradient(135deg, #B8975C, #FFECBA, #F3D696, #B8985D)",
+                      }}
+                    >
+                      <svg className="w-8 h-8 ml-1" viewBox="0 0 24 24" fill="#1a1208">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </motion.div>
+                  </div>
+                </button>
+              )}
             </div>
           </motion.div>
         </div>
