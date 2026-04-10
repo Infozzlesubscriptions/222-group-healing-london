@@ -259,9 +259,7 @@ export default function Transformations() {
               <span
                 className="text-xs font-bold tracking-[0.25em] uppercase px-3 py-1.5 rounded-full"
                 style={{ background: "linear-gradient(135deg, hsl(42 87% 96%), hsl(38 72% 93%))", color: "#7a5c2e", border: "1px solid rgba(184,151,92,0.35)" }}
-              >
-                ✦ Pilgrim Stories
-              </span>
+              >Video TESTIMONIALS </span>
               <div className="flex-1 h-px bg-border" />
             </div>
 
