@@ -15,7 +15,6 @@ import sphinxPyramidGizaImg from "@/assets/sphinx-pyramid-giza.png";
 import luxorNight from "@/assets/luxor-night.png";
 import abuSimbel from "@/assets/abu-simbel.png";
 import nileReflection from "@/assets/nile-reflection.png";
-import sphinxImg from "@/assets/sphinx.png";
 import sphinxSunsetImg from "@/assets/sphinx-sunset.png";
 import cairoPyramidsImg from "@/assets/cairo-nile-pyramids.png";
 import setiTempleImg from "@/assets/seti-temple.png";
@@ -23,7 +22,6 @@ import obeliskImg from "@/assets/obelisk.png";
 import luxorFacadeImg from "@/assets/luxor-temple-facade.png";
 import abuSimbelAerialImg from "@/assets/abu-simbel-aerial.png";
 import setiTempleDay2Img from "@/assets/seti-temple-day2.png";
-import ancientCodes from "@/assets/ancient-codes.png";
 import sacredLight from "@/assets/sacred-light.png";
 import spiritualActivation from "@/assets/spiritual-activation.png";
 import desertDune from "@/assets/desert-dune.png";
@@ -478,56 +476,6 @@ export default function Journey() {
                 </div>
               </div>
             </motion.div>
-          </div>
-        </section>
-
-        {/* 2 — Ancient Wisdom Reawakened */}
-        <section className="py-16 px-4">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-            >
-              <span className="text-primary tracking-[0.3em] text-xs font-bold uppercase block mb-3">Ancient Knowledge</span>
-              <h3 className="text-3xl md:text-5xl font-bold text-foreground italic">Ancient Wisdom<br />Reawakened</h3>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {[
-                {
-                  img: ancientCodes,
-                  title: "Dragon Ley Lines",
-                  text: "The ancients built their temples by tracking these very lines of energy. Dragon Lines create a living system of power that crosses continents, and Egypt sits at the most concentrated intersection of this planetary web. Walking these lines awakens memory in the body that no teaching can replicate.",
-                },
-                {
-                  img: sphinxImg,
-                  title: "The Great Encased",
-                  text: "During our time at the Giza Plateau we step into an encased field of energy unlike anything on Earth. The monuments here were not built by hands alone — they were encoded with cosmic intelligence that still broadcasts today. Every cell in your body responds to its frequency.",
-                },
-              ].map((card, i) => (
-                <motion.div
-                  key={i}
-                  className="rounded-2xl overflow-hidden shadow-md bg-card flex flex-col"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: i * 0.12 }}
-                >
-                  <div className="relative h-56 overflow-hidden shrink-0">
-                    <img src={card.img} alt={card.title} className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                    <div className="absolute bottom-4 left-5">
-                      <h4 className="text-white text-xl font-bold">{card.title}</h4>
-                    </div>
-                  </div>
-                  <div className="p-7 flex-1">
-                    <p className="text-muted-foreground leading-relaxed text-sm">{card.text}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
           </div>
         </section>
 
