@@ -268,6 +268,8 @@ export default function Journey() {
                       backfaceVisibility: "hidden",
                       WebkitBackfaceVisibility: "hidden",
                       borderRadius: flip.dir > 0 ? "0 0.75rem 0.75rem 0" : "0.75rem 0 0 0.75rem",
+                      background: "#faf8f6",
+                      color: "#000",
                     }}
                   >
                     {flip.dir > 0
@@ -295,6 +297,8 @@ export default function Journey() {
                       WebkitBackfaceVisibility: "hidden",
                       transform: "rotateY(180deg)",
                       borderRadius: flip.dir > 0 ? "0.75rem 0 0 0.75rem" : "0 0.75rem 0.75rem 0",
+                      background: "#faf8f6",
+                      color: "#000",
                     }}
                   >
                     {flip.dir > 0
