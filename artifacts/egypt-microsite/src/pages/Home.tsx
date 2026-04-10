@@ -253,46 +253,142 @@ export default function Home() {
         {/* Full-bleed background */}
         <div className="absolute inset-0">
           <img src={karnakImg} alt="Karnak columns" className="w-full h-full object-cover object-center" />
-          <div className="absolute inset-0 bg-black/72" />
-          <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, transparent 60%, hsl(var(--background)) 100%)" }} />
+          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.55) 60%, hsl(var(--background)) 100%)" }} />
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-4 py-24 md:py-32">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 py-20 md:py-32">
 
-          {/* Section label */}
+          {/* Section header */}
           <motion.div
-            className="text-center mb-16"
+            className="text-center mb-14 md:mb-20"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8 }}
           >
             <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">What's Included</span>
-            <h2 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-4">
+            <h2 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
               Highlights of the Trip
             </h2>
-            <div className="h-px w-20 mx-auto mt-6" style={{ background: "linear-gradient(90deg, transparent, #F3D696, transparent)" }} />
+            <div className="flex items-center justify-center gap-4">
+              <div className="h-px flex-1 max-w-[80px]" style={{ background: "linear-gradient(to right, transparent, #F3D696)" }} />
+              <span className="text-primary text-lg">☥</span>
+              <div className="h-px flex-1 max-w-[80px]" style={{ background: "linear-gradient(to left, transparent, #F3D696)" }} />
+            </div>
           </motion.div>
 
-          {/* Two-column layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          {/* Two-column layout — price card first in DOM so it's first on mobile */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
 
-            {/* Left — highlights list */}
+            {/* Price card — first on mobile, right on desktop */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="lg:sticky lg:top-32 lg:order-2 relative"
+            >
+              {/* Outer glow */}
+              <div
+                className="absolute -inset-1 rounded-[28px] blur-xl opacity-30 pointer-events-none"
+                style={{ background: "linear-gradient(135deg, #B8975C, #F3D696, #B8985D)" }}
+              />
+              <div
+                className="relative rounded-3xl overflow-hidden shadow-2xl"
+                style={{ background: "rgba(10,8,5,0.65)", backdropFilter: "blur(24px)", border: "1px solid rgba(243,214,150,0.35)" }}
+              >
+                {/* Card header */}
+                <div
+                  className="px-6 pt-7 pb-6 text-center border-b border-white/10"
+                  style={{ background: "linear-gradient(180deg, rgba(184,151,92,0.18) 0%, transparent 100%)" }}
+                >
+                  <div className="text-primary text-4xl mb-2">☥</div>
+                  <p className="text-primary/80 text-[10px] tracking-[0.28em] uppercase mb-1.5">Cosmic Ascension Tour 2027</p>
+                  <h3 className="text-white text-2xl font-bold mb-1">Secure Your Spot Now</h3>
+                  <p className="text-white/55 text-sm">The adventure of a lifetime awaits with Jerry & the Tribe.</p>
+                </div>
+
+                {/* Pricing */}
+                <div className="px-6 py-6 text-center">
+                  {/* Early Bird Banner */}
+                  <div
+                    className="rounded-xl px-4 py-2.5 mb-6 flex items-center justify-center gap-2 w-full"
+                    style={{ background: "linear-gradient(90deg, #B8975C, #F3D696, #B8985D)" }}
+                  >
+                    <span className="text-[#1a1208] text-xs font-bold tracking-wide uppercase leading-snug">⚡ Early Bird — Valid Until 1st Aug 2026</span>
+                  </div>
+
+                  {/* Struck-through full price */}
+                  <div className="flex items-center justify-center gap-3 mb-1">
+                    <span className="text-white/35 text-xs uppercase tracking-widest">Full Price</span>
+                    <span className="text-2xl font-bold text-white/30 line-through">£8,444</span>
+                  </div>
+
+                  {/* Early bird price */}
+                  <p className="text-white/50 text-[10px] mb-1 uppercase tracking-widest">Early Bird Price</p>
+                  <div className="flex items-end justify-center gap-1 mb-1">
+                    <span
+                      className="text-6xl font-bold leading-none"
+                      style={{ background: "linear-gradient(90deg, #B8975C, #FFECBA, #F3D696, #B8985D)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}
+                    >
+                      £7,444
+                    </span>
+                  </div>
+                  <p className="text-white/35 text-xs mb-6">Save £1,000 · Offer ends 1st August 2026</p>
+
+                  {/* Deposit box */}
+                  <div
+                    className="rounded-2xl px-5 py-4 w-full mb-1"
+                    style={{ background: "linear-gradient(135deg, rgba(184,151,92,0.22), rgba(243,214,150,0.10))", border: "1px solid rgba(243,214,150,0.35)" }}
+                  >
+                    <p className="text-[10px] tracking-widest uppercase mb-1 text-white/55">Reserve Your Space For Only</p>
+                    <p
+                      className="text-4xl font-bold"
+                      style={{ background: "linear-gradient(90deg, #B8975C, #FFECBA, #F3D696, #B8985D)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}
+                    >
+                      £1,500 Deposit
+                    </p>
+                    <p className="text-white/45 text-xs mt-1.5">Balance payable in flexible instalments</p>
+                  </div>
+                </div>
+
+                {/* CTA buttons */}
+                <div className="px-6 pb-8 flex flex-col gap-3">
+                  <Link href="/join-2027">
+                    <Button size="lg" className="w-full bg-primary text-primary-foreground font-bold text-base py-3 h-12" data-testid="btn-highlights-book">
+                      Reserve Your Place
+                    </Button>
+                  </Link>
+                  <Link href="/join-2027">
+                    <Button size="lg" variant="outline" className="w-full border-white/25 text-white hover:bg-white/10 font-semibold text-sm py-3 h-12">
+                      Book a Discovery Call
+                    </Button>
+                  </Link>
+                  <p className="text-center text-[11px] mt-1 text-white/40">
+                    Limited spaces · Payment plans available · Full T&Cs at booking
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Highlights list — second on mobile, left on desktop */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.8 }}
+              className="lg:order-1"
             >
-              <ul className="space-y-5">
+              <ul className="divide-y divide-white/10">
                 {[
                   { icon: "🔺", text: "4 Hours Private Access in the Great Pyramid" },
                   { icon: "🏛️", text: "7 Private Access Visits to Egypt's most sacred sites" },
                   { icon: "✈️", text: "Inland Flight — Cairo to Luxor and back" },
-                  { icon: "🛏️", text: "4 & 5 Star shared accommodation — luxurious comfort after each day's adventures" },
+                  { icon: "🛏️", text: "4 & 5 Star shared accommodation — luxurious comfort after each day" },
                   { icon: "⛵", text: "Sailing on the Nile with breathtaking cuisine and on-board accommodation" },
                   { icon: "🚌", text: "Airport transfers included throughout the journey" },
-                  { icon: "🗝️", text: "Exclusive private tours: Grand Egyptian Museum, Osiris Tomb, Giza Plateau, Mysteries of the Sphinx, Temple of Isis, Osiris Temple & more" },
+                  { icon: "🗝️", text: "Exclusive private tours: Grand Egyptian Museum, Osiris Tomb, Giza Plateau, Mysteries of the Sphinx, Temple of Isis & more" },
                   { icon: "🌟", text: "Spiritual guidance from local Egyptian guides who know the most sacred places" },
                   { icon: "🍽️", text: "Delicious authentic Egyptian cuisine showcasing the diverse flavours of the region" },
                   { icon: "🎈", text: "Optional hot air balloon ride over the Valley of the Kings" },
@@ -301,97 +397,22 @@ export default function Home() {
                 ].map((item, i) => (
                   <motion.li
                     key={i}
-                    className="flex items-start gap-4"
-                    initial={{ opacity: 0, x: -20 }}
+                    className="flex items-center gap-4 py-4 group"
+                    initial={{ opacity: 0, x: -16 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: i * 0.05 }}
+                    transition={{ duration: 0.45, delay: i * 0.04 }}
                   >
-                    <span className="text-xl shrink-0 mt-0.5">{item.icon}</span>
-                    <span className="text-white/85 text-base leading-snug">{item.text}</span>
+                    <div
+                      className="w-10 h-10 rounded-xl flex items-center justify-center text-lg shrink-0 shadow-md"
+                      style={{ background: "linear-gradient(135deg, rgba(184,151,92,0.45), rgba(243,214,150,0.25))", border: "1px solid rgba(243,214,150,0.35)" }}
+                    >
+                      {item.icon}
+                    </div>
+                    <span className="text-white/85 text-sm sm:text-base leading-snug group-hover:text-white transition-colors duration-200">{item.text}</span>
                   </motion.li>
                 ))}
               </ul>
-            </motion.div>
-
-            {/* Right — price card */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.8, delay: 0.15 }}
-              className="lg:sticky lg:top-32"
-            >
-              <div
-                className="rounded-3xl overflow-hidden shadow-2xl"
-                style={{ background: "rgba(255,255,255,0.06)", backdropFilter: "blur(20px)", border: "1px solid rgba(243,214,150,0.25)" }}
-              >
-                {/* Card header */}
-                <div className="px-5 sm:px-8 pt-8 sm:pt-10 pb-6 sm:pb-8 text-center border-b border-white/10">
-                  <div className="text-primary text-3xl mb-3">☥</div>
-                  <p className="text-white/60 text-xs tracking-[0.2em] uppercase mb-2">Cosmic Ascension Tour 2027</p>
-                  <h3 className="text-white text-2xl font-bold mb-1">Secure Your Spot Now</h3>
-                  <p className="text-white/60 text-sm">Don't miss the adventure of a lifetime with Jerry and the Tribe.</p>
-                </div>
-
-                {/* Pricing */}
-                <div className="px-5 sm:px-8 py-6 sm:py-8 text-center">
-                  {/* Early Bird Banner */}
-                  <div
-                    className="rounded-xl px-3 py-2 mb-5 inline-flex items-center justify-center gap-1.5 w-full sm:w-auto"
-                    style={{ background: "linear-gradient(90deg, #B8975C, #F3D696, #B8985D)" }}
-                  >
-                    <span className="text-[#1a1208] text-[10px] sm:text-xs font-bold tracking-wide uppercase text-center leading-snug">⚡ Early Bird — Valid Until 1st Aug 2026</span>
-                  </div>
-
-                  {/* Struck-through original */}
-                  <p className="text-white/40 text-sm mb-1 uppercase tracking-widest">Full Price</p>
-                  <div className="flex items-center justify-center gap-3 mb-4">
-                    <span className="text-3xl font-bold text-white/35 line-through decoration-white/50">£8,444</span>
-                  </div>
-
-                  {/* Early bird price */}
-                  <p className="text-white/60 text-xs mb-1 uppercase tracking-widest">Early Bird Price</p>
-                  <div className="flex items-end justify-center gap-2 mb-2">
-                    <span
-                      className="text-5xl md:text-6xl font-bold"
-                      style={{ background: "linear-gradient(90deg, #B8975C, #FFECBA, #F3D696, #B8985D)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}
-                    >
-                      £7,444
-                    </span>
-                  </div>
-                  <p className="text-white/40 text-xs mb-5">Save £1,000 · Offer ends 1st August 2026</p>
-
-                  {/* Deposit box */}
-                  <div
-                    className="block rounded-2xl px-4 sm:px-6 py-4 w-full"
-                    style={{ background: "linear-gradient(135deg, rgba(184,151,92,0.25), rgba(243,214,150,0.12))", border: "1px solid rgba(243,214,150,0.3)" }}
-                  >
-                    <p className="text-xs tracking-wide uppercase mb-1 text-white/60">Reserve Your Space For Only</p>
-                    <p className="text-3xl sm:text-4xl font-bold text-[#ffffff]" style={{ background: "linear-gradient(90deg, #B8975C, #FFECBA, #F3D696, #B8985D)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-                      £1,500 Deposit
-                    </p>
-                    <p className="text-white/50 text-xs mt-2">Balance payable in flexible instalments</p>
-                  </div>
-                </div>
-
-                {/* CTA buttons */}
-                <div className="px-5 sm:px-8 pb-8 sm:pb-10 flex flex-col gap-3">
-                  <Link href="/join-2027">
-                    <Button size="lg" className="w-full bg-primary text-primary-foreground font-bold text-lg py-3" data-testid="btn-highlights-book">
-                      Reserve Your Place
-                    </Button>
-                  </Link>
-                  <Link href="/join-2027">
-                    <Button size="lg" variant="outline" className="w-full border-white/30 text-white hover:bg-white/10 font-semibold text-base py-3">
-                      Book a Discovery Call
-                    </Button>
-                  </Link>
-                  <p className="text-center text-xs mt-2 text-white/50">
-                    Limited spaces available · Payment plans available · Full T&Cs at booking
-                  </p>
-                </div>
-              </div>
             </motion.div>
 
           </div>
