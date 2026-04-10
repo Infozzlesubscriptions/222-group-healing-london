@@ -23,7 +23,7 @@ import luxorFacadeImg from "@/assets/luxor-temple-facade.png";
 import abuSimbelAerialImg from "@/assets/abu-simbel-aerial.png";
 import setiTempleDay2Img from "@/assets/seti-temple-day2.png";
 import sacredLight from "@/assets/sacred-light.png";
-import spiritualActivation from "@/assets/spiritual-activation.png";
+import spiritualActivation from "@/assets/image_1775821429322.png";
 import desertDune from "@/assets/desert-dune.png";
 import papyrus from "@/assets/papyrus.png";
 import pyramidsSunset from "@/assets/pyramids-sunset.png";
