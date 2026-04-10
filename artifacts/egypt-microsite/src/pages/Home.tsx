@@ -783,16 +783,6 @@ export default function Home() {
                   className="w-full h-full object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                {/* Badge overlay */}
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div
-                    className="rounded-2xl px-5 py-4"
-                    style={{ background: "rgba(0,0,0,0.55)", backdropFilter: "blur(12px)", border: "1px solid rgba(243,214,150,0.3)" }}
-                  >
-                    <p className="text-white font-bold text-base mb-0.5">Egypt 2026 — Sold Out</p>
-                    <p className="text-white/60 text-xs tracking-wide">2027 registration now open · Limited spaces</p>
-                  </div>
-                </div>
               </div>
               {/* Floating trust badge */}
               <motion.div
