@@ -11,7 +11,7 @@ import nileImg from "@/assets/nile-reflection.png";
 import nileCruiseDeckImg from "@/assets/nile-cruise-deck.png";
 import nileFeluccaImg from "@/assets/nile-felucca-sunset.png";
 import jerryStepPyramidImg from "@/assets/jerry-step-pyramid.png";
-import tribeCirclePyramidImg from "@/assets/tribe-circle-pyramid.png";
+import tribeCirclePyramidImg from "@/assets/image_1775822724437.png";
 import jerrySaqqaraArmsImg from "@/assets/jerry-saqqara-arms.png";
 import sphinxImg from "@/assets/sphinx.png";
 import hatshepsutImg from "@/assets/hatshepsut-temple.png";
