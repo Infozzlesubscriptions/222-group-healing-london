@@ -62,7 +62,7 @@ export default function Join() {
                 <ul className="space-y-4">
                   <li className="flex justify-between border-b border-border/50 pb-2">
                     <span className="text-muted-foreground">Dates</span>
-                    <span className="text-foreground font-bold">March 10 - 20, 2027</span>
+                    <span className="text-foreground font-bold">16th - 30th March 2027</span>
                   </li>
                   <li className="flex justify-between border-b border-border/50 pb-2">
                     <span className="text-muted-foreground">Duration</span>
