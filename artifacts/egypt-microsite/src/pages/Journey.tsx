@@ -244,6 +244,8 @@ export default function Journey() {
                   width: "50%",
                   height: "100%",
                   transformStyle: "preserve-3d",
+                  /* Solid background ensures static layer never bleeds through at 90° mid-flip */
+                  background: "#faf8f6",
                 }}
               >
                 {/* The flipping page — no overflow-hidden on wrapper (causes 3D clip glitch) */}
