@@ -137,9 +137,9 @@ export default function Transformations() {
   return (
     <div className="min-h-screen bg-background pb-20">
       {/* Hero */}
-      <section className="relative pt-0 pb-36 md:pb-48 min-h-[60vh] overflow-hidden">
+      <section className="relative pt-0 pb-36 md:pb-48 min-h-[60vh]">
         {/* Full-bleed background */}
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 overflow-hidden">
           <img
             src={pyramidNightImg}
             alt="Pyramids at night"
@@ -164,7 +164,7 @@ export default function Transformations() {
             >
               Real Experiences. Real Awakenings.
             </span>
-            <h1 className="md:text-7xl font-sans text-white mb-6 text-[56px] font-bold">Transformations</h1>
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-sans text-white mb-6 font-bold">Transformations</h1>
             <p className="text-xl text-white/70 font-light max-w-2xl mx-auto">
               Hear directly from the pilgrims whose lives were changed forever by the Egypt journey.
             </p>
@@ -313,7 +313,7 @@ export default function Transformations() {
             {beforeAfter.map((item, i) => (
               <motion.div
                 key={i}
-                className="bg-card p-8 border border-border/50 text-center relative rounded-2xl"
+                className="bg-card p-5 md:p-8 border border-border/50 text-center relative rounded-2xl"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -338,7 +338,7 @@ export default function Transformations() {
             viewport={{ once: true }}
           >
             <div className="w-full md:w-1/3">
-              <img src={spiritualActivation} alt="Spiritual Activation" className="w-full h-[400px] object-cover border border-primary/20 p-2 rounded-xl" />
+              <img src={spiritualActivation} alt="Spiritual Activation" className="w-full h-56 sm:h-72 md:h-[400px] object-cover border border-primary/20 p-2 rounded-xl" />
             </div>
             <div className="w-full md:w-2/3">
               <h3 className="text-3xl font-sans text-foreground mb-4">"I found the missing piece of my soul."</h3>
@@ -356,7 +356,7 @@ export default function Transformations() {
             viewport={{ once: true }}
           >
             <div className="w-full md:w-1/3">
-              <img src={sacredLight} alt="Sacred Light" className="w-full h-[400px] object-cover border border-primary/20 p-2 rounded-xl" />
+              <img src={sacredLight} alt="Sacred Light" className="w-full h-56 sm:h-72 md:h-[400px] object-cover border border-primary/20 p-2 rounded-xl" />
             </div>
             <div className="w-full md:w-2/3">
               <h3 className="text-3xl font-sans text-foreground mb-4">"The chronic pain simply vanished."</h3>
@@ -386,9 +386,9 @@ export default function Transformations() {
                 transition={{ delay: i * 0.1 }}
               >
                 <Card className="bg-card border-border/40 rounded-2xl h-full">
-                  <CardContent className="p-8">
+                  <CardContent className="p-5 md:p-8">
                     <div className="text-primary text-3xl mb-4">"</div>
-                    <p className="text-foreground/90 font-sans text-xl italic mb-6 leading-relaxed">
+                    <p className="text-foreground/90 font-sans text-base sm:text-xl italic mb-6 leading-relaxed">
                       {t.quote}
                     </p>
                     <div className="flex items-center gap-4">

@@ -95,7 +95,7 @@ export default function Gallery() {
           transition={{ duration: 0.8 }}
         >
           <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Sacred Archive</span>
-          <h1 className="text-5xl md:text-7xl font-sans text-foreground mb-4">Gallery & Past Journeys</h1>
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-sans text-foreground mb-4">Gallery & Past Journeys</h1>
           <p className="text-xl text-muted-foreground font-light max-w-2xl mx-auto">
             Glimpses of the unseen. Echoes of the eternal.
           </p>

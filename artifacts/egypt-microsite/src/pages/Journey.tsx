@@ -58,7 +58,7 @@ type FlipState = {
 
 function RightPageContent({ day }: { day: typeof itinerary[0]; pageNum: number; total: number }) {
   return (
-    <div className="w-full h-full bg-card flex flex-col justify-center px-8 md:px-12 py-10 md:py-12 relative select-none">
+    <div className="w-full h-full bg-card flex flex-col justify-center px-5 sm:px-8 md:px-12 py-8 sm:py-10 md:py-12 relative select-none">
       <div className="absolute top-4 right-4 text-primary/20 text-2xl select-none">☥</div>
       <div className="absolute top-4 left-6 text-muted-foreground/25 text-xs tracking-widest uppercase">
         Star Magic Egypt
@@ -146,7 +146,7 @@ export default function Journey() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h1 className="md:text-7xl font-bold text-foreground mb-4 text-[56px]">The Journey</h1>
+        <h1 className="text-[clamp(2.5rem,9vw,4.5rem)] md:text-7xl font-bold text-foreground mb-4">The Journey</h1>
         <p className="text-xl text-primary font-light italic">
           "Each day unfolded a new layer of awakening…"
         </p>
@@ -193,7 +193,7 @@ export default function Journey() {
               />
 
               {/* Left page */}
-              <div className="w-full md:w-1/2 min-h-[300px] md:min-h-[520px] relative z-10">
+              <div className="w-full md:w-1/2 min-h-[220px] sm:min-h-[280px] md:min-h-[520px] relative z-10">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={`left-${current}`}
@@ -209,7 +209,7 @@ export default function Journey() {
               </div>
 
               {/* Right page static — shows destination */}
-              <div className="w-full md:w-1/2 min-h-[300px] md:min-h-[520px] relative z-10">
+              <div className="w-full md:w-1/2 min-h-[280px] sm:min-h-[340px] md:min-h-[520px] relative z-10">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={`right-static-${current}`}

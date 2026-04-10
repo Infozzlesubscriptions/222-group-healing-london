@@ -77,7 +77,7 @@ export default function Home() {
             <span className="text-primary text-xl md:text-2xl font-sans tracking-[0.3em] mb-4 block uppercase font-semibold">
               Calling all Planetary Guardians
             </span>
-            <h1 className="md:text-7xl lg:text-8xl font-sans text-white font-bold mb-3 drop-shadow-2xl text-[56px]">
+            <h1 className="text-[clamp(2.2rem,8vw,5rem)] md:text-7xl lg:text-8xl font-sans text-white font-bold mb-3 drop-shadow-2xl">
               Cosmic Ascension<br />Tour of Egypt
             </h1>
             <p className="text-base md:text-xl mb-3 font-semibold tracking-wide drop-shadow-md text-[#ffffff]">
@@ -425,7 +425,7 @@ export default function Home() {
               className="rounded-3xl overflow-hidden border border-primary/20 bg-card shadow-lg"
             >
               {/* Card header */}
-              <div className="px-8 py-6 border-b border-primary/15" style={{ background: "linear-gradient(135deg, hsl(42 87% 96%), hsl(38 72% 92%))" }}>
+              <div className="px-5 py-5 sm:px-8 sm:py-6 border-b border-primary/15" style={{ background: "linear-gradient(135deg, hsl(42 87% 96%), hsl(38 72% 92%))" }}>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0 shadow-md">
                     <span className="text-white font-bold text-lg">✓</span>
@@ -437,7 +437,7 @@ export default function Home() {
                 </div>
               </div>
               {/* Items */}
-              <div className="p-8">
+              <div className="p-5 sm:p-8">
                 <ul className="space-y-4">
                   {[
                     "Seven (7) private-access guided site tours, plus additional public-access visits",
@@ -475,7 +475,7 @@ export default function Home() {
               className="rounded-3xl overflow-hidden border border-border/50 bg-card shadow-md"
             >
               {/* Card header */}
-              <div className="px-8 py-6 border-b border-border/30 bg-secondary/40">
+              <div className="px-5 py-5 sm:px-8 sm:py-6 border-b border-border/30 bg-secondary/40">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center shrink-0">
                     <span className="text-muted-foreground font-bold text-lg">○</span>
@@ -487,7 +487,7 @@ export default function Home() {
                 </div>
               </div>
               {/* Items */}
-              <div className="p-8">
+              <div className="p-5 sm:p-8">
                 <ul className="space-y-4">
                   {[
                     "International airfare to and from Egypt",
@@ -738,7 +738,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <div className="text-primary text-4xl mb-8">◈</div>
-            <blockquote className="md:text-4xl text-foreground italic mb-8 text-[30px]" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            <blockquote className="text-xl sm:text-2xl md:text-4xl text-foreground italic mb-8" style={{ fontFamily: "'Poppins', sans-serif" }}>
               "The pyramid meditation cracked something open in me I didn't know existed. This was not a trip. This was a resurrection."
             </blockquote>
             <p className="text-primary tracking-widest uppercase text-sm">— David K., USA</p>
@@ -790,7 +790,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="absolute -top-4 -right-4 rounded-2xl px-5 py-4 shadow-xl"
+                className="absolute -top-3 -right-2 sm:-top-4 sm:-right-4 rounded-2xl px-4 py-3 sm:px-5 sm:py-4 shadow-xl"
                 style={{ background: "linear-gradient(135deg, hsl(42 87% 96%), hsl(38 72% 92%))", border: "1px solid rgba(184,151,92,0.4)" }}
               >
                 <p className="text-primary font-bold text-2xl leading-none">★ 4.9</p>
