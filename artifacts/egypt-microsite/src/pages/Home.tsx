@@ -14,7 +14,7 @@ import jerryStepPyramidImg from "@/assets/jerry-step-pyramid.png";
 import tribeCirclePyramidImg from "@/assets/tribe-circle-pyramid.png";
 import jerrySaqqaraArmsImg from "@/assets/jerry-saqqara-arms.png";
 import sphinxImg from "@/assets/sphinx.png";
-import hatshepsutImg from "@/assets/hatshepsut-temple.png";
+import hatshepsutImg from "@/assets/image_1775822847259.png";
 import activationImg from "@/assets/spiritual-activation.png";
 import jerryTempleImg from "@/assets/jerry-temple.png";
 import womanTempleImg from "@/assets/woman-temple-prayer.png";
