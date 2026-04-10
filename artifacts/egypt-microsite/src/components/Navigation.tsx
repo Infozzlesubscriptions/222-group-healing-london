@@ -96,9 +96,7 @@ export function Navigation() {
                   color: "#1a1208",
                   border: "none",
                 }}
-              >
-                Join 2027
-              </button>
+              >Answer Egypt's Call</button>
             </Link>
 
             {/* Mobile hamburger */}
@@ -116,7 +114,6 @@ export function Navigation() {
 
         </div>
       </div>
-
       {/* Mobile Nav Drawer */}
       <AnimatePresence>
         {isOpen && (
