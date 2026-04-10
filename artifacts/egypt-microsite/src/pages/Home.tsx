@@ -387,7 +387,7 @@ export default function Home() {
                       Book a Discovery Call
                     </Button>
                   </Link>
-                  <p className="text-center text-xs mt-2 text-[#000000]">
+                  <p className="text-center text-xs mt-2 text-white/50">
                     Limited spaces available · Payment plans available · Full T&Cs at booking
                   </p>
                 </div>
