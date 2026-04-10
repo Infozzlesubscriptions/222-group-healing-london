@@ -170,7 +170,6 @@ export default function Transformations() {
           </motion.div>
         </div>
       </section>
-
       {/* ─── DOCUMENTARY VIDEOS ─── */}
       <section className="py-20 px-4 bg-background">
         <div className="max-w-6xl mx-auto">
@@ -243,7 +242,7 @@ export default function Transformations() {
               </div>
               <div className="flex items-center gap-2 text-muted-foreground text-xs shrink-0">
                 <span className="text-primary">★★★★★</span>
-                <span>200+ pilgrims</span>
+                <span>200+ souls</span>
               </div>
             </div>
           </motion.div>
@@ -275,7 +274,6 @@ export default function Transformations() {
 
         </div>
       </section>
-
       {/* Before / After */}
       <section className="py-16 bg-secondary/20">
         <div className="max-w-5xl mx-auto px-4">
@@ -303,7 +301,6 @@ export default function Transformations() {
           </div>
         </div>
       </section>
-
       {/* Deep Narratives */}
       <section className="py-24 max-w-5xl mx-auto px-4">
         <div className="space-y-20">
@@ -344,7 +341,6 @@ export default function Transformations() {
           </motion.div>
         </div>
       </section>
-
       {/* Grid of Text Testimonials */}
       <section className="py-20 bg-secondary/10 border-t border-border">
         <div className="max-w-6xl mx-auto px-4">
@@ -384,7 +380,6 @@ export default function Transformations() {
           </div>
         </div>
       </section>
-
       {/* Final CTA */}
       <section className="py-32 text-center px-4">
         <motion.div
