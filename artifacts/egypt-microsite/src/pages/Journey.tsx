@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import templeCeremony from "@/assets/temple-ceremony.png";
 import karnakColumns from "@/assets/karnak-columns.png";
@@ -121,6 +121,15 @@ export default function Journey() {
     setFlip(null);
   };
 
+  // On mobile the 3D flip is hidden; auto-complete the state after the fade duration
+  useEffect(() => {
+    if (!flip) return;
+    if (window.innerWidth >= 768) return;
+    const t = setTimeout(onFlipComplete, 300);
+    return () => clearTimeout(t);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [flip]);
+
   const prev = () => navigate(current - 1);
   const next = () => navigate(current + 1);
 
@@ -234,10 +243,10 @@ export default function Journey() {
               </div>
             </div>
 
-            {/* === FLIP LAYER === */}
+            {/* === FLIP LAYER === desktop only; mobile uses fade via useEffect */}
             {flip && (
               <div
-                className="absolute top-0 z-30 pointer-events-none"
+                className="hidden md:block absolute top-0 z-30 pointer-events-none"
                 style={{
                   /* Forward: sits on right half. Backward: sits on left half */
                   left: flip.dir > 0 ? "50%" : 0,
