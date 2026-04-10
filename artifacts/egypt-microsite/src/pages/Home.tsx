@@ -612,7 +612,7 @@ export default function Home() {
                   },
                   {
                     img: joshSargeantImg,
-                    role: "Local Expert",
+                    role: "Energy Facilitator",
                     name: "Josh Sargeant",
                     desc: "Opens doors to sacred sites and hidden ceremonial spaces.",
                     objPos: "top",
