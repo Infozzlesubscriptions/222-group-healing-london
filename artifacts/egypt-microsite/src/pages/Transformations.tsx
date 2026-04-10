@@ -145,10 +145,9 @@ export default function Transformations() {
             alt="Walking through the temples of Egypt"
             className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-black/60" />
           <div
             className="absolute inset-0"
-            style={{ background: "linear-gradient(to bottom, transparent 40%, hsl(var(--background)) 100%)" }}
+            style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.55) 60%, black 100%)" }}
           />
         </div>
 
