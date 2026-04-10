@@ -24,7 +24,7 @@ import abuSimbelAerialImg from "@/assets/abu-simbel-aerial.png";
 import setiTempleDay2Img from "@/assets/seti-temple-day2.png";
 import sacredLight from "@/assets/sacred-light.png";
 import spiritualActivation from "@/assets/image_1775821429322.png";
-import desertDune from "@/assets/desert-dune.png";
+import desertDune from "@/assets/image_1775821969438.png";
 import papyrus from "@/assets/papyrus.png";
 import pyramidsSunset from "@/assets/pyramids-sunset.png";
 import { Link } from "wouter";
