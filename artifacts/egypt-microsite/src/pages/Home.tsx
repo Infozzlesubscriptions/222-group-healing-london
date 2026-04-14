@@ -5,7 +5,7 @@ import groupPyramidsImage from "@assets/community-group-ORD4DYoj_1776153736899.j
 import tribeCirclePyramidImg from "@assets/Jerry-Sargeant-One-Love_1776160920406.webp";
 import spiritualActivationImg from "@assets/image_1776160809528.png";
 import pillarImg1 from "@/assets/image_1775821429322.png";
-import pillarImg2 from "@/assets/image_1775822461691.png";
+import pillarImg2 from "@assets/image_1776168162975.png";
 import pillarImg3 from "@/assets/image_1775822847259.png";
 
 export default function Home() {
