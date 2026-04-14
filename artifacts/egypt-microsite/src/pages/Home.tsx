@@ -867,48 +867,53 @@ export default function Home() {
         </div>
       </section>
       {/* ─── BOOKING / CTA ─── */}
-      <section className="py-24 md:py-36 px-4" style={{ backgroundColor: "#1a1208" }}>
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="py-20 md:py-28 px-4 bg-background">
+        <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            className="rounded-3xl px-10 py-14 md:px-16 md:py-16 text-center shadow-xl"
+            style={{
+              backgroundColor: "#FDF6E9",
+              border: "1px solid rgba(211,146,34,0.25)",
+            }}
           >
             <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Limited Places</span>
-            <h2 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ color: "#1a1208" }}>
               This Event Is Limited.
             </h2>
-            <p className="text-white/75 text-lg leading-relaxed mb-4 max-w-xl mx-auto">
-              Jerry works in a room where every person gets the full experience. That means places are strictly capped. When they're gone, they're gone.
+            <div className="h-px w-16 mx-auto mb-8" style={{ backgroundColor: "#d39222" }} />
+            <p className="text-lg leading-relaxed mb-4 max-w-lg mx-auto" style={{ color: "#3d2f1a" }}>
+              Jerry works in a room where every person gets the full experience. Places are strictly capped. When they're gone, they're gone.
             </p>
-            <p className="text-white/75 text-lg leading-relaxed mb-10 max-w-xl mx-auto">
+            <p className="text-base leading-relaxed mb-10" style={{ color: "#7a6040" }}>
               If this is calling you — don't sit on it.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-5 justify-center mb-10">
-              <Link href="/booking">
-                <button
-                  className="text-base font-bold px-10 py-3 rounded-lg tracking-wide transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97] cursor-pointer shadow-lg"
-                  style={{
-                    background: "linear-gradient(90deg, #d39222 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #d39222 100%)",
-                    color: "#1a1208",
-                    border: "none",
-                  }}
-                >
-                  Reserve Your Seat Now
-                </button>
-              </Link>
-            </div>
+            <Link href="/booking">
+              <button
+                className="text-base font-bold px-12 py-3.5 rounded-lg tracking-wide transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97] cursor-pointer shadow-lg mb-8"
+                style={{
+                  background: "linear-gradient(90deg, #d39222 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #d39222 100%)",
+                  color: "#1a1208",
+                  border: "none",
+                }}
+              >
+                Reserve Your Seat Now
+              </button>
+            </Link>
 
-            <div className="text-white/55 text-sm space-y-1">
+            <div className="text-sm space-y-1" style={{ color: "#a08060" }}>
               <p>Dates: May 2026 · London, UK</p>
               <p>Includes: All 3 days · All materials</p>
               <p className="mt-4">
                 Questions?{" "}
                 <a
                   href="mailto:info@starmagichealing.com"
-                  className="text-primary hover:text-primary/80 transition-colors"
+                  className="underline hover:opacity-80 transition-opacity"
+                  style={{ color: "#d39222" }}
                 >
                   Contact our team
                 </a>
