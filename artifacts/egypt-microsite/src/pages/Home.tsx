@@ -566,7 +566,8 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.7, delay: 0 }}
-              className="flex flex-col px-8 py-10"
+              className="flex flex-col px-8 py-10 rounded-3xl"
+              style={{ border: "1px solid #d39222" }}
             >
               <div className="flex justify-center mb-5">
                 <span className="invisible text-[10px] font-bold tracking-[0.25em] uppercase px-4 py-1.5 rounded-full">Most Popular</span>
