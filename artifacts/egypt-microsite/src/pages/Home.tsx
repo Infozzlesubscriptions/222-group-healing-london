@@ -299,8 +299,8 @@ export default function Home() {
       <section className="relative py-0 overflow-hidden">
         <div className="absolute inset-0">
           <img src={spiritualActivationImg} alt="Energy work" className="w-full h-full object-cover object-center" />
-          <div className="absolute inset-0 bg-black/65" />
-          <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 60%, rgba(28,24,20,0.97) 100%)" }} />
+          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 60%, rgba(28,24,20,0.75) 100%)" }} />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-24 md:py-36 text-center">
