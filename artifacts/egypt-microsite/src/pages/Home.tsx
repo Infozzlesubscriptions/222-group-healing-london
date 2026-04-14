@@ -194,21 +194,21 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                img: pillarImg1,
+                img: card5Img,
                 alt: "Full immersion event experience",
                 heading: "Full Immersion",
                 subtitle: "No theory. Only transformation.",
                 body: "Every session is hands-on. Every practice is designed to create a real, felt shift — not just understanding.",
               },
               {
-                img: pillarImg2,
+                img: card4Img,
                 alt: "Lasting personal change",
                 heading: "Lasting Change",
                 subtitle: "You leave a different person.",
                 body: "Not motivated for a week. The change is structural — wired into your nervous system, your energy, your way of being.",
               },
               {
-                img: pillarImg3,
+                img: card6Img,
                 alt: "Proven global results",
                 heading: "Proven Results",
                 subtitle: "500,000+ lives. 85+ countries.",
