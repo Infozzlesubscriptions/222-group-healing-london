@@ -40,6 +40,19 @@ export default function Gallery() {
       {/* Grid */}
       <div className="max-w-7xl mx-auto px-4 py-12">
         <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+        >
+          <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Inside the Room</span>
+          <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight mb-4">
+            Gallery
+          </h1>
+          <div className="h-px w-20 bg-primary mx-auto mt-6" />
+        </motion.div>
+
+        <motion.div
           className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
