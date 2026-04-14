@@ -7,6 +7,9 @@ import jerryTempleImg from "@/assets/jerry-temple.png";
 import tribeCirclePyramidImg from "@/assets/image_1775822597040.png";
 import spiritualActivationImg from "@/assets/spiritual-activation.png";
 import karnakImg from "@/assets/karnak-columns.png";
+import pillarImg1 from "@/assets/image_1775821429322.png";
+import pillarImg2 from "@/assets/image_1775822461691.png";
+import pillarImg3 from "@/assets/image_1775822847259.png";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -138,19 +141,22 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                icon: "⚡",
+                img: pillarImg1,
+                alt: "Full immersion event experience",
                 heading: "Full Immersion",
                 subtitle: "No theory. Only transformation.",
                 body: "Every session is hands-on. Every practice is designed to create a real, felt shift — not just understanding.",
               },
               {
-                icon: "🔁",
+                img: pillarImg2,
+                alt: "Lasting personal change",
                 heading: "Lasting Change",
                 subtitle: "You leave a different person.",
                 body: "Not motivated for a week. The change is structural — wired into your nervous system, your energy, your way of being.",
               },
               {
-                icon: "🌍",
+                img: pillarImg3,
+                alt: "Proven global results",
                 heading: "Proven Results",
                 subtitle: "500,000+ lives. 85+ countries.",
                 body: "Jerry has spent two decades delivering these results globally. This event is the concentrated best of everything he does.",
@@ -162,29 +168,29 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.6, delay: i * 0.15 }}
-                className="flex flex-col items-center text-center rounded-3xl border border-primary/20 bg-card p-10 shadow-md hover:shadow-lg hover:border-primary/40 transition-all duration-300"
+                className="flex flex-col rounded-3xl border border-primary/20 bg-card shadow-md hover:shadow-lg hover:border-primary/40 transition-all duration-300 overflow-hidden"
               >
-                <div
-                  className="w-20 h-20 rounded-2xl flex items-center justify-center text-3xl mb-7 shadow-md"
-                  style={{
-                    background: "linear-gradient(135deg, rgba(211,146,34,0.18), rgba(243,214,150,0.1))",
-                    border: "1.5px solid rgba(211,146,34,0.35)",
-                  }}
-                >
-                  {pillar.icon}
+                <div className="w-full aspect-[4/3] overflow-hidden">
+                  <img
+                    src={pillar.img}
+                    alt={pillar.alt}
+                    className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
+                  />
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3 leading-snug">
-                  {pillar.heading}
-                </h3>
-                <p
-                  className="text-base font-semibold mb-5 italic"
-                  style={{ color: "#d39222" }}
-                >
-                  {pillar.subtitle}
-                </p>
-                <p className="text-muted-foreground text-base leading-relaxed">
-                  {pillar.body}
-                </p>
+                <div className="p-8 text-center flex flex-col flex-1">
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3 leading-snug">
+                    {pillar.heading}
+                  </h3>
+                  <p
+                    className="text-base font-semibold mb-4 italic"
+                    style={{ color: "#d39222" }}
+                  >
+                    {pillar.subtitle}
+                  </p>
+                  <p className="text-muted-foreground text-base leading-relaxed">
+                    {pillar.body}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>
