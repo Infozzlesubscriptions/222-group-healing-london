@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import groupPyramidsImage from "@/assets/group-pyramids.png";
@@ -142,6 +142,96 @@ function VideoCard({ video, index }: { video: typeof videoTestimonials[0]; index
   );
 }
 
+function WrittenCarousel() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [activeIdx, setActiveIdx] = useState(0);
+  const total = writtenTestimonials.length;
+  const CARD_WIDTH = 380;
+  const GAP = 24;
+
+  const scrollTo = (idx: number) => {
+    const next = Math.max(0, Math.min(idx, total - 1));
+    setActiveIdx(next);
+    scrollRef.current?.scrollTo({ left: next * (CARD_WIDTH + GAP), behavior: "smooth" });
+  };
+
+  return (
+    <>
+      <div
+        ref={scrollRef}
+        className="flex gap-6 overflow-x-auto pb-4"
+        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        onScroll={() => {
+          if (scrollRef.current) {
+            const idx = Math.round(scrollRef.current.scrollLeft / (CARD_WIDTH + GAP));
+            setActiveIdx(idx);
+          }
+        }}
+      >
+        {writtenTestimonials.map((t, i) => (
+          <div
+            key={i}
+            className="rounded-2xl border border-border/50 bg-card p-7 flex flex-col shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300 shrink-0"
+            style={{ width: CARD_WIDTH }}
+          >
+            <div className="flex items-center gap-1 mb-4">
+              {[...Array(5)].map((_, s) => (
+                <span key={s} className="text-primary text-sm">★</span>
+              ))}
+            </div>
+            <p className="text-muted-foreground text-sm leading-relaxed italic flex-1 mb-5">
+              "{t.quote}"
+            </p>
+            <div className="flex items-center gap-3">
+              <div
+                className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold shrink-0"
+                style={{
+                  background: "linear-gradient(135deg, rgba(184,151,92,0.3), rgba(243,214,150,0.15))",
+                  border: "1px solid rgba(184,151,92,0.35)",
+                  color: "#d39222",
+                }}
+              >
+                {t.name.charAt(0)}
+              </div>
+              <div>
+                <p className="font-semibold text-foreground text-sm">{t.name}</p>
+                <p className="text-muted-foreground text-xs">{t.loc}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Arrows */}
+      <div className="flex items-center justify-center gap-6 mt-8">
+        <button
+          onClick={() => scrollTo(activeIdx - 1)}
+          disabled={activeIdx === 0}
+          className="w-11 h-11 rounded-full border border-border/60 flex items-center justify-center text-foreground/60 hover:border-primary hover:text-primary transition-all duration-200 disabled:opacity-25 disabled:cursor-not-allowed"
+          aria-label="Previous"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </button>
+        <span className="text-muted-foreground text-xs tabular-nums">
+          {activeIdx + 1} / {total}
+        </span>
+        <button
+          onClick={() => scrollTo(activeIdx + 1)}
+          disabled={activeIdx === total - 1}
+          className="w-11 h-11 rounded-full border border-border/60 flex items-center justify-center text-foreground/60 hover:border-primary hover:text-primary transition-all duration-200 disabled:opacity-25 disabled:cursor-not-allowed"
+          aria-label="Next"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </button>
+      </div>
+    </>
+  );
+}
+
 export default function Testimonials() {
   return (
     <div className="min-h-screen bg-background pt-24 pb-20">
@@ -181,7 +271,7 @@ export default function Testimonials() {
         </div>
       </section>
 
-      {/* Written testimonials */}
+      {/* Written testimonials — carousel */}
       <section className="px-4 max-w-7xl mx-auto mb-24">
         <motion.div
           className="text-center mb-12"
@@ -192,43 +282,8 @@ export default function Testimonials() {
         >
           <span className="text-primary tracking-[0.3em] text-xs font-bold uppercase">More Voices</span>
         </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {writtenTestimonials.map((t, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.55, delay: i * 0.08 }}
-              className="rounded-2xl border border-border/50 bg-card p-7 flex flex-col shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300"
-            >
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, s) => (
-                  <span key={s} className="text-primary text-sm">★</span>
-                ))}
-              </div>
-              <p className="text-muted-foreground text-sm leading-relaxed italic flex-1 mb-5">
-                "{t.quote}"
-              </p>
-              <div className="flex items-center gap-3">
-                <div
-                  className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold shrink-0"
-                  style={{
-                    background: "linear-gradient(135deg, rgba(184,151,92,0.3), rgba(243,214,150,0.15))",
-                    border: "1px solid rgba(184,151,92,0.35)",
-                    color: "#d39222",
-                  }}
-                >
-                  {t.name.charAt(0)}
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground text-sm">{t.name}</p>
-                  <p className="text-muted-foreground text-xs">{t.loc}</p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+
+        <WrittenCarousel />
       </section>
 
       {/* CTA */}
