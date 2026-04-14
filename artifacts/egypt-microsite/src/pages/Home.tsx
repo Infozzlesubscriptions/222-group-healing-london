@@ -16,6 +16,7 @@ export default function Home() {
   const y1 = useTransform(scrollY, [0, 1000], [0, 300]);
   const opacity = useTransform(scrollY, [0, 500], [1, 0]);
   const [videoPlaying, setVideoPlaying] = useState(false);
+  const [caesarVideoPlaying, setCaesarVideoPlaying] = useState(false);
 
   const stats = [
     { value: "3", label: "Transformative Days" },
@@ -574,6 +575,109 @@ export default function Home() {
                 </Link>
               </div>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ─── VIDEO TESTIMONIAL ─── */}
+      <section className="py-24 md:py-32 px-4 bg-secondary/30">
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.8 }}
+          >
+            <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Real Results. Real People.</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight mb-4">
+              Hear It From Someone Who Was There
+            </h2>
+            <div className="h-px w-20 bg-primary mx-auto mt-6" />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 40, scale: 0.97 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.9 }}
+            className="relative"
+          >
+            <div
+              className="absolute -inset-1 rounded-3xl blur-2xl opacity-25 pointer-events-none"
+              style={{ background: "linear-gradient(135deg, #d39222, #F3D696, #d39222)" }}
+            />
+            <div
+              className="relative rounded-3xl overflow-hidden shadow-2xl"
+              style={{ border: "1px solid rgba(243,214,150,0.35)", aspectRatio: "16/9" }}
+            >
+              {caesarVideoPlaying ? (
+                <iframe
+                  src="CAESAR_VIDEO_URL_HERE"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                  className="absolute inset-0 w-full h-full"
+                  title="Caesar's Testimonial"
+                  style={{ border: 0 }}
+                />
+              ) : (
+                <button
+                  className="absolute inset-0 w-full h-full group cursor-pointer"
+                  onClick={() => setCaesarVideoPlaying(true)}
+                  aria-label="Play Caesar's testimonial"
+                >
+                  <img
+                    src={tribeCirclePyramidImg}
+                    alt="Caesar testimonial"
+                    className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/55 group-hover:bg-black/45 transition-colors duration-300" />
+
+                  {/* Quote overlay */}
+                  <div className="absolute bottom-0 left-0 right-0 px-8 pb-10 text-left">
+                    <p className="text-white/90 text-lg md:text-2xl font-semibold leading-snug drop-shadow-lg max-w-2xl">
+                      "Caesar came in a wheelchair. He stood up and walked out under his own power."
+                    </p>
+                    <p className="text-primary text-sm font-bold tracking-widest uppercase mt-3">Caesar's Story</p>
+                  </div>
+
+                  {/* Play button */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <motion.div
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="w-20 h-20 rounded-full flex items-center justify-center shadow-2xl"
+                      style={{ background: "linear-gradient(135deg, #d39222, #FFECBA, #F3D696, #d39222)" }}
+                    >
+                      <svg className="w-8 h-8 ml-1" viewBox="0 0 24 24" fill="#1a1208">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </motion.div>
+                  </div>
+                </button>
+              )}
+            </div>
+          </motion.div>
+
+          {/* CTA */}
+          <motion.div
+            className="text-center mt-10"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <Link href="/testimonials">
+              <button
+                className="text-sm font-bold px-8 py-3 rounded-lg tracking-wide transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97] cursor-pointer border"
+                style={{
+                  background: "transparent",
+                  color: "#d39222",
+                  borderColor: "#d39222",
+                }}
+              >
+                Watch More Testimonials →
+              </button>
+            </Link>
           </motion.div>
         </div>
       </section>
