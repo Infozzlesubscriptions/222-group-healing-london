@@ -147,11 +147,7 @@ export default function Home() {
               >
                 <div
                   className="text-3xl md:text-4xl font-bold mb-2"
-                  style={{
-                    background: "linear-gradient(90deg, #d39222 0%, #FFECBA 50%, #d39222 100%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                  }}
+                  style={{ color: "#d32999" }}
                 >
                   {stat.value}
                 </div>
