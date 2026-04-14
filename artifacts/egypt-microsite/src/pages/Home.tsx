@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import groupPyramidsImage from "@assets/community-group-ORD4DYoj_1776153736899.jpg";
 import jerryTempleImg from "@/assets/jerry-temple.png";
 import tribeCirclePyramidImg from "@/assets/image_1775822597040.png";
-import spiritualActivationImg from "@/assets/spiritual-activation.png";
+import spiritualActivationImg from "@assets/image_1776160809528.png";
 import karnakImg from "@assets/image_1776160676613.png";
 import pillarImg1 from "@/assets/image_1775821429322.png";
 import pillarImg2 from "@/assets/image_1775822461691.png";
