@@ -874,7 +874,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="rounded-3xl px-10 py-14 md:px-16 md:py-16 text-center shadow-xl"
+            className="px-10 py-14 md:px-16 md:py-16 text-center shadow-xl"
             style={{
               backgroundColor: "#FDF6E9",
               border: "1px solid rgba(211,146,34,0.25)",
