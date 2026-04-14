@@ -477,9 +477,9 @@ export default function Home() {
       </section>
       {/* ─── PRICING ─── */}
       <section className="py-24 md:py-32 px-4 bg-background">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <motion.div
-            className="text-center mb-14"
+            className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
@@ -492,7 +492,7 @@ export default function Home() {
             <div className="h-px w-20 bg-primary mx-auto mt-6" />
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-0 items-end">
 
             {/* General Admission */}
             <motion.div
@@ -500,32 +500,35 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.7, delay: 0 }}
-              className="flex flex-col rounded-2xl overflow-hidden shadow-xl border border-border"
+              className="flex flex-col rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none overflow-hidden shadow-xl"
+              style={{ border: "1px solid #e2d5c0" }}
             >
-              <div className="px-8 py-7" style={{ backgroundColor: "#0f1a2e" }}>
-                <h3 className="text-2xl md:text-3xl font-bold text-white leading-tight">General Admission</h3>
+              <div className="px-8 py-8" style={{ backgroundColor: "#0f1a2e" }}>
+                <h3 className="text-xl md:text-2xl font-bold text-white leading-tight">General Admission</h3>
               </div>
-              <div className="flex flex-col flex-1 bg-white px-8 py-8">
-                <div className="flex items-baseline gap-3 mb-6">
-                  <span className="text-muted-foreground/60 line-through text-lg">£444</span>
-                  <span className="text-3xl font-bold" style={{ color: "#0f1a2e" }}>£366</span>
+              <div className="flex flex-col flex-1 bg-white px-8 pt-8 pb-10">
+                <div className="mb-1">
+                  <span className="line-through text-base font-medium" style={{ color: "#d39222" }}>£444</span>
                 </div>
-                <ul className="space-y-3 mb-8 flex-1">
+                <div className="mb-7">
+                  <span className="text-4xl font-extrabold" style={{ color: "#0f1a2e" }}>£366</span>
+                </div>
+                <ul className="space-y-3 mb-10 flex-1">
                   {[
                     "Full 3-day in-person training",
                     "Access to all workshops, activations, and practices",
                     "Breathwork, energy tools, and embodiment sessions",
                     "Connect with a high-frequency global community",
                   ].map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-gray-700 leading-snug">
-                      <span className="mt-1 shrink-0 w-1.5 h-1.5 rounded-full" style={{ backgroundColor: "#d39222", marginTop: "6px" }} />
+                    <li key={item} className="flex items-start gap-3 text-sm text-gray-700 leading-snug">
+                      <span className="shrink-0 text-base leading-none" style={{ color: "#d39222", marginTop: "1px" }}>•</span>
                       {item}
                     </li>
                   ))}
                 </ul>
                 <Link href="/booking">
                   <button
-                    className="w-full py-3 rounded-full text-sm font-bold tracking-wide border-2 transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97] cursor-pointer"
+                    className="w-full py-3 rounded-lg text-sm font-bold tracking-wide border-2 transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
                     style={{ borderColor: "#d39222", color: "#0f1a2e", background: "transparent" }}
                   >
                     Sign Up Now
@@ -540,39 +543,45 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="flex flex-col rounded-2xl overflow-hidden shadow-2xl md:-mt-4 md:mb-4 relative"
+              className="flex flex-col relative z-10 rounded-none md:rounded-none overflow-hidden shadow-2xl md:-mt-6 md:-mb-0"
               style={{ border: "2px solid #d39222" }}
             >
-              <div
-                className="px-8 py-7 text-center"
-                style={{ background: "linear-gradient(135deg, #d39222 0%, #FFECBA 50%, #d39222 100%)" }}
-              >
-                <h3 className="text-2xl md:text-3xl font-bold leading-tight" style={{ color: "#1a1208" }}>VIP<br />Access</h3>
+              {/* Most Popular badge */}
+              <div className="flex items-center justify-center py-2" style={{ background: "#d39222" }}>
+                <span className="text-[10px] font-extrabold tracking-[0.3em] uppercase" style={{ color: "#1a1208" }}>Most Popular</span>
               </div>
               <div
-                className="flex flex-col flex-1 px-8 py-8"
-                style={{ background: "linear-gradient(180deg, #FDF6E9 0%, #fff9ed 100%)" }}
+                className="px-8 py-8 text-center"
+                style={{ background: "linear-gradient(135deg, #b87d1a 0%, #d39222 40%, #FFECBA 70%, #d39222 100%)" }}
               >
-                <div className="flex items-baseline gap-3 mb-6">
-                  <span className="line-through text-lg" style={{ color: "#b8902a99" }}>£999</span>
-                  <span className="text-3xl font-bold" style={{ color: "#0f1a2e" }}>£799</span>
+                <h3 className="text-xl md:text-2xl font-bold leading-tight" style={{ color: "#1a1208" }}>VIP Access</h3>
+              </div>
+              <div
+                className="flex flex-col flex-1 px-8 pt-8 pb-10"
+                style={{ backgroundColor: "#FDF6E9" }}
+              >
+                <div className="mb-1">
+                  <span className="line-through text-base font-medium" style={{ color: "#d39222" }}>£999</span>
                 </div>
-                <ul className="space-y-3 mb-8 flex-1">
+                <div className="mb-7">
+                  <span className="text-4xl font-extrabold" style={{ color: "#0f1a2e" }}>£799</span>
+                </div>
+                <ul className="space-y-3 mb-10 flex-1">
                   {[
                     "Everything in GA AND",
                     "Exclusive Q&A with Jerry & Team",
                     "Premium Seating",
                     "Swag Bag: Tote, Notebook, Sticker",
                   ].map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm leading-snug" style={{ color: "#1a1208" }}>
-                      <span className="shrink-0 w-1.5 h-1.5 rounded-full" style={{ backgroundColor: "#d39222", marginTop: "6px" }} />
+                    <li key={item} className="flex items-start gap-3 text-sm leading-snug" style={{ color: "#2a1f08" }}>
+                      <span className="shrink-0 text-base leading-none" style={{ color: "#d39222", marginTop: "1px" }}>•</span>
                       {item}
                     </li>
                   ))}
                 </ul>
                 <Link href="/booking">
                   <button
-                    className="w-full py-3 rounded-full text-sm font-bold tracking-wide transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97] cursor-pointer shadow-md"
+                    className="w-full py-3 rounded-lg text-sm font-bold tracking-wide transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-md"
                     style={{
                       background: "linear-gradient(90deg, #d39222 0%, #FFECBA 50%, #d39222 100%)",
                       color: "#1a1208",
@@ -591,32 +600,35 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="flex flex-col rounded-2xl overflow-hidden shadow-xl border border-border"
+              className="flex flex-col rounded-b-2xl md:rounded-r-2xl md:rounded-bl-none overflow-hidden shadow-xl"
+              style={{ border: "1px solid #e2d5c0", borderLeft: "none" }}
             >
-              <div className="px-8 py-7" style={{ backgroundColor: "#0f1a2e" }}>
-                <h3 className="text-2xl md:text-3xl font-bold text-white leading-tight">Elite Package</h3>
+              <div className="px-8 py-8" style={{ backgroundColor: "#0f1a2e" }}>
+                <h3 className="text-xl md:text-2xl font-bold text-white leading-tight">Elite Package</h3>
               </div>
-              <div className="flex flex-col flex-1 bg-white px-8 py-8">
-                <div className="flex items-baseline gap-3 mb-6">
-                  <span className="text-muted-foreground/60 line-through text-lg">£1,555</span>
-                  <span className="text-3xl font-bold" style={{ color: "#0f1a2e" }}>£1,222</span>
+              <div className="flex flex-col flex-1 bg-white px-8 pt-8 pb-10">
+                <div className="mb-1">
+                  <span className="line-through text-base font-medium" style={{ color: "#d39222" }}>£1,555</span>
                 </div>
-                <ul className="space-y-3 mb-8 flex-1">
+                <div className="mb-7">
+                  <span className="text-4xl font-extrabold" style={{ color: "#0f1a2e" }}>£1,222</span>
+                </div>
+                <ul className="space-y-3 mb-10 flex-1">
                   {[
                     "Everything in GA, VIP AND",
                     "Upgraded Swag Bag: Water Bottle, Signed Book, \"Elite\" T-Shirt",
                     "Front Row Seating",
                     "Private Dinner with Jerry & Team",
                   ].map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-gray-700 leading-snug">
-                      <span className="shrink-0 w-1.5 h-1.5 rounded-full" style={{ backgroundColor: "#d39222", marginTop: "6px" }} />
+                    <li key={item} className="flex items-start gap-3 text-sm text-gray-700 leading-snug">
+                      <span className="shrink-0 text-base leading-none" style={{ color: "#d39222", marginTop: "1px" }}>•</span>
                       {item}
                     </li>
                   ))}
                 </ul>
                 <Link href="/booking">
                   <button
-                    className="w-full py-3 rounded-full text-sm font-bold tracking-wide border-2 transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97] cursor-pointer"
+                    className="w-full py-3 rounded-lg text-sm font-bold tracking-wide border-2 transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
                     style={{ borderColor: "#d39222", color: "#0f1a2e", background: "transparent" }}
                   >
                     Go Elite
