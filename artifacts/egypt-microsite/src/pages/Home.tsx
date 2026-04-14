@@ -1,5 +1,4 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import groupPyramidsImage from "@assets/community-group-ORD4DYoj_1776153736899.jpg";
@@ -14,7 +13,6 @@ export default function Home() {
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 1000], [0, 300]);
   const opacity = useTransform(scrollY, [0, 500], [1, 0]);
-  const [caesarVideoPlaying, setCaesarVideoPlaying] = useState(false);
 
   const stats = [
     { value: "3", label: "Transformative Days" },
@@ -569,50 +567,13 @@ export default function Home() {
               className="relative rounded-3xl overflow-hidden shadow-2xl"
               style={{ border: "1px solid rgba(243,214,150,0.35)", aspectRatio: "16/9" }}
             >
-              {caesarVideoPlaying ? (
-                <iframe
-                  src="https://player.vimeo.com/video/1182092823?badge=0&autopause=0&autoplay=1&quality_selector=1&player_id=0&app_id=58479"
-                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                  className="absolute inset-0 w-full h-full"
-                  title="Caesar's Testimonial"
-                  style={{ border: 0 }}
-                />
-              ) : (
-                <button
-                  className="absolute inset-0 w-full h-full group cursor-pointer"
-                  onClick={() => setCaesarVideoPlaying(true)}
-                  aria-label="Play Caesar's testimonial"
-                >
-                  <img
-                    src={tribeCirclePyramidImg}
-                    alt="Caesar testimonial"
-                    className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/55 group-hover:bg-black/45 transition-colors duration-300" />
-
-                  {/* Quote overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 px-8 pb-10 text-left">
-                    <p className="text-white/90 text-lg md:text-2xl font-semibold leading-snug drop-shadow-lg max-w-2xl">
-                      "Caesar came in a wheelchair. He stood up and walked out under his own power."
-                    </p>
-                    <p className="text-primary text-sm font-bold tracking-widest uppercase mt-3">Caesar's Story</p>
-                  </div>
-
-                  {/* Play button */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <motion.div
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="w-20 h-20 rounded-full flex items-center justify-center shadow-2xl"
-                      style={{ background: "linear-gradient(135deg, #d39222, #FFECBA, #F3D696, #d39222)" }}
-                    >
-                      <svg className="w-8 h-8 ml-1" viewBox="0 0 24 24" fill="#1a1208">
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    </motion.div>
-                  </div>
-                </button>
-              )}
+              <iframe
+                src="https://player.vimeo.com/video/1156009467?badge=0&autopause=0&quality_selector=1&player_id=0&app_id=58479"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                className="absolute inset-0 w-full h-full"
+                title="Caesar's Testimonial"
+                style={{ border: 0 }}
+              />
             </div>
           </motion.div>
 
