@@ -115,17 +115,17 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <div className="text-primary text-4xl mb-8">✦</div>
-            <p className="text-xl md:text-2xl text-foreground italic leading-relaxed mb-10 max-w-3xl mx-auto font-semibold">
+            <p className="text-xl md:text-2xl text-foreground italic leading-relaxed mb-10 max-w-5xl mx-auto font-semibold">
               "Most people are living at a fraction of what they're actually capable of. This three days changes that. For good."
             </p>
             <div className="h-px w-20 bg-border mx-auto mb-10" />
-            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mb-6">
+            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-5xl mx-auto mb-6">
               Elite Be Superhuman is an immersive three-day live event unlike anything you've attended before. No passive learning. No theory. This is hands-on, full-body transformation — combining breathwork, energy medicine, performance psychology, and consciousness practices into one powerful, carefully sequenced experience.
             </p>
-            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mb-6">
+            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-5xl mx-auto mb-6">
               You don't leave motivated for a week. You leave changed and transformed. Ready to rise and create a completely different, elevated and abundant human life experience.
             </p>
-            <p className="text-foreground font-semibold text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+            <p className="text-foreground font-semibold text-base md:text-lg max-w-5xl mx-auto leading-relaxed">
               Jerry Sargeant has spent over two decades working with people across more than 85 countries — helping them dissolve deep-rooted blocks, reprogram their inner world, and step into levels of clarity, health, and success they didn't think were possible for them.
             </p>
           </motion.div>
