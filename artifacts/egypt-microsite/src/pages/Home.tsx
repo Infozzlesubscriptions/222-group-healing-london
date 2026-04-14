@@ -85,8 +85,8 @@ export default function Home() {
           className="absolute inset-0 z-0"
           style={{ y: y1, opacity }}
         >
-          <div className="absolute inset-0 bg-black/60 z-10" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black z-10" />
+          <div className="absolute inset-0 bg-black/35 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/80 z-10" />
           <img
             src={groupPyramidsImage}
             alt="Elite Be Superhuman event"
