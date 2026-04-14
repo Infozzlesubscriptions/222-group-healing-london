@@ -231,40 +231,6 @@ export default function Testimonials() {
         </div>
       </section>
 
-      {/* Caesar highlight */}
-      <section className="px-4 max-w-7xl mx-auto mb-24">
-        <motion.div
-          className="relative rounded-3xl overflow-hidden"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="absolute inset-0">
-            <img
-              src={groupPyramidsImage}
-              alt="Event moment"
-              className="w-full h-full object-cover object-center"
-            />
-            <div className="absolute inset-0 bg-black/65" />
-            <div
-              className="absolute inset-0"
-              style={{ background: "linear-gradient(135deg, rgba(184,151,92,0.25) 0%, transparent 60%)" }}
-            />
-          </div>
-          <div className="relative z-10 px-10 py-16 md:px-16 md:py-20 text-center">
-            <div className="text-primary text-4xl mb-6">✦</div>
-            <p className="text-white/70 text-xs uppercase tracking-[0.3em] font-bold mb-4">A Moment That Changed Everything</p>
-            <h2 className="text-3xl md:text-5xl font-bold text-white leading-snug mb-6">
-              Caesar came in a wheelchair.<br />He stood up and walked out under his own power.
-            </h2>
-            <p className="text-white/65 text-base leading-relaxed max-w-2xl mx-auto">
-              This is what becomes possible when you stop managing your life and start operating from a completely different frequency.
-            </p>
-          </div>
-        </motion.div>
-      </section>
-
       {/* CTA */}
       <motion.div
         className="mt-4 px-4 text-center"
