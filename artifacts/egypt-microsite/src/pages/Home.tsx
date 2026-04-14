@@ -48,7 +48,7 @@ export default function Home() {
     <div className="min-h-screen bg-background w-full overflow-hidden">
 
       {/* ─── HERO ─── */}
-      <section className="relative h-[100dvh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[100dvh] flex items-center justify-center overflow-hidden bg-black">
         <motion.div
           className="absolute inset-0 z-0"
           style={{ y: y1, opacity }}
