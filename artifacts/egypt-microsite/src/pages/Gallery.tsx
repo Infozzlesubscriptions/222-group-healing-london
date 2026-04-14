@@ -124,11 +124,7 @@ export default function Gallery() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Feel the Energy</span>
           <h1 className="text-3xl sm:text-5xl md:text-7xl font-sans text-foreground mb-4">Gallery</h1>
-          <p className="text-xl text-muted-foreground font-light max-w-2xl mx-auto">
-            People in the room. Jerry presenting. Group energy. Transformation on faces.
-          </p>
         </motion.div>
 
         {/* Instagram Grid */}
