@@ -148,6 +148,59 @@ export default function Programme() {
           </motion.div>
         ))}
       </div>
+      {/* ─── WHAT THE EXPERTS SAY ─── */}
+      <div className="mt-24 px-4 max-w-7xl mx-auto">
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.8 }}
+        >
+          <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Peer Endorsements</span>
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground leading-tight mb-4">
+            What the Experts Say
+          </h2>
+          <div className="h-px w-20 bg-primary mx-auto mt-6" />
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            { name: "Dr. Merlin", id: "REPLACE_MERLIN_ID" },
+            { name: "Dr. Maher",  id: "REPLACE_MAHER_ID"  },
+            { name: "Dr. Angela", id: "REPLACE_ANGELA_ID" },
+          ].map((expert, i) => (
+            <motion.div
+              key={expert.name}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.7, delay: i * 0.12 }}
+              className="flex flex-col"
+            >
+              <div
+                className="relative rounded-2xl overflow-hidden shadow-xl"
+                style={{ border: "1px solid rgba(211,146,34,0.4)", aspectRatio: "16/9" }}
+              >
+                {/* Glow */}
+                <div
+                  className="absolute -inset-1 rounded-2xl blur-xl opacity-20 pointer-events-none"
+                  style={{ background: "linear-gradient(135deg, #d39222, #FFECBA, #d39222)" }}
+                />
+                <iframe
+                  src={`https://player.vimeo.com/video/${expert.id}?badge=0&autopause=0&quality_selector=1&player_id=0&app_id=58479`}
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                  className="absolute inset-0 w-full h-full"
+                  title={`${expert.name} testimonial`}
+                  style={{ border: 0 }}
+                />
+              </div>
+              <p className="text-center text-foreground font-semibold mt-4 tracking-wide">{expert.name}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
       {/* Closing statement */}
       <motion.div
         className="mt-20 px-4 max-w-7xl mx-auto"
