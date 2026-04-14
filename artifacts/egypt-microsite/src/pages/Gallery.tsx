@@ -94,10 +94,10 @@ export default function Gallery() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Sacred Archive</span>
-          <h1 className="text-3xl sm:text-5xl md:text-7xl font-sans text-foreground mb-4">Gallery & Past Journeys</h1>
+          <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Feel the Energy</span>
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-sans text-foreground mb-4">Gallery</h1>
           <p className="text-xl text-muted-foreground font-light max-w-2xl mx-auto">
-            Glimpses of the unseen. Echoes of the eternal.
+            People in the room. Jerry presenting. Group energy. Transformation on faces.
           </p>
         </motion.div>
 
@@ -175,22 +175,22 @@ export default function Gallery() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <span className="text-primary tracking-[0.3em] text-xs font-bold uppercase block mb-6">The Next Chapter</span>
+          <span className="text-primary tracking-[0.3em] text-xs font-bold uppercase block mb-6">Limited Places Remaining</span>
           <h2 className="text-4xl md:text-6xl font-bold font-sans text-foreground mb-6 leading-snug">
-            Your name belongs<br />on this list.
+            Your story belongs<br />in this room.
           </h2>
           <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto">
-            Join us for Egypt 2027 — 15 days of sacred initiation, ancient power, and lifelong transformation.
+            Elite Be Superhuman — London, UK · May 2026. A 3-day live experience that changes everything.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/join-2027">
+            <Link href="/booking">
               <Button size="lg" className="bg-primary text-primary-foreground font-bold text-lg px-10 py-2">
-                Join Egypt 2027
+                Reserve Your Seat
               </Button>
             </Link>
-            <Link href="/journey">
+            <Link href="/programme">
               <Button size="lg" variant="outline" className="border-primary text-primary font-semibold text-lg px-10 py-2">
-                View the Journey
+                View the Programme
               </Button>
             </Link>
           </div>

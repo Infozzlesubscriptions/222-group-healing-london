@@ -5,11 +5,10 @@ import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "The Journey", href: "/journey" },
-  { label: "Transformations", href: "/transformations" },
+  { label: "Programme", href: "/programme" },
   { label: "Gallery", href: "/gallery" },
-  { label: "About", href: "/about" },
-  { label: "Join 2027", href: "/join-2027" },
+  { label: "Testimonials", href: "/testimonials" },
+  { label: "FAQ", href: "/faq" },
 ];
 
 export function Footer() {
@@ -30,7 +29,7 @@ export function Footer() {
               style={{ filter: logoFilter }}
             />
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
-              A transformational journey through Egypt's ancient temples — guided by Star Magic.
+              Star Magic · Elite Be Superhuman · London, May 2026
             </p>
             <a
               href="https://www.starmagichealing.com"
@@ -59,15 +58,15 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Journey Call */}
+          {/* CTA */}
           <div>
-            <h4 className="font-sans text-foreground text-lg mb-5 tracking-wide">The Next Gateway</h4>
+            <h4 className="font-sans text-foreground text-lg mb-5 tracking-wide">Secure Your Place</h4>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-              The Egypt Ascension Journey 2027 opens in March. Answer the call and step into your next awakening.
+              Places are strictly limited. If this is calling you — don't sit on it.
             </p>
-            <Link href="/join-2027">
+            <Link href="/booking">
               <Button size="lg" className="font-bold tracking-widest uppercase">
-                Join 2027
+                Reserve Now
               </Button>
             </Link>
           </div>
@@ -77,14 +76,18 @@ export function Footer() {
         {/* Divider */}
         <div className="border-t border-border/30 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-muted-foreground/50 text-xs tracking-widest uppercase">
-            ✦ Egypt Ascension Journey ✦
+            ✦ Star Magic · One Love 🔥
           </p>
           <p className="text-muted-foreground/40 text-xs">
             © {new Date().getFullYear()} Star Magic. All rights reserved.
           </p>
-          <p className="text-muted-foreground/40 text-xs italic font-sans">
-            "Egypt didn't change me. It revealed me."
-          </p>
+          <div className="flex items-center gap-4 text-muted-foreground/40 text-xs">
+            <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
+            <span>·</span>
+            <a href="#" className="hover:text-primary transition-colors">Terms</a>
+            <span>·</span>
+            <a href="mailto:info@starmagichealing.com" className="hover:text-primary transition-colors">Contact</a>
+          </div>
         </div>
       </div>
     </footer>

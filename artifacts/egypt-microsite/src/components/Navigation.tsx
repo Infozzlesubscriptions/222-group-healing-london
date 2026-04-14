@@ -6,15 +6,13 @@ import logoSrc from "@assets/live_site_logo_black_(1)_1775484379388.webp";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/journey", label: "The Journey" },
-  { href: "/transformations", label: "Transformations" },
+  { href: "/programme", label: "Programme" },
   { href: "/gallery", label: "Gallery" },
-  { href: "/about", label: "About" },
+  { href: "/testimonials", label: "Testimonials" },
   { href: "/faq", label: "FAQ" },
 ];
 
-// Pages where the hero background is dark — nav can start transparent with white text
-const DARK_HERO_PAGES = ["/", "/join-2027"];
+const DARK_HERO_PAGES = ["/", "/booking"];
 
 export function Navigation() {
   const [location] = useLocation();
@@ -22,7 +20,6 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   const hasDarkHero = DARK_HERO_PAGES.includes(location);
-  // On light pages always show the opaque/solid state regardless of scroll
   const showSolid = isScrolled || !hasDarkHero;
 
   useEffect(() => {
@@ -74,7 +71,6 @@ export function Navigation() {
                   data-testid={`link-nav-${link.label.toLowerCase().replace(/\s+/g, "-")}`}
                 >
                   {link.label}
-                  {/* Active underline */}
                   <span
                     className={`absolute -bottom-1 left-0 h-px transition-all duration-300 ${
                       active ? "w-full bg-primary" : "w-0 group-hover:w-full bg-primary/60"
@@ -87,8 +83,7 @@ export function Navigation() {
 
           {/* CTA + Mobile toggle */}
           <div className="flex items-center gap-3">
-            {/* Join 2027 CTA — desktop */}
-            <Link href="/join-2027" className="hidden lg:block" data-testid="link-nav-join-2027">
+            <Link href="/booking" className="hidden lg:block" data-testid="link-nav-secure-place">
               <button
                 className="text-sm font-semibold px-5 py-2 rounded-lg tracking-wide transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97] cursor-pointer"
                 style={{
@@ -96,7 +91,7 @@ export function Navigation() {
                   color: "#1a1208",
                   border: "none",
                 }}
-              >Answer Egypt's Call</button>
+              >Secure Your Place</button>
             </Link>
 
             {/* Mobile hamburger */}
@@ -114,6 +109,7 @@ export function Navigation() {
 
         </div>
       </div>
+
       {/* Mobile Nav Drawer */}
       <AnimatePresence>
         {isOpen && (
@@ -147,7 +143,7 @@ export function Navigation() {
 
               {/* Mobile CTA */}
               <div className="pt-3 mt-2 border-t border-border/30">
-                <Link href="/join-2027" onClick={() => setIsOpen(false)}>
+                <Link href="/booking" onClick={() => setIsOpen(false)}>
                   <button
                     className="w-full text-base font-semibold py-3 rounded-xl tracking-wide cursor-pointer"
                     style={{
@@ -155,8 +151,8 @@ export function Navigation() {
                       color: "#1a1208",
                       border: "none",
                     }}
-                    data-testid="link-mobile-join-2027"
-                  >Answer Egypt's Call</button>
+                    data-testid="link-mobile-secure-place"
+                  >Secure Your Place</button>
                 </Link>
               </div>
             </div>

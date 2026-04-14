@@ -9,12 +9,11 @@ import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { Chatbot } from "@/components/Chatbot";
 import Home from "@/pages/Home";
-import Journey from "@/pages/Journey";
-import Transformations from "@/pages/Transformations";
 import Gallery from "@/pages/Gallery";
-import About from "@/pages/About";
-import Join from "@/pages/Join";
+import Programme from "@/pages/Programme";
+import Testimonials from "@/pages/Testimonials";
 import FAQ from "@/pages/FAQ";
+import Booking from "@/pages/Booking";
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -30,13 +29,11 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
-      <Route path="/journey" component={Journey} />
-      <Route path="/transformations" component={Transformations} />
+      <Route path="/programme" component={Programme} />
       <Route path="/gallery" component={Gallery} />
-      <Route path="/about" component={About} />
-      <Route path="/join-2027" component={Join} />
-      <Route path="/past-journeys" component={Gallery} />
+      <Route path="/testimonials" component={Testimonials} />
       <Route path="/faq" component={FAQ} />
+      <Route path="/booking" component={Booking} />
       <Route component={NotFound} />
     </Switch>
   );
