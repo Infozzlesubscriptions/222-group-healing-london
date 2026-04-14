@@ -809,7 +809,7 @@ export default function Home() {
       <section className="relative py-0 overflow-hidden">
         <div className="absolute inset-0">
           <img src={groupPyramidsImage} alt="Event energy" className="w-full h-full object-cover object-center" />
-          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-black/35" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-24 md:py-36 text-center">
