@@ -169,7 +169,7 @@ export default function Gallery() {
       <section className="py-28 px-4 bg-secondary text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10" />
         <motion.div
-          className="max-w-3xl mx-auto relative z-10"
+          className="max-w-7xl mx-auto relative z-10"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

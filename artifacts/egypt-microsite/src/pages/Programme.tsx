@@ -62,7 +62,7 @@ export default function Programme() {
     <div className="min-h-screen bg-background pt-24 pb-20">
       {/* Hero */}
       <motion.div
-        className="text-center px-4 mb-20 max-w-3xl mx-auto"
+        className="text-center px-4 mb-20 max-w-7xl mx-auto"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}

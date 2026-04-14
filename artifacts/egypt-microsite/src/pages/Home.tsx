@@ -524,7 +524,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/70" />
         </div>
 
-        <div className="relative z-10 max-w-3xl mx-auto px-4 py-24 md:py-36 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 py-24 md:py-36 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
