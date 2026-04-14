@@ -312,8 +312,25 @@ export default function Home() {
       {/* ─── WHAT YOU'LL WALK AWAY WITH ─── */}
       <section className="py-24 md:py-32 px-4 bg-secondary/30">
         <div className="max-w-7xl mx-auto">
+          {/* Image */}
           <motion.div
-            className="text-center mb-16"
+            className="mb-14 rounded-3xl overflow-hidden shadow-xl"
+            style={{ maxHeight: "480px" }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.8 }}
+          >
+            <img
+              src={karnakImg}
+              alt="Elite Be Superhuman event experience"
+              className="w-full h-full object-cover object-center"
+              style={{ maxHeight: "480px" }}
+            />
+          </motion.div>
+
+          <motion.div
+            className="text-center mb-8"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
@@ -323,10 +340,13 @@ export default function Home() {
             <h2 className="text-4xl md:text-6xl font-bold text-foreground leading-tight mb-4">
               This Isn't a List of Things You'll Learn.<br className="hidden md:block" /> This Is Who You'll Be.
             </h2>
-            <div className="h-px w-20 bg-primary mx-auto mt-6" />
+            <div className="h-px w-20 bg-primary mx-auto mt-6 mb-8" />
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+              Most events leave you inspired for a week. Elite Be Superhuman leaves you fundamentally different. Every shift you experience in that room is permanent — because it happens at the level of who you actually are, not just how you think or behave.
+            </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-12">
             {walkAwayItems.map((item, i) => (
               <motion.div
                 key={i}
