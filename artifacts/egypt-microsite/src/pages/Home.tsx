@@ -188,6 +188,52 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+      {/* ─── HERO VIDEO ─── */}
+      <section className="py-24 md:py-32 px-4 bg-background">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.8 }}
+          >
+            <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">What This Event Is</span>
+            <h2 className="text-4xl md:text-6xl font-bold text-foreground leading-tight mb-4">
+              Hear It From Jerry
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-xl mx-auto font-light">
+              What this event is, what happens, what's possible — direct from Jerry.
+            </p>
+            <div className="h-px w-20 bg-primary mx-auto mt-8" />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 40, scale: 0.97 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.9 }}
+            className="relative"
+          >
+            <div
+              className="absolute -inset-1 rounded-3xl blur-2xl opacity-30 pointer-events-none"
+              style={{ background: "linear-gradient(135deg, #d39222, #F3D696, #d39222)" }}
+            />
+            <div
+              className="relative rounded-3xl overflow-hidden shadow-2xl"
+              style={{ border: "1px solid rgba(243,214,150,0.35)", aspectRatio: "16/9" }}
+            >
+              <iframe
+                src="https://player.vimeo.com/video/1182092823?badge=0&autopause=0&quality_selector=1&player_id=0&app_id=58479"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                className="absolute inset-0 w-full h-full"
+                title="Hear It From Jerry"
+                style={{ border: 0 }}
+              />
+            </div>
+          </motion.div>
+        </div>
+      </section>
       {/* ─── THREE PILLARS ─── */}
       <section className="py-24 md:py-32 px-4 bg-secondary/20">
         <div className="max-w-7xl mx-auto">
@@ -268,52 +314,6 @@ export default function Home() {
                 Secure Your Seat Now
               </button>
             </Link>
-          </motion.div>
-        </div>
-      </section>
-      {/* ─── HERO VIDEO ─── */}
-      <section className="py-24 md:py-32 px-4 bg-background">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8 }}
-          >
-            <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">What This Event Is</span>
-            <h2 className="text-4xl md:text-6xl font-bold text-foreground leading-tight mb-4">
-              Hear It From Jerry
-            </h2>
-            <p className="text-muted-foreground text-lg max-w-xl mx-auto font-light">
-              What this event is, what happens, what's possible — direct from Jerry.
-            </p>
-            <div className="h-px w-20 bg-primary mx-auto mt-8" />
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 40, scale: 0.97 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.9 }}
-            className="relative"
-          >
-            <div
-              className="absolute -inset-1 rounded-3xl blur-2xl opacity-30 pointer-events-none"
-              style={{ background: "linear-gradient(135deg, #d39222, #F3D696, #d39222)" }}
-            />
-            <div
-              className="relative rounded-3xl overflow-hidden shadow-2xl"
-              style={{ border: "1px solid rgba(243,214,150,0.35)", aspectRatio: "16/9" }}
-            >
-              <iframe
-                src="https://player.vimeo.com/video/1182092823?badge=0&autopause=0&quality_selector=1&player_id=0&app_id=58479"
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                className="absolute inset-0 w-full h-full"
-                title="Hear It From Jerry"
-                style={{ border: 0 }}
-              />
-            </div>
           </motion.div>
         </div>
       </section>
