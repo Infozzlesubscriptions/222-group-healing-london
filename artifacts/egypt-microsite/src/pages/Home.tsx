@@ -471,20 +471,26 @@ export default function Home() {
             </p>
           </motion.div>
 
-          {/* Right — full-bleed image */}
+          {/* Right — cream panel with image inset */}
           <motion.div
             initial={{ opacity: 0, scale: 1.04 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 1 }}
-            className="relative min-h-[420px] lg:min-h-0"
+            className="relative min-h-[420px] lg:min-h-0 flex items-center justify-center p-10 lg:p-16"
+            style={{ backgroundColor: "#FDF6E9" }}
           >
-            <img
-              src={tribeCirclePyramidImg}
-              alt="Jerry Sargeant"
-              className="absolute inset-0 w-full h-full object-cover object-center"
-            />
-            <div className="absolute inset-0" style={{ background: "linear-gradient(to right, #FDF6E9 0%, transparent 30%)" }} />
+            <div className="relative w-full max-w-sm aspect-square rounded-3xl overflow-hidden shadow-2xl">
+              <div
+                className="absolute -inset-1 rounded-3xl blur-xl opacity-20 pointer-events-none"
+                style={{ background: "linear-gradient(135deg, #d39222, #F3D696, #d39222)" }}
+              />
+              <img
+                src={tribeCirclePyramidImg}
+                alt="Jerry Sargeant"
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
           </motion.div>
 
         </div>
