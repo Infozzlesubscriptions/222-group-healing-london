@@ -69,7 +69,7 @@ export default function Programme() {
       >
         <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Elite Be Superhuman</span>
         <h1 className="md:text-7xl font-bold text-foreground mb-6 text-[48px]">
-          Three Days.<br />One Complete Transformation.
+          Three Days.<br /><span className="whitespace-nowrap">One Complete Transformation.</span>
         </h1>
         <p className="text-lg text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto">
           Every practice, every session, every experience over these three days is built around one outcome: you leave operating from a state of complete wholeness.
