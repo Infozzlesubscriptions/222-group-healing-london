@@ -37,7 +37,6 @@ import productionScreen from "@assets/image_1775544259005.png";
 import karnakWalk from "@assets/image_1775544266918.png";
 import dockMoment from "@assets/image_1775544334838.png";
 import nileInterview from "@assets/image_1775544341300.png";
-import groupGiza from "@assets/image_1775544348592.png";
 import saqqaraStand from "@assets/image_1775544356457.png";
 import tombSilhouette from "@assets/image_1775544506523.png";
 import valleyWalk from "@assets/image_1775544513175.png";
@@ -53,7 +52,6 @@ import nightCelebration from "@assets/image_1775544606258.png";
 import robesCelebration from "@assets/image_1775544618875.png";
 
 const allImages = [
-  { id: 1, src: groupGiza, category: "Group Moments", alt: "The Tribe — All Three Pyramids of Giza" },
   { id: 2, src: sunsetSilhouette, category: "Group Moments", alt: "Tribe Silhouettes at Sunset" },
   { id: 3, src: karnakPrayer, category: "Ceremonies", alt: "Opening to the Sky at Karnak" },
   { id: 4, src: robesCelebration, category: "Ceremonies", alt: "Celebration in Egyptian Robes" },
@@ -99,14 +97,14 @@ const allImages = [
 ];
 
 const scrollerImages = [
-  groupGiza, sunsetSilhouette, karnakPrayer, robesCelebration, tombSilhouette,
+  sunsetSilhouette, karnakPrayer, robesCelebration, tombSilhouette,
   nileHealing, karnakWalk, nileBoatSession, groupPyramid, templeDoorway,
   galleryGroup, galleryEventOverview, galleryGroupHug, galleryQuantum, galleryBlueprint,
   nilePrayer, saqqaraStand, nightCelebration, valleyWalk, busWindow,
   galleryStep3, galleryDeepTrauma, galleryNewReality, galleryEnergy, gallerySpiritual,
   karnakPrayer, nileGazing, dockMoment, nileInterview, productionScreen,
   galleryBrainScan1, galleryBrainScan2, galleryStep1, galleryStep5, galleryGroupHug,
-  groupGiza, sunsetSilhouette, karnakPrayer, robesCelebration, tombSilhouette,
+  sunsetSilhouette, karnakPrayer, robesCelebration, tombSilhouette,
   nileHealing, karnakWalk, nileBoatSession, groupPyramid, templeDoorway,
 ];
 
