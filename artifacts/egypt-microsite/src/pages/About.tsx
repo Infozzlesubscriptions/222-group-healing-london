@@ -101,7 +101,7 @@ export default function About() {
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl pointer-events-none" />
               <div
                 className="w-10 h-10 rounded-full flex items-center justify-center text-base mb-4"
-                style={{ background: "linear-gradient(135deg, #B8975C, #F3D696)", color: "#1a1208" }}
+                style={{ background: "linear-gradient(135deg, #d39222, #F3D696)", color: "#1a1208" }}
               >
                 {item.icon}
               </div>

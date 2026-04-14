@@ -98,7 +98,7 @@ export default function Programme() {
                 <div
                   className="shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-bold shadow-md"
                   style={{
-                    background: "linear-gradient(90deg, #B8975C 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #B8985D 100%)",
+                    background: "linear-gradient(90deg, #d39222 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #d39222 100%)",
                     color: "#1a1208",
                   }}
                 >
@@ -137,7 +137,7 @@ export default function Programme() {
                         style={{
                           background: "linear-gradient(135deg, rgba(184,151,92,0.3), rgba(243,214,150,0.15))",
                           border: "1px solid rgba(184,151,92,0.35)",
-                          color: "#B8975C",
+                          color: "#d39222",
                         }}
                       >
                         ✦

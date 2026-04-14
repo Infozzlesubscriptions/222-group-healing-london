@@ -147,7 +147,7 @@ export default function FAQ() {
         >
           <div
             className="w-24 h-24 rounded-full flex flex-col items-center justify-center shadow-lg shrink-0"
-            style={{ background: "linear-gradient(135deg, #B8975C 0%, #FFECBA 50%, #B8985D 100%)" }}
+            style={{ background: "linear-gradient(135deg, #d39222 0%, #FFECBA 50%, #d39222 100%)" }}
           >
             <span className="text-[#1a1208] font-bold text-[10px] uppercase tracking-wide text-center leading-tight px-2">
               100%<br />Money Back

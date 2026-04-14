@@ -87,7 +87,7 @@ export function Navigation() {
               <button
                 className="text-sm font-semibold px-5 py-2 rounded-lg tracking-wide transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97] cursor-pointer"
                 style={{
-                  background: "linear-gradient(90deg, #B8975C 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #B8985D 100%)",
+                  background: "linear-gradient(90deg, #d39222 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #d39222 100%)",
                   color: "#1a1208",
                   border: "none",
                 }}
@@ -147,7 +147,7 @@ export function Navigation() {
                   <button
                     className="w-full text-base font-semibold py-3 rounded-xl tracking-wide cursor-pointer"
                     style={{
-                      background: "linear-gradient(90deg, #B8975C 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #B8985D 100%)",
+                      background: "linear-gradient(90deg, #d39222 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #d39222 100%)",
                       color: "#1a1208",
                       border: "none",
                     }}

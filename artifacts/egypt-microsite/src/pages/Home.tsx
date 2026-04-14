@@ -83,7 +83,7 @@ export default function Home() {
                 <button
                   className="w-full sm:w-auto text-base font-bold px-8 py-3 rounded-lg tracking-wide transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97] cursor-pointer shadow-lg"
                   style={{
-                    background: "linear-gradient(90deg, #B8975C 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #B8985D 100%)",
+                    background: "linear-gradient(90deg, #d39222 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #d39222 100%)",
                     color: "#1a1208",
                     border: "none",
                   }}
@@ -148,7 +148,7 @@ export default function Home() {
                 <div
                   className="text-3xl md:text-4xl font-bold mb-2"
                   style={{
-                    background: "linear-gradient(90deg, #B8975C 0%, #FFECBA 50%, #B8985D 100%)",
+                    background: "linear-gradient(90deg, #d39222 0%, #FFECBA 50%, #d39222 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                   }}
@@ -242,7 +242,7 @@ export default function Home() {
           >
             <div
               className="absolute -inset-1 rounded-3xl blur-2xl opacity-30 pointer-events-none"
-              style={{ background: "linear-gradient(135deg, #B8975C, #F3D696, #B8985D)" }}
+              style={{ background: "linear-gradient(135deg, #d39222, #F3D696, #d39222)" }}
             />
             <div
               className="relative rounded-3xl overflow-hidden shadow-2xl"
@@ -273,7 +273,7 @@ export default function Home() {
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
                       className="w-20 h-20 rounded-full flex items-center justify-center shadow-2xl"
-                      style={{ background: "linear-gradient(135deg, #B8975C, #FFECBA, #F3D696, #B8985D)" }}
+                      style={{ background: "linear-gradient(135deg, #d39222, #FFECBA, #F3D696, #d39222)" }}
                     >
                       <svg className="w-8 h-8 ml-1" viewBox="0 0 24 24" fill="#1a1208">
                         <path d="M8 5v14l11-7z" />
@@ -319,7 +319,7 @@ export default function Home() {
                   style={{
                     background: "linear-gradient(135deg, rgba(184,151,92,0.3), rgba(243,214,150,0.15))",
                     border: "1px solid rgba(184,151,92,0.35)",
-                    color: "#B8975C",
+                    color: "#d39222",
                   }}
                 >
                   ✦
@@ -354,7 +354,7 @@ export default function Home() {
                       style={{
                         background: "linear-gradient(135deg, rgba(184,151,92,0.3), rgba(243,214,150,0.15))",
                         border: "1px solid rgba(184,151,92,0.35)",
-                        color: "#B8975C",
+                        color: "#d39222",
                       }}
                     >
                       ✦
@@ -379,7 +379,7 @@ export default function Home() {
             >
               <div
                 className="absolute -inset-1 rounded-3xl blur-xl opacity-20 pointer-events-none"
-                style={{ background: "linear-gradient(135deg, #B8975C, #F3D696, #B8985D)" }}
+                style={{ background: "linear-gradient(135deg, #d39222, #F3D696, #d39222)" }}
               />
               <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5]">
                 <img
@@ -415,7 +415,7 @@ export default function Home() {
             >
               <div
                 className="absolute -inset-1 rounded-3xl blur-xl opacity-20 pointer-events-none"
-                style={{ background: "linear-gradient(135deg, #B8975C, #F3D696, #B8985D)" }}
+                style={{ background: "linear-gradient(135deg, #d39222, #F3D696, #d39222)" }}
               />
               <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-square">
                 <img
@@ -474,7 +474,7 @@ export default function Home() {
                 <div
                   className="w-36 h-36 rounded-full flex flex-col items-center justify-center shadow-2xl mb-6"
                   style={{
-                    background: "linear-gradient(135deg, #B8975C 0%, #FFECBA 50%, #B8985D 100%)",
+                    background: "linear-gradient(135deg, #d39222 0%, #FFECBA 50%, #d39222 100%)",
                   }}
                 >
                   <span className="text-[#1a1208] font-bold text-xs uppercase tracking-widest leading-tight text-center px-4">
@@ -503,7 +503,7 @@ export default function Home() {
                   <button
                     className="text-sm font-bold px-8 py-3 rounded-lg tracking-wide transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97] cursor-pointer"
                     style={{
-                      background: "linear-gradient(90deg, #B8975C 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #B8985D 100%)",
+                      background: "linear-gradient(90deg, #d39222 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #d39222 100%)",
                       color: "#1a1208",
                       border: "none",
                     }}
@@ -547,7 +547,7 @@ export default function Home() {
                 <button
                   className="text-base font-bold px-10 py-3 rounded-lg tracking-wide transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97] cursor-pointer shadow-lg"
                   style={{
-                    background: "linear-gradient(90deg, #B8975C 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #B8985D 100%)",
+                    background: "linear-gradient(90deg, #d39222 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #d39222 100%)",
                     color: "#1a1208",
                     border: "none",
                   }}

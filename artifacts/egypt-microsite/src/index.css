@@ -347,7 +347,7 @@
 button.bg-primary,
 a > button.bg-primary,
 button.border-primary {
-  background: linear-gradient(90deg, #B8975C 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #B8985D 100%) !important;
+  background: linear-gradient(90deg, #d39222 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #d39222 100%) !important;
   color: #1a0e00 !important;
   border: none !important;
 }

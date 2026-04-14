@@ -106,7 +106,7 @@ function VideoCard({ video, index }: { video: typeof videoTestimonials[0]; index
                 whileTap={{ scale: 0.95 }}
                 className="w-16 h-16 rounded-full flex items-center justify-center shadow-2xl"
                 style={{
-                  background: "linear-gradient(135deg, #B8975C, #FFECBA, #F3D696, #B8985D)",
+                  background: "linear-gradient(135deg, #d39222, #FFECBA, #F3D696, #d39222)",
                 }}
               >
                 <svg className="w-6 h-6 ml-1" viewBox="0 0 24 24" fill="#1a1208">
@@ -216,7 +216,7 @@ export default function Testimonials() {
                   style={{
                     background: "linear-gradient(135deg, rgba(184,151,92,0.3), rgba(243,214,150,0.15))",
                     border: "1px solid rgba(184,151,92,0.35)",
-                    color: "#B8975C",
+                    color: "#d39222",
                   }}
                 >
                   {t.name.charAt(0)}

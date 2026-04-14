@@ -94,7 +94,7 @@ function VideoCard({ video, index }: { video: typeof videoTestimonials[0]; index
               <div
                 className="w-16 h-16 rounded-full flex items-center justify-center shadow-2xl transition-transform duration-300 group-hover:scale-110"
                 style={{
-                  background: "linear-gradient(135deg, #B8975C 0%, #FFECBA 50%, #B8985D 100%)",
+                  background: "linear-gradient(135deg, #d39222 0%, #FFECBA 50%, #d39222 100%)",
                 }}
               >
                 <svg className="w-6 h-6 ml-1" viewBox="0 0 24 24" fill="#1a1208">
@@ -111,7 +111,7 @@ function VideoCard({ video, index }: { video: typeof videoTestimonials[0]; index
         <div className="flex items-center gap-3">
           <div
             className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold shrink-0"
-            style={{ background: "linear-gradient(135deg, #B8975C, #F3D696)", color: "#1a1208" }}
+            style={{ background: "linear-gradient(135deg, #d39222, #F3D696)", color: "#1a1208" }}
           >
             {video.name.charAt(0)}
           </div>
@@ -203,7 +203,7 @@ export default function Transformations() {
             <div className="flex items-center gap-3 mb-5">
               <span
                 className="text-xs font-bold tracking-[0.25em] uppercase px-3 py-1.5 rounded-full"
-                style={{ background: "linear-gradient(90deg, #B8975C, #F3D696)", color: "#1a1208" }}
+                style={{ background: "linear-gradient(90deg, #d39222, #F3D696)", color: "#1a1208" }}
               >
                 ▶ Full Documentary
               </span>
@@ -215,7 +215,7 @@ export default function Transformations() {
             <div className="relative">
               <div
                 className="absolute -inset-1 rounded-3xl blur-2xl opacity-20 pointer-events-none"
-                style={{ background: "linear-gradient(135deg, #B8975C, #F3D696, #B8985D)" }}
+                style={{ background: "linear-gradient(135deg, #d39222, #F3D696, #d39222)" }}
               />
               <div
                 className="relative rounded-2xl overflow-hidden shadow-lg"
@@ -249,7 +249,7 @@ export default function Transformations() {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                         className="w-20 h-20 rounded-full flex items-center justify-center shadow-2xl"
-                        style={{ background: "linear-gradient(135deg, #B8975C, #FFECBA, #F3D696, #B8985D)" }}
+                        style={{ background: "linear-gradient(135deg, #d39222, #FFECBA, #F3D696, #d39222)" }}
                       >
                         <svg className="w-8 h-8 ml-1" viewBox="0 0 24 24" fill="#1a1208">
                           <path d="M8 5v14l11-7z" />

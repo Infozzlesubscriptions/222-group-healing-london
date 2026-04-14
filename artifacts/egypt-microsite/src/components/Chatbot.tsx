@@ -121,7 +121,7 @@ export function Chatbot() {
         onClick={() => setOpen((o) => !o)}
         className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full shadow-2xl flex items-center justify-center"
         style={{
-          background: "linear-gradient(135deg, #B8975C, #F3D696, #B8985D)",
+          background: "linear-gradient(135deg, #d39222, #F3D696, #d39222)",
         }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
@@ -168,7 +168,7 @@ export function Chatbot() {
             {/* Header */}
             <div
               className="px-5 py-4 flex items-center gap-3 shrink-0"
-              style={{ background: "linear-gradient(135deg, #B8975C, #F3D696, #B8985D)" }}
+              style={{ background: "linear-gradient(135deg, #d39222, #F3D696, #d39222)" }}
             >
               <div className="w-9 h-9 rounded-full bg-[#1a1208]/20 flex items-center justify-center text-lg shrink-0">☥</div>
               <div className="flex-1 min-w-0">
@@ -194,7 +194,7 @@ export function Chatbot() {
                 <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
                   {msg.role === "assistant" && (
                     <div className="w-6 h-6 rounded-full shrink-0 mt-0.5 mr-2 flex items-center justify-center text-xs"
-                      style={{ background: "linear-gradient(135deg, #B8975C, #F3D696)" }}>
+                      style={{ background: "linear-gradient(135deg, #d39222, #F3D696)" }}>
                       ☥
                     </div>
                   )}
@@ -204,7 +204,7 @@ export function Chatbot() {
                         ? "text-[#1a1208] rounded-br-sm"
                         : "bg-secondary/60 text-foreground rounded-bl-sm"
                     }`}
-                    style={msg.role === "user" ? { background: "linear-gradient(135deg, #B8975C, #F3D696, #B8985D)" } : {}}
+                    style={msg.role === "user" ? { background: "linear-gradient(135deg, #d39222, #F3D696, #d39222)" } : {}}
                   >
                     {msg.content || (
                       <span className="flex items-center gap-1.5">
@@ -259,7 +259,7 @@ export function Chatbot() {
                 type="submit"
                 disabled={!input.trim() || streaming}
                 className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 disabled:opacity-40 transition-all hover:scale-105 active:scale-95"
-                style={{ background: "linear-gradient(135deg, #B8975C, #F3D696, #B8985D)" }}
+                style={{ background: "linear-gradient(135deg, #d39222, #F3D696, #d39222)" }}
               >
                 {streaming ? (
                   <Loader2 className="w-4 h-4 text-[#1a1208] animate-spin" />

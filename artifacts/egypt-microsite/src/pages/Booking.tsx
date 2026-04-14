@@ -67,7 +67,7 @@ export default function Booking() {
               <button
                 className="w-full text-base font-bold py-4 rounded-xl tracking-wide transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-md"
                 style={{
-                  background: "linear-gradient(90deg, #B8975C 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #B8985D 100%)",
+                  background: "linear-gradient(90deg, #d39222 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #d39222 100%)",
                   color: "#1a1208",
                   border: "none",
                 }}
