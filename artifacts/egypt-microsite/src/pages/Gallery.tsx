@@ -3,70 +3,12 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 
-import galleryGroup from "@assets/community-group-ORD4DYoj_1776168740414.jpg";
-import galleryBrainScan1 from "@assets/Brain-Scan-1-scaled_1776168740415.webp";
-import galleryBrainScan2 from "@assets/Brain-Scan-2-scaled_1776168740416.webp";
-import galleryDeepTrauma from "@assets/Deep-Trauma-Release-scaled_1776168740416.webp";
-import galleryGroupHug from "@assets/Elite_Be_Superhuman_13-scaled_1776168740417.webp";
-import galleryEventOverview from "@assets/event-overview_1776168740418.webp";
-import galleryNewReality from "@assets/New-Reality-Optimization-Routine-scaled_1776168740419.webp";
-import galleryStep1 from "@assets/Program-and-step-1-scaled_1776168740419.webp";
-import galleryStep3 from "@assets/Program-and-step-3-scaled_1776168740420.webp";
-import galleryStep5 from "@assets/Program-and-step-5-scaled_1776168740421.webp";
-import galleryQuantum from "@assets/Quantum-Meditations-scaled_1776168740425.webp";
-import gallerySpiritual from "@assets/Spiritual-Warrior-Protocol-scaled_1776168740425.webp";
-import galleryBlueprint from "@assets/Superhuman-Blueprint-scaled_1776168740426.webp";
-import galleryEnergy from "@assets/Unshakable-Energy-scaled_1776168740427.webp";
-
-
-const scrollerImages = [
-  galleryGroup, galleryEventOverview, galleryGroupHug, galleryQuantum, galleryBlueprint,
-  galleryStep3, galleryDeepTrauma, galleryNewReality, galleryEnergy, gallerySpiritual,
-  galleryBrainScan1, galleryBrainScan2, galleryStep1, galleryStep5, galleryGroupHug,
-  galleryGroup, galleryEventOverview, galleryGroupHug, galleryQuantum, galleryBlueprint,
-  galleryStep3, galleryDeepTrauma, galleryNewReality, galleryEnergy, gallerySpiritual,
-  galleryBrainScan1, galleryBrainScan2, galleryStep1, galleryStep5, galleryGroupHug,
-];
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
     <div className="min-h-screen bg-background pt-24 pb-0">
-
-      {/* Auto-Scroll Strip */}
-      <div className="mt-24">
-        <motion.div
-          className="text-center mb-8 px-4"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <span className="text-primary tracking-[0.3em] text-xs font-bold uppercase">2026 Journey — In Moments</span>
-        </motion.div>
-        <div
-          className="relative overflow-hidden"
-          style={{ maskImage: "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)" }}
-        >
-          <div className="flex gap-4 animate-marquee w-max">
-            {scrollerImages.map((src, i) => (
-              <div
-                key={i}
-                className="shrink-0 w-72 h-48 overflow-hidden cursor-pointer border border-border/20 hover:border-primary/50 transition-colors duration-300"
-                onClick={() => setSelectedImage(src)}
-              >
-                <img
-                  src={src}
-                  alt={`Moment ${i + 1}`}
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
 
       {/* CTA Banner */}
       <section className="py-28 px-4 bg-secondary text-center relative overflow-hidden">
