@@ -4,9 +4,14 @@ import { Button } from "@/components/ui/button";
 import groupPyramidsImage from "@assets/community-group-ORD4DYoj_1776153736899.jpg";
 import tribeCirclePyramidImg from "@assets/Jerry-Sargeant-One-Love_1776160920406.webp";
 import spiritualActivationImg from "@assets/image_1776160809528.png";
-import pillarImg1 from "@/assets/image_1775821429322.png";
-import pillarImg2 from "@assets/image_1776168162975.png";
-import pillarImg3 from "@/assets/image_1775822847259.png";
+import card1Img from "@assets/Brain-Scan-1-scaled_1776168428464.webp";
+import card2Img from "@assets/Brain-Scan-2-scaled_1776168428464.webp";
+import card3Img from "@assets/Deep-Trauma-Release-scaled_1776168428465.webp";
+import card4Img from "@assets/Elite_Be_Superhuman_11-scaled_1776168428466.webp";
+import card5Img from "@assets/event-overview_1776168428467.webp";
+import card6Img from "@assets/much-more-section-scaled_1776168428468.webp";
+import card7Img from "@assets/Program-and-step-1-scaled_1776168428469.webp";
+import card8Img from "@assets/Program-and-step-2-scaled_1776168428469.webp";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -22,42 +27,42 @@ export default function Home() {
 
   const walkAwayItems = [
     {
-      img: pillarImg1,
+      img: card1Img,
       title: "Reset Nervous System",
       text: "A completely reset nervous system, no longer running on stress and survival",
     },
     {
-      img: pillarImg2,
+      img: card2Img,
       title: "Unshakeable Clarity",
       text: "Unshakeable clarity on who you are and what you're here to do",
     },
     {
-      img: pillarImg3,
+      img: card3Img,
       title: "Coherent Energy",
       text: "A coherent signal — no more leaking energy, no more running on empty",
     },
     {
-      img: spiritualActivationImg,
+      img: card4Img,
       title: "Sustained Expansion",
       text: "The capacity to hold and sustain real expansion in every area of life",
     },
     {
-      img: pillarImg3,
+      img: card5Img,
       title: "Elevated Relationships",
       text: "Relationships that reflect your new level back to you",
     },
     {
-      img: tribeCirclePyramidImg,
+      img: card6Img,
       title: "Upgraded Body",
       text: "A body that's been cleared, activated, and upgraded from the inside out",
     },
     {
-      img: pillarImg1,
+      img: card7Img,
       title: "Lifelong Tools",
       text: "Tools and practices you'll use every single day for the rest of your life",
     },
     {
-      img: groupPyramidsImage,
+      img: card8Img,
       title: "Your Tribe",
       text: "A community of people operating at the same frequency as you",
     },
