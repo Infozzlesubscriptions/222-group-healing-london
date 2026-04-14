@@ -174,16 +174,16 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <div className="text-primary text-4xl mb-8">✦</div>
-            <p className="text-xl md:text-2xl text-foreground italic leading-relaxed mb-10 max-w-5xl mx-auto font-semibold">Most people are living at a fraction of what they're actually capable of. This three days changes that. For good.</p>
+            <p className="text-xl md:text-2xl text-foreground italic leading-relaxed mb-10 max-w-5xl mx-auto font-semibold">Most people live far below their true potential — this three-day experience changes that, for good.</p>
             <div className="h-px w-20 bg-border mx-auto mb-10" />
             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-5xl mx-auto mb-6">
-              Elite Be Superhuman is an immersive three-day live event unlike anything you've attended before. No passive learning. No theory. This is hands-on, full-body transformation — combining breathwork, energy medicine, performance psychology, and consciousness practices into one powerful, carefully sequenced experience.
+              Elite Be Superhuman is an immersive, hands-on live event designed for real transformation. No passive learning or theory — just powerful, full-body practices combining breathwork, energy medicine, performance psychology, and consciousness work in a carefully structured journey.
             </p>
             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-5xl mx-auto mb-6">
-              You don't leave motivated for a week. You leave changed and transformed. Ready to rise and create a completely different, elevated and abundant human life experience.
+              You won't leave with temporary motivation — you'll leave truly transformed, ready to step into a higher, more abundant version of your life.
             </p>
             <p className="text-foreground font-semibold text-base md:text-lg max-w-5xl mx-auto leading-relaxed">
-              Jerry Sargeant has spent over two decades working with people across more than 85 countries — helping them dissolve deep-rooted blocks, reprogram their inner world, and step into levels of clarity, health, and success they didn't think were possible for them.
+              With over 20 years of experience across 85+ countries, Jerry Sargeant has helped people break deep-rooted limitations, rewire their inner world, and unlock levels of clarity, health, and success they once thought impossible.
             </p>
           </motion.div>
         </div>
