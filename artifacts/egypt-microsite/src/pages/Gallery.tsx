@@ -18,22 +18,6 @@ import gallerySpiritual from "@assets/Spiritual-Warrior-Protocol-scaled_17761687
 import galleryBlueprint from "@assets/Superhuman-Blueprint-scaled_1776168740426.webp";
 import galleryEnergy from "@assets/Unshakable-Energy-scaled_1776168740427.webp";
 
-const allImages = [
-  { id: 30, src: galleryGroup, category: "Live Event", alt: "The Whole Tribe — Hands Up" },
-  { id: 31, src: galleryBrainScan1, category: "Live Event", alt: "Brain Scan Technology — Reading the Shift" },
-  { id: 32, src: galleryBrainScan2, category: "Live Event", alt: "Brain Scan Technology — Deep State" },
-  { id: 33, src: galleryDeepTrauma, category: "Live Event", alt: "Deep Trauma Release" },
-  { id: 34, src: galleryGroupHug, category: "Live Event", alt: "Connection in the Room" },
-  { id: 35, src: galleryEventOverview, category: "Live Event", alt: "Opening the Heart" },
-  { id: 36, src: galleryNewReality, category: "Live Event", alt: "New Reality Optimization" },
-  { id: 37, src: galleryStep1, category: "Live Event", alt: "Healing on the Floor" },
-  { id: 38, src: galleryStep3, category: "Live Event", alt: "The Room in Stillness" },
-  { id: 39, src: galleryStep5, category: "Live Event", alt: "Energy Work — Hands Open" },
-  { id: 40, src: galleryQuantum, category: "Live Event", alt: "Quantum Meditation Release" },
-  { id: 41, src: gallerySpiritual, category: "Live Event", alt: "Spiritual Warrior Protocol" },
-  { id: 42, src: galleryBlueprint, category: "Live Event", alt: "Jerry — Superhuman Blueprint" },
-  { id: 43, src: galleryEnergy, category: "Live Event", alt: "Unshakeable Energy — Jerry & Tribe" },
-];
 
 const scrollerImages = [
   galleryGroup, galleryEventOverview, galleryGroupHug, galleryQuantum, galleryBlueprint,
@@ -49,41 +33,6 @@ export default function Gallery() {
 
   return (
     <div className="min-h-screen bg-background pt-24 pb-0">
-
-      {/* ── GALLERY ── */}
-      <div className="max-w-7xl mx-auto px-4">
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1 className="text-3xl sm:text-5xl md:text-7xl font-sans text-foreground mb-4">Gallery</h1>
-        </motion.div>
-
-        {/* Instagram Grid */}
-        <motion.div className="grid grid-cols-3 gap-0.5 sm:gap-1" layout>
-          {allImages.map((img) => (
-            <motion.div
-              key={img.id}
-              layout
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.35 }}
-              className="relative aspect-square overflow-hidden group cursor-pointer"
-              onClick={() => setSelectedImage(img.src)}
-            >
-              <img
-                src={img.src}
-                alt={img.alt}
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                loading="lazy"
-              />
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
 
       {/* Auto-Scroll Strip */}
       <div className="mt-24">
