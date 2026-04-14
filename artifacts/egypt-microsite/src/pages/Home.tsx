@@ -422,57 +422,71 @@ export default function Home() {
         </div>
       </section>
       {/* ─── ABOUT JERRY ─── */}
-      <section className="py-24 md:py-32 px-4" style={{ backgroundColor: "#FDF6E9" }}>
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <section className="overflow-hidden" style={{ backgroundColor: "#0f1a2e" }}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[680px]">
 
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.7 }}
-              className="relative"
-            >
-              <div
-                className="absolute -inset-1 rounded-3xl blur-xl opacity-20 pointer-events-none"
-                style={{ background: "linear-gradient(135deg, #d39222, #F3D696, #d39222)" }}
-              />
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-square">
-                <img
-                  src={tribeCirclePyramidImg}
-                  alt="Jerry Sargeant"
-                  className="w-full h-full object-cover object-center"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-              </div>
-            </motion.div>
+          {/* Left — text */}
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.8 }}
+            className="flex flex-col justify-center px-10 py-20 md:px-16 lg:px-20 xl:px-24"
+          >
+            <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Your Guide</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-5">
+              Jerry Sargeant
+            </h2>
+            <div className="h-px w-16 mb-8" style={{ backgroundColor: "#d39222" }} />
+            <p className="text-white/70 text-base md:text-lg leading-relaxed mb-5">
+              Jerry Sargeant is a global healing facilitator, author, and consciousness teacher — and the founder of Star Magic, one of the world's fastest-growing healing and human performance communities.
+            </p>
+            <p className="text-white/70 text-base md:text-lg leading-relaxed mb-5">
+              Over the past two decades Jerry has worked with hundreds of thousands of people across more than 85 countries — from CEOs and elite athletes to people who had been told by doctors there was nothing more that could be done.
+            </p>
+            <p className="text-white/70 text-base md:text-lg leading-relaxed mb-10">
+              His approach is direct, practical, and it works at a level most personal development never reaches — the deep root of why people stay stuck, get sick, and self-sabotage — and he dismantles it, live, in the room.
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.7, delay: 0.1 }}
-            >
-              <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Your Guide</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight mb-6">
-                Jerry Sargeant
-              </h2>
-              <div className="h-px w-16 bg-primary mb-8" />
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-5">
-                Jerry Sargeant is a global healing facilitator, author, and consciousness teacher — and the founder of Star Magic, one of the world's fastest-growing healing and human performance communities.
-              </p>
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-5">
-                Over the past two decades Jerry has worked with hundreds of thousands of people across more than 85 countries — from CEOs and elite athletes to people who had been told by doctors there was nothing more that could be done.
-              </p>
-              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8">
-                His approach is direct, practical, and it works at a level most personal development never reaches — the deep root of why people stay stuck, get sick, and self-sabotage — and he dismantles it, live, in the room.
-              </p>
-              <p className="text-foreground font-semibold text-base leading-relaxed">
-                Elite Be Superhuman is the most powerful live experience he delivers.
-              </p>
-            </motion.div>
+            {/* Stat pills */}
+            <div className="flex flex-wrap gap-3 mb-10">
+              {[
+                { value: "85+", label: "Countries" },
+                { value: "500K+", label: "Lives Changed" },
+                { value: "20+", label: "Years" },
+              ].map(({ value, label }) => (
+                <div
+                  key={label}
+                  className="flex items-center gap-2 px-4 py-2 rounded-full border"
+                  style={{ borderColor: "rgba(211,146,34,0.4)", backgroundColor: "rgba(211,146,34,0.08)" }}
+                >
+                  <span className="font-extrabold text-sm" style={{ color: "#d39222" }}>{value}</span>
+                  <span className="text-white/55 text-xs uppercase tracking-widest">{label}</span>
+                </div>
+              ))}
+            </div>
 
-          </div>
+            <p className="text-white font-semibold text-base leading-relaxed border-l-2 pl-4" style={{ borderColor: "#d39222" }}>
+              Elite Be Superhuman is the most powerful live experience he delivers.
+            </p>
+          </motion.div>
+
+          {/* Right — full-bleed image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 1.04 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 1 }}
+            className="relative min-h-[420px] lg:min-h-0"
+          >
+            <img
+              src={tribeCirclePyramidImg}
+              alt="Jerry Sargeant"
+              className="absolute inset-0 w-full h-full object-cover object-center"
+            />
+            <div className="absolute inset-0" style={{ background: "linear-gradient(to right, #0f1a2e 0%, transparent 30%)" }} />
+          </motion.div>
+
         </div>
       </section>
       {/* ─── PRICING ─── */}
