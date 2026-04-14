@@ -4,7 +4,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import groupPyramidsImage from "@assets/community-group-ORD4DYoj_1776153736899.jpg";
 import jerryTempleImg from "@/assets/jerry-temple.png";
-import tribeCirclePyramidImg from "@/assets/image_1775822597040.png";
+import tribeCirclePyramidImg from "@assets/Jerry-Sargeant-One-Love_1776160920406.webp";
 import spiritualActivationImg from "@assets/image_1776160809528.png";
 import karnakImg from "@assets/image_1776160676613.png";
 import pillarImg1 from "@/assets/image_1775821429322.png";
@@ -47,7 +47,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background w-full overflow-hidden">
-
       {/* ─── HERO ─── */}
       <section className="relative h-[100dvh] flex items-center justify-center overflow-hidden bg-black">
         <motion.div
@@ -108,7 +107,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       {/* ─── STATS BAR ─── */}
       <section className="py-14 px-4 bg-secondary/30 border-y border-border/40">
         <div className="max-w-7xl mx-auto">
@@ -134,7 +132,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* ─── PROMISE / INTRO ─── */}
       <section className="py-24 md:py-32 px-4 relative z-20 bg-background">
         <div className="max-w-7xl mx-auto text-center">
@@ -145,9 +142,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <div className="text-primary text-4xl mb-8">✦</div>
-            <p className="text-xl md:text-2xl text-foreground italic leading-relaxed mb-10 max-w-5xl mx-auto font-semibold">
-              "Most people are living at a fraction of what they're actually capable of. This three days changes that. For good."
-            </p>
+            <p className="text-xl md:text-2xl text-foreground italic leading-relaxed mb-10 max-w-5xl mx-auto font-semibold">Most people are living at a fraction of what they're actually capable of. This three days changes that. For good.</p>
             <div className="h-px w-20 bg-border mx-auto mb-10" />
             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-5xl mx-auto mb-6">
               Elite Be Superhuman is an immersive three-day live event unlike anything you've attended before. No passive learning. No theory. This is hands-on, full-body transformation — combining breathwork, energy medicine, performance psychology, and consciousness practices into one powerful, carefully sequenced experience.
@@ -161,7 +156,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       {/* ─── THREE PILLARS ─── */}
       <section className="py-24 md:py-32 px-4 bg-secondary/20">
         <div className="max-w-7xl mx-auto">
@@ -223,7 +217,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* ─── HERO VIDEO ─── */}
       <section className="py-24 md:py-32 px-4 bg-background">
         <div className="max-w-7xl mx-auto">
@@ -297,7 +290,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       {/* ─── THE CORE OF EVERYTHING ─── */}
       <section className="relative py-0 overflow-hidden">
         <div className="absolute inset-0">
@@ -348,7 +340,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       {/* ─── WHAT YOU'LL WALK AWAY WITH ─── */}
       <section className="py-24 md:py-32 px-4 bg-secondary/30">
         <div className="max-w-7xl mx-auto">
@@ -392,7 +383,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* ─── WHO THIS IS FOR ─── */}
       <section className="py-24 md:py-32 px-4 bg-background">
         <div className="max-w-7xl mx-auto">
@@ -462,7 +452,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* ─── ABOUT JERRY ─── */}
       <section className="py-24 md:py-32 px-4" style={{ backgroundColor: "#FDF6E9" }}>
         <div className="max-w-7xl mx-auto">
@@ -517,7 +506,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* ─── GUARANTEE ─── */}
       <section className="py-24 md:py-32 px-4 bg-background">
         <div className="max-w-7xl mx-auto">
@@ -578,7 +566,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       {/* ─── VIDEO TESTIMONIAL ─── */}
       <section className="py-24 md:py-32 px-4 bg-secondary/30">
         <div className="max-w-5xl mx-auto">
@@ -681,7 +668,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       {/* ─── BOOKING / CTA ─── */}
       <section className="relative py-0 overflow-hidden">
         <div className="absolute inset-0">
@@ -738,7 +724,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
     </div>
   );
 }
