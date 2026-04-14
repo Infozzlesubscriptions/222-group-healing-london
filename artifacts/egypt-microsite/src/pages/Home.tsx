@@ -177,17 +177,17 @@ export default function Home() {
             <h2 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-8">
               Stop Leaking Energy.<br />Start Operating from Wholeness.
             </h2>
-            <p className="text-white/75 text-lg leading-relaxed mb-6 max-w-2xl mx-auto">
+            <p className="text-white/75 text-lg leading-relaxed mb-6 max-w-4xl mx-auto">
               Most people are unknowingly leaking energy every single day. Through stress. Through unresolved emotion. Through relationships that drain rather than fuel. Through a nervous system that's stuck in survival mode.
             </p>
-            <p className="text-white/75 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+            <p className="text-white/75 text-lg leading-relaxed mb-10 max-w-4xl mx-auto">
               The result? A signal that's scattered. A life that feels like it's constantly running uphill.
             </p>
-            <p className="text-white font-semibold text-lg md:text-xl leading-relaxed mb-10 max-w-2xl mx-auto">
+            <p className="text-white font-semibold text-lg md:text-xl leading-relaxed mb-10 max-w-4xl mx-auto">
               Elite Be Superhuman changes that at the root. Over three days, every practice, every session, every experience is built around one outcome: <span className="text-primary italic">you leave operating from a state of complete wholeness.</span>
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto mb-10 text-left">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto mb-10 text-left">
               {[
                 "Your relationships deepen and align",
                 "Your health responds and regenerates",
@@ -202,7 +202,7 @@ export default function Home() {
               ))}
             </div>
 
-            <p className="text-white/65 text-base leading-relaxed max-w-2xl mx-auto italic">
+            <p className="text-white/65 text-base leading-relaxed max-w-4xl mx-auto italic">
               This isn't about getting a temporary high from a live event. It's about upgrading the frequency you carry so that wholeness becomes your new normal — and everything in your life begins to reflect that back to you.
             </p>
           </motion.div>
