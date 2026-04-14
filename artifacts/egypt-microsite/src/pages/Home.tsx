@@ -22,14 +22,46 @@ export default function Home() {
   ];
 
   const walkAwayItems = [
-    "A completely reset nervous system, no longer running on stress and survival",
-    "Unshakeable clarity on who you are and what you're here to do",
-    "A coherent signal — no more leaking energy, no more running on empty",
-    "The capacity to hold and sustain real expansion in every area of life",
-    "Relationships that reflect your new level back to you",
-    "A body that's been cleared, activated, and upgraded from the inside out",
-    "Tools and practices you'll use every single day for the rest of your life",
-    "A community of people operating at the same frequency as you",
+    {
+      img: pillarImg1,
+      title: "Reset Nervous System",
+      text: "A completely reset nervous system, no longer running on stress and survival",
+    },
+    {
+      img: karnakImg,
+      title: "Unshakeable Clarity",
+      text: "Unshakeable clarity on who you are and what you're here to do",
+    },
+    {
+      img: pillarImg2,
+      title: "Coherent Energy",
+      text: "A coherent signal — no more leaking energy, no more running on empty",
+    },
+    {
+      img: spiritualActivationImg,
+      title: "Sustained Expansion",
+      text: "The capacity to hold and sustain real expansion in every area of life",
+    },
+    {
+      img: pillarImg3,
+      title: "Elevated Relationships",
+      text: "Relationships that reflect your new level back to you",
+    },
+    {
+      img: tribeCirclePyramidImg,
+      title: "Upgraded Body",
+      text: "A body that's been cleared, activated, and upgraded from the inside out",
+    },
+    {
+      img: pillarImg1,
+      title: "Lifelong Tools",
+      text: "Tools and practices you'll use every single day for the rest of your life",
+    },
+    {
+      img: groupPyramidsImage,
+      title: "Your Tribe",
+      text: "A community of people operating at the same frequency as you",
+    },
   ];
 
   const forYouItems = [
@@ -346,27 +378,29 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
             {walkAwayItems.map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.07 }}
-                className="flex items-start gap-4 rounded-2xl border border-primary/15 bg-card p-5 hover:border-primary/30 hover:shadow-md transition-all duration-300"
+                className="rounded-2xl border border-primary/15 bg-card overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all duration-300 flex flex-col"
               >
-                <div
-                  className="w-9 h-9 rounded-xl shrink-0 flex items-center justify-center text-sm"
-                  style={{
-                    background: "linear-gradient(135deg, rgba(184,151,92,0.3), rgba(243,214,150,0.15))",
-                    border: "1px solid rgba(184,151,92,0.35)",
-                    color: "#d39222",
-                  }}
-                >
-                  ✦
+                <div className="h-44 overflow-hidden shrink-0">
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105"
+                  />
                 </div>
-                <p className="text-foreground/85 text-sm md:text-base leading-relaxed pt-1">{item}</p>
+                <div className="p-5 flex flex-col flex-1">
+                  <h3 className="font-bold text-sm uppercase tracking-[0.2em] mb-2" style={{ color: "#d39222" }}>
+                    ✦ {item.title}
+                  </h3>
+                  <p className="text-foreground/75 text-sm leading-relaxed">{item.text}</p>
+                </div>
               </motion.div>
             ))}
           </div>
