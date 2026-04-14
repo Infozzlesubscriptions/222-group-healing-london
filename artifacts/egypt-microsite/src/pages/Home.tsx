@@ -318,53 +318,75 @@ export default function Home() {
         </div>
       </section>
       {/* ─── THE CORE OF EVERYTHING ─── */}
-      <section className="relative py-0 overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={spiritualActivationImg} alt="Energy work" className="w-full h-full object-cover object-center" />
-          <div className="absolute inset-0 bg-black/30" />
-          <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 60%, rgba(28,24,20,0.75) 100%)" }} />
-        </div>
+      <section className="py-24 md:py-32 px-4 bg-background">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 py-24 md:py-36 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8 }}
-          >
-            <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">The Core of Everything</span>
-            <h2 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-8">
-              Stop Leaking Energy.<br />Start Operating from Wholeness.
-            </h2>
-            <p className="text-white/75 text-lg leading-relaxed mb-6 max-w-4xl mx-auto">
-              Most people are unknowingly leaking energy every single day. Through stress. Through unresolved emotion. Through relationships that drain rather than fuel. Through a nervous system that's stuck in survival mode.
-            </p>
-            <p className="text-white/75 text-lg leading-relaxed mb-10 max-w-4xl mx-auto">
-              The result? A signal that's scattered. A life that feels like it's constantly running uphill.
-            </p>
-            <p className="text-white font-semibold text-lg md:text-xl leading-relaxed mb-10 max-w-4xl mx-auto">
-              Elite Be Superhuman changes that at the root. Over three days, every practice, every session, every experience is built around one outcome: <span className="text-primary italic">you leave operating from a state of complete wholeness.</span>
-            </p>
+            {/* Text side */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.7 }}
+            >
+              <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">The Core of Everything</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight mb-6">
+                Stop Leaking Energy.<br />Start Operating from Wholeness.
+              </h2>
+              <div className="h-px w-16 bg-primary mb-8" />
+              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-5">
+                Most people are unknowingly leaking energy every single day. Through stress. Through unresolved emotion. Through relationships that drain rather than fuel. Through a nervous system that's stuck in survival mode.
+              </p>
+              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-5">
+                The result? A signal that's scattered. A life that feels like it's constantly running uphill.
+              </p>
+              <p className="text-foreground font-semibold text-base md:text-lg leading-relaxed mb-8">
+                Elite Be Superhuman changes that at the root. Over three days, every practice, every session, every experience is built around one outcome: <span style={{ color: "#d39222" }} className="italic">you leave operating from a state of complete wholeness.</span>
+              </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto mb-10 text-left">
-              {[
-                "Your relationships deepen and align",
-                "Your health responds and regenerates",
-                "Your business and finances move with less resistance",
-                "Your decisions come from clarity, not fear",
-                "You hold the capacity to sustain that expansion — not just feel it for a week",
-              ].map((item, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <span className="text-primary text-sm mt-1 shrink-0">✦</span>
-                  <span className="text-white/80 text-sm leading-snug">{item}</span>
-                </div>
-              ))}
-            </div>
+              <div className="space-y-3 mb-8">
+                {[
+                  "Your relationships deepen and align",
+                  "Your health responds and regenerates",
+                  "Your business and finances move with less resistance",
+                  "Your decisions come from clarity, not fear",
+                  "You hold the capacity to sustain that expansion — not just feel it for a week",
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <span style={{ color: "#d39222" }} className="text-sm mt-1 shrink-0">✦</span>
+                    <span className="text-muted-foreground text-sm leading-snug">{item}</span>
+                  </div>
+                ))}
+              </div>
 
-            <p className="text-white/65 text-base leading-relaxed max-w-4xl mx-auto italic">
-              This isn't about getting a temporary high from a live event. It's about upgrading the frequency you carry so that wholeness becomes your new normal — and everything in your life begins to reflect that back to you.
-            </p>
-          </motion.div>
+              <p className="text-foreground/60 text-sm leading-relaxed italic">
+                This isn't about getting a temporary high from a live event. It's about upgrading the frequency you carry so that wholeness becomes your new normal.
+              </p>
+            </motion.div>
+
+            {/* Image side */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+              className="relative"
+            >
+              <div
+                className="absolute -inset-1 rounded-3xl blur-xl opacity-20 pointer-events-none"
+                style={{ background: "linear-gradient(135deg, #d39222, #F3D696, #d39222)" }}
+              />
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5]">
+                <img
+                  src={spiritualActivationImg}
+                  alt="Energy work"
+                  className="w-full h-full object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+              </div>
+            </motion.div>
+
+          </div>
         </div>
       </section>
       {/* ─── WHAT YOU'LL WALK AWAY WITH ─── */}
