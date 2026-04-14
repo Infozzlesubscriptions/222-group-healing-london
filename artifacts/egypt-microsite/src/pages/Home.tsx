@@ -422,7 +422,7 @@ export default function Home() {
         </div>
       </section>
       {/* ─── ABOUT JERRY ─── */}
-      <section className="overflow-hidden" style={{ backgroundColor: "#0f1a2e" }}>
+      <section className="overflow-hidden" style={{ backgroundColor: "#FDF6E9" }}>
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[680px]">
 
           {/* Left — text */}
@@ -434,17 +434,17 @@ export default function Home() {
             className="flex flex-col justify-center px-10 py-20 md:px-16 lg:px-20 xl:px-24"
           >
             <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Your Guide</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-5">
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-5" style={{ color: "#1a1208" }}>
               Jerry Sargeant
             </h2>
             <div className="h-px w-16 mb-8" style={{ backgroundColor: "#d39222" }} />
-            <p className="text-white/70 text-base md:text-lg leading-relaxed mb-5">
+            <p className="text-base md:text-lg leading-relaxed mb-5" style={{ color: "#3d2f1a" }}>
               Jerry Sargeant is a global healing facilitator, author, and consciousness teacher — and the founder of Star Magic, one of the world's fastest-growing healing and human performance communities.
             </p>
-            <p className="text-white/70 text-base md:text-lg leading-relaxed mb-5">
+            <p className="text-base md:text-lg leading-relaxed mb-5" style={{ color: "#3d2f1a" }}>
               Over the past two decades Jerry has worked with hundreds of thousands of people across more than 85 countries — from CEOs and elite athletes to people who had been told by doctors there was nothing more that could be done.
             </p>
-            <p className="text-white/70 text-base md:text-lg leading-relaxed mb-10">
+            <p className="text-base md:text-lg leading-relaxed mb-10" style={{ color: "#3d2f1a" }}>
               His approach is direct, practical, and it works at a level most personal development never reaches — the deep root of why people stay stuck, get sick, and self-sabotage — and he dismantles it, live, in the room.
             </p>
 
@@ -458,15 +458,15 @@ export default function Home() {
                 <div
                   key={label}
                   className="flex items-center gap-2 px-4 py-2 rounded-full border"
-                  style={{ borderColor: "rgba(211,146,34,0.4)", backgroundColor: "rgba(211,146,34,0.08)" }}
+                  style={{ borderColor: "rgba(211,146,34,0.5)", backgroundColor: "rgba(211,146,34,0.1)" }}
                 >
                   <span className="font-extrabold text-sm" style={{ color: "#d39222" }}>{value}</span>
-                  <span className="text-white/55 text-xs uppercase tracking-widest">{label}</span>
+                  <span className="text-xs uppercase tracking-widest" style={{ color: "#7a5c2e" }}>{label}</span>
                 </div>
               ))}
             </div>
 
-            <p className="text-white font-semibold text-base leading-relaxed border-l-2 pl-4" style={{ borderColor: "#d39222" }}>
+            <p className="font-semibold text-base leading-relaxed border-l-2 pl-4" style={{ borderColor: "#d39222", color: "#1a1208" }}>
               Elite Be Superhuman is the most powerful live experience he delivers.
             </p>
           </motion.div>
@@ -484,7 +484,7 @@ export default function Home() {
               alt="Jerry Sargeant"
               className="absolute inset-0 w-full h-full object-cover object-center"
             />
-            <div className="absolute inset-0" style={{ background: "linear-gradient(to right, #0f1a2e 0%, transparent 30%)" }} />
+            <div className="absolute inset-0" style={{ background: "linear-gradient(to right, #FDF6E9 0%, transparent 30%)" }} />
           </motion.div>
 
         </div>
