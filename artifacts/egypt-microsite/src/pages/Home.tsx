@@ -490,7 +490,7 @@ export default function Home() {
               />
               <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5]">
                 <img
-                  src={spiritualActivationImg}
+                  src={card3Img}
                   alt="Event experience"
                   className="w-full h-full object-cover object-center"
                 />
