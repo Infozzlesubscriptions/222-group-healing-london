@@ -132,6 +132,65 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ─── THREE PILLARS ─── */}
+      <section className="py-24 md:py-32 px-4 bg-secondary/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: "⚡",
+                heading: "Full Immersion",
+                subtitle: "No theory. Only transformation.",
+                body: "Every session is hands-on. Every practice is designed to create a real, felt shift — not just understanding.",
+              },
+              {
+                icon: "🔁",
+                heading: "Lasting Change",
+                subtitle: "You leave a different person.",
+                body: "Not motivated for a week. The change is structural — wired into your nervous system, your energy, your way of being.",
+              },
+              {
+                icon: "🌍",
+                heading: "Proven Results",
+                subtitle: "500,000+ lives. 85+ countries.",
+                body: "Jerry has spent two decades delivering these results globally. This event is the concentrated best of everything he does.",
+              },
+            ].map((pillar, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.6, delay: i * 0.15 }}
+                className="flex flex-col items-center text-center rounded-3xl border border-primary/20 bg-card p-10 shadow-md hover:shadow-lg hover:border-primary/40 transition-all duration-300"
+              >
+                <div
+                  className="w-20 h-20 rounded-2xl flex items-center justify-center text-3xl mb-7 shadow-md"
+                  style={{
+                    background: "linear-gradient(135deg, rgba(211,146,34,0.18), rgba(243,214,150,0.1))",
+                    border: "1.5px solid rgba(211,146,34,0.35)",
+                  }}
+                >
+                  {pillar.icon}
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3 leading-snug">
+                  {pillar.heading}
+                </h3>
+                <p
+                  className="text-base font-semibold mb-5 italic"
+                  style={{ color: "#d39222" }}
+                >
+                  {pillar.subtitle}
+                </p>
+                <p className="text-muted-foreground text-base leading-relaxed">
+                  {pillar.body}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ─── STATS BAR ─── */}
       <section className="py-14 px-4 bg-secondary/30 border-y border-border/40">
         <div className="max-w-7xl mx-auto">
