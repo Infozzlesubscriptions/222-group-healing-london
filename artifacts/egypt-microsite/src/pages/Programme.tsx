@@ -203,6 +203,20 @@ export default function Programme() {
 
       {/* ─── EXPERIENCE / WALK AWAY / WHO IT'S FOR ─── */}
       <div className="mt-24 px-4 max-w-7xl mx-auto">
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.8 }}
+        >
+          <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">The Full Picture</span>
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground leading-tight mb-4">
+            Everything You Need to Know
+          </h2>
+          <div className="h-px w-20 bg-primary mx-auto mt-6" />
+        </motion.div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
 
           {/* What You Experience */}
