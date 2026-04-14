@@ -13,6 +13,7 @@ const videoTestimonials = [
     context: "He came in a wheelchair. He stood up and walked out under his own power.",
     quote: "Caesar came in a wheelchair. He stood up and walked out under his own power.",
     hasVideo: true,
+    vimeoId: "1182092823",
   },
   {
     thumbnail: womanTempleImg,
@@ -85,9 +86,19 @@ function VideoCard({ video, index }: { video: typeof videoTestimonials[0]; index
       {/* Thumbnail / video */}
       <div className="relative aspect-video overflow-hidden">
         {playing ? (
-          <div className="absolute inset-0 flex items-center justify-center bg-black text-white text-sm">
-            Video coming soon
-          </div>
+          video.vimeoId ? (
+            <iframe
+              src={`https://player.vimeo.com/video/${video.vimeoId}?badge=0&autopause=0&autoplay=1&quality_selector=1&player_id=0&app_id=58479`}
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              className="absolute inset-0 w-full h-full"
+              title={`${video.name} testimonial`}
+              style={{ border: 0 }}
+            />
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center bg-black text-white text-sm">
+              Video coming soon
+            </div>
+          )
         ) : (
           <button
             className="absolute inset-0 w-full h-full group cursor-pointer"
