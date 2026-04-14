@@ -718,25 +718,35 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <div
-              className="px-8 py-10 md:px-14 md:py-14 grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
+              className="grid grid-cols-1 md:grid-cols-2 gap-0 items-stretch"
             >
-              {/* Badge */}
-              <div className="flex flex-col items-center text-center">
-                <div
-                  className="w-36 h-36 rounded-full flex flex-col items-center justify-center shadow-2xl mb-6"
-                  style={{
-                    background: "linear-gradient(135deg, #d39222 0%, #FFECBA 50%, #d39222 100%)",
-                  }}
-                >
-                  <span className="text-[#1a1208] font-bold text-xs uppercase tracking-widest leading-tight text-center px-4">
-                    100%<br />Money Back<br />Guarantee
-                  </span>
-                </div>
-                <p className="text-muted-foreground text-xs uppercase tracking-widest">Our Promise to You</p>
+              {/* Image */}
+              <div className="relative overflow-hidden rounded-tl-3xl rounded-bl-3xl min-h-[320px]">
+                <img
+                  src={spiritualActivationImg}
+                  alt="Guarantee"
+                  className="w-full h-full object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-black/20" />
               </div>
 
               {/* Text */}
-              <div>
+              <div className="px-8 py-10 md:px-14 md:py-14 flex flex-col justify-center">
+                {/* Badge — above heading */}
+                <div className="flex items-center gap-4 mb-6">
+                  <div
+                    className="w-16 h-16 shrink-0 rounded-full flex flex-col items-center justify-center shadow-xl"
+                    style={{
+                      background: "linear-gradient(135deg, #d39222 0%, #FFECBA 50%, #d39222 100%)",
+                    }}
+                  >
+                    <span className="text-[#1a1208] font-bold text-[8px] uppercase tracking-widest leading-tight text-center px-1">
+                      100%<br />Money<br />Back
+                    </span>
+                  </div>
+                  <p className="text-muted-foreground text-xs uppercase tracking-widest">Our Promise to You</p>
+                </div>
+
                 <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Zero Risk</span>
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground leading-tight mb-6">
                   Turn up. Give it a morning.
