@@ -5,7 +5,7 @@ import groupPyramidsImage from "@assets/community-group-ORD4DYoj_1776153736899.j
 import tribeCirclePyramidImg from "@assets/Jerry-Sargeant-One-Love_1776160920406.webp";
 import spiritualActivationImg from "@assets/image_1776160809528.png";
 import card1Img from "@assets/Brain-Scan-1-scaled_1776168428464.webp";
-import card2Img from "@assets/Brain-Scan-2-scaled_1776168428464.webp";
+import card2Img from "@assets/Elite_Be_Superhuman_13-scaled_1776168740417.webp";
 import card3Img from "@assets/Deep-Trauma-Release-scaled_1776168428465.webp";
 import card4Img from "@assets/Elite_Be_Superhuman_11-scaled_1776168428466.webp";
 import card5Img from "@assets/event-overview_1776168428467.webp";
