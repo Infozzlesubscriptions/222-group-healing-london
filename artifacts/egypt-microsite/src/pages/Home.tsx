@@ -108,6 +108,32 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ─── STATS BAR ─── */}
+      <section className="py-14 px-4 bg-secondary/30 border-y border-border/40">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="text-center"
+              >
+                <div
+                  className="text-3xl md:text-4xl font-bold mb-2"
+                  style={{ color: "#d39222" }}
+                >
+                  {stat.value}
+                </div>
+                <div className="text-muted-foreground text-sm font-medium tracking-wide">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ─── PROMISE / INTRO ─── */}
       <section className="py-24 md:py-32 px-4 relative z-20 bg-background">
         <div className="max-w-7xl mx-auto text-center">
@@ -191,32 +217,6 @@ export default function Home() {
                     {pillar.body}
                   </p>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── STATS BAR ─── */}
-      <section className="py-14 px-4 bg-secondary/30 border-y border-border/40">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="text-center"
-              >
-                <div
-                  className="text-3xl md:text-4xl font-bold mb-2"
-                  style={{ color: "#d39222" }}
-                >
-                  {stat.value}
-                </div>
-                <div className="text-muted-foreground text-sm font-medium tracking-wide">{stat.label}</div>
               </motion.div>
             ))}
           </div>
