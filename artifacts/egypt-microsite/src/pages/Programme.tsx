@@ -201,6 +201,109 @@ export default function Programme() {
         </div>
       </div>
 
+      {/* ─── EXPERIENCE / WALK AWAY / WHO IT'S FOR ─── */}
+      <div className="mt-24 px-4 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+
+          {/* What You Experience */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.7, delay: 0 }}
+            className="rounded-3xl overflow-hidden flex flex-col"
+            style={{ background: "#1a1208", border: "1px solid rgba(211,146,34,0.25)" }}
+          >
+            <div className="px-8 pt-8 pb-6" style={{ borderBottom: "1px solid rgba(211,146,34,0.2)" }}>
+              <h3 className="text-xl md:text-2xl font-bold leading-snug text-white">What You Experience</h3>
+            </div>
+            <div className="px-8 py-7 flex flex-col flex-1">
+              <ul className="space-y-3 flex-1 mb-6">
+                {[
+                  "Breathwork sessions to shift energy and build inner fire",
+                  "Qigong & Energetic techniques for heart-mind coherence",
+                  "Immersive energy work that shifts your state and rewires your nervous system instantly",
+                  "Powerful activations, meditations, and energy protocols to lock it all in",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-sm leading-snug text-white/80">
+                    <span style={{ color: "#d39222" }} className="shrink-0 mt-0.5">●</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="text-sm italic font-semibold leading-snug" style={{ color: "#d39222" }}>
+                You experience a full recalibration to lock you into your next level!
+              </p>
+            </div>
+          </motion.div>
+
+          {/* What You Walk Away With — featured */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="rounded-3xl overflow-hidden flex flex-col"
+            style={{ background: "#EDE5D5", border: "1px solid #d39222", boxShadow: "0 8px 40px rgba(211,146,34,0.15)" }}
+          >
+            <div className="px-8 pt-8 pb-6" style={{ borderBottom: "1px solid rgba(211,146,34,0.3)" }}>
+              <h3 className="text-xl md:text-2xl font-bold leading-snug" style={{ color: "#1a1208" }}>What You Walk Away With</h3>
+            </div>
+            <div className="px-8 py-7 flex flex-col flex-1">
+              <ul className="space-y-3 flex-1 mb-6">
+                {[
+                  "You receive a personalised Superhuman protocol to follow daily",
+                  "How to supercharge & reset your nervous system",
+                  "You align your health, wealth & relationships with your dream life",
+                  "You master state-shifting breathwork and energetic resets on demand",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-sm leading-snug" style={{ color: "#3d2f1a" }}>
+                    <span style={{ color: "#d39222" }} className="shrink-0 mt-0.5">●</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="text-sm italic font-semibold leading-snug" style={{ color: "#1a1208" }}>
+                You walk away unshakable — in command of reality like never before!
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Who This Is For */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="rounded-3xl overflow-hidden flex flex-col"
+            style={{ background: "#1a1208", border: "1px solid rgba(211,146,34,0.25)" }}
+          >
+            <div className="px-8 pt-8 pb-6" style={{ borderBottom: "1px solid rgba(211,146,34,0.2)" }}>
+              <h3 className="text-xl md:text-2xl font-bold leading-snug text-white">Who This Is For</h3>
+            </div>
+            <div className="px-8 py-7 flex flex-col flex-1">
+              <ul className="space-y-3 flex-1 mb-6">
+                {[
+                  "You're a high-performer operating below capacity due to burnout",
+                  "You've done the work, but still feel misaligned, foggy, or reactive",
+                  "You're ready to align health, wealth, and energy",
+                  "You're tired of temporary highs, chasing clarity, or collapsing under pressure",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-sm leading-snug text-white/80">
+                    <span style={{ color: "#d39222" }} className="shrink-0 mt-0.5">●</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="text-sm italic font-semibold leading-snug" style={{ color: "#d39222" }}>
+                This is for the ones who are READY to live from their Superhuman Self!
+              </p>
+            </div>
+          </motion.div>
+
+        </div>
+      </div>
+
       {/* Closing statement */}
       <motion.div
         className="mt-20 px-4 max-w-7xl mx-auto"
