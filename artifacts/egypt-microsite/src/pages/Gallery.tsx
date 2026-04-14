@@ -15,6 +15,21 @@ import desertDune from "@/assets/desert-dune.png";
 import sphinxImg from "@/assets/sphinx.png";
 import papyrus from "@/assets/papyrus.png";
 
+import galleryGroup from "@assets/community-group-ORD4DYoj_1776168740414.jpg";
+import galleryBrainScan1 from "@assets/Brain-Scan-1-scaled_1776168740415.webp";
+import galleryBrainScan2 from "@assets/Brain-Scan-2-scaled_1776168740416.webp";
+import galleryDeepTrauma from "@assets/Deep-Trauma-Release-scaled_1776168740416.webp";
+import galleryGroupHug from "@assets/Elite_Be_Superhuman_13-scaled_1776168740417.webp";
+import galleryEventOverview from "@assets/event-overview_1776168740418.webp";
+import galleryNewReality from "@assets/New-Reality-Optimization-Routine-scaled_1776168740419.webp";
+import galleryStep1 from "@assets/Program-and-step-1-scaled_1776168740419.webp";
+import galleryStep3 from "@assets/Program-and-step-3-scaled_1776168740420.webp";
+import galleryStep5 from "@assets/Program-and-step-5-scaled_1776168740421.webp";
+import galleryQuantum from "@assets/Quantum-Meditations-scaled_1776168740425.webp";
+import gallerySpiritual from "@assets/Spiritual-Warrior-Protocol-scaled_1776168740425.webp";
+import galleryBlueprint from "@assets/Superhuman-Blueprint-scaled_1776168740426.webp";
+import galleryEnergy from "@assets/Unshakable-Energy-scaled_1776168740427.webp";
+
 import eyeOfHorus from "@assets/image_1775544227935.png";
 import groupPyramid from "@assets/image_1775544233059.png";
 import hatshepsutTemple from "@assets/image_1775544253314.png";
@@ -67,17 +82,32 @@ const allImages = [
   { id: 27, src: karnakColumns, category: "Temples", alt: "Karnak Columns" },
   { id: 28, src: sacredLight, category: "Ceremonies", alt: "Sacred Light Beams" },
   { id: 29, src: desertDune, category: "Nile Experience", alt: "Desert at Dawn" },
+  { id: 30, src: galleryGroup, category: "Live Event", alt: "The Whole Tribe — Hands Up" },
+  { id: 31, src: galleryBrainScan1, category: "Live Event", alt: "Brain Scan Technology — Reading the Shift" },
+  { id: 32, src: galleryBrainScan2, category: "Live Event", alt: "Brain Scan Technology — Deep State" },
+  { id: 33, src: galleryDeepTrauma, category: "Live Event", alt: "Deep Trauma Release" },
+  { id: 34, src: galleryGroupHug, category: "Live Event", alt: "Connection in the Room" },
+  { id: 35, src: galleryEventOverview, category: "Live Event", alt: "Opening the Heart" },
+  { id: 36, src: galleryNewReality, category: "Live Event", alt: "New Reality Optimization" },
+  { id: 37, src: galleryStep1, category: "Live Event", alt: "Healing on the Floor" },
+  { id: 38, src: galleryStep3, category: "Live Event", alt: "The Room in Stillness" },
+  { id: 39, src: galleryStep5, category: "Live Event", alt: "Energy Work — Hands Open" },
+  { id: 40, src: galleryQuantum, category: "Live Event", alt: "Quantum Meditation Release" },
+  { id: 41, src: gallerySpiritual, category: "Live Event", alt: "Spiritual Warrior Protocol" },
+  { id: 42, src: galleryBlueprint, category: "Live Event", alt: "Jerry — Superhuman Blueprint" },
+  { id: 43, src: galleryEnergy, category: "Live Event", alt: "Unshakeable Energy — Jerry & Tribe" },
 ];
 
 const scrollerImages = [
   groupGiza, sunsetSilhouette, karnakPrayer, robesCelebration, tombSilhouette,
   nileHealing, karnakWalk, nileBoatSession, groupPyramid, templeDoorway,
+  galleryGroup, galleryEventOverview, galleryGroupHug, galleryQuantum, galleryBlueprint,
   nilePrayer, saqqaraStand, nightCelebration, valleyWalk, busWindow,
+  galleryStep3, galleryDeepTrauma, galleryNewReality, galleryEnergy, gallerySpiritual,
   karnakPrayer, nileGazing, dockMoment, nileInterview, productionScreen,
+  galleryBrainScan1, galleryBrainScan2, galleryStep1, galleryStep5, galleryGroupHug,
   groupGiza, sunsetSilhouette, karnakPrayer, robesCelebration, tombSilhouette,
   nileHealing, karnakWalk, nileBoatSession, groupPyramid, templeDoorway,
-  nilePrayer, saqqaraStand, nightCelebration, valleyWalk, busWindow,
-  karnakPrayer, nileGazing, dockMoment, nileInterview, productionScreen,
 ];
 
 export default function Gallery() {
