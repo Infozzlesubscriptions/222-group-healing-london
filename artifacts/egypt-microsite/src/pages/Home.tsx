@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import groupPyramidsImage from "@/assets/group-pyramids.png";
+import groupPyramidsImage from "@assets/community-group-ORD4DYoj_1776153736899.jpg";
 import jerryTempleImg from "@/assets/jerry-temple.png";
 import tribeCirclePyramidImg from "@/assets/image_1775822597040.png";
 import spiritualActivationImg from "@/assets/spiritual-activation.png";
