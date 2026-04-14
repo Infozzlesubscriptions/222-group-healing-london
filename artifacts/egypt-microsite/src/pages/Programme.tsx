@@ -60,7 +60,6 @@ const days = [
 export default function Programme() {
   return (
     <div className="min-h-screen bg-background pt-24 pb-20">
-
       {/* Hero */}
       <motion.div
         className="text-center px-4 mb-20 max-w-3xl mx-auto"
@@ -69,7 +68,7 @@ export default function Programme() {
         transition={{ duration: 0.8 }}
       >
         <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Elite Be Superhuman</span>
-        <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-none mb-6">
+        <h1 className="md:text-7xl font-bold text-foreground mb-6 text-[48px]">
           Three Days.<br />One Complete Transformation.
         </h1>
         <p className="text-lg text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto">
@@ -77,7 +76,6 @@ export default function Programme() {
         </p>
         <div className="h-px w-20 bg-primary mx-auto mt-10" />
       </motion.div>
-
       {/* Days */}
       <div className="px-4 max-w-7xl mx-auto space-y-10">
         {days.map((day, i) => (
@@ -151,7 +149,6 @@ export default function Programme() {
           </motion.div>
         ))}
       </div>
-
       {/* Closing statement */}
       <motion.div
         className="mt-20 px-4 max-w-7xl mx-auto"
@@ -188,7 +185,6 @@ export default function Programme() {
           </Link>
         </div>
       </motion.div>
-
     </div>
   );
 }
