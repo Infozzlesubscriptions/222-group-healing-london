@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import groupPyramidsImage from "@assets/community-group-ORD4DYoj_1776153736899.jpg";
 import tribeCirclePyramidImg from "@assets/Jerry-Sargeant-One-Love_1776160920406.webp";
 import spiritualActivationImg from "@assets/image_1776160809528.png";
-import karnakImg from "@assets/image_1776160676613.png";
 import pillarImg1 from "@/assets/image_1775821429322.png";
 import pillarImg2 from "@/assets/image_1775822461691.png";
 import pillarImg3 from "@/assets/image_1775822847259.png";
@@ -28,12 +27,12 @@ export default function Home() {
       text: "A completely reset nervous system, no longer running on stress and survival",
     },
     {
-      img: karnakImg,
+      img: pillarImg2,
       title: "Unshakeable Clarity",
       text: "Unshakeable clarity on who you are and what you're here to do",
     },
     {
-      img: pillarImg2,
+      img: pillarImg3,
       title: "Coherent Energy",
       text: "A coherent signal — no more leaking energy, no more running on empty",
     },
@@ -344,23 +343,6 @@ export default function Home() {
       {/* ─── WHAT YOU'LL WALK AWAY WITH ─── */}
       <section className="py-24 md:py-32 px-4 bg-secondary/30">
         <div className="max-w-7xl mx-auto">
-          {/* Image */}
-          <motion.div
-            className="mb-14 rounded-3xl overflow-hidden shadow-xl"
-            style={{ maxHeight: "480px" }}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8 }}
-          >
-            <img
-              src={karnakImg}
-              alt="Elite Be Superhuman event experience"
-              className="w-full h-full object-cover object-center"
-              style={{ maxHeight: "480px" }}
-            />
-          </motion.div>
-
           <motion.div
             className="text-center mb-8"
             initial={{ opacity: 0, y: 30 }}
