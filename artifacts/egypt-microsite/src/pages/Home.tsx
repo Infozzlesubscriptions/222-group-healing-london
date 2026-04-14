@@ -59,7 +59,7 @@ export default function Home() {
           />
         </motion.div>
 
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">
+        <div className="relative z-10 text-center px-4 max-w-7xl mx-auto mt-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -107,7 +107,7 @@ export default function Home() {
 
       {/* ─── PROMISE / INTRO ─── */}
       <section className="py-24 md:py-32 px-4 relative z-20 bg-background">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -134,7 +134,7 @@ export default function Home() {
 
       {/* ─── STATS BAR ─── */}
       <section className="py-14 px-4 bg-secondary/30 border-y border-border/40">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, i) => (
               <motion.div
@@ -170,7 +170,7 @@ export default function Home() {
           <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 60%, rgba(28,24,20,0.97) 100%)" }} />
         </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-4 py-24 md:py-36 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 py-24 md:py-36 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -215,7 +215,7 @@ export default function Home() {
 
       {/* ─── HERO VIDEO ─── */}
       <section className="py-24 md:py-32 px-4 bg-background">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 30 }}
@@ -289,7 +289,7 @@ export default function Home() {
 
       {/* ─── WHAT YOU'LL WALK AWAY WITH ─── */}
       <section className="py-24 md:py-32 px-4 bg-secondary/30">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
@@ -333,7 +333,7 @@ export default function Home() {
 
       {/* ─── WHO THIS IS FOR ─── */}
       <section className="py-24 md:py-32 px-4 bg-background">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
             <motion.div
@@ -403,7 +403,7 @@ export default function Home() {
 
       {/* ─── ABOUT JERRY ─── */}
       <section className="py-24 md:py-32 px-4 bg-secondary/30">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
             <motion.div
@@ -458,7 +458,7 @@ export default function Home() {
 
       {/* ─── GUARANTEE ─── */}
       <section className="py-24 md:py-32 px-4 bg-background">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             className="rounded-3xl border border-primary/30 bg-card shadow-lg overflow-hidden"
             initial={{ opacity: 0, y: 30 }}

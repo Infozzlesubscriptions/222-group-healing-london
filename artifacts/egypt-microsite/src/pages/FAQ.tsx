@@ -111,7 +111,7 @@ export default function FAQ() {
       </motion.div>
 
       {/* FAQ Accordion */}
-      <div className="px-4 max-w-4xl mx-auto mb-20">
+      <div className="px-4 max-w-7xl mx-auto mb-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -132,7 +132,7 @@ export default function FAQ() {
 
       {/* Guarantee reminder */}
       <motion.div
-        className="px-4 max-w-4xl mx-auto mb-20"
+        className="px-4 max-w-7xl mx-auto mb-20"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}

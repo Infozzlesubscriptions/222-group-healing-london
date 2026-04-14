@@ -79,7 +79,7 @@ export default function Programme() {
       </motion.div>
 
       {/* Days */}
-      <div className="px-4 max-w-5xl mx-auto space-y-10">
+      <div className="px-4 max-w-7xl mx-auto space-y-10">
         {days.map((day, i) => (
           <motion.div
             key={i}
@@ -154,7 +154,7 @@ export default function Programme() {
 
       {/* Closing statement */}
       <motion.div
-        className="mt-20 px-4 max-w-4xl mx-auto"
+        className="mt-20 px-4 max-w-7xl mx-auto"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}

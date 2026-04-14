@@ -87,7 +87,7 @@ export default function Gallery() {
     <div className="min-h-screen bg-background pt-24 pb-0">
 
       {/* ── GALLERY ── */}
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}

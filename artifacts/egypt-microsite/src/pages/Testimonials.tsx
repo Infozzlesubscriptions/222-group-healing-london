@@ -164,7 +164,7 @@ export default function Testimonials() {
       </motion.div>
 
       {/* Video Testimonials */}
-      <section className="px-4 max-w-6xl mx-auto mb-24">
+      <section className="px-4 max-w-7xl mx-auto mb-24">
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
@@ -182,7 +182,7 @@ export default function Testimonials() {
       </section>
 
       {/* Written testimonials */}
-      <section className="px-4 max-w-6xl mx-auto mb-24">
+      <section className="px-4 max-w-7xl mx-auto mb-24">
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
@@ -232,7 +232,7 @@ export default function Testimonials() {
       </section>
 
       {/* Caesar highlight */}
-      <section className="px-4 max-w-4xl mx-auto mb-24">
+      <section className="px-4 max-w-7xl mx-auto mb-24">
         <motion.div
           className="relative rounded-3xl overflow-hidden"
           initial={{ opacity: 0, y: 30 }}
