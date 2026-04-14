@@ -494,6 +494,8 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.7, delay: 0.1 }}
+              className="rounded-3xl p-8 md:p-10"
+              style={{ background: "#fdf6e9" }}
             >
               <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Your Guide</span>
               <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight mb-6">
