@@ -505,6 +505,9 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0 }}
               className="flex flex-col px-8 py-10"
             >
+              <div className="flex justify-center mb-5">
+                <span className="invisible text-[10px] font-bold tracking-[0.25em] uppercase px-4 py-1.5 rounded-full">Most Popular</span>
+              </div>
               <h3 className="text-xl font-bold mb-6 text-center" style={{ color: "#1a1208" }}>General Admission</h3>
               <div className="text-center mb-6">
                 <div className="line-through text-sm mb-1" style={{ color: "#aaa" }}>£444</div>
@@ -598,6 +601,9 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="flex flex-col px-8 py-10"
             >
+              <div className="flex justify-center mb-5">
+                <span className="invisible text-[10px] font-bold tracking-[0.25em] uppercase px-4 py-1.5 rounded-full">Most Popular</span>
+              </div>
               <h3 className="text-xl font-bold mb-6 text-center" style={{ color: "#1a1208" }}>Elite Package</h3>
               <div className="text-center mb-6">
                 <div className="line-through text-sm mb-1" style={{ color: "#aaa" }}>£1,555</div>
