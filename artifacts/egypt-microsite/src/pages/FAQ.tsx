@@ -9,44 +9,69 @@ type FAQItem = {
   a: string;
 };
 
-const faqs: FAQItem[] = [
+type FAQCategory = {
+  label: string;
+  items: FAQItem[];
+};
+
+const faqCategories: FAQCategory[] = [
   {
-    q: "Is this suitable for beginners?",
-    a: "Completely. Whether you've never done anything like this before or you've spent years on this path, the experience meets you exactly where you are. No prior experience in meditation, breathwork, or energy work is required.",
+    label: "Before You Come",
+    items: [
+      {
+        q: "Is this suitable for beginners?",
+        a: "Completely. Whether you've never done anything like this before or you've spent years on this path, the experience meets you exactly where you are. No prior experience in meditation, breathwork, or energy work is required.",
+      },
+      {
+        q: "What should I bring?",
+        a: "Comfortable clothing you can move in, an open mind, and a willingness to fully participate. Full details are sent on booking.",
+      },
+    ],
   },
   {
-    q: "What should I bring?",
-    a: "Comfortable clothing you can move in, an open mind, and a willingness to fully participate. Full details are sent on booking.",
+    label: "Booking & Payment",
+    items: [
+      {
+        q: "Is there a payment plan?",
+        a: "Yes. Options are available at checkout. We want this experience to be accessible and we'll do everything we can to make it work for you.",
+      },
+      {
+        q: "What if I can't make it after booking?",
+        a: "Contact our team and we'll do everything we can to accommodate you.",
+      },
+      {
+        q: "What is the money-back guarantee?",
+        a: "We don't have a standard refund policy — we have something better. If you attend day one and feel it isn't right for you, simply speak to a team member before lunch and you'll receive a full refund on the spot. After that point, all sales are final.",
+      },
+    ],
   },
   {
-    q: "Is there a payment plan?",
-    a: "Yes. Options are available at checkout. We want this experience to be accessible and we'll do everything we can to make it work for you.",
+    label: "The Event",
+    items: [
+      {
+        q: "Where is the event held?",
+        a: "Elite Be Superhuman takes place in London, UK in May 2026. Full venue details are sent to all confirmed attendees.",
+      },
+      {
+        q: "How many people will be in the room?",
+        a: "Places are strictly limited to ensure every person gets the full experience. Jerry works in an intentionally small, contained group. When the room is full, that's it.",
+      },
+    ],
   },
   {
-    q: "What if I can't make it after booking?",
-    a: "Contact our team and we'll do everything we can to accommodate you.",
-  },
-  {
-    q: "What is the money-back guarantee?",
-    a: "We don't have a standard refund policy — we have something better. If you attend day one and feel it isn't right for you, simply speak to a team member before lunch and you'll receive a full refund on the spot. After that point, all sales are final.",
-  },
-  {
-    q: "Where is the event held?",
-    a: "Elite Be Superhuman takes place in London, UK in May 2026. Full venue details are sent to all confirmed attendees.",
-  },
-  {
-    q: "How many people will be in the room?",
-    a: "Places are strictly limited to ensure every person gets the full experience. Jerry works in an intentionally small, contained group. When the room is full, that's it.",
-  },
-  {
-    q: "What happens after the three days?",
-    a: "Every practice, tool, and technique you move through is yours to take home and apply daily. You'll also have access to the Star Magic community for ongoing support and connection with people operating at the same frequency.",
+    label: "After the Event",
+    items: [
+      {
+        q: "What happens after the three days?",
+        a: "Every practice, tool, and technique you move through is yours to take home and apply daily. You'll also have access to the Star Magic community for ongoing support and connection with people operating at the same frequency.",
+      },
+    ],
   },
 ];
 
 function FAQAccordion({ item, isOpen, onToggle }: { item: FAQItem; isOpen: boolean; onToggle: () => void }) {
   return (
-    <div className={`border-b border-border/50 transition-colors duration-200 ${isOpen ? "bg-secondary/30" : ""}`}>
+    <div className={`border-b border-border/50 last:border-b-0 transition-colors duration-200 ${isOpen ? "bg-secondary/30" : ""}`}>
       <button
         className="w-full text-left flex items-start justify-between gap-4 py-5 px-6 group"
         onClick={onToggle}
@@ -84,10 +109,10 @@ function FAQAccordion({ item, isOpen, onToggle }: { item: FAQItem; isOpen: boole
 }
 
 export default function FAQ() {
-  const [openItems, setOpenItems] = useState<Record<number, boolean>>({});
+  const [openItems, setOpenItems] = useState<Record<string, boolean>>({});
 
-  const toggle = (i: number) => {
-    setOpenItems((prev) => ({ ...prev, [i]: !prev[i] }));
+  const toggle = (key: string) => {
+    setOpenItems((prev) => ({ ...prev, [key]: !prev[key] }));
   };
 
   return (
@@ -110,29 +135,40 @@ export default function FAQ() {
         <div className="h-px w-20 bg-primary mx-auto mt-10" />
       </motion.div>
 
-      {/* FAQ Accordion */}
-      <div className="px-4 max-w-7xl mx-auto mb-20">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="rounded-2xl border border-border/50 overflow-hidden bg-card shadow-sm"
-        >
-          {faqs.map((item, i) => (
-            <FAQAccordion
-              key={i}
-              item={item}
-              isOpen={!!openItems[i]}
-              onToggle={() => toggle(i)}
-            />
-          ))}
-        </motion.div>
+      {/* FAQ Categories */}
+      <div className="px-4 max-w-4xl mx-auto mb-20 space-y-10">
+        {faqCategories.map((cat, ci) => (
+          <motion.div
+            key={ci}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.6, delay: ci * 0.08 }}
+          >
+            {/* Category label */}
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-primary text-xs font-bold tracking-[0.3em] uppercase">{cat.label}</span>
+              <div className="flex-1 h-px bg-border/50" />
+            </div>
+
+            {/* Accordion group */}
+            <div className="rounded-2xl border border-border/50 overflow-hidden bg-card shadow-sm">
+              {cat.items.map((item, ii) => (
+                <FAQAccordion
+                  key={ii}
+                  item={item}
+                  isOpen={!!openItems[`${ci}-${ii}`]}
+                  onToggle={() => toggle(`${ci}-${ii}`)}
+                />
+              ))}
+            </div>
+          </motion.div>
+        ))}
       </div>
 
       {/* Guarantee reminder */}
       <motion.div
-        className="px-4 max-w-7xl mx-auto mb-20"
+        className="px-4 max-w-4xl mx-auto mb-20"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
