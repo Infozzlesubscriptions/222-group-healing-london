@@ -1,10 +1,15 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import day1Img from "@/assets/spiritual-activation.png";
+import day2Img from "@/assets/image_1775822461691.png";
+import day3Img from "@/assets/image_1775822847259.png";
 
 const days = [
   {
     number: "01",
+    img: day1Img,
+    imgAlt: "Breathwork and nervous system reset session",
     title: "Build the Unbreakable Version of You",
     summary:
       "Day one strips everything back and rebuilds from the ground up. You'll learn to hear and trust your own inner guidance — above the noise of fear, doubt, and other people's opinions. We work through what it means to truly know something versus just believe it, how to take complete ownership of your life without excuses, and how to carry yourself in a way that makes you completely unfazed by judgment, criticism, or chaos.",
@@ -23,6 +28,8 @@ const days = [
   },
   {
     number: "02",
+    img: day2Img,
+    imgAlt: "Body upgrade and energy activation",
     title: "Upgrade Your Body and Expand Your Capacity",
     summary:
       "Day two goes deeper. You'll receive a complete Superhuman lifestyle framework — covering breath, food, sleep, meditation, exercise, fasting, cold exposure, and how to regulate your nervous system so your body stops working against you and starts working for you.",
@@ -40,6 +47,8 @@ const days = [
   },
   {
     number: "03",
+    img: day3Img,
+    imgAlt: "Full system upgrade and transformation",
     title: "Lock In the Upgrade. Step Into the New You.",
     summary:
       "Day three seals everything in. You'll open with a gratitude and heart coherence practice that brings the nervous system into full alignment — one of the most powerful states a human being can access for healing, manifestation, and sustained performance.",
@@ -85,66 +94,56 @@ export default function Programme() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.7, delay: i * 0.1 }}
-            className="rounded-3xl border border-primary/20 bg-card shadow-lg overflow-hidden"
+            className="rounded-3xl border border-primary/20 bg-card shadow-lg overflow-hidden grid grid-cols-1 lg:grid-cols-2"
           >
-            {/* Day header */}
-            <div
-              className="px-8 py-7 border-b border-primary/15"
-              style={{ background: "linear-gradient(135deg, hsl(42 87% 96%), hsl(38 72% 92%))" }}
-            >
-              <div className="flex items-start gap-5">
+            {/* Image */}
+            <div className="relative w-full min-h-[280px] lg:min-h-[480px] overflow-hidden">
+              <img
+                src={day.img}
+                alt={day.imgAlt}
+                className="absolute inset-0 w-full h-full object-cover object-center"
+              />
+              {/* Day badge overlaid on image */}
+              <div className="absolute top-6 left-6">
                 <div
-                  className="shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-bold shadow-md"
+                  className="w-16 h-16 rounded-2xl flex flex-col items-center justify-center shadow-lg"
                   style={{
-                    background: "linear-gradient(90deg, #d39222 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #d39222 100%)",
+                    background: "linear-gradient(135deg, #d39222 0%, #FFECBA 50%, #d39222 100%)",
                     color: "#1a1208",
                   }}
                 >
-                  {day.number}
-                </div>
-                <div>
-                  <p className="text-primary text-xs font-bold uppercase tracking-[0.3em] mb-1">Day {parseInt(day.number)}</p>
-                  <h2 className="text-2xl md:text-3xl font-bold text-foreground leading-snug">{day.title}</h2>
+                  <span className="text-[10px] font-bold uppercase tracking-widest leading-none">Day</span>
+                  <span className="text-2xl font-bold leading-none mt-0.5">{parseInt(day.number)}</span>
                 </div>
               </div>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/20 lg:block hidden" />
             </div>
 
-            {/* Day body */}
-            <div className="px-8 py-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Description */}
-              <div>
-                <p className="text-muted-foreground leading-relaxed mb-4">{day.summary}</p>
-                {day.detail && (
-                  <p className="text-muted-foreground leading-relaxed mb-4">{day.detail}</p>
-                )}
-                {day.outcome && (
-                  <p className="text-foreground font-semibold text-base leading-relaxed italic">
-                    "{day.outcome}"
-                  </p>
-                )}
-              </div>
-
-              {/* Topics */}
-              <div>
-                <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary mb-4">What's Covered</p>
-                <ul className="space-y-3">
-                  {day.topics.map((topic, j) => (
-                    <li key={j} className="flex items-center gap-3">
-                      <span
-                        className="w-7 h-7 rounded-lg shrink-0 flex items-center justify-center text-xs"
-                        style={{
-                          background: "linear-gradient(135deg, rgba(184,151,92,0.3), rgba(243,214,150,0.15))",
-                          border: "1px solid rgba(184,151,92,0.35)",
-                          color: "#d39222",
-                        }}
-                      >
-                        ✦
-                      </span>
-                      <span className="text-foreground/85 text-sm leading-snug">{topic}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            {/* Content */}
+            <div className="p-8 md:p-10 flex flex-col justify-center">
+              <p className="text-primary text-xs font-bold uppercase tracking-[0.35em] mb-3">Day {parseInt(day.number)}</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground leading-snug mb-6">
+                {day.title}
+              </h2>
+              <div className="h-px w-12 mb-6" style={{ background: "#d39222" }} />
+              <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-3">{day.summary}</p>
+              {day.detail && (
+                <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-4">{day.detail}</p>
+              )}
+              {day.outcome && (
+                <p className="text-foreground font-semibold text-sm leading-relaxed italic mb-6">
+                  "{day.outcome}"
+                </p>
+              )}
+              <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary mb-3">What's Covered</p>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                {day.topics.map((topic, j) => (
+                  <li key={j} className="flex items-center gap-2">
+                    <span style={{ color: "#d39222" }} className="text-xs shrink-0">✦</span>
+                    <span className="text-foreground/80 text-sm leading-snug">{topic}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </motion.div>
         ))}
