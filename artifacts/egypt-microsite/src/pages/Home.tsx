@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import groupPyramidsImage from "@assets/community-group-ORD4DYoj_1776153736899.jpg";
-import jerryTempleImg from "@/assets/jerry-temple.png";
 import tribeCirclePyramidImg from "@assets/Jerry-Sargeant-One-Love_1776160920406.webp";
 import spiritualActivationImg from "@assets/image_1776160809528.png";
 import karnakImg from "@assets/image_1776160676613.png";
@@ -15,7 +14,6 @@ export default function Home() {
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 1000], [0, 300]);
   const opacity = useTransform(scrollY, [0, 500], [1, 0]);
-  const [videoPlaying, setVideoPlaying] = useState(false);
   const [caesarVideoPlaying, setCaesarVideoPlaying] = useState(false);
 
   const stats = [
@@ -252,40 +250,13 @@ export default function Home() {
               className="relative rounded-3xl overflow-hidden shadow-2xl"
               style={{ border: "1px solid rgba(243,214,150,0.35)", aspectRatio: "16/9" }}
             >
-              {videoPlaying ? (
-                <iframe
-                  src="https://player.vimeo.com/video/1128847726?badge=0&autopause=0&autoplay=1&quality_selector=1&player_id=0&app_id=58479"
-                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                  className="absolute inset-0 w-full h-full"
-                  title="Elite Be Superhuman"
-                  style={{ border: 0 }}
-                />
-              ) : (
-                <button
-                  className="absolute inset-0 w-full h-full group cursor-pointer"
-                  onClick={() => setVideoPlaying(true)}
-                  aria-label="Play video"
-                >
-                  <img
-                    src={jerryTempleImg}
-                    alt="Jerry Sargeant"
-                    className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/35 group-hover:bg-black/25 transition-colors duration-300" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <motion.div
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="w-20 h-20 rounded-full flex items-center justify-center shadow-2xl"
-                      style={{ background: "linear-gradient(135deg, #d39222, #FFECBA, #F3D696, #d39222)" }}
-                    >
-                      <svg className="w-8 h-8 ml-1" viewBox="0 0 24 24" fill="#1a1208">
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    </motion.div>
-                  </div>
-                </button>
-              )}
+              <iframe
+                src="https://player.vimeo.com/video/1182092823?badge=0&autopause=0&quality_selector=1&player_id=0&app_id=58479"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                className="absolute inset-0 w-full h-full"
+                title="Hear It From Jerry"
+                style={{ border: 0 }}
+              />
             </div>
           </motion.div>
         </div>
