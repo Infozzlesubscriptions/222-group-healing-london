@@ -564,9 +564,10 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.03 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.7, delay: 0 }}
-              className="flex flex-col px-8 py-10 rounded-3xl"
+              className="flex flex-col px-8 py-10 rounded-3xl cursor-default"
               style={{ border: "1px solid #d39222" }}
             >
               <div className="flex justify-center mb-5">
@@ -608,9 +609,10 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.03 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="flex flex-col px-8 py-10 rounded-3xl relative"
+              className="flex flex-col px-8 py-10 rounded-3xl relative cursor-default"
               style={{ backgroundColor: "#EDE5D5", boxShadow: "0 8px 40px rgba(211,146,34,0.15)" }}
             >
               <div className="flex justify-center mb-5">
@@ -661,9 +663,10 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.03 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="flex flex-col px-8 py-10 rounded-3xl"
+              className="flex flex-col px-8 py-10 rounded-3xl cursor-default"
               style={{ border: "1px solid #d39222" }}
             >
               <div className="flex justify-center mb-5">
