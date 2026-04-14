@@ -318,7 +318,7 @@ export default function Home() {
         </div>
       </section>
       {/* ─── THE CORE OF EVERYTHING ─── */}
-      <section className="py-24 md:py-32 px-4 bg-background">
+      <section className="py-24 md:py-32 px-4" style={{ backgroundColor: "#FDF6E9" }}>
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
