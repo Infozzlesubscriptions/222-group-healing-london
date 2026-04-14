@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import day1Img from "@assets/Program-and-step-2-scaled_1776165893158.webp";
-import day2Img from "@/assets/image_1775822461691.png";
+import day2Img from "@assets/Program-and-step-3-scaled_1776166006733.webp";
 import day3Img from "@/assets/image_1775822847259.png";
 
 const days = [
