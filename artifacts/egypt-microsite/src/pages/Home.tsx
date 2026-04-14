@@ -529,7 +529,7 @@ export default function Home() {
               </ul>
               <Link href="/booking">
                 <button
-                  className="w-full py-3 rounded-full text-sm font-bold tracking-wide border transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+                  className="w-full py-3 rounded-lg text-sm font-bold tracking-wide border transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
                   style={{ borderColor: "#d39222", color: "#d39222", background: "transparent" }}
                 >
                   Sign Up Now
@@ -578,7 +578,7 @@ export default function Home() {
               </ul>
               <Link href="/booking">
                 <button
-                  className="w-full py-3 rounded-full text-sm font-bold tracking-wide transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-md"
+                  className="w-full py-3 rounded-lg text-sm font-bold tracking-wide transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-md"
                   style={{
                     background: "linear-gradient(90deg, #b87d1a 0%, #d39222 35%, #FFECBA 65%, #d39222 100%)",
                     color: "#1a1208",
@@ -622,7 +622,7 @@ export default function Home() {
               </ul>
               <Link href="/booking">
                 <button
-                  className="w-full py-3 rounded-full text-sm font-bold tracking-wide border transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+                  className="w-full py-3 rounded-lg text-sm font-bold tracking-wide border transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
                   style={{ borderColor: "#d39222", color: "#d39222", background: "transparent" }}
                 >
                   Go Elite
