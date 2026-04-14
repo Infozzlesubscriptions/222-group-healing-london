@@ -723,7 +723,7 @@ export default function Home() {
               {/* Image */}
               <div className="relative overflow-hidden rounded-tl-3xl rounded-bl-3xl min-h-[320px]">
                 <img
-                  src={spiritualActivationImg}
+                  src={tribeCirclePyramidImg}
                   alt="Guarantee"
                   className="w-full h-full object-cover object-center"
                 />
