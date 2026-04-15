@@ -498,9 +498,9 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6">
                   <p className="text-white font-bold text-lg leading-snug drop-shadow-lg">
-                    London, UK · May 2026
+                    May 15–17, 2026 · London, UK
                   </p>
-                  <p className="text-white/70 text-sm">3 Days · Limited Places</p>
+                  <p className="text-white/70 text-sm">3 Days · 9am–6pm · Limited Places</p>
                 </div>
               </div>
             </motion.div>
@@ -905,17 +905,20 @@ export default function Home() {
               </button>
             </Link>
 
-            <div className="text-sm space-y-1" style={{ color: "#a08060" }}>
-              <p>Dates: May 2026 · London, UK</p>
-              <p>Includes: All 3 days · All materials</p>
+            <div className="text-sm space-y-2 max-w-md mx-auto" style={{ color: "#a08060" }}>
+              <p className="font-semibold" style={{ color: "#3d2f1a" }}>Event Details</p>
+              <p>Dates: May 15–17, 2026</p>
+              <p>Location: Radisson Blu Hotel, London Heathrow, 140 Bath Road, Hayes, Middlesex, UB3 5AW</p>
+              <p>Time: 9am – 6pm (local time) w/ 1 hour lunch break</p>
+              <p>Accommodation & Food: Not Included</p>
               <p className="mt-4">
-                Questions?{" "}
+                Got questions?{" "}
                 <a
-                  href="mailto:info@starmagichealing.com"
+                  href="mailto:admin@starmagichealing.org"
                   className="underline hover:opacity-80 transition-opacity"
                   style={{ color: "#d39222" }}
                 >
-                  Contact our team
+                  Email us at admin@starmagichealing.org
                 </a>
               </p>
             </div>

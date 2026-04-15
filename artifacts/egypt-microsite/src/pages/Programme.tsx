@@ -354,6 +354,33 @@ export default function Programme() {
           </Link>
         </div>
       </motion.div>
+
+      {/* Event Details */}
+      <motion.div
+        className="mt-16 px-4 max-w-7xl mx-auto"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <div className="rounded-2xl border border-primary/20 bg-card p-6 sm:p-8 md:p-10">
+          <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
+            <span style={{ color: "#d39222" }}>✦</span> Event Details
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 text-sm text-muted-foreground">
+            <div><span className="font-semibold text-foreground">Dates:</span> May 15–17, 2026</div>
+            <div><span className="font-semibold text-foreground">Time:</span> 9am – 6pm (local time) w/ 1 hour lunch break</div>
+            <div className="sm:col-span-2"><span className="font-semibold text-foreground">Location:</span> Radisson Blu Hotel, London Heathrow, 140 Bath Road, Hayes, Middlesex, UB3 5AW</div>
+            <div><span className="font-semibold text-foreground">Accommodation & Food:</span> Not Included</div>
+            <div>
+              <span className="font-semibold text-foreground">Got Questions?</span>{" "}
+              <a href="mailto:admin@starmagichealing.org" className="underline hover:opacity-80 transition-opacity" style={{ color: "#d39222" }}>
+                admin@starmagichealing.org
+              </a>
+            </div>
+          </div>
+        </div>
+      </motion.div>
     </div>
   );
 }
