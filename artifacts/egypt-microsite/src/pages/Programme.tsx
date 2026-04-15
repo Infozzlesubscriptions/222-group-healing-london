@@ -343,7 +343,7 @@ export default function Programme() {
           <p className="text-primary font-bold text-lg italic mb-8">
             That is the real outcome of Elite Be Superhuman. Not a weekend high. A permanent elevation.
           </p>
-          <Link href="/booking">
+          <Link href="/#pricing">
             <Button
               size="lg"
               className="font-bold text-base px-10 py-2 tracking-wide"

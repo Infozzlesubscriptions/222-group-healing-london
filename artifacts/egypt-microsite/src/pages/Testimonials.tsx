@@ -324,7 +324,7 @@ export default function Testimonials() {
             Every one of these people showed up and decided to go all in. Now it's your turn.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/booking">
+            <Link href="/#pricing">
               <Button size="lg" className="bg-primary text-primary-foreground font-bold text-base px-10 py-2">
                 Reserve Your Seat Now
               </Button>

@@ -292,7 +292,7 @@ export default function FAQ() {
             Reach out to our team directly. We'll answer everything and help you decide if Elite Be Superhuman is right for you — with zero pressure.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/booking">
+            <Link href="/#pricing">
               <Button size="lg" className="bg-primary text-primary-foreground font-bold text-base px-10 py-2">
                 Reserve Your Seat
               </Button>

@@ -786,7 +786,13 @@ export default function Home() {
                 <p className="text-foreground font-semibold text-sm italic mb-8">
                   The only risk here is not showing up.
                 </p>
-                <Link href="/booking">
+                <a
+                  href="#pricing"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
                   <button
                     className="text-sm font-bold px-8 py-3 rounded-lg tracking-wide transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97] cursor-pointer"
                     style={{
@@ -797,7 +803,7 @@ export default function Home() {
                   >
                     Reserve Your Seat — Risk Free
                   </button>
-                </Link>
+                </a>
               </div>
             </div>
           </motion.div>
@@ -894,7 +900,13 @@ export default function Home() {
               If this is calling you — don't sit on it.
             </p>
 
-            <Link href="/booking">
+            <a
+              href="#pricing"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
               <button
                 className="text-base font-bold px-12 py-3.5 rounded-lg tracking-wide transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97] cursor-pointer shadow-lg mb-8"
                 style={{
@@ -905,7 +917,7 @@ export default function Home() {
               >
                 Reserve Your Seat Now
               </button>
-            </Link>
+            </a>
 
           </motion.div>
         </div>
