@@ -260,6 +260,27 @@ export default function Programme() {
             </p>
           </motion.div>
         </div>
+
+        <motion.div
+          className="mt-10"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.7 }}
+        >
+          <div
+            className="rounded-3xl overflow-hidden shadow-xl"
+            style={{ border: "1px solid rgba(211,146,34,0.3)", aspectRatio: "16/9" }}
+          >
+            <iframe
+              src="https://player.vimeo.com/video/1099884785?badge=0&autopause=0&quality_selector=1&player_id=0&app_id=58479"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              className="w-full h-full"
+              title="The Science Behind It All"
+              style={{ border: 0 }}
+            />
+          </div>
+        </motion.div>
       </div>
 
       {/* ─── EXPERIENCE / WALK AWAY / WHO IT'S FOR ─── */}
