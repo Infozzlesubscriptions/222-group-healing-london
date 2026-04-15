@@ -166,13 +166,13 @@ function FAQAccordion({ item, isOpen, onToggle }: { item: FAQItem; isOpen: boole
 
 export default function FAQ() {
   const [openItems, setOpenItems] = useState<Record<string, boolean>>({});
-  const [activeTab, setActiveTab] = useState(0);
+  const [activeTab, setActiveTab] = useState(-1);
 
   const toggle = (key: string) => {
     setOpenItems((prev) => ({ ...prev, [key]: !prev[key] }));
   };
 
-  const activeCat = faqCategories[activeTab];
+  const isAll = activeTab === -1;
 
   return (
     <div className="min-h-screen bg-background pt-24 pb-20">
@@ -197,35 +197,35 @@ export default function FAQ() {
       {/* Category Tabs */}
       <div className="px-4 max-w-4xl mx-auto mb-10">
         <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 md:gap-3 max-w-2xl mx-auto">
-          {faqCategories.slice(0, 5).map((cat, ci) => (
+          {[{ label: "All", idx: -1 }, ...faqCategories.slice(0, 4).map((cat, ci) => ({ label: cat.label, idx: ci }))].map(({ label, idx }) => (
             <button
-              key={ci}
-              onClick={() => { setActiveTab(ci); setOpenItems({}); }}
+              key={idx}
+              onClick={() => { setActiveTab(idx); setOpenItems({}); }}
               className={`px-3 sm:px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold tracking-wide transition-all duration-300 cursor-pointer shadow-sm ${
-                activeTab === ci
+                activeTab === idx
                   ? "text-[#1a1208] shadow-md"
                   : "bg-card text-muted-foreground hover:text-primary border border-border/50 hover:border-primary/40"
               }`}
-              style={activeTab === ci ? {
+              style={activeTab === idx ? {
                 background: "linear-gradient(90deg, #d39222 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #d39222 100%)",
                 border: "none",
               } : undefined}
             >
-              {cat.label}
+              {label}
             </button>
           ))}
         </div>
-        <div className="flex justify-center gap-2 md:gap-3 mt-2 md:mt-3 max-w-2xl mx-auto">
-          {faqCategories.slice(5).map((cat, ci) => (
+        <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 md:gap-3 mt-2 md:mt-3 max-w-2xl mx-auto">
+          {faqCategories.slice(4).map((cat, ci) => (
             <button
-              key={ci + 5}
-              onClick={() => { setActiveTab(ci + 5); setOpenItems({}); }}
-              className={`px-3 sm:px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold tracking-wide transition-all duration-300 cursor-pointer shadow-sm min-w-[calc(20%-0.5rem)] ${
-                activeTab === ci + 5
+              key={ci + 4}
+              onClick={() => { setActiveTab(ci + 4); setOpenItems({}); }}
+              className={`px-3 sm:px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold tracking-wide transition-all duration-300 cursor-pointer shadow-sm ${
+                activeTab === ci + 4
                   ? "text-[#1a1208] shadow-md"
                   : "bg-card text-muted-foreground hover:text-primary border border-border/50 hover:border-primary/40"
               }`}
-              style={activeTab === ci + 5 ? {
+              style={activeTab === ci + 4 ? {
                 background: "linear-gradient(90deg, #d39222 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #d39222 100%)",
                 border: "none",
               } : undefined}
@@ -244,21 +244,45 @@ export default function FAQ() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
         >
-          <div className="flex items-center gap-3 mb-4">
-            <span className="text-primary text-xs font-bold tracking-[0.3em] uppercase">{activeCat.label}</span>
-            <div className="flex-1 h-px bg-border/50" />
-          </div>
-
-          <div className="rounded-2xl border border-border/50 overflow-hidden bg-card shadow-sm">
-            {activeCat.items.map((item, ii) => (
-              <FAQAccordion
-                key={ii}
-                item={item}
-                isOpen={!!openItems[`${activeTab}-${ii}`]}
-                onToggle={() => toggle(`${activeTab}-${ii}`)}
-              />
-            ))}
-          </div>
+          {isAll ? (
+            <div className="space-y-8">
+              {faqCategories.map((cat, catIdx) => (
+                <div key={catIdx}>
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-primary text-xs font-bold tracking-[0.3em] uppercase">{cat.label}</span>
+                    <div className="flex-1 h-px bg-border/50" />
+                  </div>
+                  <div className="rounded-2xl border border-border/50 overflow-hidden bg-card shadow-sm">
+                    {cat.items.map((item, ii) => (
+                      <FAQAccordion
+                        key={ii}
+                        item={item}
+                        isOpen={!!openItems[`${catIdx}-${ii}`]}
+                        onToggle={() => toggle(`${catIdx}-${ii}`)}
+                      />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <>
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-primary text-xs font-bold tracking-[0.3em] uppercase">{faqCategories[activeTab].label}</span>
+                <div className="flex-1 h-px bg-border/50" />
+              </div>
+              <div className="rounded-2xl border border-border/50 overflow-hidden bg-card shadow-sm">
+                {faqCategories[activeTab].items.map((item, ii) => (
+                  <FAQAccordion
+                    key={ii}
+                    item={item}
+                    isOpen={!!openItems[`${activeTab}-${ii}`]}
+                    onToggle={() => toggle(`${activeTab}-${ii}`)}
+                  />
+                ))}
+              </div>
+            </>
+          )}
         </motion.div>
       </div>
 
