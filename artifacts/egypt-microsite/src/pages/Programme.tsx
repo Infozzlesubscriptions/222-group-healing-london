@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 
-function ExpertVideoCard({ expert, index }: { expert: { name: string; id: string }; index: number }) {
+function ExpertVideoCard({ expert, index }: { expert: { name: string; id: string; thumbnail?: string }; index: number }) {
   const [playing, setPlaying] = useState(false);
 
   return (
@@ -33,8 +33,15 @@ function ExpertVideoCard({ expert, index }: { expert: { name: string; id: string
           />
         ) : (
           <>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
+            {expert.thumbnail && (
+              <img
+                src={expert.thumbnail}
+                alt={`${expert.name} testimonial`}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            )}
+            <div className="absolute inset-0 bg-black/30" />
+            <div className="absolute inset-0 flex items-center justify-center">
               <motion.div
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
@@ -282,9 +289,9 @@ export default function Programme() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
-            { name: "Dr. Merlin", id: "1161753909" },
-            { name: "Dr. Maher",  id: "1161753427"  },
-            { name: "Dr. Angela", id: "1161753289" },
+            { name: "Dr. Merlin", id: "1161753909", thumbnail: "https://i.vimeocdn.com/video/2117255887-e8f0ee91b1183ee41f4960225142a4ac0a5464ecbfc081d845f6226bd0c73dc6-d_640" },
+            { name: "Dr. Maher",  id: "1161753427", thumbnail: ""  },
+            { name: "Dr. Angela", id: "1161753289", thumbnail: "https://i.vimeocdn.com/video/2117253821-40dc7c9a4e00c76988bde58e3fad116d301c7c26f7752390aab98a63b85e6a9c-d_640" },
           ].map((expert, i) => (
             <ExpertVideoCard key={expert.name} expert={expert} index={i} />
           ))}

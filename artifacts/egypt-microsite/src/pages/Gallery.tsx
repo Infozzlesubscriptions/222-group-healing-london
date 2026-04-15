@@ -36,6 +36,7 @@ function TransformationVideoCard({ video, index }: { video: typeof transformatio
       style={{ aspectRatio: "16/9" }}
     >
       <div className="relative w-full h-full" style={{ background: "linear-gradient(135deg, #1a1208 0%, #2a1f10 50%, #0a0e1a 100%)" }}>
+        {video.thumbnail && <VideoThumbnail vimeoId={video.vimeoId} thumbnailUrl={video.thumbnail} />}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
           <motion.div
@@ -50,7 +51,7 @@ function TransformationVideoCard({ video, index }: { video: typeof transformatio
               <path d="M8 5v14l11-7z" />
             </svg>
           </motion.div>
-          <span className="text-white/80 text-xs font-medium tracking-wide">{video.title}</span>
+          {!video.thumbnail && <span className="text-white/80 text-xs font-medium tracking-wide">{video.title}</span>}
         </div>
         <div className="absolute top-3 right-3 flex items-center gap-1.5 bg-black/40 backdrop-blur-sm rounded-full px-3 py-1">
           <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
@@ -64,7 +65,7 @@ function TransformationVideoCard({ video, index }: { video: typeof transformatio
 const transformationVideos = [
   { id: 1, vimeoId: "1161766582", title: "Transformation Story 1", thumbnail: "" },
   { id: 2, vimeoId: "1161766314", title: "Transformation Story 2", thumbnail: "" },
-  { id: 3, vimeoId: "1161766538", title: "Transformation Story 3", thumbnail: "" },
+  { id: 3, vimeoId: "1161766538", title: "Transformation Story 3", thumbnail: "https://i.vimeocdn.com/video/2117272103-83769dc126ddeb04de74cc07d79b12eacb4f3c026e0eedab35866eb5f0d6224f-d_640" },
   { id: 4, vimeoId: "1161766020", title: "Transformation Story 4", thumbnail: "" },
   { id: 5, vimeoId: "1161765970", title: "Transformation Story 5", thumbnail: "" },
   { id: 6, vimeoId: "1161766248", title: "Transformation Story 6", thumbnail: "" },
