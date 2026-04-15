@@ -356,31 +356,58 @@ export default function Programme() {
       </motion.div>
 
       {/* Event Details */}
-      <motion.div
-        className="mt-16 px-4 max-w-7xl mx-auto"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        <div className="rounded-2xl border border-primary/20 bg-card p-6 sm:p-8 md:p-10">
-          <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
-            <span style={{ color: "#d39222" }}>✦</span> Event Details
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 text-sm text-muted-foreground">
-            <div><span className="font-semibold text-foreground">Dates:</span> May 15–17, 2026</div>
-            <div><span className="font-semibold text-foreground">Time:</span> 9am – 6pm (local time) w/ 1 hour lunch break</div>
-            <div className="sm:col-span-2"><span className="font-semibold text-foreground">Location:</span> Radisson Blu Hotel, London Heathrow, 140 Bath Road, Hayes, Middlesex, UB3 5AW</div>
-            <div><span className="font-semibold text-foreground">Accommodation & Food:</span> Not Included</div>
-            <div>
-              <span className="font-semibold text-foreground">Got Questions?</span>{" "}
-              <a href="mailto:admin@starmagichealing.org" className="underline hover:opacity-80 transition-opacity" style={{ color: "#d39222" }}>
-                admin@starmagichealing.org
-              </a>
+      <div className="mt-16 px-4">
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <div className="text-center mb-10">
+              <span className="tracking-[0.35em] text-xs font-bold uppercase block mb-3" style={{ color: "#d39222" }}>Practical Information</span>
+              <h2 className="text-2xl md:text-4xl font-bold leading-tight text-foreground">Event Details</h2>
+              <div className="h-px w-16 mx-auto mt-5" style={{ backgroundColor: "#d39222" }} />
             </div>
-          </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { icon: "📅", label: "Dates", value: "May 15–17, 2026" },
+                { icon: "📍", label: "Location", value: "Radisson Blu Hotel, London Heathrow, 140 Bath Road, Hayes, Middlesex, UB3 5AW" },
+                { icon: "🕘", label: "Time", value: "9am – 6pm (local time) w/ 1 hour lunch break" },
+                { icon: "🏨", label: "Accommodation & Food", value: "Not Included" },
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className="rounded-2xl p-5 text-center"
+                  style={{ backgroundColor: "#FDF6E9", border: "1px solid rgba(211,146,34,0.2)" }}
+                >
+                  <div className="text-2xl mb-3">{item.icon}</div>
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] mb-2" style={{ color: "#d39222" }}>{item.label}</p>
+                  <p className="text-sm leading-relaxed text-muted-foreground">{item.value}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="text-center mt-10">
+              <p className="text-sm text-muted-foreground">
+                Got questions?{" "}
+                <a
+                  href="mailto:admin@starmagichealing.org"
+                  className="underline hover:opacity-80 transition-opacity"
+                  style={{ color: "#d39222" }}
+                >
+                  Email us at admin@starmagichealing.org
+                </a>
+              </p>
+            </div>
+          </motion.div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }
