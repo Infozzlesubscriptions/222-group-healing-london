@@ -5,16 +5,16 @@ import groupPyramidsImage from "@assets/community-group-ORD4DYoj_1776153736899.j
 import tribeCirclePyramidImg from "@assets/Jerry-Sargeant-One-Love_1776160920406.webp";
 import spiritualActivationImg from "@assets/image_1776160809528.png";
 import card1Img from "@assets/Brain-Scan-1-scaled_1776168428464.webp";
-import card2Img from "@assets/Elite_Be_Superhuman_13-scaled_1776168740417.webp";
-import card3Img from "@assets/Deep-Trauma-Release-scaled_1776168428465.webp";
+import card2Img from "@assets/Brain-Scan-2-scaled_1776169771247.webp";
+import card3Img from "@assets/Program-and-step-5-scaled_1776169771253.webp";
 import card4Img from "@assets/Elite_Be_Superhuman_11-scaled_1776168428466.webp";
 import card5Img from "@assets/event-overview_1776168428467.webp";
 import spiritualWarriorImg from "@assets/Spiritual-Warrior-Protocol-scaled_1776176043760.webp";
 import eliteGroup13Img from "@assets/Elite_Be_Superhuman_13-scaled_1776176188604.webp";
 import guaranteeImg from "@assets/Elite_Be_Superhuman_11-scaled_1776177221392.webp";
-import card6Img from "@assets/much-more-section-scaled_1776168428468.webp";
-import card7Img from "@assets/Program-and-step-1-scaled_1776168428469.webp";
-import card8Img from "@assets/Program-and-step-2-scaled_1776168428469.webp";
+import card6Img from "@assets/Superhuman-Blueprint-scaled_1776169771254.webp";
+import card7Img from "@assets/Program-and-step-3-scaled_1776166006733.webp";
+import card8Img from "@assets/Elite_Be_Superhuman_13-scaled_1776168740417.webp";
 
 export default function Home() {
   const { scrollY } = useScroll();
