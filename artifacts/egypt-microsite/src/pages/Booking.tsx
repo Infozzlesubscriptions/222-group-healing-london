@@ -1,26 +1,7 @@
-import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 
 export default function Booking() {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!containerRef.current) return;
-
-    const existing = document.querySelector(
-      'script[src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"]',
-    );
-    if (!existing) {
-      const script = document.createElement("script");
-      script.src =
-        "https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js";
-      script.type = "text/javascript";
-      script.async = true;
-      document.body.appendChild(script);
-    }
-  }, []);
-
   return (
     <div className="min-h-screen bg-background pt-24 pb-20">
       <motion.div
@@ -63,10 +44,13 @@ export default function Booking() {
             </p>
           </div>
 
-          <div className="bg-background min-h-[600px]" ref={containerRef}>
-            <div
-              className="meetings-iframe-container"
-              data-src="https://meetings.hubspot.com/marie215/elite-be-supehuman?embed=true"
+          <div className="bg-background">
+            <iframe
+              src="https://meetings.hubspot.com/marie215/elite-be-supehuman?embed=true"
+              className="w-full border-0"
+              style={{ minHeight: "700px" }}
+              title="Book a call — Elite Be Superhuman"
+              allow="camera; microphone"
             />
           </div>
         </div>
