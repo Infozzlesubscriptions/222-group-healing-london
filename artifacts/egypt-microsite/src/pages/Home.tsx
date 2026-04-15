@@ -16,7 +16,7 @@ import guaranteeImg from "@assets/Elite_Be_Superhuman_11-scaled_1776177221392.we
 import card6Img from "@assets/Superhuman-Blueprint-scaled_1776169771254.webp";
 import card7Img from "@assets/Program-and-step-3-scaled_1776166006733.webp";
 import card8Img from "@assets/Elite_Be_Superhuman_13-scaled_1776168740417.webp";
-import jerrySargeantImg from "@assets/045422fa-f14f-462f-9fd8-0b0f7e7f2523_1776254070724.jfif";
+import jerrySargeantImg from "@assets/wmremove-transformed_1776254411149.jpeg";
 
 export default function Home() {
   const { scrollY } = useScroll();
