@@ -197,7 +197,7 @@ export default function FAQ() {
       {/* Category Tabs */}
       <div className="px-4 max-w-4xl mx-auto mb-10">
         <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 md:gap-3 max-w-2xl mx-auto">
-          {faqCategories.map((cat, ci) => (
+          {faqCategories.slice(0, 5).map((cat, ci) => (
             <button
               key={ci}
               onClick={() => { setActiveTab(ci); setOpenItems({}); }}
@@ -207,6 +207,25 @@ export default function FAQ() {
                   : "bg-card text-muted-foreground hover:text-primary border border-border/50 hover:border-primary/40"
               }`}
               style={activeTab === ci ? {
+                background: "linear-gradient(90deg, #d39222 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #d39222 100%)",
+                border: "none",
+              } : undefined}
+            >
+              {cat.label}
+            </button>
+          ))}
+        </div>
+        <div className="flex justify-center gap-2 md:gap-3 mt-2 md:mt-3 max-w-2xl mx-auto">
+          {faqCategories.slice(5).map((cat, ci) => (
+            <button
+              key={ci + 5}
+              onClick={() => { setActiveTab(ci + 5); setOpenItems({}); }}
+              className={`px-3 sm:px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold tracking-wide transition-all duration-300 cursor-pointer shadow-sm min-w-[calc(20%-0.5rem)] ${
+                activeTab === ci + 5
+                  ? "text-[#1a1208] shadow-md"
+                  : "bg-card text-muted-foreground hover:text-primary border border-border/50 hover:border-primary/40"
+              }`}
+              style={activeTab === ci + 5 ? {
                 background: "linear-gradient(90deg, #d39222 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #d39222 100%)",
                 border: "none",
               } : undefined}
