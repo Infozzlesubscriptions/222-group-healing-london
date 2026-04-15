@@ -36,9 +36,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary text-sm hover:text-primary/70 transition-colors tracking-wide"
-            >
-              www.starmagichealing.com
-            </a>
+            >www.starmagichealing.org</a>
           </div>
 
           {/* Navigation */}
