@@ -908,8 +908,13 @@ export default function Home() {
                 />
               ) : (
                 <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, #1a1208 0%, #2a1f10 50%, #0a0e1a 100%)" }}>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
+                  <img
+                    src="https://i.vimeocdn.com/video/2141347193-0b89a5c7091846589d4b5fa8b7c2a911df26a2a24cc532bb51d5fb4fd5f84939-d_1280"
+                    alt="Caesar's Story"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/30" />
+                  <div className="absolute inset-0 flex items-center justify-center">
                     <motion.div
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
@@ -922,11 +927,6 @@ export default function Home() {
                         <path d="M8 5v14l11-7z" />
                       </svg>
                     </motion.div>
-                    <span className="text-white/70 text-xs font-medium tracking-wide">Watch Caesar's Story</span>
-                  </div>
-                  <div className="absolute top-3 right-3 flex items-center gap-1.5 bg-black/40 backdrop-blur-sm rounded-full px-3 py-1">
-                    <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
-                    <span className="text-white/80 text-[10px] font-medium uppercase tracking-wider">Video</span>
                   </div>
                 </div>
               )}
