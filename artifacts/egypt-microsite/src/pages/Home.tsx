@@ -87,34 +87,34 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background w-full overflow-hidden">
       {/* ─── HERO ─── */}
-      <section className="relative min-h-[600px] md:min-h-[700px] flex items-center justify-center overflow-hidden">
+      <section className="relative flex flex-col overflow-hidden" style={{ backgroundColor: "#0a0e1a" }}>
         <motion.div
-          className="absolute inset-0 z-0"
+          className="w-full z-0"
           style={{ y: y1, opacity }}
         >
           <img
             src={groupPyramidsImage}
             alt="Elite Be Superhuman event"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-auto block"
           />
         </motion.div>
 
-        <div className="relative z-10 text-center px-4 max-w-7xl mx-auto py-24 md:py-32">
+        <div className="relative z-10 text-center px-4 max-w-7xl mx-auto py-12 md:py-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            <span className="text-sm sm:text-base md:text-lg font-sans tracking-[0.2em] sm:tracking-[0.35em] mb-4 block uppercase text-[#ffffff] font-bold">
+            <span className="text-sm sm:text-base md:text-lg font-sans tracking-[0.2em] sm:tracking-[0.35em] mb-3 block uppercase text-[#ffffff] font-bold">
               Jerry Sargeant Presents
             </span>
-            <h1 className="text-[clamp(2rem,7vw,5.5rem)] font-sans text-white font-bold mb-4 drop-shadow-2xl leading-tight">
+            <h1 className="text-[clamp(2rem,7vw,5.5rem)] font-sans text-white font-bold mb-3 drop-shadow-2xl leading-tight">
               ELITE BE SUPERHUMAN
             </h1>
-            <p className="text-sm sm:text-base md:text-xl text-white/90 mb-4 max-w-2xl mx-auto leading-relaxed drop-shadow-md px-2">
+            <p className="text-sm sm:text-base md:text-xl text-white/90 mb-3 max-w-2xl mx-auto leading-relaxed drop-shadow-md px-2">
               A 3-day live experience that rewires your mind, rebuilds your body, and unlocks the version of you the world has been waiting for.
             </p>
-            <p className="text-xs sm:text-sm md:text-base text-primary font-semibold tracking-wider sm:tracking-widest uppercase mb-10 px-2">London, UK · May 15–17, 2026 · 3 Days · Limited Places</p>
+            <p className="text-xs sm:text-sm md:text-base text-primary font-semibold tracking-wider sm:tracking-widest uppercase mb-8 px-2">London, UK · May 15–17, 2026 · 3 Days · Limited Places</p>
 
             <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
               <a
