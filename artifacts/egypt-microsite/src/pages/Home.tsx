@@ -87,15 +87,15 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background w-full overflow-hidden">
       {/* ─── HERO ─── */}
-      <section className="relative flex flex-col overflow-hidden" style={{ backgroundColor: "#0a0e1a" }}>
+      <section className="relative flex flex-col items-center overflow-hidden" style={{ backgroundColor: "#0a0e1a" }}>
         <motion.div
-          className="w-full z-0"
+          className="w-full flex justify-center z-0"
           style={{ y: y1, opacity }}
         >
           <img
             src={groupPyramidsImage}
             alt="Elite Be Superhuman event"
-            className="w-full h-auto block"
+            className="w-full max-w-[1400px] h-auto block mx-auto"
           />
         </motion.div>
 
