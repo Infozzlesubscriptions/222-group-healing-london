@@ -257,6 +257,47 @@ export default function Gallery() {
         <div className="h-px w-20 bg-primary mx-auto mt-10" />
       </motion.div>
 
+      {/* Transformation Videos */}
+      <section className="px-4 max-w-7xl mx-auto mb-24">
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <span className="text-primary tracking-[0.3em] text-xs font-bold uppercase">Inside the Room</span>
+        </motion.div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            { id: "1161766582", title: "Transformation Story 1" },
+            { id: "1161766314", title: "Transformation Story 2" },
+            { id: "1161766538", title: "Transformation Story 3" },
+            { id: "1161766020", title: "Transformation Story 4" },
+            { id: "1161765970", title: "Transformation Story 5" },
+            { id: "1161766248", title: "Transformation Story 6" },
+          ].map((video, i) => (
+            <motion.div
+              key={video.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="rounded-2xl overflow-hidden shadow-lg border border-border/30"
+              style={{ aspectRatio: "16/9" }}
+            >
+              <iframe
+                src={`https://player.vimeo.com/video/${video.id}?badge=0&autopause=0&player_id=0&app_id=58479`}
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                className="w-full h-full"
+                title={video.title}
+                style={{ border: 0 }}
+              />
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
       {/* Video Testimonials */}
       <section className="px-4 max-w-7xl mx-auto mb-24">
         <motion.div
