@@ -48,7 +48,7 @@ export default function Booking() {
             <iframe
               src="https://meetings.hubspot.com/marie215/elite-be-supehuman?embed=true"
               className="w-full border-0"
-              style={{ minHeight: "min(700px, 80vh)" }}
+              style={{ minHeight: "900px" }}
               title="Book a call — Elite Be Superhuman"
               allow="camera; microphone"
             />
