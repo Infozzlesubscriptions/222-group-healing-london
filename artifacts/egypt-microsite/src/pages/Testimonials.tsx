@@ -34,40 +34,46 @@ const videoTestimonials = [
 
 const writtenTestimonials = [
   {
-    name: "Sophia M.",
-    loc: "UK",
+    name: "Barcelona Group Healing",
+    loc: "Barcelona",
     quote:
-      "I arrived not knowing what was possible. I left knowing exactly who I am and what I'm here to do. This three days rewired something fundamental.",
+      "This was the most powerful two days I have ever experienced. Jerry was the facilitator along with his SM team provided a safe container which allowed me to be open to the healing energy that the group generated which can only be described as magical. I highly recommend doing a star magic group healing session especially if you have been working on long unresolved issues as I have and now they are resolved. Thanks Jerry",
   },
   {
-    name: "David K.",
-    loc: "USA",
+    name: "Jill Johnston",
+    loc: "Star Magic Member",
     quote:
-      "The breathwork alone on day two cracked something open in me I didn't know existed. But it was the transmission on day three that changed everything. I am not the same man.",
+      "The meditations are phenomenal. I was going through a very traumatic grief process with anxiety and restless nights. Sedatives aren't a long term solution! No other recordings helped with not only relaxation and sleep but also calm and peaceful at daytime. The downloads are so powerful and I progressed to a lifestyle of knowing what my mind and body needs to heal. It extends out to my family and friends. This heart healing expands to the world. One love, one heart, one human family!",
   },
   {
-    name: "Amara T.",
-    loc: "South Africa",
+    name: "Star Magic Review",
+    loc: "Star Magic Member",
     quote:
-      "I've attended dozens of personal development programmes. Nothing touches the raw power of what Jerry creates in that room. The facilitators held space for real, lasting transformation.",
+      "Star Magic is the best healing modality I experienced. I tried so many other modalities, but could not feel from my heart centre due to childhood traumas. Only one live group healing session has opened my heart centre and healed my lower back pain. My intuition and psyche abilities have improved considerably. Deep gratitude to Jerry and the Star magic team. So worth it. Thank you so much.",
   },
   {
-    name: "Elena R.",
-    loc: "Spain",
+    name: "Amandalynn Family of Adams",
+    loc: "Star Magic Member",
     quote:
-      "By the end of day one I was already different. By the end of day three I couldn't remember the version of me that walked in. That's not an exaggeration.",
+      "I have been with Star Magic for 3 months now and I am so very grateful to be a part of this amazing tribe. Jerry and the tribe have created space for everyone to experience and become the most powerful being that they are meant to be, with love, integrity and from the heart. I absolutely love Star Magic and everything it embodies. Thank you Jerry, thank you to everyone of you amazing beautiful souls.",
   },
   {
-    name: "Marcus W.",
-    loc: "Australia",
+    name: "Deborah Bevard",
+    loc: "Star Magic Member",
     quote:
-      "My relationships have deepened. My business has grown. My health is the best it's been in years. All of it started in that room.",
+      "Star Magic is beyond written description. Literally can't imagine it unless you've been there. Every single area of my life has improved since starting 1.5 years ago and the change has been extraordinary.",
   },
   {
-    name: "Priya S.",
-    loc: "Singapore",
+    name: "Lillie Thornton",
+    loc: "Star Magic Member",
     quote:
-      "I was sceptical. I am not anymore. What happens in Jerry's events is real, measurable, and permanent. I tell everyone I know about this.",
+      "My heart led me to StarMagic Healing. This has been the most incredible experience of my life. After a group healing my physical pain has gone. I followed up with joining Infinity and it has completely transformed my life.",
+  },
+  {
+    name: "Linda",
+    loc: "Star Magic Member",
+    quote:
+      "Star Magic Healing gave me a fresh perspective on wellness. It's not about chasing quick fixes but about creating lasting change. The meditations are powerful, and the teachings have transformed how I approach my health and wellbeing.",
   },
 ];
 
