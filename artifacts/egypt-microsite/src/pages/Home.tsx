@@ -905,13 +905,49 @@ export default function Home() {
               </button>
             </Link>
 
-            <div className="text-sm space-y-2 max-w-md mx-auto" style={{ color: "#a08060" }}>
-              <p className="font-semibold" style={{ color: "#3d2f1a" }}>Event Details</p>
-              <p>Dates: May 15–17, 2026</p>
-              <p>Location: Radisson Blu Hotel, London Heathrow, 140 Bath Road, Hayes, Middlesex, UB3 5AW</p>
-              <p>Time: 9am – 6pm (local time) w/ 1 hour lunch break</p>
-              <p>Accommodation & Food: Not Included</p>
-              <p className="mt-4">
+          </motion.div>
+        </div>
+      </section>
+      {/* ─── EVENT DETAILS ─── */}
+      <section className="py-16 md:py-20 px-4" style={{ backgroundColor: "#1a1208" }}>
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <div className="text-center mb-10">
+              <span className="tracking-[0.35em] text-xs font-bold uppercase block mb-3" style={{ color: "#d39222" }}>Practical Information</span>
+              <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight">Event Details</h2>
+              <div className="h-px w-16 mx-auto mt-5" style={{ backgroundColor: "#d39222" }} />
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { icon: "📅", label: "Dates", value: "May 15–17, 2026" },
+                { icon: "📍", label: "Location", value: "Radisson Blu Hotel, London Heathrow, 140 Bath Road, Hayes, Middlesex, UB3 5AW" },
+                { icon: "🕘", label: "Time", value: "9am – 6pm (local time) w/ 1 hour lunch break" },
+                { icon: "🏨", label: "Accommodation & Food", value: "Not Included" },
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className="rounded-2xl p-5 text-center"
+                  style={{ backgroundColor: "rgba(211,146,34,0.08)", border: "1px solid rgba(211,146,34,0.2)" }}
+                >
+                  <div className="text-2xl mb-3">{item.icon}</div>
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] mb-2" style={{ color: "#d39222" }}>{item.label}</p>
+                  <p className="text-white/80 text-sm leading-relaxed">{item.value}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="text-center mt-10">
+              <p className="text-white/60 text-sm">
                 Got questions?{" "}
                 <a
                   href="mailto:admin@starmagichealing.org"
