@@ -112,9 +112,7 @@ export default function Home() {
             <p className="text-base md:text-xl text-white/90 mb-4 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
               A 3-day live experience that rewires your mind, rebuilds your body, and unlocks the version of you the world has been waiting for.
             </p>
-            <p className="text-sm md:text-base text-primary font-semibold tracking-widest uppercase mb-10">
-              London, UK · May 2026 · 3 Days · Limited Places
-            </p>
+            <p className="text-sm md:text-base text-primary font-semibold tracking-widest uppercase mb-10">London, UK · May 15th-17th, 2026 · 3 Days · Limited Places</p>
 
             <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
               <Link href="/booking" className="w-full sm:w-auto">
