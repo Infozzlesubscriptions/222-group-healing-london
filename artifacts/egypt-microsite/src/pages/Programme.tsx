@@ -225,7 +225,7 @@ export default function Programme() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.7, delay: 0 }}
-            className="rounded-3xl overflow-hidden flex flex-col"
+            className="rounded-3xl overflow-hidden flex flex-col cursor-default transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-primary/50"
             style={{ background: "#FDF6E9", border: "1px solid rgba(211,146,34,0.25)" }}
           >
             <div className="px-8 pt-8 pb-6" style={{ borderBottom: "1px solid rgba(211,146,34,0.2)" }}>
@@ -257,7 +257,7 @@ export default function Programme() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="rounded-3xl overflow-hidden flex flex-col"
+            className="rounded-3xl overflow-hidden flex flex-col cursor-default transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-primary/50"
             style={{ background: "#FDF6E9", border: "1px solid #d39222", boxShadow: "0 8px 40px rgba(211,146,34,0.15)" }}
           >
             <div className="px-8 pt-8 pb-6" style={{ borderBottom: "1px solid rgba(211,146,34,0.3)" }}>
@@ -289,7 +289,7 @@ export default function Programme() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="rounded-3xl overflow-hidden flex flex-col"
+            className="rounded-3xl overflow-hidden flex flex-col cursor-default transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-primary/50"
             style={{ background: "#FDF6E9", border: "1px solid rgba(211,146,34,0.25)" }}
           >
             <div className="px-8 pt-8 pb-6" style={{ borderBottom: "1px solid rgba(211,146,34,0.2)" }}>
