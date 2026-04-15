@@ -151,7 +151,7 @@ export default function Home() {
       {/* ─── STATS BAR ─── */}
       <section className="py-14 px-4 bg-secondary/30 border-y border-border/40">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, i) => (
               <motion.div
                 key={i}
@@ -159,7 +159,8 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="text-center"
+                className="text-center rounded-2xl px-4 py-6"
+                style={{ border: "1px solid rgba(211,146,34,0.3)" }}
               >
                 <div
                   className="text-3xl md:text-4xl font-bold mb-2"
