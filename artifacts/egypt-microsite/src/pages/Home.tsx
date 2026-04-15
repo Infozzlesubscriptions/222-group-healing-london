@@ -177,16 +177,16 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <div className="text-primary text-4xl mb-8">✦</div>
-            <p className="text-xl md:text-2xl text-foreground italic leading-relaxed mb-10 max-w-5xl mx-auto font-semibold">Most people live far below their true potential — this three-day experience changes that, for good.</p>
+            <p className="text-xl md:text-2xl text-foreground italic leading-relaxed mb-10 max-w-5xl mx-auto font-semibold">Most people live far below their true potential — this three-day experience changes that for good.</p>
             <div className="h-px w-20 bg-border mx-auto mb-10" />
             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-5xl mx-auto mb-6">
-              Elite Be Superhuman is an immersive, hands-on live event designed for real transformation. No passive learning or theory — just powerful, full-body practices combining breathwork, energy medicine, performance psychology, and consciousness work in a carefully structured journey.
+              Elite Be Superhuman is a fully immersive, hands-on event focused on real transformation. No theory or passive learning — just powerful practices combining breathwork, energy medicine, performance psychology, and consciousness work in a structured journey.
             </p>
             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-5xl mx-auto mb-6">
-              You won't leave with temporary motivation — you'll leave truly transformed, ready to step into a higher, more abundant version of your life.
+              You won't leave with temporary motivation — you'll leave transformed, ready to step into a higher, more abundant version of your life.
             </p>
             <p className="text-foreground font-semibold text-base md:text-lg max-w-5xl mx-auto leading-relaxed">
-              With over 20 years of experience across 85+ countries, Jerry Sargeant has helped people break deep-rooted limitations, rewire their inner world, and unlock levels of clarity, health, and success they once thought impossible.
+              With 20+ years of experience across 85+ countries, Jerry Sargeant has helped people break limitations, rewire their inner world, and unlock new levels of clarity, health, and success.
             </p>
           </motion.div>
         </div>
