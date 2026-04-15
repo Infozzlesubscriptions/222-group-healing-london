@@ -1,3 +1,14 @@
-<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="180" height="180" rx="36" fill="#FF3C00"/>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" rx="14" fill="#1a1208"/>
+  <g transform="translate(32,32)">
+    <path d="M0,-23 L1,-6 L0,-1 L-1,-6 Z" fill="white"/>
+    <path d="M0,23 L1,6 L0,1 L-1,6 Z" fill="white"/>
+    <path d="M-23,0 L-6,1 L-1,0 L-6,-1 Z" fill="white"/>
+    <path d="M23,0 L6,1 L1,0 L6,-1 Z" fill="white"/>
+    <path d="M-16.3,-16.3 L-4.5,-3 L-0.7,-0.7 L-3,-4.5 Z" fill="white"/>
+    <path d="M16.3,16.3 L4.5,3 L0.7,0.7 L3,4.5 Z" fill="white"/>
+    <path d="M16.3,-16.3 L4.5,-3 L0.7,-0.7 L3,-4.5 Z" fill="white"/>
+    <path d="M-16.3,16.3 L-4.5,3 L-0.7,0.7 L-3,4.5 Z" fill="white"/>
+    <circle cx="0" cy="0" r="2.5" fill="white"/>
+  </g>
 </svg>
