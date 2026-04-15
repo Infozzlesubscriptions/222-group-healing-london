@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import day1Img from "@assets/Program-and-step-2-scaled_1776165893158.webp";
 import day2Img from "@assets/Program-and-step-3-scaled_1776166006733.webp";
 import day3Img from "@assets/Program-and-step-4-scaled_1776166120113.webp";
+import brainScanImg from "@assets/image_1776252123367.png";
+import impactImg from "@assets/71012442-3639-45bd-a896-8384cce59ec3_1776252214437.png";
 
 const days = [
   {
@@ -197,6 +199,80 @@ export default function Programme() {
               <p className="text-center text-foreground font-semibold mt-4 tracking-wide">{expert.name}</p>
             </motion.div>
           ))}
+        </div>
+      </div>
+
+      {/* ─── THE SCIENCE BEHIND IT ALL ─── */}
+      <div className="mt-24 px-4 max-w-7xl mx-auto">
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.8 }}
+        >
+          <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Backed by Data</span>
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground leading-tight mb-4">
+            The Science Behind It All…
+          </h2>
+          <div className="h-px w-20 bg-primary mx-auto mt-6" />
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.7 }}
+            className="relative rounded-3xl overflow-hidden shadow-xl"
+          >
+            <img
+              src={brainScanImg}
+              alt="Live brain scan during the event"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/90 via-[#0a1628]/60 to-[#0a1628]/30" />
+            <div className="relative p-8 sm:p-10 flex flex-col justify-end min-h-[320px] sm:min-h-[360px]">
+              <h3
+                className="text-xl sm:text-2xl font-bold italic mb-4"
+                style={{ color: "#F3D696" }}
+              >
+                We've Conducted Live Brain Scans
+              </h3>
+              <p className="text-white/90 text-sm sm:text-base leading-relaxed">
+                After just hours of this work, participants showed measurable decreases in beta brainwaves associated with stress and overthinking, along with significant increases in theta and delta brainwaves linked to healing, intuition, and deep nervous system regulation.
+              </p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.7, delay: 0.15 }}
+            className="relative rounded-3xl overflow-hidden shadow-xl"
+          >
+            <img
+              src={impactImg}
+              alt="The measurable impact of the work"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/90 via-[#0a1628]/60 to-[#0a1628]/30" />
+            <div className="relative p-8 sm:p-10 flex flex-col justify-end min-h-[320px] sm:min-h-[360px]">
+              <h3
+                className="text-xl sm:text-2xl font-bold italic mb-4"
+                style={{ color: "#F3D696" }}
+              >
+                The Impact
+              </h3>
+              <p className="text-white/90 text-sm sm:text-base leading-relaxed mb-4">
+                These shifts create a stable internal foundation for emotional resilience, clearer thinking, faster recovery, and a stronger sense of presence.
+              </p>
+              <p className="text-white/90 text-sm sm:text-base leading-relaxed">
+                The brain, heart & energy enter coherence, your body self-regulates. From that state anything you want to create happens ten fold.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </div>
 
