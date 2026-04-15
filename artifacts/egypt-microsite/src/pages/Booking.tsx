@@ -27,11 +27,11 @@ export default function Booking() {
         transition={{ duration: 0.8, delay: 0.2 }}
       >
         <div
-          className="rounded-3xl border overflow-hidden shadow-lg"
+          className="rounded-3xl border shadow-lg"
           style={{ borderColor: "rgba(211,146,34,0.25)" }}
         >
           <div
-            className="px-5 py-6 sm:px-8 sm:py-7 text-center"
+            className="px-5 py-6 sm:px-8 sm:py-7 text-center rounded-t-3xl"
             style={{
               background: "linear-gradient(135deg, hsl(42 87% 96%), hsl(38 72% 92%))",
               borderBottom: "1px solid rgba(211,146,34,0.2)",
