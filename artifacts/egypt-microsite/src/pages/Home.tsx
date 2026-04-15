@@ -21,6 +21,7 @@ import jerrySargeantImg from "@assets/wmremove-transformed_1776254411149.jpeg";
 
 export default function Home() {
   const [jerryVideoPlaying, setJerryVideoPlaying] = useState(false);
+  const [caesarPlaying, setCaesarPlaying] = useState(false);
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 1000], [0, 300]);
   const opacity = useTransform(scrollY, [0, 500], [1, 0]);
@@ -886,16 +887,42 @@ export default function Home() {
               style={{ background: "linear-gradient(135deg, #d39222, #F3D696, #d39222)" }}
             />
             <div
-              className="relative rounded-3xl overflow-hidden shadow-2xl"
+              className="relative rounded-3xl overflow-hidden shadow-2xl cursor-pointer"
               style={{ border: "1px solid rgba(243,214,150,0.35)", aspectRatio: "16/9" }}
+              onClick={() => setCaesarPlaying(true)}
             >
-              <iframe
-                src="https://player.vimeo.com/video/1156009467?badge=0&autopause=0&quality_selector=1&player_id=0&app_id=58479"
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                className="absolute inset-0 w-full h-full"
-                title="Caesar's Testimonial"
-                style={{ border: 0 }}
-              />
+              {caesarPlaying ? (
+                <iframe
+                  src="https://player.vimeo.com/video/1156009467?badge=0&autopause=0&quality_selector=1&player_id=0&app_id=58479&autoplay=1"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                  className="absolute inset-0 w-full h-full"
+                  title="Caesar's Testimonial"
+                  style={{ border: 0 }}
+                />
+              ) : (
+                <>
+                  <img
+                    src="https://vumbnail.com/1156009467.jpg"
+                    alt="Caesar's Testimonial — Video Thumbnail"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/30" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <motion.div
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center shadow-2xl"
+                      style={{
+                        background: "linear-gradient(135deg, #d39222 0%, #FFECBA 50%, #d39222 100%)",
+                      }}
+                    >
+                      <svg viewBox="0 0 24 24" className="w-8 h-8 md:w-10 md:h-10 ml-1" fill="#1a1208">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </motion.div>
+                  </div>
+                </>
+              )}
             </div>
           </motion.div>
 

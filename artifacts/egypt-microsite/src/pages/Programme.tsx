@@ -1,6 +1,110 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+
+function ExpertVideoCard({ expert, index }: { expert: { name: string; id: string }; index: number }) {
+  const [playing, setPlaying] = useState(false);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.7, delay: index * 0.12 }}
+      className="flex flex-col"
+    >
+      <div
+        className="relative rounded-2xl overflow-hidden shadow-xl cursor-pointer"
+        style={{ border: "1px solid rgba(211,146,34,0.4)", aspectRatio: "16/9" }}
+        onClick={() => setPlaying(true)}
+      >
+        <div
+          className="absolute -inset-1 rounded-2xl blur-xl opacity-20 pointer-events-none"
+          style={{ background: "linear-gradient(135deg, #d39222, #FFECBA, #d39222)" }}
+        />
+        {playing ? (
+          <iframe
+            src={`https://player.vimeo.com/video/${expert.id}?badge=0&autopause=0&quality_selector=1&player_id=0&app_id=58479&autoplay=1`}
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            className="absolute inset-0 w-full h-full"
+            title={`${expert.name} testimonial`}
+            style={{ border: 0 }}
+          />
+        ) : (
+          <>
+            <img
+              src={`https://vumbnail.com/${expert.id}.jpg`}
+              alt={`${expert.name} testimonial`}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/30" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center shadow-2xl"
+                style={{
+                  background: "linear-gradient(135deg, #d39222 0%, #FFECBA 50%, #d39222 100%)",
+                }}
+              >
+                <svg viewBox="0 0 24 24" className="w-7 h-7 md:w-8 md:h-8 ml-1" fill="#1a1208">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </motion.div>
+            </div>
+          </>
+        )}
+      </div>
+      <p className="text-center text-foreground font-semibold mt-4 tracking-wide">{expert.name}</p>
+    </motion.div>
+  );
+}
+
+function ScienceVideoCard() {
+  const [playing, setPlaying] = useState(false);
+
+  return (
+    <div
+      className="rounded-3xl overflow-hidden shadow-xl cursor-pointer"
+      style={{ border: "1px solid rgba(211,146,34,0.3)", aspectRatio: "16/9" }}
+      onClick={() => setPlaying(true)}
+    >
+      {playing ? (
+        <iframe
+          src="https://player.vimeo.com/video/1099884785?badge=0&autopause=0&quality_selector=1&player_id=0&app_id=58479&autoplay=1"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+          className="w-full h-full"
+          title="The Science Behind It All"
+          style={{ border: 0 }}
+        />
+      ) : (
+        <div className="relative w-full h-full">
+          <img
+            src="https://vumbnail.com/1099884785.jpg"
+            alt="The Science Behind It All"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center shadow-2xl"
+              style={{
+                background: "linear-gradient(135deg, #d39222 0%, #FFECBA 50%, #d39222 100%)",
+              }}
+            >
+              <svg viewBox="0 0 24 24" className="w-8 h-8 md:w-10 md:h-10 ml-1" fill="#1a1208">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </motion.div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
 import day1Img from "@assets/Program-and-step-2-scaled_1776165893158.webp";
 import day2Img from "@assets/Program-and-step-3-scaled_1776166006733.webp";
 import day3Img from "@assets/Program-and-step-4-scaled_1776166120113.webp";
@@ -78,8 +182,8 @@ export default function Programme() {
         transition={{ duration: 0.8 }}
       >
         <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Elite Be Superhuman</span>
-        <h1 className="text-3xl sm:text-[48px] md:text-7xl font-bold text-foreground mb-6">
-          Three Days.<br /><span className="sm:whitespace-nowrap">One Complete Transformation.</span>
+        <h1 className="text-3xl sm:text-[42px] md:text-7xl font-bold text-foreground mb-6 leading-tight">
+          Three Days.<br />One Complete Transformation.
         </h1>
         <p className="text-lg text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto">
           Every practice, every session, every experience over these three days is built around one outcome: you leave operating from a state of complete wholeness.
@@ -171,33 +275,7 @@ export default function Programme() {
             { name: "Dr. Maher",  id: "1161753427"  },
             { name: "Dr. Angela", id: "1161753289" },
           ].map((expert, i) => (
-            <motion.div
-              key={expert.name}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.7, delay: i * 0.12 }}
-              className="flex flex-col"
-            >
-              <div
-                className="relative rounded-2xl overflow-hidden shadow-xl"
-                style={{ border: "1px solid rgba(211,146,34,0.4)", aspectRatio: "16/9" }}
-              >
-                {/* Glow */}
-                <div
-                  className="absolute -inset-1 rounded-2xl blur-xl opacity-20 pointer-events-none"
-                  style={{ background: "linear-gradient(135deg, #d39222, #FFECBA, #d39222)" }}
-                />
-                <iframe
-                  src={`https://player.vimeo.com/video/${expert.id}?badge=0&autopause=0&quality_selector=1&player_id=0&app_id=58479`}
-                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                  className="absolute inset-0 w-full h-full"
-                  title={`${expert.name} testimonial`}
-                  style={{ border: 0 }}
-                />
-              </div>
-              <p className="text-center text-foreground font-semibold mt-4 tracking-wide">{expert.name}</p>
-            </motion.div>
+            <ExpertVideoCard key={expert.name} expert={expert} index={i} />
           ))}
         </div>
       </div>
@@ -268,18 +346,7 @@ export default function Programme() {
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.7 }}
         >
-          <div
-            className="rounded-3xl overflow-hidden shadow-xl"
-            style={{ border: "1px solid rgba(211,146,34,0.3)", aspectRatio: "16/9" }}
-          >
-            <iframe
-              src="https://player.vimeo.com/video/1099884785?badge=0&autopause=0&quality_selector=1&player_id=0&app_id=58479"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-              className="w-full h-full"
-              title="The Science Behind It All"
-              style={{ border: 0 }}
-            />
-          </div>
+          <ScienceVideoCard />
         </motion.div>
       </div>
 

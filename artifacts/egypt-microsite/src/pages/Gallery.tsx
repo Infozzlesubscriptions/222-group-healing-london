@@ -3,13 +3,61 @@ import { useState, useRef, useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 
+function TransformationVideoCard({ video, index }: { video: typeof transformationVideos[0]; index: number }) {
+  const [playing, setPlaying] = useState(false);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className="rounded-2xl overflow-hidden shadow-lg border border-border/30 cursor-pointer"
+      style={{ aspectRatio: "16/9" }}
+      onClick={() => setPlaying(true)}
+    >
+      {playing ? (
+        <iframe
+          src={`https://player.vimeo.com/video/${video.vimeoId}?badge=0&autopause=0&quality_selector=1&player_id=0&app_id=58479&autoplay=1`}
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+          className="w-full h-full"
+          title={video.title}
+          style={{ border: 0 }}
+        />
+      ) : (
+        <div className="relative w-full h-full">
+          <img
+            src={`https://vumbnail.com/${video.vimeoId}.jpg`}
+            alt={video.title}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center shadow-2xl"
+              style={{
+                background: "linear-gradient(135deg, #d39222 0%, #FFECBA 50%, #d39222 100%)",
+              }}
+            >
+              <svg viewBox="0 0 24 24" className="w-7 h-7 md:w-8 md:h-8 ml-1" fill="#1a1208">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </motion.div>
+          </div>
+        </div>
+      )}
+    </motion.div>
+  );
+}
+
 const transformationVideos = [
-  { id: 1, src: "https://player.vimeo.com/video/1161766582", title: "Transformation Story 1" },
-  { id: 2, src: "https://player.vimeo.com/video/1161766314", title: "Transformation Story 2" },
-  { id: 3, src: "https://player.vimeo.com/video/1161766538", title: "Transformation Story 3" },
-  { id: 4, src: "https://player.vimeo.com/video/1161766020", title: "Transformation Story 4" },
-  { id: 5, src: "https://player.vimeo.com/video/1161765970", title: "Transformation Story 5" },
-  { id: 6, src: "https://player.vimeo.com/video/1161766248", title: "Transformation Story 6" },
+  { id: 1, vimeoId: "1161766582", title: "Transformation Story 1" },
+  { id: 2, vimeoId: "1161766314", title: "Transformation Story 2" },
+  { id: 3, vimeoId: "1161766538", title: "Transformation Story 3" },
+  { id: 4, vimeoId: "1161766020", title: "Transformation Story 4" },
+  { id: 5, vimeoId: "1161765970", title: "Transformation Story 5" },
+  { id: 6, vimeoId: "1161766248", title: "Transformation Story 6" },
 ];
 
 const videoTestimonials = [
@@ -290,22 +338,7 @@ export default function Gallery() {
         </motion.div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {transformationVideos.map((video, i) => (
-            <motion.div
-              key={video.id}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="rounded-2xl overflow-hidden shadow-lg border border-border/30"
-              style={{ aspectRatio: "16/9" }}
-            >
-              <iframe
-                src={`${video.src}?badge=0&autopause=0&quality_selector=1&player_id=0&app_id=58479`}
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                className="w-full h-full"
-                title={video.title}
-                style={{ border: 0 }}
-              />
-            </motion.div>
+            <TransformationVideoCard key={video.id} video={video} index={i} />
           ))}
         </div>
       </section>
