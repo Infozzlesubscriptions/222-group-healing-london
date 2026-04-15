@@ -159,8 +159,9 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="text-center rounded-2xl px-4 py-6"
+                className="text-center rounded-2xl px-4 py-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-default"
                 style={{ border: "1px solid rgba(211,146,34,0.3)" }}
+                whileHover={{ borderColor: "rgba(211,146,34,0.6)" }}
               >
                 <div
                   className="text-3xl md:text-4xl font-bold mb-2"
