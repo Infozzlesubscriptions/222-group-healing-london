@@ -87,20 +87,19 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background w-full overflow-hidden">
       {/* ─── HERO ─── */}
-      <section className="relative h-auto flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[600px] md:min-h-[700px] flex items-center justify-center overflow-hidden">
         <motion.div
-          className="w-full z-0"
+          className="absolute inset-0 z-0"
           style={{ y: y1, opacity }}
         >
           <img
             src={groupPyramidsImage}
             alt="Elite Be Superhuman event"
-            className="w-full h-auto block"
+            className="w-full h-full object-cover object-center"
           />
         </motion.div>
 
-        <div className="absolute inset-0 z-10 flex items-center justify-center">
-        <div className="text-center px-4 max-w-7xl mx-auto">
+        <div className="relative z-10 text-center px-4 max-w-7xl mx-auto py-24 md:py-32">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -148,7 +147,6 @@ export default function Home() {
               </Link>
             </div>
           </motion.div>
-        </div>
         </div>
       </section>
       {/* ─── STATS BAR ─── */}
