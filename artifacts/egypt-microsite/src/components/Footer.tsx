@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Programme", href: "/programme" },
-  { label: "Gallery", href: "/gallery" },
+  { label: "Transformation Stories", href: "/gallery" },
   { label: "Testimonials", href: "/testimonials" },
   { label: "FAQ", href: "/faq" },
 ];
@@ -72,7 +72,7 @@ export function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-border/30 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="border-t border-border/30 pt-8 flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left">
           <p className="text-muted-foreground/50 text-xs tracking-widest uppercase">
             ✦ Star Magic · One Love 🔥
           </p>

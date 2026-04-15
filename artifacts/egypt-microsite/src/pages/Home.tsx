@@ -105,16 +105,16 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            <span className="text-primary text-base md:text-lg font-sans tracking-[0.35em] mb-4 block uppercase font-semibold">
+            <span className="text-primary text-sm sm:text-base md:text-lg font-sans tracking-[0.2em] sm:tracking-[0.35em] mb-4 block uppercase font-semibold">
               Jerry Sargeant Presents
             </span>
-            <h1 className="text-[clamp(2.4rem,8vw,5.5rem)] font-sans text-white font-bold mb-4 drop-shadow-2xl leading-tight">
+            <h1 className="text-[clamp(2rem,7vw,5.5rem)] font-sans text-white font-bold mb-4 drop-shadow-2xl leading-tight">
               ELITE BE SUPERHUMAN
             </h1>
-            <p className="text-base md:text-xl text-white/90 mb-4 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+            <p className="text-sm sm:text-base md:text-xl text-white/90 mb-4 max-w-2xl mx-auto leading-relaxed drop-shadow-md px-2">
               A 3-day live experience that rewires your mind, rebuilds your body, and unlocks the version of you the world has been waiting for.
             </p>
-            <p className="text-sm md:text-base text-primary font-semibold tracking-widest uppercase mb-10">London, UK · May 15th-17th, 2026 · 3 Days · Limited Places</p>
+            <p className="text-xs sm:text-sm md:text-base text-primary font-semibold tracking-wider sm:tracking-widest uppercase mb-10 px-2">London, UK · May 15–17, 2026 · 3 Days · Limited Places</p>
 
             <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
               <a
@@ -450,9 +450,9 @@ export default function Home() {
         </div>
       </section>
       {/* ─── WHO THIS IS FOR ─── */}
-      <section className="py-24 md:py-32 px-4" style={{ backgroundColor: "#FDF6E9" }}>
+      <section className="py-16 sm:py-24 md:py-32 px-4" style={{ backgroundColor: "#FDF6E9" }}>
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
 
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -461,7 +461,7 @@ export default function Home() {
               transition={{ duration: 0.7 }}
             >
               <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Is This For You?</span>
-              <h2 className="text-3xl md:text-5xl font-bold text-foreground leading-tight mb-8">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-foreground leading-tight mb-6 sm:mb-8">
                 This Is for You If:
               </h2>
               <div className="space-y-4">
@@ -519,9 +519,9 @@ export default function Home() {
         </div>
       </section>
       {/* ─── ABOUT JERRY ─── */}
-      <section className="py-24 md:py-32 px-4" style={{ backgroundColor: "#FDF6E9" }}>
+      <section className="py-16 sm:py-24 md:py-32 px-4" style={{ backgroundColor: "#FDF6E9" }}>
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -572,7 +572,7 @@ export default function Home() {
         </div>
       </section>
       {/* ─── PRICING ─── */}
-      <section id="pricing" className="py-24 md:py-32 px-4" style={{ backgroundColor: "#F5F0E8" }}>
+      <section id="pricing" className="py-16 sm:py-24 md:py-32 px-4" style={{ backgroundColor: "#F5F0E8" }}>
         <div className="max-w-6xl mx-auto">
           <motion.div
             className="text-center mb-14"
@@ -600,16 +600,16 @@ export default function Home() {
               whileHover={{ scale: 1.03 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.7, delay: 0 }}
-              className="flex flex-col px-6 py-8 md:px-8 md:py-10 rounded-3xl cursor-default"
+              className="flex flex-col px-5 py-7 sm:px-6 sm:py-8 md:px-8 md:py-10 rounded-3xl cursor-default"
               style={{ border: "1px solid #d39222" }}
             >
               <div className="flex justify-center mb-5">
                 <span className="invisible text-[10px] font-bold tracking-[0.25em] uppercase px-4 py-1.5 rounded-full">Most Popular</span>
               </div>
-              <h3 className="text-xl font-bold mb-6 text-center" style={{ color: "#1a1208" }}>General Admission</h3>
-              <div className="text-center mb-6">
+              <h3 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6 text-center" style={{ color: "#1a1208" }}>General Admission</h3>
+              <div className="text-center mb-4 sm:mb-6">
                 <div className="line-through text-sm mb-1" style={{ color: "#aaa" }}>£444</div>
-                <div className="text-5xl font-extrabold" style={{ color: "#d39222" }}>£366</div>
+                <div className="text-4xl sm:text-5xl font-extrabold" style={{ color: "#d39222" }}>£366</div>
                 <div className="text-[10px] tracking-[0.2em] uppercase font-semibold mt-2" style={{ color: "#b8a080" }}>Early Bird Price</div>
               </div>
               <ul className="space-y-3 mb-8 flex-1">
@@ -644,7 +644,7 @@ export default function Home() {
               whileHover={{ scale: 1.03 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="flex flex-col px-6 py-8 md:px-8 md:py-10 rounded-3xl relative cursor-default"
+              className="flex flex-col px-5 py-7 sm:px-6 sm:py-8 md:px-8 md:py-10 rounded-3xl relative cursor-default"
               style={{ backgroundColor: "#EDE5D5", boxShadow: "0 8px 40px rgba(211,146,34,0.15)" }}
             >
               <div className="flex justify-center mb-5">
@@ -655,10 +655,10 @@ export default function Home() {
                   Most Popular
                 </span>
               </div>
-              <h3 className="text-xl font-bold mb-6 text-center" style={{ color: "#1a1208" }}>VIP Access</h3>
-              <div className="text-center mb-6">
+              <h3 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6 text-center" style={{ color: "#1a1208" }}>VIP Access</h3>
+              <div className="text-center mb-4 sm:mb-6">
                 <div className="line-through text-sm mb-1" style={{ color: "#aaa" }}>£999</div>
-                <div className="text-5xl font-extrabold" style={{ color: "#d39222" }}>£799</div>
+                <div className="text-4xl sm:text-5xl font-extrabold" style={{ color: "#d39222" }}>£799</div>
                 <div className="text-[10px] tracking-[0.2em] uppercase font-semibold mt-2" style={{ color: "#b8a080" }}>Early Bird Price</div>
               </div>
               <ul className="space-y-3 mb-8 flex-1">
@@ -693,16 +693,16 @@ export default function Home() {
               whileHover={{ scale: 1.03 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="flex flex-col px-6 py-8 md:px-8 md:py-10 rounded-3xl cursor-default"
+              className="flex flex-col px-5 py-7 sm:px-6 sm:py-8 md:px-8 md:py-10 rounded-3xl cursor-default"
               style={{ border: "1px solid #d39222" }}
             >
               <div className="flex justify-center mb-5">
                 <span className="invisible text-[10px] font-bold tracking-[0.25em] uppercase px-4 py-1.5 rounded-full">Most Popular</span>
               </div>
-              <h3 className="text-xl font-bold mb-6 text-center" style={{ color: "#1a1208" }}>Elite Package</h3>
-              <div className="text-center mb-6">
+              <h3 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6 text-center" style={{ color: "#1a1208" }}>Elite Package</h3>
+              <div className="text-center mb-4 sm:mb-6">
                 <div className="line-through text-sm mb-1" style={{ color: "#aaa" }}>£1,555</div>
-                <div className="text-5xl font-extrabold" style={{ color: "#d39222" }}>£1,222</div>
+                <div className="text-4xl sm:text-5xl font-extrabold" style={{ color: "#d39222" }}>£1,222</div>
                 <div className="text-[10px] tracking-[0.2em] uppercase font-semibold mt-2" style={{ color: "#b8a080" }}>Early Bird Price</div>
               </div>
               <ul className="space-y-3 mb-8 flex-1">
@@ -734,7 +734,7 @@ export default function Home() {
         </div>
       </section>
       {/* ─── GUARANTEE ─── */}
-      <section className="py-24 md:py-32 px-4 bg-background">
+      <section className="py-16 sm:py-24 md:py-32 px-4 bg-background">
         <div className="max-w-7xl mx-auto">
           <motion.div
             className="rounded-3xl border border-primary/30 bg-card shadow-lg overflow-hidden"
