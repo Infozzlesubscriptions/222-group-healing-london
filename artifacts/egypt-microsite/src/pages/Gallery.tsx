@@ -3,74 +3,6 @@ import { useState, useRef, useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 
-function VideoThumbnail({ vimeoId, thumbnailUrl }: { vimeoId: string; thumbnailUrl?: string }) {
-  const [thumbLoaded, setThumbLoaded] = useState(false);
-  const [thumbError, setThumbError] = useState(false);
-  const src = thumbnailUrl || `https://vumbnail.com/${vimeoId}.jpg`;
-
-  if (thumbError || !thumbnailUrl) {
-    return null;
-  }
-
-  return (
-    <img
-      src={src}
-      alt=""
-      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${thumbLoaded ? "opacity-100" : "opacity-0"}`}
-      onLoad={() => setThumbLoaded(true)}
-      onError={() => setThumbError(true)}
-    />
-  );
-}
-
-function TransformationVideoCard({ video, index }: { video: typeof transformationVideos[0]; index: number }) {
-  return (
-    <motion.a
-      href={`https://player.vimeo.com/video/${video.vimeoId}`}
-      target="_blank"
-      rel="noopener noreferrer"
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="block rounded-2xl overflow-hidden shadow-lg border border-border/30 cursor-pointer group"
-      style={{ aspectRatio: "16/9" }}
-    >
-      <div className="relative w-full h-full" style={{ background: "linear-gradient(135deg, #1a1208 0%, #2a1f10 50%, #0a0e1a 100%)" }}>
-        {video.thumbnail && <VideoThumbnail vimeoId={video.vimeoId} thumbnailUrl={video.thumbnail} />}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-          <motion.div
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className="w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center shadow-2xl group-hover:shadow-[0_0_30px_rgba(211,146,34,0.4)] transition-shadow duration-300"
-            style={{
-              background: "linear-gradient(135deg, #d39222 0%, #FFECBA 50%, #d39222 100%)",
-            }}
-          >
-            <svg viewBox="0 0 24 24" className="w-7 h-7 md:w-8 md:h-8 ml-1" fill="#1a1208">
-              <path d="M8 5v14l11-7z" />
-            </svg>
-          </motion.div>
-          {!video.thumbnail && <span className="text-white/80 text-xs font-medium tracking-wide">{video.title}</span>}
-        </div>
-        <div className="absolute top-3 right-3 flex items-center gap-1.5 bg-black/40 backdrop-blur-sm rounded-full px-3 py-1">
-          <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
-          <span className="text-white/80 text-[10px] font-medium uppercase tracking-wider">Video</span>
-        </div>
-      </div>
-    </motion.a>
-  );
-}
-
-const transformationVideos = [
-  { id: 1, vimeoId: "1161766582", title: "Transformation Story 1", thumbnail: "" },
-  { id: 2, vimeoId: "1161766314", title: "Transformation Story 2", thumbnail: "" },
-  { id: 3, vimeoId: "1161766538", title: "Transformation Story 3", thumbnail: "https://i.vimeocdn.com/video/2117272103-83769dc126ddeb04de74cc07d79b12eacb4f3c026e0eedab35866eb5f0d6224f-d_640" },
-  { id: 4, vimeoId: "1161766020", title: "Transformation Story 4", thumbnail: "" },
-  { id: 5, vimeoId: "1161765970", title: "Transformation Story 5", thumbnail: "" },
-  { id: 6, vimeoId: "1161766248", title: "Transformation Story 6", thumbnail: "" },
-];
-
 const videoTestimonials = [
   {
     vimeoId: "1156009467",
@@ -324,24 +256,6 @@ export default function Gallery() {
         </p>
         <div className="h-px w-20 bg-primary mx-auto mt-10" />
       </motion.div>
-
-      {/* Transformation Videos */}
-      <section className="px-4 max-w-7xl mx-auto mb-24">
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <span className="text-primary tracking-[0.3em] text-xs font-bold uppercase">Inside the Room</span>
-        </motion.div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {transformationVideos.map((video, i) => (
-            <TransformationVideoCard key={video.id} video={video} index={i} />
-          ))}
-        </div>
-      </section>
 
       {/* Video Testimonials */}
       <section className="px-4 max-w-7xl mx-auto mb-24">
