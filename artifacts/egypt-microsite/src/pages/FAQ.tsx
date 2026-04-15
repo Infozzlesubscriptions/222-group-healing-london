@@ -196,12 +196,12 @@ export default function FAQ() {
 
       {/* Category Tabs */}
       <div className="px-4 max-w-4xl mx-auto mb-10">
-        <div className="flex flex-wrap justify-center gap-2 md:gap-3">
+        <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 md:gap-3 max-w-2xl mx-auto">
           {faqCategories.map((cat, ci) => (
             <button
               key={ci}
               onClick={() => { setActiveTab(ci); setOpenItems({}); }}
-              className={`px-4 sm:px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold tracking-wide transition-all duration-300 cursor-pointer shadow-sm ${
+              className={`px-3 sm:px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold tracking-wide transition-all duration-300 cursor-pointer shadow-sm ${
                 activeTab === ci
                   ? "text-[#1a1208] shadow-md"
                   : "bg-card text-muted-foreground hover:text-primary border border-border/50 hover:border-primary/40"
