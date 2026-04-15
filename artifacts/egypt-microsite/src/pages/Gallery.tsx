@@ -3,29 +3,6 @@ import { useState, useRef, useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 
-const videoTestimonials = [
-  {
-    vimeoId: "1156009467",
-    name: "Caesar",
-    context: "He came in a wheelchair. He stood up and walked out under his own power.",
-    quote: "Caesar came in a wheelchair. He stood up and walked out under his own power.",
-  },
-  {
-    vimeoId: "1161766582",
-    name: "Linda",
-    location: "Canada",
-    quote:
-      "I've done every course, every retreat, every modality. Nothing has come close to what happens in Jerry's events. My business has completely transformed. My health has completely transformed. I am not the same person.",
-  },
-  {
-    vimeoId: "1161766314",
-    name: "Susan",
-    location: "Business Owner",
-    quote:
-      "I didn't come expecting what happened. I came hoping. What Jerry created in that room changed something in me I had given up on.",
-  },
-];
-
 const writtenTestimonials = [
   {
     name: "Barcelona Group Healing",
@@ -70,67 +47,6 @@ const writtenTestimonials = [
       "Star Magic Healing gave me a fresh perspective on wellness. It's not about chasing quick fixes but about creating lasting change. The meditations are powerful, and the teachings have transformed how I approach my health and wellbeing.",
   },
 ];
-
-function VideoCard({ video, index }: { video: typeof videoTestimonials[0]; index: number }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-40px" }}
-      transition={{ duration: 0.6, delay: index * 0.12 }}
-      className="rounded-2xl overflow-hidden border border-primary/20 bg-card shadow-lg flex flex-col"
-    >
-      <a
-        href={`https://player.vimeo.com/video/${video.vimeoId}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="relative aspect-video overflow-hidden cursor-pointer block group"
-        style={{ background: "linear-gradient(135deg, #1a1208 0%, #2a1f10 50%, #0a0e1a 100%)" }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
-          <motion.div
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className="w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center shadow-2xl group-hover:shadow-[0_0_30px_rgba(211,146,34,0.4)] transition-shadow duration-300"
-            style={{
-              background: "linear-gradient(135deg, #d39222 0%, #FFECBA 50%, #d39222 100%)",
-            }}
-          >
-            <svg viewBox="0 0 24 24" className="w-7 h-7 md:w-8 md:h-8 ml-1" fill="#1a1208">
-              <path d="M8 5v14l11-7z" />
-            </svg>
-          </motion.div>
-          <span className="text-white/70 text-xs font-medium">{video.name}'s Story</span>
-        </div>
-        <div className="absolute top-3 right-3 flex items-center gap-1.5 bg-black/40 backdrop-blur-sm rounded-full px-3 py-1">
-          <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
-          <span className="text-white/80 text-[10px] font-medium uppercase tracking-wider">Video</span>
-        </div>
-      </a>
-
-      <div className="p-6 flex flex-col flex-1">
-        <div className="flex items-center gap-1 mb-3">
-          {[...Array(5)].map((_, i) => (
-            <span key={i} className="text-primary text-sm">★</span>
-          ))}
-        </div>
-        <p className="text-muted-foreground text-sm leading-relaxed italic flex-1 mb-4">
-          "{video.quote}"
-        </p>
-        <div>
-          <p className="font-semibold text-foreground text-sm">{video.name}</p>
-          {video.location && (
-            <p className="text-muted-foreground text-xs">{video.location}</p>
-          )}
-          {video.context && !video.location && (
-            <p className="text-primary text-xs font-medium">{video.context}</p>
-          )}
-        </div>
-      </div>
-    </motion.div>
-  );
-}
 
 function useCardWidth() {
   const [width, setWidth] = useState(() => {
@@ -294,24 +210,6 @@ export default function Gallery() {
                 style={{ border: 0 }}
               />
             </motion.div>
-          ))}
-        </div>
-      </section>
-
-      {/* Video Testimonials */}
-      <section className="px-4 max-w-7xl mx-auto mb-24">
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <span className="text-primary tracking-[0.3em] text-xs font-bold uppercase">Video Testimonials</span>
-        </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {videoTestimonials.map((video, i) => (
-            <VideoCard key={i} video={video} index={i} />
           ))}
         </div>
       </section>
