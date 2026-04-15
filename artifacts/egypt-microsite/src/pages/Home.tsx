@@ -116,7 +116,14 @@ export default function Home() {
             <p className="text-sm md:text-base text-primary font-semibold tracking-widest uppercase mb-10">London, UK · May 15th-17th, 2026 · 3 Days · Limited Places</p>
 
             <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
-              <Link href="/booking" className="w-full sm:w-auto">
+              <a
+                href="#pricing"
+                className="w-full sm:w-auto"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
                 <button
                   className="w-full sm:w-auto text-base font-bold px-8 py-3 rounded-lg tracking-wide transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97] cursor-pointer shadow-lg"
                   style={{
@@ -127,7 +134,7 @@ export default function Home() {
                 >
                   Reserve Your Seat Now
                 </button>
-              </Link>
+              </a>
               <Link href="/programme" className="w-full sm:w-auto">
                 <Button
                   size="lg"
@@ -563,7 +570,7 @@ export default function Home() {
         </div>
       </section>
       {/* ─── PRICING ─── */}
-      <section className="py-24 md:py-32 px-4" style={{ backgroundColor: "#F5F0E8" }}>
+      <section id="pricing" className="py-24 md:py-32 px-4" style={{ backgroundColor: "#F5F0E8" }}>
         <div className="max-w-6xl mx-auto">
           <motion.div
             className="text-center mb-14"
