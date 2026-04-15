@@ -2,9 +2,6 @@ import { motion } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import thumb1Img from "@assets/community-group-ORD4DYoj_1776153736899.jpg";
-import thumb2Img from "@assets/Elite_Be_Superhuman_11-scaled_1776168428466.webp";
-import thumb3Img from "@assets/Elite_Be_Superhuman_13-scaled_1776168740417.webp";
 
 const transformationVideos = [
   { id: 1, src: "https://player.vimeo.com/video/1161766582", title: "Transformation Story 1" },
@@ -17,27 +14,24 @@ const transformationVideos = [
 
 const videoTestimonials = [
   {
-    thumbnail: thumb1Img,
+    vimeoId: "1156009467",
     name: "Caesar",
     context: "He came in a wheelchair. He stood up and walked out under his own power.",
     quote: "Caesar came in a wheelchair. He stood up and walked out under his own power.",
-    hasVideo: true,
   },
   {
-    thumbnail: thumb2Img,
+    vimeoId: "1161766582",
     name: "Linda",
     location: "Canada",
     quote:
       "I've done every course, every retreat, every modality. Nothing has come close to what happens in Jerry's events. My business has completely transformed. My health has completely transformed. I am not the same person.",
-    hasVideo: true,
   },
   {
-    thumbnail: thumb3Img,
+    vimeoId: "1161766314",
     name: "Susan",
     location: "Business Owner",
     quote:
       "I didn't come expecting what happened. I came hoping. What Jerry created in that room changed something in me I had given up on.",
-    hasVideo: true,
   },
 ];
 
@@ -97,38 +91,41 @@ function VideoCard({ video, index }: { video: typeof videoTestimonials[0]; index
       transition={{ duration: 0.6, delay: index * 0.12 }}
       className="rounded-2xl overflow-hidden border border-primary/20 bg-card shadow-lg flex flex-col"
     >
-      <div className="relative aspect-video overflow-hidden">
+      <div
+        className="relative aspect-video overflow-hidden cursor-pointer"
+        onClick={() => setPlaying(true)}
+      >
         {playing ? (
-          <div className="absolute inset-0 flex items-center justify-center bg-black text-white text-sm">
-            Video coming soon
-          </div>
+          <iframe
+            src={`https://player.vimeo.com/video/${video.vimeoId}?badge=0&autopause=0&quality_selector=1&player_id=0&app_id=58479&autoplay=1`}
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            className="absolute inset-0 w-full h-full"
+            title={`${video.name}'s Testimonial`}
+            style={{ border: 0 }}
+          />
         ) : (
-          <button
-            className="absolute inset-0 w-full h-full group cursor-pointer"
-            onClick={() => setPlaying(true)}
-            aria-label="Play testimonial video"
-          >
+          <>
             <img
-              src={video.thumbnail}
+              src={`https://vumbnail.com/${video.vimeoId}.jpg`}
               alt={video.name}
-              className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+              className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
             />
-            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-300" />
+            <div className="absolute inset-0 bg-black/30" />
             <div className="absolute inset-0 flex items-center justify-center">
               <motion.div
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-16 h-16 rounded-full flex items-center justify-center shadow-2xl"
+                className="w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center shadow-2xl"
                 style={{
-                  background: "linear-gradient(135deg, #d39222, #FFECBA, #F3D696, #d39222)",
+                  background: "linear-gradient(135deg, #d39222 0%, #FFECBA 50%, #d39222 100%)",
                 }}
               >
-                <svg className="w-6 h-6 ml-1" viewBox="0 0 24 24" fill="#1a1208">
+                <svg viewBox="0 0 24 24" className="w-8 h-8 md:w-10 md:h-10 ml-1" fill="#1a1208">
                   <path d="M8 5v14l11-7z" />
                 </svg>
               </motion.div>
             </div>
-          </button>
+          </>
         )}
       </div>
 
