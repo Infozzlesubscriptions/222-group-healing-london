@@ -11,6 +11,7 @@ import card4Img from "@assets/Elite_Be_Superhuman_11-scaled_1776168428466.webp";
 import card5Img from "@assets/event-overview_1776168428467.webp";
 import spiritualWarriorImg from "@assets/Spiritual-Warrior-Protocol-scaled_1776176043760.webp";
 import eliteGroup13Img from "@assets/Elite_Be_Superhuman_13-scaled_1776176188604.webp";
+import whoThisIsForImg from "@assets/generated_images/who-this-is-for-illustration.png";
 import guaranteeImg from "@assets/Elite_Be_Superhuman_11-scaled_1776177221392.webp";
 import card6Img from "@assets/Superhuman-Blueprint-scaled_1776169771254.webp";
 import card7Img from "@assets/Program-and-step-3-scaled_1776166006733.webp";
@@ -490,8 +491,8 @@ export default function Home() {
               />
               <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5]">
                 <img
-                  src={eliteGroup13Img}
-                  alt="Event experience"
+                  src={whoThisIsForImg}
+                  alt="Personal transformation energy illustration"
                   className="w-full h-full object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
