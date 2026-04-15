@@ -853,11 +853,11 @@ export default function Home() {
           >
             <Link href="/testimonials">
               <button
-                className="text-sm font-bold px-8 py-3 rounded-lg tracking-wide transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97] cursor-pointer border"
+                className="text-sm font-bold px-8 py-3 rounded-lg tracking-wide transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97] cursor-pointer shadow-md"
                 style={{
-                  background: "transparent",
-                  color: "#d39222",
-                  borderColor: "#d39222",
+                  background: "linear-gradient(90deg, #d39222 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #d39222 100%)",
+                  color: "#1a1208",
+                  border: "none",
                 }}
               >
                 Watch More Testimonials →
