@@ -1,13 +1,30 @@
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 
 export default function Booking() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const existing = document.querySelector(
+      'script[src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"]',
+    );
+    if (!existing) {
+      const script = document.createElement("script");
+      script.src =
+        "https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js";
+      script.type = "text/javascript";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-background pt-24 pb-20">
-
       <motion.div
-        className="text-center px-4 mb-16 max-w-7xl mx-auto"
+        className="text-center px-4 mb-12 max-w-7xl mx-auto"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -17,93 +34,69 @@ export default function Booking() {
           Secure Your Place
         </h1>
         <p className="text-lg text-muted-foreground font-light leading-relaxed max-w-xl mx-auto">
-          Elite Be Superhuman · London, UK · May 2026
+          Elite Be Superhuman · London, UK · May 15–17, 2026
         </p>
         <div className="h-px w-20 bg-primary mx-auto mt-10" />
       </motion.div>
 
-      <div className="px-4 max-w-2xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="rounded-3xl border border-primary/20 bg-card shadow-lg overflow-hidden"
+      <motion.div
+        className="px-4 max-w-4xl mx-auto"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        <div
+          className="rounded-3xl border overflow-hidden shadow-lg"
+          style={{ borderColor: "rgba(211,146,34,0.25)" }}
         >
           <div
-            className="px-5 py-6 sm:px-8 sm:py-7 border-b border-primary/15 text-center"
-            style={{ background: "linear-gradient(135deg, hsl(42 87% 96%), hsl(38 72% 92%))" }}
+            className="px-5 py-6 sm:px-8 sm:py-7 text-center"
+            style={{
+              background: "linear-gradient(135deg, hsl(42 87% 96%), hsl(38 72% 92%))",
+              borderBottom: "1px solid rgba(211,146,34,0.2)",
+            }}
           >
             <div className="text-primary text-4xl mb-3">✦</div>
-            <h2 className="text-2xl font-bold text-foreground mb-2">Reserve Your Seat</h2>
-            <p className="text-muted-foreground text-sm">Complete the form below — our team will be in touch within 24 hours.</p>
+            <h2 className="text-2xl font-bold text-foreground mb-2">Book Your Call</h2>
+            <p className="text-muted-foreground text-sm max-w-md mx-auto">
+              Choose a time that works for you — our team will walk you through everything and secure your seat.
+            </p>
           </div>
 
-          <div className="px-5 py-8 sm:px-8 sm:py-10 space-y-5">
-            {[
-              { label: "Full Name", type: "text", placeholder: "Your full name" },
-              { label: "Email Address", type: "email", placeholder: "your@email.com" },
-              { label: "Phone Number", type: "tel", placeholder: "+44 (0) 000 000 0000" },
-            ].map((field) => (
-              <div key={field.label}>
-                <label className="block text-sm font-semibold text-foreground mb-2">{field.label}</label>
-                <input
-                  type={field.type}
-                  placeholder={field.placeholder}
-                  className="w-full px-4 py-3 rounded-xl border border-border/60 bg-background text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all duration-200"
-                />
-              </div>
-            ))}
-
-            <div>
-              <label className="block text-sm font-semibold text-foreground mb-2">What is your biggest reason for attending?</label>
-              <textarea
-                rows={4}
-                placeholder="Tell us what's bringing you here..."
-                className="w-full px-4 py-3 rounded-xl border border-border/60 bg-background text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all duration-200 resize-none"
-              />
-            </div>
-
-            <div className="pt-2">
-              <button
-                className="w-full text-base font-bold py-4 rounded-xl tracking-wide transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-md"
-                style={{
-                  background: "linear-gradient(90deg, #d39222 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #d39222 100%)",
-                  color: "#1a1208",
-                  border: "none",
-                }}
-              >
-                Submit My Application
-              </button>
-              <p className="text-center text-xs text-muted-foreground mt-4 leading-relaxed">
-                Payment plan options available · 100% money-back guarantee on day one · Prices and dates confirmed on booking
-              </p>
-            </div>
+          <div className="bg-background min-h-[600px]" ref={containerRef}>
+            <div
+              className="meetings-iframe-container"
+              data-src="https://meetings.hubspot.com/marie215/elite-be-supehuman?embed=true"
+            />
           </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-10 p-6 rounded-2xl bg-secondary/30 border border-border/40 text-center"
-        >
-          <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-            Have questions before committing? We're happy to talk you through everything.
-          </p>
-          <a href="mailto:info@starmagichealing.com">
-            <Button variant="outline" size="sm" className="border-border hover:border-primary hover:text-primary">
-              Email Our Team
-            </Button>
-          </a>
-        </motion.div>
-
-        <div className="text-center mt-8">
-          <Link href="/" className="text-muted-foreground text-sm hover:text-primary transition-colors">
-            ← Back to home
-          </Link>
         </div>
-      </div>
+      </motion.div>
 
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="mt-10 px-4 max-w-4xl mx-auto"
+      >
+        <div className="p-6 rounded-2xl bg-secondary/30 border border-border/40 text-center">
+          <p className="text-muted-foreground text-sm leading-relaxed mb-1">
+            Prefer to reach out directly?{" "}
+            <a
+              href="mailto:admin@starmagichealing.org"
+              className="underline hover:opacity-80 transition-opacity"
+              style={{ color: "#d39222" }}
+            >
+              Email us at admin@starmagichealing.org
+            </a>
+          </p>
+        </div>
+      </motion.div>
+
+      <div className="text-center mt-8">
+        <Link href="/" className="text-muted-foreground text-sm hover:text-primary transition-colors">
+          ← Back to home
+        </Link>
+      </div>
     </div>
   );
 }
