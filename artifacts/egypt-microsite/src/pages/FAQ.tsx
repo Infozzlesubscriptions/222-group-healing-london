@@ -16,15 +16,49 @@ type FAQCategory = {
 
 const faqCategories: FAQCategory[] = [
   {
-    label: "Before You Come",
+    label: "General Information",
     items: [
       {
-        q: "Is this suitable for beginners?",
-        a: "Completely. Whether you've never done anything like this before or you've spent years on this path, the experience meets you exactly where you are. No prior experience in meditation, breathwork, or energy work is required.",
+        q: "Who is this event for?",
+        a: "This experience is for individuals ready to break limitations, elevate their mindset, and step into higher levels of performance, clarity, and purpose.",
       },
       {
-        q: "What should I bring?",
-        a: "Comfortable clothing you can move in, an open mind, and a willingness to fully participate. Full details are sent on booking.",
+        q: "What makes this different from other workshops or seminars?",
+        a: "This is not theory-based learning — it's a fully immersive, hands-on transformation experience where real change happens in real time.",
+      },
+      {
+        q: "What kind of results can I expect?",
+        a: "Participants often experience greater clarity, emotional balance, confidence, improved health, and a stronger sense of purpose.",
+      },
+    ],
+  },
+  {
+    label: "Experience & Participation",
+    items: [
+      {
+        q: "Do I need prior experience in meditation or breathwork?",
+        a: "No. Everything is guided step-by-step, making it accessible for both beginners and experienced individuals.",
+      },
+      {
+        q: "Will there be physical activities involved?",
+        a: "Yes. The event includes breathwork, movement, and energy practices, all adaptable to your comfort level.",
+      },
+      {
+        q: "Can I attend if I'm going through a difficult phase in life?",
+        a: "Absolutely. Many participants join during challenging times and find the experience deeply supportive and transformative.",
+      },
+    ],
+  },
+  {
+    label: "Safety & Preparation",
+    items: [
+      {
+        q: "Is this safe for everyone?",
+        a: "The practices are guided and designed to be safe. However, if you have any medical conditions, it's best to consult your healthcare provider beforehand.",
+      },
+      {
+        q: "What should I bring to the event?",
+        a: "Comfortable clothing, a water bottle, a journal, and an open mind. Any additional instructions will be shared before the event.",
       },
     ],
   },
@@ -59,11 +93,33 @@ const faqCategories: FAQCategory[] = [
     ],
   },
   {
-    label: "After the Event",
+    label: "Outcomes & Post-Event",
     items: [
       {
-        q: "What happens after the three days?",
-        a: "Every practice, tool, and technique you move through is yours to take home and apply daily. You'll also have access to the Star Magic community for ongoing support and connection with people operating at the same frequency.",
+        q: "Will I receive anything after the event?",
+        a: "Yes, you'll receive a take-home protocol and practices to help you integrate and continue your transformation.",
+      },
+      {
+        q: "Will there be support after the event?",
+        a: "You'll leave with clear tools and frameworks. You'll also have access to the Star Magic community for ongoing support and connection with people operating at the same frequency.",
+      },
+    ],
+  },
+  {
+    label: "Professionals & Practical Benefits",
+    items: [
+      {
+        q: "Is this event suitable for professionals or entrepreneurs?",
+        a: "Yes. The practices enhance focus, resilience, decision-making, and overall performance — making it highly valuable for professionals and business owners.",
+      },
+    ],
+  },
+  {
+    label: "Mindset & Skepticism",
+    items: [
+      {
+        q: "What if I'm skeptical about this kind of work?",
+        a: "That's completely fine. This experience is designed to be felt, not just believed. Come with an open mind and judge based on your own results.",
       },
     ],
   },
