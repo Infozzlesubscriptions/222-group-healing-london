@@ -36,7 +36,6 @@ export default function Gallery() {
 
   return (
     <div className="min-h-screen bg-background pt-24 pb-0">
-
       {/* Grid */}
       <div className="max-w-7xl mx-auto px-4 py-12">
         <motion.div
@@ -46,9 +45,7 @@ export default function Gallery() {
           transition={{ duration: 0.7 }}
         >
           <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Inside the Room</span>
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight mb-4">
-            Gallery
-          </h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight mb-4">Transformation Stories</h1>
           <div className="h-px w-20 bg-primary mx-auto mt-6" />
         </motion.div>
 
@@ -78,7 +75,6 @@ export default function Gallery() {
           ))}
         </motion.div>
       </div>
-
       {/* CTA Banner */}
       <section className="py-28 px-4 bg-secondary text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10" />
@@ -110,7 +106,6 @@ export default function Gallery() {
           </div>
         </motion.div>
       </section>
-
       {/* Lightbox */}
       {selectedImage && (
         <div
