@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import groupPyramidsImage from "@assets/community-group-ORD4DYoj_1776153736899.jpg";
+import groupPyramidsImage from "@assets/ee6d0798-a474-4b9c-aaae-8b4e67b60758_1776260776950.jfif";
 import tribeCirclePyramidImg from "@assets/Jerry-Sargeant-One-Love_1776160920406.webp";
 import spiritualActivationImg from "@assets/image_1776160809528.png";
 import card1Img from "@assets/Brain-Scan-1-scaled_1776168428464.webp";
