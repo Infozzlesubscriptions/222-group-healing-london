@@ -48,6 +48,56 @@ const writtenTestimonials = [
   },
 ];
 
+function TransformationVideoCard({ video, index }: { video: { id: string; title: string; thumb: string }; index: number }) {
+  const [playing, setPlaying] = useState(false);
+
+  return (
+    <motion.div
+      key={video.id}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className="rounded-2xl overflow-hidden shadow-lg border border-border/30 cursor-pointer"
+      style={{ aspectRatio: "16/9" }}
+      onClick={() => setPlaying(true)}
+    >
+      {playing ? (
+        <iframe
+          src={`https://player.vimeo.com/video/${video.id}?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1`}
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+          className="w-full h-full"
+          title={video.title}
+          style={{ border: 0 }}
+        />
+      ) : (
+        <div className="relative w-full h-full" style={{ background: "linear-gradient(135deg, #1a1208 0%, #2a1f10 50%, #0a0e1a 100%)" }}>
+          <img
+            src={video.thumb}
+            alt={video.title}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center shadow-2xl"
+              style={{
+                background: "linear-gradient(135deg, #d39222 0%, #FFECBA 50%, #d39222 100%)",
+              }}
+            >
+              <svg viewBox="0 0 24 24" className="w-7 h-7 md:w-8 md:h-8 ml-1" fill="#1a1208">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </motion.div>
+          </div>
+        </div>
+      )}
+    </motion.div>
+  );
+}
+
 function useCardWidth() {
   const [width, setWidth] = useState(() => {
     if (typeof window === 'undefined') return 380;
