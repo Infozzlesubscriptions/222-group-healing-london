@@ -37,7 +37,7 @@ export default function Home() {
       text: "A completely reset nervous system, no longer running on stress and survival",
     },
     {
-      img: card2Img,
+      img: spiritualWarriorImg,
       title: "Unshakeable Clarity",
       text: "Unshakeable clarity on who you are and what you're here to do",
     },
