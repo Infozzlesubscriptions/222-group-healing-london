@@ -733,7 +733,7 @@ export default function Home() {
               </ul>
               <Link href="/booking">
                 <button
-                  className="w-full py-3.5 rounded-xl text-sm font-extrabold uppercase tracking-widest transition-all duration-200 hover:scale-[1.03] hover:shadow-lg active:scale-[0.97] cursor-pointer shadow-md"
+                  className="w-full py-3 rounded-lg text-sm font-bold tracking-wide transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-md"
                   style={{
                     background: "linear-gradient(90deg, #d39222 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #d39222 100%)",
                     color: "#1a1208",
