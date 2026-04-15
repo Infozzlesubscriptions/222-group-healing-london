@@ -534,11 +534,11 @@ export default function Home() {
                 className="absolute -inset-1 rounded-3xl blur-xl opacity-20 pointer-events-none"
                 style={{ background: "linear-gradient(135deg, #d39222, #F3D696, #d39222)" }}
               />
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[3/4]" style={{ backgroundColor: "#111" }}>
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
                   src={jerrySargeantImg}
                   alt="Jerry Sargeant — Forbes Cover"
-                  className="w-full h-full object-contain"
+                  className="w-full h-auto block"
                 />
               </div>
             </motion.div>
