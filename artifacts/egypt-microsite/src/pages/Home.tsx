@@ -149,9 +149,9 @@ export default function Home() {
         </div>
       </section>
       {/* ─── STATS BAR ─── */}
-      <section className="py-14 px-4 bg-secondary/30 border-y border-border/40">
+      <section className="py-10 sm:py-14 px-4 bg-secondary/30 border-y border-border/40">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6">
             {stats.map((stat, i) => (
               <motion.div
                 key={i}
@@ -159,17 +159,17 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="text-center rounded-2xl px-4 py-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-default"
+                className="text-center rounded-xl sm:rounded-2xl px-3 sm:px-4 py-4 sm:py-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-default"
                 style={{ border: "1px solid rgba(211,146,34,0.3)" }}
                 whileHover={{ borderColor: "rgba(211,146,34,0.6)" }}
               >
                 <div
-                  className="text-3xl md:text-4xl font-bold mb-2"
+                  className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2"
                   style={{ color: "#d39222" }}
                 >
                   {stat.value}
                 </div>
-                <div className="text-muted-foreground text-sm font-medium tracking-wide">{stat.label}</div>
+                <div className="text-muted-foreground text-xs sm:text-sm font-medium tracking-wide">{stat.label}</div>
               </motion.div>
             ))}
           </div>
