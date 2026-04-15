@@ -628,13 +628,13 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <Link href="/booking">
+              <a href="https://buy.stripe.com/28E4gzbCU8pT8obd6L9Zm1a" target="_blank" rel="noopener noreferrer">
                 <button
                   className="w-full py-3.5 rounded-full text-sm font-bold tracking-wide transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-md bg-primary"
                 >
                   Sign Up Now
                 </button>
-              </Link>
+              </a>
             </motion.div>
 
             {/* VIP Access — featured */}
@@ -677,13 +677,13 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <Link href="/booking">
+              <a href="https://buy.stripe.com/eVq4gz0Yg5dHawj3wb9Zm1b" target="_blank" rel="noopener noreferrer">
                 <button
                   className="w-full py-3.5 rounded-full text-sm font-bold tracking-wide transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-md bg-primary"
                 >
                   Get VIP Access
                 </button>
-              </Link>
+              </a>
             </motion.div>
 
             {/* Elite Package */}
@@ -721,13 +721,13 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <Link href="/booking">
+              <a href="https://buy.stripe.com/6oU6oH6iAdKd5bZ6In9Zm1c" target="_blank" rel="noopener noreferrer">
                 <button
                   className="w-full py-3.5 rounded-full text-sm font-bold tracking-wide transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-md bg-primary"
                 >
                   Go Elite
                 </button>
-              </Link>
+              </a>
             </motion.div>
 
           </div>
