@@ -165,9 +165,9 @@ export default function Programme() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
-            { name: "Dr. Merlin", id: "REPLACE_MERLIN_ID" },
-            { name: "Dr. Maher",  id: "REPLACE_MAHER_ID"  },
-            { name: "Dr. Angela", id: "REPLACE_ANGELA_ID" },
+            { name: "Dr. Merlin", id: "1161753909" },
+            { name: "Dr. Maher",  id: "1161753427"  },
+            { name: "Dr. Angela", id: "1161753289" },
           ].map((expert, i) => (
             <motion.div
               key={expert.name}
