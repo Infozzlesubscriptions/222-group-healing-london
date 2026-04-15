@@ -22,6 +22,7 @@ import mobileHeroBanner from "@assets/freepik_wide-cinematic-banner-cal_27927149
 
 export default function Home() {
   const [jerryVideoPlaying, setJerryVideoPlaying] = useState(false);
+  const [caesarVideoPlaying, setCaesarVideoPlaying] = useState(false);
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 1000], [0, 300]);
   const opacity = useTransform(scrollY, [0, 500], [1, 0]);
@@ -892,36 +893,44 @@ export default function Home() {
               className="absolute -inset-1 rounded-3xl blur-2xl opacity-25 pointer-events-none"
               style={{ background: "linear-gradient(135deg, #d39222, #F3D696, #d39222)" }}
             />
-            <a
-              href="https://vimeo.com/1156009467"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block relative rounded-3xl overflow-hidden shadow-2xl cursor-pointer"
+            <div
+              className="relative rounded-3xl overflow-hidden shadow-2xl cursor-pointer"
               style={{ border: "1px solid rgba(243,214,150,0.35)", aspectRatio: "16/9" }}
+              onClick={() => setCaesarVideoPlaying(true)}
             >
-              <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, #1a1208 0%, #2a1f10 50%, #0a0e1a 100%)" }}>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-                  <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center shadow-2xl"
-                    style={{
-                      background: "linear-gradient(135deg, #d39222 0%, #FFECBA 50%, #d39222 100%)",
-                    }}
-                  >
-                    <svg viewBox="0 0 24 24" className="w-8 h-8 md:w-10 md:h-10 ml-1" fill="#1a1208">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </motion.div>
-                  <span className="text-white/70 text-xs font-medium tracking-wide">Watch Caesar's Story</span>
+              {caesarVideoPlaying ? (
+                <iframe
+                  src="https://player.vimeo.com/video/1156009467?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                  className="absolute inset-0 w-full h-full"
+                  title="Caesar's Story"
+                  style={{ border: 0 }}
+                />
+              ) : (
+                <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, #1a1208 0%, #2a1f10 50%, #0a0e1a 100%)" }}>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
+                    <motion.div
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center shadow-2xl"
+                      style={{
+                        background: "linear-gradient(135deg, #d39222 0%, #FFECBA 50%, #d39222 100%)",
+                      }}
+                    >
+                      <svg viewBox="0 0 24 24" className="w-8 h-8 md:w-10 md:h-10 ml-1" fill="#1a1208">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </motion.div>
+                    <span className="text-white/70 text-xs font-medium tracking-wide">Watch Caesar's Story</span>
+                  </div>
+                  <div className="absolute top-3 right-3 flex items-center gap-1.5 bg-black/40 backdrop-blur-sm rounded-full px-3 py-1">
+                    <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
+                    <span className="text-white/80 text-[10px] font-medium uppercase tracking-wider">Video</span>
+                  </div>
                 </div>
-                <div className="absolute top-3 right-3 flex items-center gap-1.5 bg-black/40 backdrop-blur-sm rounded-full px-3 py-1">
-                  <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
-                  <span className="text-white/80 text-[10px] font-medium uppercase tracking-wider">Video</span>
-                </div>
-              </div>
-            </a>
+              )}
+            </div>
           </motion.div>
 
           {/* CTA */}
