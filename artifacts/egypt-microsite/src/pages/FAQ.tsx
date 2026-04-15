@@ -166,17 +166,20 @@ function FAQAccordion({ item, isOpen, onToggle }: { item: FAQItem; isOpen: boole
 
 export default function FAQ() {
   const [openItems, setOpenItems] = useState<Record<string, boolean>>({});
+  const [activeTab, setActiveTab] = useState(0);
 
   const toggle = (key: string) => {
     setOpenItems((prev) => ({ ...prev, [key]: !prev[key] }));
   };
+
+  const activeCat = faqCategories[activeTab];
 
   return (
     <div className="min-h-screen bg-background pt-24 pb-20">
 
       {/* Hero */}
       <motion.div
-        className="text-center px-4 mb-20 max-w-7xl mx-auto"
+        className="text-center px-4 mb-14 max-w-7xl mx-auto"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -191,35 +194,53 @@ export default function FAQ() {
         <div className="h-px w-20 bg-primary mx-auto mt-10" />
       </motion.div>
 
-      {/* FAQ Categories */}
-      <div className="px-4 max-w-4xl mx-auto mb-20 space-y-10">
-        {faqCategories.map((cat, ci) => (
-          <motion.div
-            key={ci}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: 0.6, delay: ci * 0.08 }}
-          >
-            {/* Category label */}
-            <div className="flex items-center gap-3 mb-4">
-              <span className="text-primary text-xs font-bold tracking-[0.3em] uppercase">{cat.label}</span>
-              <div className="flex-1 h-px bg-border/50" />
-            </div>
+      {/* Category Tabs */}
+      <div className="px-4 max-w-4xl mx-auto mb-10">
+        <div className="flex flex-wrap justify-center gap-2 md:gap-3">
+          {faqCategories.map((cat, ci) => (
+            <button
+              key={ci}
+              onClick={() => { setActiveTab(ci); setOpenItems({}); }}
+              className={`px-4 py-2 rounded-full text-xs md:text-sm font-semibold tracking-wide transition-all duration-300 cursor-pointer border ${
+                activeTab === ci
+                  ? "text-[#1a1208] shadow-md"
+                  : "border-border/50 text-muted-foreground hover:border-primary/40 hover:text-primary bg-transparent"
+              }`}
+              style={activeTab === ci ? {
+                background: "linear-gradient(90deg, #d39222 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #d39222 100%)",
+                borderColor: "transparent",
+              } : undefined}
+            >
+              {cat.label}
+            </button>
+          ))}
+        </div>
+      </div>
 
-            {/* Accordion group */}
-            <div className="rounded-2xl border border-border/50 overflow-hidden bg-card shadow-sm">
-              {cat.items.map((item, ii) => (
-                <FAQAccordion
-                  key={ii}
-                  item={item}
-                  isOpen={!!openItems[`${ci}-${ii}`]}
-                  onToggle={() => toggle(`${ci}-${ii}`)}
-                />
-              ))}
-            </div>
-          </motion.div>
-        ))}
+      {/* Active Category FAQ */}
+      <div className="px-4 max-w-4xl mx-auto mb-20">
+        <motion.div
+          key={activeTab}
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+        >
+          <div className="flex items-center gap-3 mb-4">
+            <span className="text-primary text-xs font-bold tracking-[0.3em] uppercase">{activeCat.label}</span>
+            <div className="flex-1 h-px bg-border/50" />
+          </div>
+
+          <div className="rounded-2xl border border-border/50 overflow-hidden bg-card shadow-sm">
+            {activeCat.items.map((item, ii) => (
+              <FAQAccordion
+                key={ii}
+                item={item}
+                isOpen={!!openItems[`${activeTab}-${ii}`]}
+                onToggle={() => toggle(`${activeTab}-${ii}`)}
+              />
+            ))}
+          </div>
+        </motion.div>
       </div>
 
       {/* Guarantee reminder */}
