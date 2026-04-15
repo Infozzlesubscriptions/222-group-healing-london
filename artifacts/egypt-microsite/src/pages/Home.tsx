@@ -107,7 +107,7 @@ export default function Home() {
           <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
         </motion.div>
 
-        <div className="relative z-10 text-center md:text-left px-6 sm:px-10 md:px-16 md:max-w-3xl min-h-[85vh] flex items-end pb-10 md:items-center md:pb-0 md:py-32 md:min-h-[90vh]">
+        <div className="relative z-10 text-center md:text-left px-6 sm:px-10 md:px-16 md:max-w-3xl min-h-[85vh] flex items-center pb-16 pt-20 md:pb-0 md:pt-0 md:py-32 md:min-h-[90vh]">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
