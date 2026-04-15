@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import groupPyramidsImage from "@/assets/group-pyramids.png";
@@ -142,11 +142,26 @@ function VideoCard({ video, index }: { video: typeof videoTestimonials[0]; index
   );
 }
 
+function useCardWidth() {
+  const [width, setWidth] = useState(() => {
+    if (typeof window === 'undefined') return 380;
+    return window.innerWidth < 640 ? Math.min(300, window.innerWidth - 48) : 380;
+  });
+  useEffect(() => {
+    const update = () => {
+      setWidth(window.innerWidth < 640 ? Math.min(300, window.innerWidth - 48) : 380);
+    };
+    window.addEventListener('resize', update);
+    return () => window.removeEventListener('resize', update);
+  }, []);
+  return width;
+}
+
 function WrittenCarousel() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIdx, setActiveIdx] = useState(0);
   const total = writtenTestimonials.length;
-  const CARD_WIDTH = 380;
+  const CARD_WIDTH = useCardWidth();
   const GAP = 24;
 
   const scrollTo = (idx: number) => {
@@ -171,7 +186,7 @@ function WrittenCarousel() {
         {writtenTestimonials.map((t, i) => (
           <div
             key={i}
-            className="rounded-2xl border border-border/50 bg-card p-7 flex flex-col shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300 shrink-0"
+            className="rounded-2xl border border-border/50 bg-card p-5 sm:p-7 flex flex-col shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300 shrink-0"
             style={{ width: CARD_WIDTH }}
           >
             <div className="flex items-center gap-1 mb-4">
@@ -244,7 +259,7 @@ export default function Testimonials() {
         transition={{ duration: 0.8 }}
       >
         <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Real People. Real Results.</span>
-        <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-none mb-6">
+        <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold text-foreground leading-tight mb-6">
           What Happens in the Room Changes Everything.
         </h1>
         <p className="text-lg text-muted-foreground font-light leading-relaxed">
@@ -294,9 +309,9 @@ export default function Testimonials() {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <div className="max-w-2xl mx-auto bg-secondary/30 rounded-3xl border border-border/50 p-12">
+        <div className="max-w-2xl mx-auto bg-secondary/30 rounded-3xl border border-border/50 p-6 sm:p-10 md:p-12">
           <div className="text-primary text-3xl mb-6">◈</div>
-          <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h3 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
             Your Story Starts Here.
           </h3>
           <p className="text-muted-foreground leading-relaxed mb-8">

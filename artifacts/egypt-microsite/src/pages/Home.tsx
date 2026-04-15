@@ -202,7 +202,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">What This Event Is</span>
-            <h2 className="text-4xl md:text-6xl font-bold text-foreground leading-tight mb-4">
+            <h2 className="text-3xl md:text-6xl font-bold text-foreground leading-tight mb-4">
               Hear It From Jerry
             </h2>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto font-light">
@@ -333,8 +333,8 @@ export default function Home() {
               transition={{ duration: 0.7 }}
             >
               <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">The Core of Everything</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight mb-6">
-                Stop Leaking Energy.<br />Start Operating from Wholeness.
+              <h2 className="text-3xl md:text-5xl font-bold text-foreground leading-tight mb-6">
+                Stop Leaking Energy.<br className="hidden md:block" />Start Operating from Wholeness.
               </h2>
               <div className="h-px w-16 bg-primary mb-8" />
               <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-5">
@@ -403,7 +403,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">The Real Outcome</span>
-            <h2 className="text-4xl md:text-6xl font-bold text-foreground leading-tight mb-4">
+            <h2 className="text-3xl md:text-6xl font-bold text-foreground leading-tight mb-4">
               This Isn't a List of Things You'll Learn.<br className="hidden md:block" /> This Is Who You'll Be.
             </h2>
             <div className="h-px w-20 bg-primary mx-auto mt-6 mb-8" />
@@ -452,7 +452,7 @@ export default function Home() {
               transition={{ duration: 0.7 }}
             >
               <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Is This For You?</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight mb-8">
+              <h2 className="text-3xl md:text-5xl font-bold text-foreground leading-tight mb-8">
                 This Is for You If:
               </h2>
               <div className="space-y-4">
@@ -542,7 +542,7 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0.1 }}
             >
               <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Your Guide</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight mb-6">
+              <h2 className="text-3xl md:text-5xl font-bold text-foreground leading-tight mb-6">
                 Jerry Sargeant
               </h2>
               <div className="h-px w-16 bg-primary mb-8" />
@@ -573,7 +573,7 @@ export default function Home() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-4" style={{ color: "#1a1208" }}>
+            <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-4" style={{ color: "#1a1208" }}>
               Choose Your Experience
             </h2>
             <div className="flex items-center justify-center gap-1.5 mt-4">
@@ -583,7 +583,7 @@ export default function Home() {
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-stretch">
 
             {/* General Admission */}
             <motion.div
@@ -592,7 +592,7 @@ export default function Home() {
               whileHover={{ scale: 1.03 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.7, delay: 0 }}
-              className="flex flex-col px-8 py-10 rounded-3xl cursor-default"
+              className="flex flex-col px-6 py-8 md:px-8 md:py-10 rounded-3xl cursor-default"
               style={{ border: "1px solid #d39222" }}
             >
               <div className="flex justify-center mb-5">
@@ -637,7 +637,7 @@ export default function Home() {
               whileHover={{ scale: 1.03 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="flex flex-col px-8 py-10 rounded-3xl relative cursor-default"
+              className="flex flex-col px-6 py-8 md:px-8 md:py-10 rounded-3xl relative cursor-default"
               style={{ backgroundColor: "#EDE5D5", boxShadow: "0 8px 40px rgba(211,146,34,0.15)" }}
             >
               <div className="flex justify-center mb-5">
@@ -691,7 +691,7 @@ export default function Home() {
               whileHover={{ scale: 1.03 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="flex flex-col px-8 py-10 rounded-3xl cursor-default"
+              className="flex flex-col px-6 py-8 md:px-8 md:py-10 rounded-3xl cursor-default"
               style={{ border: "1px solid #d39222" }}
             >
               <div className="flex justify-center mb-5">
@@ -746,7 +746,7 @@ export default function Home() {
               className="grid grid-cols-1 md:grid-cols-2 gap-0 items-stretch"
             >
               {/* Image */}
-              <div className="relative overflow-hidden rounded-tl-3xl rounded-bl-3xl min-h-[320px]">
+              <div className="relative overflow-hidden rounded-t-3xl md:rounded-t-none md:rounded-tl-3xl md:rounded-bl-3xl min-h-[240px] md:min-h-[320px]">
                 <img
                   src={guaranteeImg}
                   alt="Guarantee"
@@ -756,7 +756,7 @@ export default function Home() {
               </div>
 
               {/* Text */}
-              <div className="px-8 py-10 md:px-14 md:py-14 flex flex-col justify-center">
+              <div className="px-6 py-8 md:px-14 md:py-14 flex flex-col justify-center">
                 {/* Badge — above heading */}
                 <div className="flex items-center gap-4 mb-6">
                   <div
@@ -773,7 +773,7 @@ export default function Home() {
                 </div>
 
                 <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Zero Risk</span>
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground leading-tight mb-6">
+                <h2 className="text-2xl md:text-4xl font-bold text-foreground leading-tight mb-6">
                   Turn up. Give it a morning.
                 </h2>
                 <p className="text-muted-foreground text-base leading-relaxed mb-4">
@@ -813,7 +813,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Real Results. Real People.</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground leading-tight mb-4">
               Hear It From Someone Who Was There
             </h2>
             <div className="h-px w-20 bg-primary mx-auto mt-6" />
@@ -875,14 +875,14 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="px-10 py-14 md:px-16 md:py-16 text-center shadow-xl"
+            className="px-6 py-10 md:px-16 md:py-16 text-center shadow-xl"
             style={{
               backgroundColor: "#FDF6E9",
               border: "1px solid rgba(211,146,34,0.25)",
             }}
           >
             <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Limited Places</span>
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ color: "#1a1208" }}>
+            <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-6" style={{ color: "#1a1208" }}>
               This Event Is Limited.
             </h2>
             <div className="h-px w-16 mx-auto mb-8" style={{ backgroundColor: "#d39222" }} />

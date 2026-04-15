@@ -77,8 +77,8 @@ export default function Programme() {
         transition={{ duration: 0.8 }}
       >
         <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Elite Be Superhuman</span>
-        <h1 className="md:text-7xl font-bold text-foreground mb-6 text-[48px]">
-          Three Days.<br /><span className="whitespace-nowrap">One Complete Transformation.</span>
+        <h1 className="text-3xl sm:text-[48px] md:text-7xl font-bold text-foreground mb-6">
+          Three Days.<br /><span className="sm:whitespace-nowrap">One Complete Transformation.</span>
         </h1>
         <p className="text-lg text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto">
           Every practice, every session, every experience over these three days is built around one outcome: you leave operating from a state of complete wholeness.
@@ -217,7 +217,7 @@ export default function Programme() {
           <div className="h-px w-20 bg-primary mx-auto mt-6" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
 
           {/* What You Experience */}
           <motion.div
@@ -326,7 +326,7 @@ export default function Programme() {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <div className="bg-secondary/40 rounded-3xl border border-border/50 p-10 md:p-14 text-center">
+        <div className="bg-secondary/40 rounded-3xl border border-border/50 p-6 sm:p-10 md:p-14 text-center">
           <div className="text-primary text-3xl mb-6">✦</div>
           <h3 className="text-2xl md:text-4xl font-bold text-foreground mb-6 leading-snug">
             This Is Not a Weekend You Attend and Forget.

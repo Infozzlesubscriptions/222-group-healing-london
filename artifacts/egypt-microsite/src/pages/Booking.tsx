@@ -13,7 +13,7 @@ export default function Booking() {
         transition={{ duration: 0.8 }}
       >
         <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Limited Places</span>
-        <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-none mb-6">
+        <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold text-foreground leading-tight mb-6">
           Secure Your Place
         </h1>
         <p className="text-lg text-muted-foreground font-light leading-relaxed max-w-xl mx-auto">
@@ -30,7 +30,7 @@ export default function Booking() {
           className="rounded-3xl border border-primary/20 bg-card shadow-lg overflow-hidden"
         >
           <div
-            className="px-8 py-7 border-b border-primary/15 text-center"
+            className="px-5 py-6 sm:px-8 sm:py-7 border-b border-primary/15 text-center"
             style={{ background: "linear-gradient(135deg, hsl(42 87% 96%), hsl(38 72% 92%))" }}
           >
             <div className="text-primary text-4xl mb-3">✦</div>
@@ -38,7 +38,7 @@ export default function Booking() {
             <p className="text-muted-foreground text-sm">Complete the form below — our team will be in touch within 24 hours.</p>
           </div>
 
-          <div className="px-8 py-10 space-y-5">
+          <div className="px-5 py-8 sm:px-8 sm:py-10 space-y-5">
             {[
               { label: "Full Name", type: "text", placeholder: "Your full name" },
               { label: "Email Address", type: "email", placeholder: "your@email.com" },

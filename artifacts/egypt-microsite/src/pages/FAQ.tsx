@@ -126,7 +126,7 @@ export default function FAQ() {
         transition={{ duration: 0.8 }}
       >
         <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Everything You Need to Know</span>
-        <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-none mb-6">
+        <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold text-foreground leading-tight mb-6">
           Frequently Asked Questions
         </h1>
         <p className="text-lg text-muted-foreground font-light leading-relaxed">
@@ -206,9 +206,9 @@ export default function FAQ() {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <div className="max-w-2xl mx-auto bg-secondary/30 rounded-3xl border border-border/50 p-12">
+        <div className="max-w-2xl mx-auto bg-secondary/30 rounded-3xl border border-border/50 p-6 sm:p-10 md:p-12">
           <div className="text-primary text-4xl mb-6">◈</div>
-          <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h3 className="text-2xl md:text-4xl font-bold text-foreground mb-4">
             Still have questions?
           </h3>
           <p className="text-muted-foreground leading-relaxed mb-8">
