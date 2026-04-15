@@ -9,21 +9,20 @@ const days = [
   {
     number: "01",
     img: day1Img,
-    imgAlt: "Breathwork and nervous system reset session",
-    title: "Build the Unbreakable Version of You",
+    imgAlt: "Quantum meditation and frequency activation session",
+    title: "Rewire Your Foundation",
     summary:
-      "Day one strips everything back and rebuilds from the ground up. You'll learn to hear and trust your own inner guidance — above the noise of fear, doubt, and other people's opinions. We work through what it means to truly know something versus just believe it, how to take complete ownership of your life without excuses, and how to carry yourself in a way that makes you completely unfazed by judgment, criticism, or chaos.",
+      "Day one breaks you down and rebuilds you from within. You'll learn to trust your inner guidance, take full ownership of your life, and become mentally unshakeable.",
     detail:
-      "You'll move through practices that reset your nervous system, rewire your stress response, and teach your body to operate from calm, focused power rather than anxiety and reaction.",
-    outcome: "By the end of day one, you are grounded. Clear. Unshakeable.",
+      "Through powerful practices, you reset your nervous system, rewire stress patterns, and step into calm, focused power.",
+    outcome: "By the end of Day 1: You are grounded, clear, and unshakeable.",
     topics: [
-      "Inner guidance & intuition",
-      "Extreme ownership",
-      "Unshakeable confidence",
-      "Manifestation principles",
-      "Breathwork",
-      "Nervous system reset",
-      "Performance mindset",
+      "Quantum meditation & frequency activation",
+      "Transformational breathwork (Star Magic)",
+      "The 4 Pillars of Impact",
+      "Recode your biological system",
+      "Krystal Spiral vs Fibonacci",
+      "Build your new internal operating system",
     ],
   },
   {
