@@ -908,7 +908,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Link href="/testimonials">
+            <Link href="/gallery">
               <button
                 className="text-sm font-bold px-8 py-3 rounded-lg tracking-wide transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97] cursor-pointer shadow-md"
                 style={{
@@ -917,7 +917,7 @@ export default function Home() {
                   border: "none",
                 }}
               >
-                Watch More Testimonials →
+                See More Transformation Stories →
               </button>
             </Link>
           </motion.div>

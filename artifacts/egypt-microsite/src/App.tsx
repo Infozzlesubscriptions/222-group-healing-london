@@ -11,7 +11,7 @@ import { Chatbot } from "@/components/Chatbot";
 import Home from "@/pages/Home";
 import Gallery from "@/pages/Gallery";
 import Programme from "@/pages/Programme";
-import Testimonials from "@/pages/Testimonials";
+
 import FAQ from "@/pages/FAQ";
 import Booking from "@/pages/Booking";
 
@@ -31,7 +31,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/programme" component={Programme} />
       <Route path="/gallery" component={Gallery} />
-      <Route path="/testimonials" component={Testimonials} />
+      <Route path="/testimonials">{() => { window.location.replace(import.meta.env.BASE_URL + "gallery"); return null; }}</Route>
       <Route path="/faq" component={FAQ} />
       <Route path="/booking" component={Booking} />
       <Route component={NotFound} />
