@@ -18,6 +18,7 @@ import card6Img from "@assets/Superhuman-Blueprint-scaled_1776169771254.webp";
 import card7Img from "@assets/Program-and-step-3-scaled_1776166006733.webp";
 import card8Img from "@assets/Elite_Be_Superhuman_13-scaled_1776168740417.webp";
 import jerrySargeantImg from "@assets/wmremove-transformed_1776254411149.jpeg";
+import mobileHeroBanner from "@assets/freepik_wide-cinematic-banner-cal_2792714935_1776273619553.jpeg";
 
 export default function Home() {
   const [jerryVideoPlaying, setJerryVideoPlaying] = useState(false);
@@ -93,9 +94,14 @@ export default function Home() {
           style={{ y: y1, opacity }}
         >
           <img
+            src={mobileHeroBanner}
+            alt="Elite Be Superhuman event"
+            className="w-full h-auto block md:hidden"
+          />
+          <img
             src={groupPyramidsImage}
             alt="Elite Be Superhuman event"
-            className="w-full h-auto md:h-full md:object-cover md:object-center block"
+            className="hidden md:block w-full h-full object-cover object-center"
           />
           <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
         </motion.div>
