@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 
 function ExpertVideoCard({ expert, index }: { expert: { name: string; id: string }; index: number }) {
   const [playing, setPlaying] = useState(false);
+  const [thumbLoaded, setThumbLoaded] = useState(false);
+  const [thumbError, setThumbError] = useState(false);
 
   return (
     <motion.div
@@ -16,7 +18,7 @@ function ExpertVideoCard({ expert, index }: { expert: { name: string; id: string
     >
       <div
         className="relative rounded-2xl overflow-hidden shadow-xl cursor-pointer"
-        style={{ border: "1px solid rgba(211,146,34,0.4)", aspectRatio: "16/9" }}
+        style={{ border: "1px solid rgba(211,146,34,0.4)", aspectRatio: "16/9", background: "linear-gradient(135deg, #1a1208 0%, #2a1f10 50%, #0a0e1a 100%)" }}
         onClick={() => setPlaying(true)}
       >
         <div
@@ -33,11 +35,15 @@ function ExpertVideoCard({ expert, index }: { expert: { name: string; id: string
           />
         ) : (
           <>
-            <img
-              src={`https://vumbnail.com/${expert.id}.jpg`}
-              alt={`${expert.name} testimonial`}
-              className="absolute inset-0 w-full h-full object-cover"
-            />
+            {!thumbError && (
+              <img
+                src={`https://vumbnail.com/${expert.id}.jpg`}
+                alt={`${expert.name} testimonial`}
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${thumbLoaded ? "opacity-100" : "opacity-0"}`}
+                onLoad={() => setThumbLoaded(true)}
+                onError={() => setThumbError(true)}
+              />
+            )}
             <div className="absolute inset-0 bg-black/30" />
             <div className="absolute inset-0 flex items-center justify-center">
               <motion.div
@@ -63,11 +69,13 @@ function ExpertVideoCard({ expert, index }: { expert: { name: string; id: string
 
 function ScienceVideoCard() {
   const [playing, setPlaying] = useState(false);
+  const [thumbLoaded, setThumbLoaded] = useState(false);
+  const [thumbError, setThumbError] = useState(false);
 
   return (
     <div
       className="rounded-3xl overflow-hidden shadow-xl cursor-pointer"
-      style={{ border: "1px solid rgba(211,146,34,0.3)", aspectRatio: "16/9" }}
+      style={{ border: "1px solid rgba(211,146,34,0.3)", aspectRatio: "16/9", background: "linear-gradient(135deg, #1a1208 0%, #2a1f10 50%, #0a0e1a 100%)" }}
       onClick={() => setPlaying(true)}
     >
       {playing ? (
@@ -80,11 +88,15 @@ function ScienceVideoCard() {
         />
       ) : (
         <div className="relative w-full h-full">
-          <img
-            src="https://vumbnail.com/1099884785.jpg"
-            alt="The Science Behind It All"
-            className="w-full h-full object-cover"
-          />
+          {!thumbError && (
+            <img
+              src="https://vumbnail.com/1099884785.jpg"
+              alt="The Science Behind It All"
+              className={`w-full h-full object-cover transition-opacity duration-300 ${thumbLoaded ? "opacity-100" : "opacity-0"}`}
+              onLoad={() => setThumbLoaded(true)}
+              onError={() => setThumbError(true)}
+            />
+          )}
           <div className="absolute inset-0 bg-black/30" />
           <div className="absolute inset-0 flex items-center justify-center">
             <motion.div

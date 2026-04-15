@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 
 function TransformationVideoCard({ video, index }: { video: typeof transformationVideos[0]; index: number }) {
   const [playing, setPlaying] = useState(false);
+  const [thumbLoaded, setThumbLoaded] = useState(false);
+  const [thumbError, setThumbError] = useState(false);
 
   return (
     <motion.div
@@ -24,14 +26,18 @@ function TransformationVideoCard({ video, index }: { video: typeof transformatio
           style={{ border: 0 }}
         />
       ) : (
-        <div className="relative w-full h-full">
-          <img
-            src={`https://vumbnail.com/${video.vimeoId}.jpg`}
-            alt={video.title}
-            className="w-full h-full object-cover"
-          />
+        <div className="relative w-full h-full" style={{ background: "linear-gradient(135deg, #1a1208 0%, #2a1f10 50%, #0a0e1a 100%)" }}>
+          {!thumbError && (
+            <img
+              src={`https://vumbnail.com/${video.vimeoId}.jpg`}
+              alt={video.title}
+              className={`w-full h-full object-cover transition-opacity duration-300 ${thumbLoaded ? "opacity-100" : "opacity-0"}`}
+              onLoad={() => setThumbLoaded(true)}
+              onError={() => setThumbError(true)}
+            />
+          )}
           <div className="absolute inset-0 bg-black/30" />
-          <div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
             <motion.div
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
@@ -44,6 +50,9 @@ function TransformationVideoCard({ video, index }: { video: typeof transformatio
                 <path d="M8 5v14l11-7z" />
               </svg>
             </motion.div>
+            {thumbError && (
+              <span className="text-white/70 text-xs font-medium tracking-wide">{video.title}</span>
+            )}
           </div>
         </div>
       )}
@@ -130,6 +139,8 @@ const writtenTestimonials = [
 
 function VideoCard({ video, index }: { video: typeof videoTestimonials[0]; index: number }) {
   const [playing, setPlaying] = useState(false);
+  const [thumbLoaded, setThumbLoaded] = useState(false);
+  const [thumbError, setThumbError] = useState(false);
 
   return (
     <motion.div
@@ -141,6 +152,7 @@ function VideoCard({ video, index }: { video: typeof videoTestimonials[0]; index
     >
       <div
         className="relative aspect-video overflow-hidden cursor-pointer"
+        style={{ background: "linear-gradient(135deg, #1a1208 0%, #2a1f10 50%, #0a0e1a 100%)" }}
         onClick={() => setPlaying(true)}
       >
         {playing ? (
@@ -153,11 +165,15 @@ function VideoCard({ video, index }: { video: typeof videoTestimonials[0]; index
           />
         ) : (
           <>
-            <img
-              src={`https://vumbnail.com/${video.vimeoId}.jpg`}
-              alt={video.name}
-              className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
-            />
+            {!thumbError && (
+              <img
+                src={`https://vumbnail.com/${video.vimeoId}.jpg`}
+                alt={video.name}
+                className={`absolute inset-0 w-full h-full object-cover object-center transition-all duration-700 hover:scale-105 ${thumbLoaded ? "opacity-100" : "opacity-0"}`}
+                onLoad={() => setThumbLoaded(true)}
+                onError={() => setThumbError(true)}
+              />
+            )}
             <div className="absolute inset-0 bg-black/30" />
             <div className="absolute inset-0 flex items-center justify-center">
               <motion.div
