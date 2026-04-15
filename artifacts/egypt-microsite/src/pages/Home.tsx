@@ -447,6 +447,27 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+
+          <motion.div
+            className="text-center mt-14"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <Link href="/programme">
+              <button
+                className="text-base font-bold px-10 py-3 rounded-lg tracking-wide transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97] cursor-pointer shadow-lg"
+                style={{
+                  background: "linear-gradient(90deg, #d39222 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #d39222 100%)",
+                  color: "#1a1208",
+                  border: "none",
+                }}
+              >
+                Learn Our Programme
+              </button>
+            </Link>
+          </motion.div>
         </div>
       </section>
       {/* ─── WHO THIS IS FOR ─── */}
