@@ -88,25 +88,26 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background w-full overflow-hidden">
       {/* ─── HERO ─── */}
-      <section className="relative flex flex-col md:block overflow-hidden" style={{ backgroundColor: "#0a0e1a" }}>
+      <section className="relative overflow-hidden" style={{ backgroundColor: "#0a0e1a" }}>
         <motion.div
-          className="relative md:absolute md:inset-0 z-0 w-full"
+          className="absolute inset-0 z-0"
           style={{ y: y1, opacity }}
         >
           <img
             src={mobileHeroBanner}
             alt="Elite Be Superhuman event"
-            className="w-full h-auto block md:hidden"
+            className="w-full h-full object-cover object-bottom block md:hidden"
           />
           <img
             src={groupPyramidsImage}
             alt="Elite Be Superhuman event"
             className="hidden md:block w-full h-full object-cover object-center"
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent md:hidden" />
           <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
         </motion.div>
 
-        <div className="relative z-10 text-center md:text-left px-6 sm:px-10 md:px-16 md:max-w-3xl py-10 md:py-32 md:min-h-[90vh] md:flex md:items-center">
+        <div className="relative z-10 text-center md:text-left px-6 sm:px-10 md:px-16 md:max-w-3xl min-h-[85vh] flex items-end pb-10 md:items-center md:pb-0 md:py-32 md:min-h-[90vh]">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
