@@ -226,10 +226,10 @@ export default function Programme() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.7, delay: 0 }}
             className="rounded-3xl overflow-hidden flex flex-col"
-            style={{ background: "#1a1208", border: "1px solid rgba(211,146,34,0.25)" }}
+            style={{ background: "#FDF6E9", border: "1px solid rgba(211,146,34,0.25)" }}
           >
             <div className="px-8 pt-8 pb-6" style={{ borderBottom: "1px solid rgba(211,146,34,0.2)" }}>
-              <h3 className="text-xl md:text-2xl font-bold leading-snug text-white">What You Experience</h3>
+              <h3 className="text-xl md:text-2xl font-bold leading-snug" style={{ color: "#1a1208" }}>What You Experience</h3>
             </div>
             <div className="px-8 py-7 flex flex-col flex-1">
               <ul className="space-y-3 flex-1 mb-6">
@@ -239,7 +239,7 @@ export default function Programme() {
                   "Immersive energy work that shifts your state and rewires your nervous system instantly",
                   "Powerful activations, meditations, and energy protocols to lock it all in",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm leading-snug text-white/80">
+                  <li key={item} className="flex items-start gap-2 text-sm leading-snug" style={{ color: "#3d2f1a" }}>
                     <span style={{ color: "#d39222" }} className="shrink-0 mt-0.5">●</span>
                     {item}
                   </li>
@@ -258,10 +258,10 @@ export default function Programme() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.7, delay: 0.1 }}
             className="rounded-3xl overflow-hidden flex flex-col"
-            style={{ background: "transparent", border: "1px solid #d39222", boxShadow: "0 8px 40px rgba(211,146,34,0.15)" }}
+            style={{ background: "#FDF6E9", border: "1px solid #d39222", boxShadow: "0 8px 40px rgba(211,146,34,0.15)" }}
           >
             <div className="px-8 pt-8 pb-6" style={{ borderBottom: "1px solid rgba(211,146,34,0.3)" }}>
-              <h3 className="text-xl md:text-2xl font-bold leading-snug text-white">What You Walk Away With</h3>
+              <h3 className="text-xl md:text-2xl font-bold leading-snug" style={{ color: "#1a1208" }}>What You Walk Away With</h3>
             </div>
             <div className="px-8 py-7 flex flex-col flex-1">
               <ul className="space-y-3 flex-1 mb-6">
@@ -271,7 +271,7 @@ export default function Programme() {
                   "You align your health, wealth & relationships with your dream life",
                   "You master state-shifting breathwork and energetic resets on demand",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm leading-snug text-white/80">
+                  <li key={item} className="flex items-start gap-2 text-sm leading-snug" style={{ color: "#3d2f1a" }}>
                     <span style={{ color: "#d39222" }} className="shrink-0 mt-0.5">●</span>
                     {item}
                   </li>
@@ -290,10 +290,10 @@ export default function Programme() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.7, delay: 0.2 }}
             className="rounded-3xl overflow-hidden flex flex-col"
-            style={{ background: "#1a1208", border: "1px solid rgba(211,146,34,0.25)" }}
+            style={{ background: "#FDF6E9", border: "1px solid rgba(211,146,34,0.25)" }}
           >
             <div className="px-8 pt-8 pb-6" style={{ borderBottom: "1px solid rgba(211,146,34,0.2)" }}>
-              <h3 className="text-xl md:text-2xl font-bold leading-snug text-white">Who This Is For</h3>
+              <h3 className="text-xl md:text-2xl font-bold leading-snug" style={{ color: "#1a1208" }}>Who This Is For</h3>
             </div>
             <div className="px-8 py-7 flex flex-col flex-1">
               <ul className="space-y-3 flex-1 mb-6">
@@ -303,7 +303,7 @@ export default function Programme() {
                   "You're ready to align health, wealth, and energy",
                   "You're tired of temporary highs, chasing clarity, or collapsing under pressure",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm leading-snug text-white/80">
+                  <li key={item} className="flex items-start gap-2 text-sm leading-snug" style={{ color: "#3d2f1a" }}>
                     <span style={{ color: "#d39222" }} className="shrink-0 mt-0.5">●</span>
                     {item}
                   </li>
