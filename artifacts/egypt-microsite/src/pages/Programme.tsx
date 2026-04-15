@@ -224,25 +224,18 @@ export default function Programme() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.7 }}
-            className="relative rounded-3xl overflow-hidden shadow-xl"
+            className="rounded-3xl p-8 sm:p-10"
+            style={{ backgroundColor: "#FDF6E9", border: "1px solid rgba(211,146,34,0.25)" }}
           >
-            <img
-              src={brainScanImg}
-              alt="Live brain scan during the event"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/90 via-[#0a1628]/60 to-[#0a1628]/30" />
-            <div className="relative p-8 sm:p-10 flex flex-col justify-end min-h-[320px] sm:min-h-[360px]">
-              <h3
-                className="text-xl sm:text-2xl font-bold italic mb-4"
-                style={{ color: "#F3D696" }}
-              >
-                We've Conducted Live Brain Scans
-              </h3>
-              <p className="text-white/90 text-sm sm:text-base leading-relaxed">
-                After just hours of this work, participants showed measurable decreases in beta brainwaves associated with stress and overthinking, along with significant increases in theta and delta brainwaves linked to healing, intuition, and deep nervous system regulation.
-              </p>
-            </div>
+            <h3
+              className="text-xl sm:text-2xl font-bold italic mb-4"
+              style={{ color: "#d39222" }}
+            >
+              We've Conducted Live Brain Scans
+            </h3>
+            <p className="text-sm sm:text-base leading-relaxed" style={{ color: "#3d2f1a" }}>
+              After just hours of this work, participants showed measurable decreases in beta brainwaves associated with stress and overthinking, along with significant increases in theta and delta brainwaves linked to healing, intuition, and deep nervous system regulation.
+            </p>
           </motion.div>
 
           <motion.div
@@ -250,28 +243,21 @@ export default function Programme() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="relative rounded-3xl overflow-hidden shadow-xl"
+            className="rounded-3xl p-8 sm:p-10"
+            style={{ backgroundColor: "#FDF6E9", border: "1px solid rgba(211,146,34,0.25)" }}
           >
-            <img
-              src={impactImg}
-              alt="The measurable impact of the work"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/90 via-[#0a1628]/60 to-[#0a1628]/30" />
-            <div className="relative p-8 sm:p-10 flex flex-col justify-end min-h-[320px] sm:min-h-[360px]">
-              <h3
-                className="text-xl sm:text-2xl font-bold italic mb-4"
-                style={{ color: "#F3D696" }}
-              >
-                The Impact
-              </h3>
-              <p className="text-white/90 text-sm sm:text-base leading-relaxed mb-4">
-                These shifts create a stable internal foundation for emotional resilience, clearer thinking, faster recovery, and a stronger sense of presence.
-              </p>
-              <p className="text-white/90 text-sm sm:text-base leading-relaxed">
-                The brain, heart & energy enter coherence, your body self-regulates. From that state anything you want to create happens ten fold.
-              </p>
-            </div>
+            <h3
+              className="text-xl sm:text-2xl font-bold italic mb-4"
+              style={{ color: "#d39222" }}
+            >
+              The Impact
+            </h3>
+            <p className="text-sm sm:text-base leading-relaxed mb-4" style={{ color: "#3d2f1a" }}>
+              These shifts create a stable internal foundation for emotional resilience, clearer thinking, faster recovery, and a stronger sense of presence.
+            </p>
+            <p className="text-sm sm:text-base leading-relaxed" style={{ color: "#3d2f1a" }}>
+              The brain, heart & energy enter coherence, your body self-regulates. From that state anything you want to create happens ten fold.
+            </p>
           </motion.div>
         </div>
       </div>
