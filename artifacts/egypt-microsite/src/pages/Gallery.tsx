@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import groupPyramidsImage from "@/assets/group-pyramids.png";
-import womanTempleImg from "@/assets/woman-temple-prayer.png";
-import jerryTempleImg from "@/assets/jerry-temple.png";
+import thumb1Img from "@assets/community-group-ORD4DYoj_1776153736899.jpg";
+import thumb2Img from "@assets/Elite_Be_Superhuman_11-scaled_1776168428466.webp";
+import thumb3Img from "@assets/Elite_Be_Superhuman_13-scaled_1776168740417.webp";
 
 const transformationVideos = [
   { id: 1, src: "https://player.vimeo.com/video/1161766582", title: "Transformation Story 1" },
@@ -17,14 +17,14 @@ const transformationVideos = [
 
 const videoTestimonials = [
   {
-    thumbnail: groupPyramidsImage,
+    thumbnail: thumb1Img,
     name: "Caesar",
     context: "He came in a wheelchair. He stood up and walked out under his own power.",
     quote: "Caesar came in a wheelchair. He stood up and walked out under his own power.",
     hasVideo: true,
   },
   {
-    thumbnail: womanTempleImg,
+    thumbnail: thumb2Img,
     name: "Linda",
     location: "Canada",
     quote:
@@ -32,7 +32,7 @@ const videoTestimonials = [
     hasVideo: true,
   },
   {
-    thumbnail: jerryTempleImg,
+    thumbnail: thumb3Img,
     name: "Susan",
     location: "Business Owner",
     quote:
