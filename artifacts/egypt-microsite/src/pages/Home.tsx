@@ -16,6 +16,7 @@ import guaranteeImg from "@assets/Elite_Be_Superhuman_11-scaled_1776177221392.we
 import card6Img from "@assets/Superhuman-Blueprint-scaled_1776169771254.webp";
 import card7Img from "@assets/Program-and-step-3-scaled_1776166006733.webp";
 import card8Img from "@assets/Elite_Be_Superhuman_13-scaled_1776168740417.webp";
+import jerrySargeantImg from "@assets/jerry-sargeant-RqwmxHoJ_1776241732960.jpeg";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -535,11 +536,10 @@ export default function Home() {
               />
               <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-square">
                 <img
-                  src={tribeCirclePyramidImg}
-                  alt="Jerry Sargeant"
+                  src={jerrySargeantImg}
+                  alt="Jerry Sargeant — Forbes Cover"
                   className="w-full h-full object-cover object-center"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               </div>
             </motion.div>
 
