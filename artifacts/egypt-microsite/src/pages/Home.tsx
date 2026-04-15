@@ -192,7 +192,7 @@ export default function Home() {
         </div>
       </section>
       {/* ─── HERO VIDEO ─── */}
-      <section className="py-24 md:py-32 px-4 bg-background">
+      <section className="pt-0 pb-24 md:pb-32 px-4 bg-background">
         <div className="max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-12"
