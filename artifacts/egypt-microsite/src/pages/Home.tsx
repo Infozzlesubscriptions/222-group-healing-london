@@ -909,7 +909,7 @@ export default function Home() {
         </div>
       </section>
       {/* ─── EVENT DETAILS ─── */}
-      <section className="pt-12 pb-16 md:pt-16 md:pb-20 px-4" style={{ backgroundColor: "#1a1208" }}>
+      <section className="pt-12 pb-16 md:pt-16 md:pb-20 px-4" style={{ backgroundColor: "#FDF6E9" }}>
         <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -919,7 +919,7 @@ export default function Home() {
           >
             <div className="text-center mb-10">
               <span className="tracking-[0.35em] text-xs font-bold uppercase block mb-3" style={{ color: "#d39222" }}>Practical Information</span>
-              <h2 className="text-2xl md:text-4xl font-bold text-white leading-tight">Event Details</h2>
+              <h2 className="text-2xl md:text-4xl font-bold leading-tight" style={{ color: "#1a1208" }}>Event Details</h2>
               <div className="h-px w-16 mx-auto mt-5" style={{ backgroundColor: "#d39222" }} />
             </div>
 
@@ -936,18 +936,18 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="rounded-2xl p-5 text-center"
-                  style={{ backgroundColor: "rgba(211,146,34,0.08)", border: "1px solid rgba(211,146,34,0.2)" }}
+                  className="rounded-2xl p-5 text-center bg-white/60"
+                  style={{ border: "1px solid rgba(211,146,34,0.2)" }}
                 >
                   <div className="text-2xl mb-3">{item.icon}</div>
                   <p className="text-xs font-bold uppercase tracking-[0.2em] mb-2" style={{ color: "#d39222" }}>{item.label}</p>
-                  <p className="text-white/80 text-sm leading-relaxed">{item.value}</p>
+                  <p className="text-sm leading-relaxed" style={{ color: "#3d2f1a" }}>{item.value}</p>
                 </motion.div>
               ))}
             </div>
 
             <div className="text-center mt-10">
-              <p className="text-white/60 text-sm">
+              <p className="text-sm" style={{ color: "#7a6040" }}>
                 Got questions?{" "}
                 <a
                   href="mailto:admin@starmagichealing.org"
