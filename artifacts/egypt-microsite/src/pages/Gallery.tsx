@@ -186,30 +186,14 @@ export default function Gallery() {
         </motion.div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-            { id: "1161766582", title: "Transformation Story 1" },
-            { id: "1161766314", title: "Transformation Story 2" },
-            { id: "1161766538", title: "Transformation Story 3" },
-            { id: "1161766020", title: "Transformation Story 4" },
-            { id: "1161765970", title: "Transformation Story 5" },
-            { id: "1161766248", title: "Transformation Story 6" },
+            { id: "1161766582", title: "Transformation Story 1", thumb: "https://i.vimeocdn.com/video/2117272081-d3a83b8ce1886924da8b879a25d7846c3aba8789322839650ee795ea7d36e563-d_640" },
+            { id: "1161766314", title: "Transformation Story 2", thumb: "https://i.vimeocdn.com/video/2118346175-eebec97fd64505d46d4f3d3368fd775d7141a71f58cf756faad9a0d173d2686c-d_640" },
+            { id: "1161766538", title: "Transformation Story 3", thumb: "https://i.vimeocdn.com/video/2117272103-83769dc126ddeb04de74cc07d79b12eacb4f3c026e0eedab35866eb5f0d6224f-d_640" },
+            { id: "1161766020", title: "Transformation Story 4", thumb: "https://i.vimeocdn.com/video/2118346301-9c69ba699141743126f2f97894b86c98aae46b7d949e2d285f5e7e9a5b299398-d_640" },
+            { id: "1161765970", title: "Transformation Story 5", thumb: "https://i.vimeocdn.com/video/2118346745-f63f1f7f20897c7b9cbe25e1d1f73dbbcaf535d611c6592bec16aeccecc9d73c-d_640" },
+            { id: "1161766248", title: "Transformation Story 6", thumb: "https://i.vimeocdn.com/video/2118346583-33e6a1ef376834a2b22629ffcb489bbc32cee2e12579608a92d044f832c6112b-d_640" },
           ].map((video, i) => (
-            <motion.div
-              key={video.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="rounded-2xl overflow-hidden shadow-lg border border-border/30"
-              style={{ aspectRatio: "16/9" }}
-            >
-              <iframe
-                src={`https://player.vimeo.com/video/${video.id}?badge=0&autopause=0&player_id=0&app_id=58479`}
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                className="w-full h-full"
-                title={video.title}
-                style={{ border: 0 }}
-              />
-            </motion.div>
+            <TransformationVideoCard key={video.id} video={video} index={i} />
           ))}
         </div>
       </section>
