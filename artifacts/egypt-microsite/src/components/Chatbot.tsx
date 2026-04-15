@@ -8,17 +8,17 @@ const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
 const API = `${BASE}/api`;
 
 const SUGGESTED = [
-  "What's included in the price?",
+  "What's included in each ticket?",
   "How do I secure my place?",
-  "What sacred sites will we visit?",
-  "Is this right for beginners?",
+  "Do I need prior experience?",
+  "Is there a money-back guarantee?",
 ];
 
 async function createConversation(): Promise<number> {
   const res = await fetch(`${API}/openai/conversations`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ title: "Egypt 2027 Chatbot" }),
+    body: JSON.stringify({ title: "Elite Be Superhuman Chatbot" }),
   });
   const data = await res.json();
   return data.id;
@@ -170,10 +170,10 @@ export function Chatbot() {
               className="px-5 py-4 flex items-center gap-3 shrink-0"
               style={{ background: "linear-gradient(135deg, #d39222, #F3D696, #d39222)" }}
             >
-              <div className="w-9 h-9 rounded-full bg-[#1a1208]/20 flex items-center justify-center text-lg shrink-0">☥</div>
+              <div className="w-9 h-9 rounded-full bg-[#1a1208]/20 flex items-center justify-center text-lg shrink-0">✦</div>
               <div className="flex-1 min-w-0">
-                <p className="font-bold text-[#1a1208] text-sm leading-none">Egypt 2027 Assistant</p>
-                <p className="text-[#1a1208]/70 text-xs mt-0.5">Ask me anything about the journey</p>
+                <p className="font-bold text-[#1a1208] text-sm leading-none">Elite Be Superhuman</p>
+                <p className="text-[#1a1208]/70 text-xs mt-0.5">Ask me anything about the event</p>
               </div>
               <div className="w-2 h-2 rounded-full bg-green-600 shrink-0" title="Online" />
             </div>
@@ -183,9 +183,9 @@ export function Chatbot() {
               {messages.length === 0 && (
                 <div className="text-center py-4">
                   <div className="text-primary text-3xl mb-3">✦</div>
-                  <p className="text-foreground font-semibold text-sm mb-1">Welcome, dear traveller</p>
+                  <p className="text-foreground font-semibold text-sm mb-1">Welcome to Elite Be Superhuman</p>
                   <p className="text-muted-foreground text-xs leading-relaxed">
-                    I'm here to answer your questions about the Cosmic Ascension Tour of Egypt 2027.
+                    I'm here to answer your questions about the 3-day live transformation event in London.
                   </p>
                 </div>
               )}
@@ -195,7 +195,7 @@ export function Chatbot() {
                   {msg.role === "assistant" && (
                     <div className="w-6 h-6 rounded-full shrink-0 mt-0.5 mr-2 flex items-center justify-center text-xs"
                       style={{ background: "linear-gradient(135deg, #d39222, #F3D696)" }}>
-                      ☥
+                      ✦
                     </div>
                   )}
                   <div
@@ -251,7 +251,7 @@ export function Chatbot() {
                 ref={inputRef}
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="Ask about the journey…"
+                placeholder="Ask about the event…"
                 disabled={streaming}
                 className="flex-1 bg-secondary/40 border border-border/50 rounded-xl px-4 py-2 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-primary/50 disabled:opacity-50 transition-colors"
               />

@@ -6,32 +6,39 @@ import { openai } from "@workspace/integrations-openai-ai-server";
 
 const router = Router();
 
-const SYSTEM_PROMPT = `You are a concise, warm assistant for the Cosmic Ascension Tour of Egypt — a 15-day sacred pilgrimage led by Jerry Sargeant (Star Magic), 16th–30th March 2027.
+const SYSTEM_PROMPT = `You are a concise, warm assistant for Elite Be Superhuman — a 3-day live personal transformation event led by Jerry Sargeant (Star Magic) in London, UK, May 15–17, 2026.
 
 RESPONSE RULES (follow strictly):
 - Answer in 1–3 short sentences OR a tight bullet list (3–5 bullets max).
 - Never write long paragraphs. Be direct and clear.
-- Warm, heart-centred tone — never salesy.
-- If asked to book: direct to "Reserve Your Place" or "Book a Discovery Call" on the site.
+- Warm, confident, heart-centred tone — never salesy.
+- If asked to book: direct to "Secure Your Place" or the Booking page on the site.
+- If asked about refunds: mention the 100% money-back guarantee — if by lunchtime on day one it's not what they expected, they get a full refund on the spot, no questions asked.
 
 Key facts:
-- Dates: 16–30 March 2027 (15 days)
-- Price: £8,444 pp · Deposit: £1,500 · Balance in flexible instalments
-- Group: 25–40 people max
-- Included: 7 private-access site tours, 7-day Nile cruise, 4★/5★ hotels, all meals, internal flights, transfers
-- Not included: international flights, travel insurance, visa, €150 gratuity, personal expenses
-- Rooms: shared (15 private upgrades available — sell fast)
-- Sites: Great Pyramid (4 hrs private), Sphinx, Karnak, Luxor, Abu Simbel, Isis & Horus Temples, Valley of the Kings, Saqqara, Egyptian Museum & more
-- Daily: breathwork, Qigong, group activations, meditations, sharing circles
-- Led by Jerry Sargeant — present all 15 days
-- Optional: Sinai extension (extra cost), hot air balloon over Valley of the Kings`;
+- Event: Elite Be Superhuman — 3-day live transformation experience
+- Dates: May 15–17, 2026 (3 days, 9am–6pm each day with 1 hour lunch break)
+- Location: Radisson Blu Hotel, London Heathrow, 140 Bath Road, Hayes, Middlesex, UB3 5AW
+- Accommodation & food: NOT included
+- Led by Jerry Sargeant — 20+ years experience, 500,000+ lives transformed across 85+ countries
+- Pricing (Early Bird):
+  • General Admission: £366 (was £444) — full 3-day access, breathwork & energy sessions, take-home protocol
+  • VIP Access: £799 (was £999) — everything in GA + priority seating, VIP networking, bonus materials, post-event integration call
+  • Elite Package: £1,222 (was £1,555) — everything in VIP + 1-on-1 session with Jerry, lifetime community access, personal roadmap session
+- Payment plans available at checkout
+- What happens: breathwork, Qigong, energy work, nervous system recalibration, meditations, activations, performance psychology, consciousness work
+- What you walk away with: personalised Superhuman protocol, state-shifting breathwork techniques, nervous system reset tools, alignment of health/wealth/relationships
+- Expert speakers: Dr. Merlin Sheldrake, Dr. Maher, Dr. Angela
+- No prior experience in meditation or breathwork needed — everything is guided
+- Guarantee: 100% money back if not satisfied by lunchtime on day one
+- Contact: admin@starmagichealing.org`;
 
 router.post("/conversations", async (req, res) => {
   try {
     const { title } = req.body as { title?: string };
     const [conv] = await db
       .insert(conversations)
-      .values({ title: title || "Egypt 2027 Enquiry" })
+      .values({ title: title || "Elite Be Superhuman Enquiry" })
       .returning();
     res.status(201).json(conv);
   } catch {
