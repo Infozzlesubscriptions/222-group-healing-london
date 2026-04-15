@@ -146,13 +146,16 @@ export default function Home() {
                 </button>
               </a>
               <Link href="/programme" className="w-full sm:w-auto">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="w-full sm:w-auto border-white/60 text-white hover:bg-white/10 font-semibold text-base px-8 py-2 tracking-wide cursor-pointer"
+                <button
+                  className="w-full sm:w-auto text-base font-bold px-8 py-3 rounded-lg tracking-wide transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97] cursor-pointer"
+                  style={{
+                    background: "transparent",
+                    color: "#ffffff",
+                    border: "2px solid rgba(211,146,34,0.8)",
+                  }}
                 >
                   See What's Inside
-                </Button>
+                </button>
               </Link>
             </div>
           </motion.div>
