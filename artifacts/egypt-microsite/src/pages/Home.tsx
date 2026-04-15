@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import groupPyramidsImage from "@assets/ee6d0798-a474-4b9c-aaae-8b4e67b60758_1776260776950.jfif";
+import groupPyramidsImage from "@assets/freepik_wide-cinematic-banner-of-_2791068153_1776265285999.jpeg";
 import tribeCirclePyramidImg from "@assets/Jerry-Sargeant-One-Love_1776160920406.webp";
 import spiritualActivationImg from "@assets/image_1776160809528.png";
 import card1Img from "@assets/Brain-Scan-1-scaled_1776168428464.webp";
@@ -87,36 +87,37 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background w-full overflow-hidden">
       {/* ─── HERO ─── */}
-      <section className="relative flex flex-col items-center overflow-hidden" style={{ backgroundColor: "#0a0e1a" }}>
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <motion.div
-          className="w-full flex justify-center z-0"
+          className="absolute inset-0 z-0"
           style={{ y: y1, opacity }}
         >
           <img
             src={groupPyramidsImage}
             alt="Elite Be Superhuman event"
-            className="w-full max-w-[1400px] h-auto block mx-auto"
+            className="w-full h-full object-cover object-center"
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
         </motion.div>
 
-        <div className="relative z-10 text-center px-4 max-w-7xl mx-auto py-12 md:py-16">
+        <div className="relative z-10 text-left px-6 sm:px-10 md:px-16 max-w-3xl py-24 md:py-32">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            <span className="text-sm sm:text-base md:text-lg font-sans tracking-[0.2em] sm:tracking-[0.35em] mb-3 block uppercase text-[#ffffff] font-bold">
+            <span className="text-sm sm:text-base md:text-lg font-sans tracking-[0.2em] sm:tracking-[0.35em] mb-4 block uppercase text-[#ffffff] font-bold">
               Jerry Sargeant Presents
             </span>
-            <h1 className="text-[clamp(2rem,7vw,5.5rem)] font-sans text-white font-bold mb-3 drop-shadow-2xl leading-tight">
-              ELITE BE SUPERHUMAN
+            <h1 className="text-[clamp(2.5rem,7vw,5.5rem)] font-sans text-white font-bold mb-4 drop-shadow-2xl leading-tight">
+              ELITE BE<br />SUPERHUMAN
             </h1>
-            <p className="text-sm sm:text-base md:text-xl text-white/90 mb-3 max-w-2xl mx-auto leading-relaxed drop-shadow-md px-2">
+            <p className="text-sm sm:text-base md:text-xl text-white/90 mb-4 max-w-xl leading-relaxed drop-shadow-md">
               A 3-day live experience that rewires your mind, rebuilds your body, and unlocks the version of you the world has been waiting for.
             </p>
-            <p className="text-xs sm:text-sm md:text-base text-primary font-semibold tracking-wider sm:tracking-widest uppercase mb-8 px-2">London, UK · May 15–17, 2026 · 3 Days · Limited Places</p>
+            <p className="text-xs sm:text-sm md:text-base text-primary font-semibold tracking-wider sm:tracking-widest uppercase mb-10">London, UK · May 15–17, 2026 · 3 Days · Limited Places</p>
 
-            <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 items-start">
               <a
                 href="#pricing"
                 className="w-full sm:w-auto"
