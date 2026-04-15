@@ -3,17 +3,35 @@ import { useState, useRef, useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 
-function TransformationVideoCard({ video, index }: { video: typeof transformationVideos[0]; index: number }) {
-  const [playing, setPlaying] = useState(false);
+function VideoThumbnail({ vimeoId, thumbnailUrl }: { vimeoId: string; thumbnailUrl?: string }) {
   const [thumbLoaded, setThumbLoaded] = useState(false);
   const [thumbError, setThumbError] = useState(false);
+  const src = thumbnailUrl || `https://vumbnail.com/${vimeoId}.jpg`;
+
+  if (thumbError || !thumbnailUrl) {
+    return null;
+  }
+
+  return (
+    <img
+      src={src}
+      alt=""
+      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${thumbLoaded ? "opacity-100" : "opacity-0"}`}
+      onLoad={() => setThumbLoaded(true)}
+      onError={() => setThumbError(true)}
+    />
+  );
+}
+
+function TransformationVideoCard({ video, index }: { video: typeof transformationVideos[0]; index: number }) {
+  const [playing, setPlaying] = useState(false);
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="rounded-2xl overflow-hidden shadow-lg border border-border/30 cursor-pointer"
+      className="rounded-2xl overflow-hidden shadow-lg border border-border/30 cursor-pointer group"
       style={{ aspectRatio: "16/9" }}
       onClick={() => setPlaying(true)}
     >
@@ -27,16 +45,8 @@ function TransformationVideoCard({ video, index }: { video: typeof transformatio
         />
       ) : (
         <div className="relative w-full h-full" style={{ background: "linear-gradient(135deg, #1a1208 0%, #2a1f10 50%, #0a0e1a 100%)" }}>
-          {!thumbError && (
-            <img
-              src={`https://vumbnail.com/${video.vimeoId}.jpg`}
-              alt={video.title}
-              className={`w-full h-full object-cover transition-opacity duration-300 ${thumbLoaded ? "opacity-100" : "opacity-0"}`}
-              onLoad={() => setThumbLoaded(true)}
-              onError={() => setThumbError(true)}
-            />
-          )}
-          <div className="absolute inset-0 bg-black/30" />
+          {video.thumbnail && <VideoThumbnail vimeoId={video.vimeoId} thumbnailUrl={video.thumbnail} />}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
             <motion.div
               whileHover={{ scale: 1.1 }}
@@ -50,9 +60,11 @@ function TransformationVideoCard({ video, index }: { video: typeof transformatio
                 <path d="M8 5v14l11-7z" />
               </svg>
             </motion.div>
-            {thumbError && (
-              <span className="text-white/70 text-xs font-medium tracking-wide">{video.title}</span>
-            )}
+            <span className="text-white/80 text-xs font-medium tracking-wide">{video.title}</span>
+          </div>
+          <div className="absolute top-3 right-3 flex items-center gap-1.5 bg-black/40 backdrop-blur-sm rounded-full px-3 py-1">
+            <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
+            <span className="text-white/80 text-[10px] font-medium uppercase tracking-wider">Video</span>
           </div>
         </div>
       )}
@@ -61,12 +73,12 @@ function TransformationVideoCard({ video, index }: { video: typeof transformatio
 }
 
 const transformationVideos = [
-  { id: 1, vimeoId: "1161766582", title: "Transformation Story 1" },
-  { id: 2, vimeoId: "1161766314", title: "Transformation Story 2" },
-  { id: 3, vimeoId: "1161766538", title: "Transformation Story 3" },
-  { id: 4, vimeoId: "1161766020", title: "Transformation Story 4" },
-  { id: 5, vimeoId: "1161765970", title: "Transformation Story 5" },
-  { id: 6, vimeoId: "1161766248", title: "Transformation Story 6" },
+  { id: 1, vimeoId: "1161766582", title: "Transformation Story 1", thumbnail: "" },
+  { id: 2, vimeoId: "1161766314", title: "Transformation Story 2", thumbnail: "" },
+  { id: 3, vimeoId: "1161766538", title: "Transformation Story 3", thumbnail: "" },
+  { id: 4, vimeoId: "1161766020", title: "Transformation Story 4", thumbnail: "" },
+  { id: 5, vimeoId: "1161765970", title: "Transformation Story 5", thumbnail: "" },
+  { id: 6, vimeoId: "1161766248", title: "Transformation Story 6", thumbnail: "" },
 ];
 
 const videoTestimonials = [
@@ -139,8 +151,6 @@ const writtenTestimonials = [
 
 function VideoCard({ video, index }: { video: typeof videoTestimonials[0]; index: number }) {
   const [playing, setPlaying] = useState(false);
-  const [thumbLoaded, setThumbLoaded] = useState(false);
-  const [thumbError, setThumbError] = useState(false);
 
   return (
     <motion.div
@@ -153,7 +163,7 @@ function VideoCard({ video, index }: { video: typeof videoTestimonials[0]; index
       <div
         className="relative aspect-video overflow-hidden cursor-pointer"
         style={{ background: "linear-gradient(135deg, #1a1208 0%, #2a1f10 50%, #0a0e1a 100%)" }}
-        onClick={() => setPlaying(true)}
+        onClick={() => !playing && setPlaying(true)}
       >
         {playing ? (
           <iframe
@@ -165,29 +175,25 @@ function VideoCard({ video, index }: { video: typeof videoTestimonials[0]; index
           />
         ) : (
           <>
-            {!thumbError && (
-              <img
-                src={`https://vumbnail.com/${video.vimeoId}.jpg`}
-                alt={video.name}
-                className={`absolute inset-0 w-full h-full object-cover object-center transition-all duration-700 hover:scale-105 ${thumbLoaded ? "opacity-100" : "opacity-0"}`}
-                onLoad={() => setThumbLoaded(true)}
-                onError={() => setThumbError(true)}
-              />
-            )}
-            <div className="absolute inset-0 bg-black/30" />
-            <div className="absolute inset-0 flex items-center justify-center">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
               <motion.div
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center shadow-2xl"
+                className="w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center shadow-2xl"
                 style={{
                   background: "linear-gradient(135deg, #d39222 0%, #FFECBA 50%, #d39222 100%)",
                 }}
               >
-                <svg viewBox="0 0 24 24" className="w-8 h-8 md:w-10 md:h-10 ml-1" fill="#1a1208">
+                <svg viewBox="0 0 24 24" className="w-7 h-7 md:w-8 md:h-8 ml-1" fill="#1a1208">
                   <path d="M8 5v14l11-7z" />
                 </svg>
               </motion.div>
+              <span className="text-white/70 text-xs font-medium">{video.name}'s Story</span>
+            </div>
+            <div className="absolute top-3 right-3 flex items-center gap-1.5 bg-black/40 backdrop-blur-sm rounded-full px-3 py-1">
+              <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
+              <span className="text-white/80 text-[10px] font-medium uppercase tracking-wider">Video</span>
             </div>
           </>
         )}

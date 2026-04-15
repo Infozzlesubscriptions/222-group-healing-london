@@ -5,8 +5,6 @@ import { Button } from "@/components/ui/button";
 
 function ExpertVideoCard({ expert, index }: { expert: { name: string; id: string }; index: number }) {
   const [playing, setPlaying] = useState(false);
-  const [thumbLoaded, setThumbLoaded] = useState(false);
-  const [thumbError, setThumbError] = useState(false);
 
   return (
     <motion.div
@@ -35,17 +33,8 @@ function ExpertVideoCard({ expert, index }: { expert: { name: string; id: string
           />
         ) : (
           <>
-            {!thumbError && (
-              <img
-                src={`https://vumbnail.com/${expert.id}.jpg`}
-                alt={`${expert.name} testimonial`}
-                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${thumbLoaded ? "opacity-100" : "opacity-0"}`}
-                onLoad={() => setThumbLoaded(true)}
-                onError={() => setThumbError(true)}
-              />
-            )}
-            <div className="absolute inset-0 bg-black/30" />
-            <div className="absolute inset-0 flex items-center justify-center">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
               <motion.div
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
@@ -59,6 +48,10 @@ function ExpertVideoCard({ expert, index }: { expert: { name: string; id: string
                 </svg>
               </motion.div>
             </div>
+            <div className="absolute top-3 right-3 flex items-center gap-1.5 bg-black/40 backdrop-blur-sm rounded-full px-3 py-1">
+              <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
+              <span className="text-white/80 text-[10px] font-medium uppercase tracking-wider">Video</span>
+            </div>
           </>
         )}
       </div>
@@ -66,6 +59,8 @@ function ExpertVideoCard({ expert, index }: { expert: { name: string; id: string
     </motion.div>
   );
 }
+
+const SCIENCE_THUMB = "https://i.vimeocdn.com/video/2034952591-c2b53df80aaa16561cdadff839e197e40faf32d27c3e63bd953b65eecc0b967d-d_640";
 
 function ScienceVideoCard() {
   const [playing, setPlaying] = useState(false);
@@ -90,14 +85,14 @@ function ScienceVideoCard() {
         <div className="relative w-full h-full">
           {!thumbError && (
             <img
-              src="https://vumbnail.com/1099884785.jpg"
+              src={SCIENCE_THUMB}
               alt="The Science Behind It All"
-              className={`w-full h-full object-cover transition-opacity duration-300 ${thumbLoaded ? "opacity-100" : "opacity-0"}`}
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${thumbLoaded ? "opacity-100" : "opacity-0"}`}
               onLoad={() => setThumbLoaded(true)}
               onError={() => setThumbError(true)}
             />
           )}
-          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
           <div className="absolute inset-0 flex items-center justify-center">
             <motion.div
               whileHover={{ scale: 1.1 }}
@@ -111,6 +106,10 @@ function ScienceVideoCard() {
                 <path d="M8 5v14l11-7z" />
               </svg>
             </motion.div>
+          </div>
+          <div className="absolute top-3 right-3 flex items-center gap-1.5 bg-black/40 backdrop-blur-sm rounded-full px-3 py-1">
+            <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
+            <span className="text-white/80 text-[10px] font-medium uppercase tracking-wider">Video</span>
           </div>
         </div>
       )}

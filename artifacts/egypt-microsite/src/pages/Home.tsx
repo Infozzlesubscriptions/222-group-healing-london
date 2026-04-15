@@ -21,11 +21,6 @@ import jerrySargeantImg from "@assets/wmremove-transformed_1776254411149.jpeg";
 
 export default function Home() {
   const [jerryVideoPlaying, setJerryVideoPlaying] = useState(false);
-  const [caesarPlaying, setCaesarPlaying] = useState(false);
-  const [jerryThumbLoaded, setJerryThumbLoaded] = useState(false);
-  const [jerryThumbError, setJerryThumbError] = useState(false);
-  const [caesarThumbLoaded, setCaesarThumbLoaded] = useState(false);
-  const [caesarThumbError, setCaesarThumbError] = useState(false);
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 1000], [0, 300]);
   const opacity = useTransform(scrollY, [0, 500], [1, 0]);
@@ -252,17 +247,8 @@ export default function Home() {
                 />
               ) : (
                 <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, #1a1208 0%, #2a1f10 50%, #0a0e1a 100%)" }}>
-                  {!jerryThumbError && (
-                    <img
-                      src="https://vumbnail.com/1182092823.jpg"
-                      alt="Hear It From Jerry — Video Thumbnail"
-                      className={`w-full h-full object-cover transition-opacity duration-300 ${jerryThumbLoaded ? "opacity-100" : "opacity-0"}`}
-                      onLoad={() => setJerryThumbLoaded(true)}
-                      onError={() => setJerryThumbError(true)}
-                    />
-                  )}
-                  <div className="absolute inset-0 bg-black/30" />
-                  <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
                     <motion.div
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
@@ -275,6 +261,11 @@ export default function Home() {
                         <path d="M8 5v14l11-7z" />
                       </svg>
                     </motion.div>
+                    <span className="text-white/70 text-xs font-medium tracking-wide">Hear It From Jerry</span>
+                  </div>
+                  <div className="absolute top-3 right-3 flex items-center gap-1.5 bg-black/40 backdrop-blur-sm rounded-full px-3 py-1">
+                    <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
+                    <span className="text-white/80 text-[10px] font-medium uppercase tracking-wider">Video</span>
                   </div>
                 </div>
               )}
@@ -902,17 +893,8 @@ export default function Home() {
               style={{ border: "1px solid rgba(243,214,150,0.35)", aspectRatio: "16/9" }}
             >
               <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, #1a1208 0%, #2a1f10 50%, #0a0e1a 100%)" }}>
-                {!caesarThumbError && (
-                  <img
-                    src="https://vumbnail.com/1156009467.jpg"
-                    alt="Caesar's Testimonial — Video Thumbnail"
-                    className={`w-full h-full object-cover transition-opacity duration-300 ${caesarThumbLoaded ? "opacity-100" : "opacity-0"}`}
-                    onLoad={() => setCaesarThumbLoaded(true)}
-                    onError={() => setCaesarThumbError(true)}
-                  />
-                )}
-                <div className="absolute inset-0 bg-black/30" />
-                <div className="absolute inset-0 flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
@@ -925,6 +907,11 @@ export default function Home() {
                       <path d="M8 5v14l11-7z" />
                     </svg>
                   </motion.div>
+                  <span className="text-white/70 text-xs font-medium tracking-wide">Watch Caesar's Story</span>
+                </div>
+                <div className="absolute top-3 right-3 flex items-center gap-1.5 bg-black/40 backdrop-blur-sm rounded-full px-3 py-1">
+                  <div className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
+                  <span className="text-white/80 text-[10px] font-medium uppercase tracking-wider">Video</span>
                 </div>
               </div>
             </a>
