@@ -7,7 +7,7 @@ import logoSrc from "@assets/live_site_logo_black_(1)_1775484379388.webp";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/programme", label: "Programme" },
-  { href: "/gallery", label: "Gallery" },
+  { href: "/gallery", label: "Transformation Stories" },
   { href: "/testimonials", label: "Testimonials" },
   { href: "/faq", label: "FAQ" },
 ];
