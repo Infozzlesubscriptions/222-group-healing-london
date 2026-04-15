@@ -290,7 +290,7 @@ export default function Programme() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
             { name: "Dr. Merlin", id: "1161753909", thumbnail: "https://i.vimeocdn.com/video/2117255887-e8f0ee91b1183ee41f4960225142a4ac0a5464ecbfc081d845f6226bd0c73dc6-d_640" },
-            { name: "Dr. Maher",  id: "1161753427", thumbnail: ""  },
+            { name: "Dr. Maher",  id: "1161753427", thumbnail: "https://i.vimeocdn.com/video/2146327509-1c1528a5b386a647f534718a5ffa66336d5d3b20bb9d0ce0821be18ecc525fe4-d_640"  },
             { name: "Dr. Angela", id: "1161753289", thumbnail: "https://i.vimeocdn.com/video/2117253821-40dc7c9a4e00c76988bde58e3fad116d301c7c26f7752390aab98a63b85e6a9c-d_640" },
           ].map((expert, i) => (
             <ExpertVideoCard key={expert.name} expert={expert} index={i} />
