@@ -87,20 +87,20 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background w-full overflow-hidden">
       {/* ─── HERO ─── */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section className="relative flex flex-col md:block overflow-hidden" style={{ backgroundColor: "#0a0e1a" }}>
         <motion.div
-          className="absolute inset-0 z-0"
+          className="relative md:absolute md:inset-0 z-0 w-full"
           style={{ y: y1, opacity }}
         >
           <img
             src={groupPyramidsImage}
             alt="Elite Be Superhuman event"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-auto md:h-full md:object-cover md:object-center block"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
+          <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
         </motion.div>
 
-        <div className="relative z-10 text-left px-6 sm:px-10 md:px-16 max-w-3xl py-24 md:py-32">
+        <div className="relative z-10 text-center md:text-left px-6 sm:px-10 md:px-16 md:max-w-3xl py-10 md:py-32 md:min-h-[90vh] md:flex md:items-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -112,12 +112,12 @@ export default function Home() {
             <h1 className="text-[clamp(2.5rem,7vw,5.5rem)] font-sans text-white font-bold mb-4 drop-shadow-2xl leading-tight">
               ELITE BE<br />SUPERHUMAN
             </h1>
-            <p className="text-sm sm:text-base md:text-xl text-white/90 mb-4 max-w-xl leading-relaxed drop-shadow-md">
+            <p className="text-sm sm:text-base md:text-xl text-white/90 mb-4 max-w-xl md:max-w-xl mx-auto md:mx-0 leading-relaxed drop-shadow-md">
               A 3-day live experience that rewires your mind, rebuilds your body, and unlocks the version of you the world has been waiting for.
             </p>
-            <p className="text-xs sm:text-sm md:text-base text-primary font-semibold tracking-wider sm:tracking-widest uppercase mb-10">London, UK · May 15–17, 2026 · 3 Days · Limited Places</p>
+            <p className="text-xs sm:text-sm md:text-base text-primary font-semibold tracking-wider sm:tracking-widest uppercase mb-8 md:mb-10">London, UK · May 15–17, 2026 · 3 Days · Limited Places</p>
 
-            <div className="flex flex-col sm:flex-row gap-4 items-start">
+            <div className="flex flex-col sm:flex-row gap-4 items-center md:items-start justify-center md:justify-start">
               <a
                 href="#pricing"
                 className="w-full sm:w-auto"
