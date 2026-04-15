@@ -215,7 +215,7 @@ export default function FAQ() {
             </button>
           ))}
         </div>
-        <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 md:gap-3 mt-2 md:mt-3 max-w-2xl mx-auto">
+        <div className="flex justify-center gap-2 md:gap-3 mt-2 md:mt-3 max-w-2xl mx-auto">
           {faqCategories.slice(4).map((cat, ci) => (
             <button
               key={ci + 4}
