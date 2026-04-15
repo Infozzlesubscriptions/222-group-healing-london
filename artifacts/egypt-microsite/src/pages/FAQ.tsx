@@ -16,7 +16,7 @@ type FAQCategory = {
 
 const faqCategories: FAQCategory[] = [
   {
-    label: "General Information",
+    label: "General",
     items: [
       {
         q: "Who is this event for?",
@@ -33,7 +33,7 @@ const faqCategories: FAQCategory[] = [
     ],
   },
   {
-    label: "Experience & Participation",
+    label: "Experience",
     items: [
       {
         q: "Do I need prior experience in meditation or breathwork?",
@@ -50,7 +50,7 @@ const faqCategories: FAQCategory[] = [
     ],
   },
   {
-    label: "Safety & Preparation",
+    label: "Preparation",
     items: [
       {
         q: "Is this safe for everyone?",
@@ -63,7 +63,7 @@ const faqCategories: FAQCategory[] = [
     ],
   },
   {
-    label: "Booking & Payment",
+    label: "Booking",
     items: [
       {
         q: "Is there a payment plan?",
@@ -80,7 +80,7 @@ const faqCategories: FAQCategory[] = [
     ],
   },
   {
-    label: "The Event",
+    label: "Event",
     items: [
       {
         q: "Where is the event held?",
@@ -93,7 +93,7 @@ const faqCategories: FAQCategory[] = [
     ],
   },
   {
-    label: "Outcomes & Post-Event",
+    label: "Outcomes",
     items: [
       {
         q: "Will I receive anything after the event?",
@@ -106,7 +106,7 @@ const faqCategories: FAQCategory[] = [
     ],
   },
   {
-    label: "Professionals & Practical Benefits",
+    label: "Professionals",
     items: [
       {
         q: "Is this event suitable for professionals or entrepreneurs?",
@@ -115,7 +115,7 @@ const faqCategories: FAQCategory[] = [
     ],
   },
   {
-    label: "Mindset & Skepticism",
+    label: "Mindset",
     items: [
       {
         q: "What if I'm skeptical about this kind of work?",
@@ -196,19 +196,19 @@ export default function FAQ() {
 
       {/* Category Tabs */}
       <div className="px-4 max-w-4xl mx-auto mb-10">
-        <div className="flex overflow-x-auto pb-2 sm:pb-0 sm:flex-wrap sm:justify-center gap-2 md:gap-3 no-scrollbar">
+        <div className="flex flex-wrap justify-center gap-2 md:gap-3">
           {faqCategories.map((cat, ci) => (
             <button
               key={ci}
               onClick={() => { setActiveTab(ci); setOpenItems({}); }}
-              className={`px-3 sm:px-4 py-2 rounded-full text-[11px] sm:text-xs md:text-sm font-semibold tracking-wide transition-all duration-300 cursor-pointer border whitespace-nowrap shrink-0 sm:shrink ${
+              className={`px-4 sm:px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold tracking-wide transition-all duration-300 cursor-pointer shadow-sm ${
                 activeTab === ci
                   ? "text-[#1a1208] shadow-md"
-                  : "border-border/50 text-muted-foreground hover:border-primary/40 hover:text-primary bg-transparent"
+                  : "bg-card text-muted-foreground hover:text-primary border border-border/50 hover:border-primary/40"
               }`}
               style={activeTab === ci ? {
                 background: "linear-gradient(90deg, #d39222 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #d39222 100%)",
-                borderColor: "transparent",
+                border: "none",
               } : undefined}
             >
               {cat.label}
