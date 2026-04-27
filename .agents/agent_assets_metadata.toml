@@ -90,3 +90,39 @@ id = "7NNSrklBjIyncSLji3wjE"
 uri = "file://attached_assets/generated_images/who-this-is-for-illustration.png"
 type = "image"
 title = "golden energy transformation illustration"
+
+[[generated]]
+id = "BvKjyB_71aJ3Sf6DeaoR0"
+uri = "file://attached_assets/generated_images/feature_compressing_time.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "nTuBwOrmRdgFArLXoo45_"
+uri = "file://attached_assets/generated_images/feature_safety.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "rkPSAeV-iXkPnuN0_i5x5"
+uri = "file://attached_assets/generated_images/feature_dissolve_programming.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "hU6kZWVmV5TgWf-Ue9Q24"
+uri = "file://attached_assets/generated_images/feature_group_power.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "8jUgnhh2NG9nbvfa65qgK"
+uri = "file://attached_assets/generated_images/feature_health_abundance.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "x1b_QBHphcMi4u_be8ieu"
+uri = "file://attached_assets/generated_images/feature_planetary_gridwork.png"
+type = "image"
+title = "generated_image"

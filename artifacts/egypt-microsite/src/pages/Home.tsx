@@ -3,16 +3,16 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import { ChevronDown } from "lucide-react";
 import spiritualActivationImg from "@assets/GH-photo-2_1777272117708.png";
 import card1Img from "@assets/Brain-Scan-1-scaled_1776168428464.webp";
-import card4Img from "@assets/Elite_Be_Superhuman_11-scaled_1776168428466.webp";
-import card5Img from "@assets/event-overview_1776168428467.webp";
-import spiritualWarriorImg from "@assets/Spiritual-Warrior-Protocol-scaled_1776176043760.webp";
-import guaranteeImg from "@assets/Elite_Be_Superhuman_11-scaled_1776177221392.webp";
-import card6Img from "@assets/Superhuman-Blueprint-scaled_1776169771254.webp";
-import card7Img from "@assets/Program-and-step-3-scaled_1776166006733.webp";
+import card4Img from "@assets/generated_images/feature_compressing_time.png";
+import card5Img from "@assets/generated_images/feature_health_abundance.png";
+import spiritualWarriorImg from "@assets/generated_images/feature_safety.png";
+import guaranteeImg from "@assets/event-overview_1776168428467.webp";
+import card6Img from "@assets/generated_images/feature_dissolve_programming.png";
+import card7Img from "@assets/generated_images/feature_group_power.png";
 import card8Img from "@assets/Elite_Be_Superhuman_13-scaled_1776168740417.webp";
 import mobileHeroBanner from "@assets/freepik_wide-cinematic-banner-cal_2792714935_1776273619553.jpeg";
 import day2Img from "@assets/Program-and-step-3-scaled_1776166006733.webp";
-import day3Img from "@assets/Program-and-step-4-scaled_1776166120113.webp";
+import day3Img from "@assets/generated_images/feature_planetary_gridwork.png";
 
 const stats = [
   { value: "5 Hrs", label: "Radical Transformation" },
