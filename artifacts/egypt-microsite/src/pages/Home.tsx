@@ -658,7 +658,6 @@ export default function Home() {
           <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
             <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Secure Your Place</span>
             <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-4" style={{ color: "#1a1208" }}>222 Group Healing — London</h2>
-            <p className="text-muted-foreground text-lg leading-relaxed">5th &amp; 6th September 2026 · Two separate dates, choose yours</p>
             <div className="flex items-center justify-center gap-1.5 mt-6">
               <span className="w-6 h-0.5 rounded-full" style={{ backgroundColor: "#d39222" }} />
               <span className="w-2 h-2 rounded-full" style={{ backgroundColor: "#d39222" }} />
