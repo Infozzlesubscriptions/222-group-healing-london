@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import spiritualActivationImg from "@assets/image_1776160809528.png";
+import spiritualActivationImg from "@assets/GH-photo-2_1777272117708.png";
 import card1Img from "@assets/Brain-Scan-1-scaled_1776168428464.webp";
 import card4Img from "@assets/Elite_Be_Superhuman_11-scaled_1776168428466.webp";
 import card5Img from "@assets/event-overview_1776168428467.webp";
