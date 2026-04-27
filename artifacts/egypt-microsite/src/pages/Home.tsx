@@ -665,61 +665,53 @@ export default function Home() {
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {[
-              {
-                date: "5th September 2026",
-                day: "Saturday",
-                link: "https://buy.stripe.com/28E4gzbCU8pT8obd6L9Zm1a",
-              },
-              {
-                date: "6th September 2026",
-                day: "Sunday",
-                link: "https://buy.stripe.com/eVq4gz0Yg5dHawj3wb9Zm1b",
-              },
-            ].map((session, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                whileHover={{ scale: 1.03 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: i * 0.1 }}
-                className="flex flex-col px-7 py-9 rounded-3xl cursor-default"
-                style={{ border: "1px solid #d39222", backgroundColor: "#EDE5D5" }}
-              >
-                <p className="text-xs font-bold tracking-[0.2em] uppercase mb-2 text-center" style={{ color: "#d39222" }}>{session.day}</p>
-                <h3 className="text-lg font-bold mb-6 text-center" style={{ color: "#1a1208" }}>{session.date}</h3>
-                <div className="text-center mb-8">
-                  <div className="line-through text-sm mb-1" style={{ color: "#aaa" }}>£999</div>
-                  <div className="text-5xl font-extrabold" style={{ color: "#d39222" }}>£888</div>
-                  <div className="text-[10px] tracking-[0.2em] uppercase font-semibold mt-2" style={{ color: "#b8a080" }}>London · 5 Hours</div>
-                </div>
-                <ul className="space-y-3 mb-8 flex-1">
-                  {[
-                    "Full 5-hour live group healing with Jerry",
-                    "5D Abundance Code transmissions",
-                    "Planetary gridwork activation",
-                    "Star Magic community connection",
-                    "Post-event integration guidance",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-sm leading-snug" style={{ color: "#3d2f1a" }}>
-                      <svg className="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <circle cx="8" cy="8" r="7.5" stroke="#d39222" strokeWidth="1" />
-                        <path d="M5 8.5l2 2 4-4" stroke="#d39222" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <a href={session.link} target="_blank" rel="noopener noreferrer">
-                  <button className="w-full py-3.5 rounded-lg text-sm font-bold tracking-wide transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-md" style={goldBtn}>
-                    Book {session.day}'s Session
-                  </button>
-                </a>
-              </motion.div>
-            ))}
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.02 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="flex flex-col px-7 py-9 rounded-3xl cursor-default"
+            style={{ border: "1px solid #d39222", backgroundColor: "#EDE5D5" }}
+          >
+            <p className="text-xs font-bold tracking-[0.2em] uppercase mb-2 text-center" style={{ color: "#d39222" }}>London, UK</p>
+            <h3 className="text-lg font-bold mb-2 text-center" style={{ color: "#1a1208" }}>5th &amp; 6th September 2026</h3>
+            <p className="text-sm text-center mb-6" style={{ color: "#7a6040" }}>Choose Saturday or Sunday — same experience, same price</p>
+            <div className="text-center mb-8">
+              <div className="line-through text-sm mb-1" style={{ color: "#aaa" }}>£999</div>
+              <div className="text-5xl font-extrabold" style={{ color: "#d39222" }}>£888</div>
+              <div className="text-[10px] tracking-[0.2em] uppercase font-semibold mt-2" style={{ color: "#b8a080" }}>London · 5 Hours</div>
+            </div>
+            <ul className="space-y-3 mb-8 flex-1">
+              {[
+                "Full 5-hour live group healing with Jerry",
+                "5D Abundance Code transmissions",
+                "Planetary gridwork activation",
+                "Star Magic community connection",
+                "Post-event integration guidance",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm leading-snug" style={{ color: "#3d2f1a" }}>
+                  <svg className="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <circle cx="8" cy="8" r="7.5" stroke="#d39222" strokeWidth="1" />
+                    <path d="M5 8.5l2 2 4-4" stroke="#d39222" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <a href="https://buy.stripe.com/28E4gzbCU8pT8obd6L9Zm1a" target="_blank" rel="noopener noreferrer">
+                <button className="w-full py-3.5 rounded-lg text-sm font-bold tracking-wide transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-md" style={goldBtn}>
+                  Book Saturday 5th Sept
+                </button>
+              </a>
+              <a href="https://buy.stripe.com/eVq4gz0Yg5dHawj3wb9Zm1b" target="_blank" rel="noopener noreferrer">
+                <button className="w-full py-3.5 rounded-lg text-sm font-bold tracking-wide transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-md" style={goldBtn}>
+                  Book Sunday 6th Sept
+                </button>
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
 
