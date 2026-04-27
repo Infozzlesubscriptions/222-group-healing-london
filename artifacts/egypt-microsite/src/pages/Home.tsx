@@ -591,14 +591,14 @@ export default function Home() {
       </section>
 
       {/* ─── CTA BANNER ─── */}
-      <section className="py-20 md:py-28 px-4" style={{ background: "linear-gradient(135deg, #1a1208 0%, #0a0e1a 50%, #1a1208 100%)" }}>
+      <section className="py-20 md:py-28 px-4" style={{ backgroundColor: "#FDF6E9" }}>
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
             <div className="text-primary text-3xl mb-6">✦</div>
-            <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-6" style={{ color: "#1a1208" }}>
               Can you radically shift your entire life in 5 hours?
             </h2>
-            <p className="text-white/70 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl leading-relaxed mb-10 max-w-2xl mx-auto" style={{ color: "#5a4a30" }}>
               Thousands of people have walked out of this room feeling lighter, freer, and more alive than they have in years — often after carrying pain, trauma, or blocks for decades. The answer is yes. And it starts here.
             </p>
             <button
