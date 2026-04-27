@@ -334,7 +334,7 @@ export default function Home() {
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-light">What happens inside the room, why it works, and what's possible for you — direct from Jerry.</p>
             <div className="h-px w-20 bg-primary mx-auto mt-8" />
           </motion.div>
-          <motion.div initial={{ opacity: 0, y: 40, scale: 0.97 }} whileInView={{ opacity: 1, y: 0, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.9 }} className="relative">
+          <motion.div initial={{ opacity: 0, y: 40, scale: 0.97 }} whileInView={{ opacity: 1, y: 0, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.9 }} className="relative max-w-4xl mx-auto">
             <div className="absolute -inset-1 rounded-3xl blur-2xl opacity-30 pointer-events-none" style={{ background: "linear-gradient(135deg, #d39222, #F3D696, #d39222)" }} />
             <div
               className="relative rounded-3xl overflow-hidden shadow-2xl cursor-pointer"
