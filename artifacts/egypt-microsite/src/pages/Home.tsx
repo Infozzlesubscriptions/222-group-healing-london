@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import spiritualActivationImg from "@assets/GH-photo-2_1777272117708.png";
+import spiritualActivationImg from "@assets/jerry-sargeant-group-healing-workshop_1777276863181.png";
 import card1Img from "@assets/Brain-Scan-1-scaled_1776168428464.webp";
 import card4Img from "@assets/generated_images/feature_compressing_time.png";
 import card5Img from "@assets/generated_images/feature_health_abundance.png";
