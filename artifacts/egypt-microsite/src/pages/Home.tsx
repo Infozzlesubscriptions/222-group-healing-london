@@ -11,7 +11,7 @@ import card6Img from "@assets/generated_images/feature_dissolve_programming.png"
 import card7Img from "@assets/generated_images/feature_group_power.png";
 import card8Img from "@assets/Elite_Be_Superhuman_13-scaled_1776168740417.webp";
 import jerrySargeantImg from "@assets/StarMagicHealing-S2H09403-Jerry-Sargeant_1777275463000.webp";
-import mobileHeroBanner from "@assets/freepik_wide-cinematic-banner-cal_2792714935_1776273619553.jpeg";
+import mobileHeroBanner from "@assets/spiritual-enlightenment-through-meditation-awakening-ones-inne_1777277040113.jpg";
 import day2Img from "@assets/Program-and-step-3-scaled_1776166006733.webp";
 import day3Img from "@assets/generated_images/feature_planetary_gridwork.png";
 
