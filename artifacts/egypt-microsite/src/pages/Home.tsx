@@ -10,7 +10,6 @@ import guaranteeImg from "@assets/Elite_Be_Superhuman_11-scaled_1776177221392.we
 import card6Img from "@assets/Superhuman-Blueprint-scaled_1776169771254.webp";
 import card7Img from "@assets/Program-and-step-3-scaled_1776166006733.webp";
 import card8Img from "@assets/Elite_Be_Superhuman_13-scaled_1776168740417.webp";
-import jerrySargeantImg from "@assets/jerry-sargeant-RqwmxHoJ_1776320363143.jpeg";
 import mobileHeroBanner from "@assets/freepik_wide-cinematic-banner-cal_2792714935_1776273619553.jpeg";
 import day2Img from "@assets/Program-and-step-3-scaled_1776166006733.webp";
 import day3Img from "@assets/Program-and-step-4-scaled_1776166120113.webp";
@@ -268,7 +267,7 @@ export default function Home() {
         </motion.div>
 
         <div className="relative z-10 px-6 sm:px-10 md:px-16 min-h-[90vh] flex items-center">
-          <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-32">
+          <div className="max-w-4xl mx-auto w-full py-32">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.2 }}>
               <span className="text-sm sm:text-base font-sans tracking-[0.2em] sm:tracking-[0.3em] mb-4 block uppercase font-bold" style={{ color: "#d39222" }}>
                 Jerry Sargeant Presents
@@ -300,21 +299,6 @@ export default function Home() {
               </div>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0.5 }}
-              className="relative hidden lg:block"
-            >
-              <div className="absolute -inset-2 rounded-3xl blur-2xl opacity-30 pointer-events-none" style={{ background: "linear-gradient(135deg, #d39222, #F3D696, #d39222)" }} />
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[3/4]">
-                <img src={jerrySargeantImg} alt="Jerry Sargeant" className="w-full h-full object-cover object-top" />
-                <div className="absolute bottom-6 left-6 right-6">
-                  <p className="text-white font-bold text-lg drop-shadow-lg">Jerry Sargeant</p>
-                  <p className="text-white/70 text-sm">Founder, Star Magic · Global Healing Facilitator</p>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </div>
       </section>
