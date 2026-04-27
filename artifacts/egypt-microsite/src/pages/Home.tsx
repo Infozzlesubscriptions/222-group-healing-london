@@ -556,12 +556,12 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
             {[
-              { id: "1161766582", title: "Transformation Story 1", thumb: "https://i.vimeocdn.com/video/2117272081-d3a83b8ce1886924da8b879a25d7846c3aba8789322839650ee795ea7d36e563-d_640" },
-              { id: "1161766314", title: "Transformation Story 2", thumb: "https://i.vimeocdn.com/video/2118346175-eebec97fd64505d46d4f3d3368fd775d7141a71f58cf756faad9a0d173d2686c-d_640" },
-              { id: "1161766538", title: "Transformation Story 3", thumb: "https://i.vimeocdn.com/video/2117272103-83769dc126ddeb04de74cc07d79b12eacb4f3c026e0eedab35866eb5f0d6224f-d_640" },
-              { id: "1161766020", title: "Transformation Story 4", thumb: "https://i.vimeocdn.com/video/2118346301-9c69ba699141743126f2f97894b86c98aae46b7d949e2d285f5e7e9a5b299398-d_640" },
-              { id: "1161765970", title: "Transformation Story 5", thumb: "https://i.vimeocdn.com/video/2118346745-f63f1f7f20897c7b9cbe25e1d1f73dbbcaf535d611c6592bec16aeccecc9d73c-d_640" },
-              { id: "1161766248", title: "Transformation Story 6", thumb: "https://i.vimeocdn.com/video/2118346583-33e6a1ef376834a2b22629ffcb489bbc32cee2e12579608a92d044f832c6112b-d_640" },
+              { id: "844364822", title: "Transformation Story 1", thumb: `https://i.vimeocdn.com/video/844364822_640` },
+              { id: "852253956", title: "Transformation Story 2", thumb: `https://i.vimeocdn.com/video/852253956_640` },
+              { id: "840752416", title: "Transformation Story 3", thumb: `https://i.vimeocdn.com/video/840752416_640` },
+              { id: "857804771", title: "Transformation Story 4", thumb: `https://i.vimeocdn.com/video/857804771_640` },
+              { id: "803825100", title: "Transformation Story 5", thumb: `https://i.vimeocdn.com/video/803825100_640` },
+              { id: "799929529", title: "Transformation Story 6", thumb: `https://i.vimeocdn.com/video/799929529_640` },
             ].map((video, i) => (
               <motion.div key={video.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}>
                 <VideoCard vimeoId={video.id} title={video.title} thumbnail={video.thumb} />
