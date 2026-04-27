@@ -503,7 +503,7 @@ export default function Home() {
             ))}
           </div>
 
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="max-w-4xl mx-auto">
             <div className="mb-4 text-center">
               <span className="text-primary tracking-[0.25em] text-xs font-bold uppercase">Watch the Evidence</span>
             </div>
