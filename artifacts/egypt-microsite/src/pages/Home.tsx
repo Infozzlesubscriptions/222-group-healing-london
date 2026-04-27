@@ -309,7 +309,6 @@ export default function Home() {
               <div className="absolute -inset-2 rounded-3xl blur-2xl opacity-30 pointer-events-none" style={{ background: "linear-gradient(135deg, #d39222, #F3D696, #d39222)" }} />
               <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[3/4]">
                 <img src={jerrySargeantImg} alt="Jerry Sargeant" className="w-full h-full object-cover object-top" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6">
                   <p className="text-white font-bold text-lg drop-shadow-lg">Jerry Sargeant</p>
                   <p className="text-white/70 text-sm">Founder, Star Magic · Global Healing Facilitator</p>
