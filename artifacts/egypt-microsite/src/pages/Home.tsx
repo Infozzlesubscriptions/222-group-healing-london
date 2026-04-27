@@ -556,12 +556,12 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
             {[
-              { id: "844364822", title: "Transformation Story 1", thumb: `https://i.vimeocdn.com/video/844364822_640` },
-              { id: "852253956", title: "Transformation Story 2", thumb: `https://i.vimeocdn.com/video/852253956_640` },
-              { id: "840752416", title: "Transformation Story 3", thumb: `https://i.vimeocdn.com/video/840752416_640` },
-              { id: "857804771", title: "Transformation Story 4", thumb: `https://i.vimeocdn.com/video/857804771_640` },
-              { id: "803825100", title: "Transformation Story 5", thumb: `https://i.vimeocdn.com/video/803825100_640` },
-              { id: "799929529", title: "Transformation Story 6", thumb: `https://i.vimeocdn.com/video/799929529_640` },
+              { id: "844364822", title: "Not Walked in 5 Years", thumb: "https://i.vimeocdn.com/video/1904075251-cc58ce4d1f879d0b0e7e2c73f75e7cfb0a2c0938b66927af1caad62775255d9b-d_640" },
+              { id: "852253956", title: "Not Walked For 10 Years — Now Walking", thumb: "https://i.vimeocdn.com/video/1904075004-e07699120542f9d0b63993e6db95e3b1e2e3fff969a1877351832e25f73e0792-d_640" },
+              { id: "840752416", title: "Hips & Lungs Transformation", thumb: "https://i.vimeocdn.com/video/1904059923-14940eccd5eb88968272a90c0dea1ff5b345269b444c20036bc132c1334f0067-d_640" },
+              { id: "857804771", title: "No More Wheelchair", thumb: "https://i.vimeocdn.com/video/1904060840-643762246751747b80c1753245480dcb875dd366afae01ef40a56acb77a1765e-d_640" },
+              { id: "803825100", title: "Compressed Spine Healed", thumb: "https://i.vimeocdn.com/video/1904057702-3d810c671725e58558f0e83b25e4f60f93e12f690943fceeb9a393777f33d9b7-d_640" },
+              { id: "799929529", title: "Freedom From Bulimia", thumb: "https://i.vimeocdn.com/video/1904058884-36e25420a29d04c3dd9911b1c239ee45a776f010c7f50a8e8a43e6d54735333e-d_640" },
             ].map((video, i) => (
               <motion.div key={video.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}>
                 <VideoCard vimeoId={video.id} title={video.title} thumbnail={video.thumb} />
