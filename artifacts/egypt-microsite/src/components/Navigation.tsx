@@ -5,9 +5,9 @@ import logoSrc from "@assets/live_site_logo_black_(1)_1775484379388.webp";
 
 const navLinks = [
   { href: "hero", label: "Home" },
-  { href: "programme", label: "Programme" },
+  { href: "science", label: "The Science" },
   { href: "testimonials", label: "Transformation Stories" },
-  { href: "faq", label: "FAQ" },
+  { href: "faq", label: "FAQs" },
 ];
 
 function scrollToSection(id: string) {
@@ -26,7 +26,7 @@ export function Navigation() {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-      const sections = ["hero", "programme", "about", "testimonials", "pricing", "faq"];
+      const sections = ["hero", "science", "testimonials", "pricing", "faq"];
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = document.getElementById(sections[i]);
         if (el && window.scrollY >= el.offsetTop - 120) {
@@ -103,7 +103,7 @@ export function Navigation() {
                 border: "none",
               }}
             >
-              Secure Your Place
+              Book Now
             </button>
 
             <button
@@ -151,7 +151,7 @@ export function Navigation() {
                     border: "none",
                   }}
                 >
-                  Secure Your Place
+                  Book Now
                 </button>
               </div>
             </div>
