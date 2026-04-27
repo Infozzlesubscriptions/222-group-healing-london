@@ -343,7 +343,7 @@ export default function Home() {
             >
               {jerryVideoPlaying ? (
                 <iframe
-                  src="https://player.vimeo.com/video/1182092823?badge=0&autopause=0&quality_selector=1&player_id=0&app_id=58479&autoplay=1"
+                  src="https://player.vimeo.com/video/841026317?badge=0&autopause=0&quality_selector=1&player_id=0&app_id=58479&autoplay=1"
                   allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
                   className="absolute inset-0 w-full h-full"
                   title="What Is a 222 Group Healing"
@@ -351,7 +351,7 @@ export default function Home() {
                 />
               ) : (
                 <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, #1a1208 0%, #2a1f10 50%, #0a0e1a 100%)" }}>
-                  <img src="https://i.vimeocdn.com/video/2145700151-3ab93ca3bba871ba91a5f5dc4c2bbcbab8229fd73c448e654473c74f69cd71a9-d_1280" alt="What Is a 222 Group Healing" className="absolute inset-0 w-full h-full object-cover" />
+                  <img src="https://i.vimeocdn.com/video/1691266570-f540e0b5972903c5d3427db9adadd6744d6c67ac4aae67c90aab6b3f55aabebe-d_1280" alt="What Is a 222 Group Healing" className="absolute inset-0 w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-black/30" />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <motion.div
