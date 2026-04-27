@@ -369,6 +369,77 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ─── DATE & VENUE ─── */}
+      <section className="py-16 md:py-20 px-4 bg-background">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {/* Date & Time */}
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="rounded-2xl p-7 flex flex-col gap-4"
+              style={{ border: "1px solid rgba(211,146,34,0.35)", background: "rgba(211,146,34,0.06)" }}
+            >
+              <div className="flex items-center gap-3 mb-1">
+                <div className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0" style={{ background: "linear-gradient(135deg, rgba(211,146,34,0.25), rgba(243,214,150,0.1))", border: "1px solid rgba(211,146,34,0.4)" }}>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d39222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+                  </svg>
+                </div>
+                <h3 className="text-base font-bold tracking-wide uppercase" style={{ color: "#d39222" }}>Date and Time</h3>
+              </div>
+              <p className="text-foreground text-base leading-relaxed">Saturday 5th &amp; Sunday 6th September, 11AM to 6PM (Local Time)</p>
+              <p className="text-sm font-semibold" style={{ color: "#d39222" }}>Food &amp; Accommodation is not included</p>
+            </motion.div>
+
+            {/* Venue */}
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+              className="rounded-2xl p-7 flex flex-col gap-4"
+              style={{ border: "1px solid rgba(211,146,34,0.35)", background: "rgba(211,146,34,0.06)" }}
+            >
+              <div className="flex items-center gap-3 mb-1">
+                <div className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0" style={{ background: "linear-gradient(135deg, rgba(211,146,34,0.25), rgba(243,214,150,0.1))", border: "1px solid rgba(211,146,34,0.4)" }}>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d39222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <h3 className="text-base font-bold tracking-wide uppercase" style={{ color: "#d39222" }}>Venue Address</h3>
+              </div>
+              <p className="text-foreground text-base leading-relaxed">Radisson Blu Hotel, London Heathrow: 140 Bath Road, Hayes, Middlesex, UB3 5AW</p>
+              <p className="text-muted-foreground text-sm">(1 mile from London Heathrow Airport)</p>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-center mt-8"
+          >
+            <p className="text-muted-foreground text-sm mb-5">
+              Please see our{" "}
+              <a href="https://starmagichealing.com/cancellation-policy" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-primary transition-colors" style={{ color: "#d39222" }}>
+                Cancellation Policy here
+              </a>.
+            </p>
+            <button
+              onClick={() => scrollTo("pricing")}
+              className="text-base font-bold px-10 py-3.5 rounded-lg tracking-wide transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97] cursor-pointer shadow-lg"
+              style={goldBtn}
+            >
+              Sign Up Now
+            </button>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ─── PART OF SOMETHING BIGGER ─── */}
       <section className="py-24 md:py-32 px-4 bg-secondary/20">
         <div className="max-w-5xl mx-auto">
