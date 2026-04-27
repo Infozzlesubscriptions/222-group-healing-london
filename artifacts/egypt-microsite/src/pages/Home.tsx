@@ -10,6 +10,7 @@ import guaranteeImg from "@assets/event-overview_1776168428467.webp";
 import card6Img from "@assets/generated_images/feature_dissolve_programming.png";
 import card7Img from "@assets/generated_images/feature_group_power.png";
 import card8Img from "@assets/Elite_Be_Superhuman_13-scaled_1776168740417.webp";
+import jerrySargeantImg from "@assets/StarMagicHealing-S2H09403-Jerry-Sargeant_1777275463000.webp";
 import mobileHeroBanner from "@assets/freepik_wide-cinematic-banner-cal_2792714935_1776273619553.jpeg";
 import day2Img from "@assets/Program-and-step-3-scaled_1776166006733.webp";
 import day3Img from "@assets/generated_images/feature_planetary_gridwork.png";
@@ -783,7 +784,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[card5Img, card8Img, spiritualWarriorImg, guaranteeImg].map((img, i) => (
+            {[jerrySargeantImg, card8Img, spiritualWarriorImg, guaranteeImg].map((img, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, scale: 0.95 }}
