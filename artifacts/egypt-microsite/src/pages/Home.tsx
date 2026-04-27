@@ -248,7 +248,6 @@ function scrollTo(id: string) {
 export default function Home() {
   const [jerryVideoPlaying, setJerryVideoPlaying] = useState(false);
   const [scienceVideoPlaying, setScienceVideoPlaying] = useState(false);
-  const [caesarVideoPlaying, setCaesarVideoPlaying] = useState(false);
   const [openFaq, setOpenFaq] = useState<Record<number, boolean>>({});
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 1000], [0, 300]);
@@ -569,46 +568,7 @@ export default function Home() {
             ))}
           </div>
 
-          <motion.div className="text-center mb-12" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
-            <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Hear It First Hand</span>
-            <h2 className="text-2xl md:text-4xl font-bold text-foreground leading-tight mb-4">One Person's Journey</h2>
-            <div className="h-px w-20 bg-primary mx-auto mt-6" />
-          </motion.div>
-          <motion.div initial={{ opacity: 0, y: 40, scale: 0.97 }} whileInView={{ opacity: 1, y: 0, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.9 }} className="relative max-w-4xl mx-auto">
-            <div className="absolute -inset-1 rounded-3xl blur-2xl opacity-25 pointer-events-none" style={{ background: "linear-gradient(135deg, #d39222, #F3D696, #d39222)" }} />
-            <div
-              className="relative rounded-3xl overflow-hidden shadow-2xl cursor-pointer"
-              style={{ border: "1px solid rgba(243,214,150,0.35)", aspectRatio: "16/9" }}
-              onClick={() => setCaesarVideoPlaying(true)}
-            >
-              {caesarVideoPlaying ? (
-                <iframe
-                  src="https://player.vimeo.com/video/1156009467?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1"
-                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                  className="absolute inset-0 w-full h-full"
-                  title="Group Healing Testimonial"
-                  style={{ border: 0 }}
-                />
-              ) : (
-                <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, #1a1208 0%, #2a1f10 50%, #0a0e1a 100%)" }}>
-                  <img src="https://i.vimeocdn.com/video/2141347193-0b89a5c7091846589d4b5fa8b7c2a911df26a2a24cc532bb51d5fb4fd5f84939-d_1280" alt="Group Healing Testimonial" className="absolute inset-0 w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-black/30" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <motion.div
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center shadow-2xl"
-                      style={{ background: "linear-gradient(135deg, #d39222 0%, #FFECBA 50%, #d39222 100%)" }}
-                    >
-                      <svg viewBox="0 0 24 24" className="w-8 h-8 md:w-10 md:h-10 ml-1" fill="#1a1208"><path d="M8 5v14l11-7z" /></svg>
-                    </motion.div>
-                  </div>
-                </div>
-              )}
-            </div>
-          </motion.div>
-
-          <div className="mt-24">
+          <div className="mt-20">
             <motion.div className="text-center mb-12" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <span className="text-primary tracking-[0.3em] text-xs font-bold uppercase block mb-4">More Voices</span>
               <h3 className="text-2xl md:text-3xl font-bold text-foreground">What People Are Saying</h3>
