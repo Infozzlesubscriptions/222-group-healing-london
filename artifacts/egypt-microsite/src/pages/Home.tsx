@@ -230,7 +230,6 @@ export default function Home() {
                 className="rounded-2xl p-7 flex flex-col gap-3"
                 style={{ border: "1px solid rgba(211,146,34,0.3)", background: "rgba(211,146,34,0.05)" }}
               >
-                <div className="text-3xl mb-1">{item.icon}</div>
                 <h3 className="font-bold text-lg" style={{ color: "#1a1208" }}>{item.title}</h3>
                 <p className="text-sm leading-relaxed" style={{ color: "#5a4a30" }}>{item.body}</p>
               </motion.div>
