@@ -30,7 +30,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background w-full overflow-hidden">
-
       {/* ─── HERO ─── */}
       <section id="hero" className="relative overflow-hidden min-h-[70svh] flex items-center">
         <motion.div className="absolute inset-0 z-0" style={{ y: y1, opacity }}>
@@ -41,7 +40,7 @@ export default function Home() {
         <div className="relative z-10 px-6 sm:px-10 md:px-16 w-full">
           <div className="max-w-7xl mx-auto w-full py-20">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.2 }}>
-              <span className="text-sm sm:text-base font-sans tracking-[0.2em] sm:tracking-[0.3em] mb-4 block uppercase font-bold" style={{ color: "#d39222" }}>
+              <span className="text-sm sm:text-base font-sans tracking-[0.2em] sm:tracking-[0.3em] mb-4 block uppercase font-bold text-[#f7e7cb]" style={{ color: "#d39222" }}>
                 Jerry Sargeant Presents
               </span>
               <h1 className="text-[clamp(2rem,5.5vw,5rem)] font-sans text-white font-bold mb-4 drop-shadow-2xl leading-tight whitespace-nowrap">
@@ -84,7 +83,6 @@ export default function Home() {
           <div className="w-px h-8 bg-gradient-to-b from-white/40 to-transparent" />
         </motion.div>
       </section>
-
       {/* ─── STATS BAR ─── */}
       <section className="py-10 sm:py-14 px-4 bg-secondary/30 border-y border-border/40">
         <div className="max-w-7xl mx-auto">
@@ -106,7 +104,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* ─── EMOTIONAL HOOK ─── */}
       <section className="py-24 md:py-32 px-4 bg-background">
         <div className="max-w-4xl mx-auto text-center">
@@ -128,7 +125,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       {/* ─── WHAT IS 222 (SHORT INTRO) ─── */}
       <section className="py-20 md:py-28 px-4 bg-secondary/20">
         <div className="max-w-7xl mx-auto">
@@ -168,7 +164,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* ─── JERRY VIDEO ─── */}
       <section className="py-24 md:py-32 px-4 bg-background">
         <div className="max-w-4xl mx-auto">
@@ -208,7 +203,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       {/* ─── WHY GROUP ENERGY ─── */}
       <section className="py-24 md:py-32 px-4" style={{ backgroundColor: "#FDF6E9" }}>
         <div className="max-w-5xl mx-auto">
@@ -252,7 +246,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       {/* ─── MINI TESTIMONIALS ─── */}
       <section className="py-24 md:py-32 px-4 bg-secondary/20">
         <div className="max-w-7xl mx-auto">
@@ -303,7 +296,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       {/* ─── FINAL CTA ─── */}
       <section className="py-24 md:py-32 px-4" style={{ background: "linear-gradient(135deg, #0a0e1a 0%, #1a1208 50%, #0a0e1a 100%)" }}>
         <div className="max-w-4xl mx-auto text-center">
@@ -333,7 +325,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
     </div>
   );
 }
