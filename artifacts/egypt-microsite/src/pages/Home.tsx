@@ -38,7 +38,7 @@ export default function Home() {
         </motion.div>
 
         <div className="relative z-10 px-6 sm:px-10 md:px-16 w-full">
-          <div className="max-w-7xl mx-auto w-full py-20">
+          <div className="max-w-7xl mx-auto w-full pt-32 md:pt-40 pb-20">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.2 }}>
               <span className="text-sm sm:text-base font-sans tracking-[0.2em] sm:tracking-[0.3em] mb-4 block uppercase font-bold text-[#f7e7cb]" style={{ color: "#d39222" }}>
                 Jerry Sargeant Presents
