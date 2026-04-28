@@ -29,14 +29,14 @@ export default function Home() {
     <div className="min-h-screen bg-background w-full overflow-hidden">
 
       {/* ─── HERO ─── */}
-      <section id="hero" className="relative overflow-hidden min-h-[100svh] flex items-center">
+      <section id="hero" className="relative overflow-hidden min-h-[70svh] flex items-center">
         <motion.div className="absolute inset-0 z-0" style={{ y: y1, opacity }}>
           <img src={mobileHeroBanner} alt="222 Group Healing" className="w-full h-full object-cover object-center" />
           <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(10,14,26,0.92) 0%, rgba(10,14,26,0.6) 60%, rgba(10,14,26,0.3) 100%)" }} />
         </motion.div>
 
         <div className="relative z-10 px-6 sm:px-10 md:px-16 w-full">
-          <div className="max-w-7xl mx-auto w-full py-40">
+          <div className="max-w-7xl mx-auto w-full py-20">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.2 }}>
               <span className="text-sm sm:text-base font-sans tracking-[0.2em] sm:tracking-[0.3em] mb-4 block uppercase font-bold" style={{ color: "#d39222" }}>
                 Jerry Sargeant Presents
