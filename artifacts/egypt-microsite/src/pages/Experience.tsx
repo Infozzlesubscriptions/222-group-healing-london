@@ -131,7 +131,6 @@ export default function Experience() {
                 className="rounded-2xl p-6 flex flex-col gap-3"
                 style={{ border: "1px solid rgba(211,146,34,0.25)", background: "rgba(211,146,34,0.04)" }}
               >
-                <div className="text-3xl">{item.icon}</div>
                 <h3 className="font-bold text-base text-foreground">{item.title}</h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">{item.body}</p>
               </motion.div>
