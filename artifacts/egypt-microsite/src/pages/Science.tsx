@@ -188,26 +188,6 @@ export default function Science() {
             ))}
           </div>
 
-          {/* Soft disclaimer */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="rounded-2xl p-7"
-            style={{ border: "1px solid rgba(255,255,255,0.1)", background: "rgba(255,255,255,0.03)" }}
-          >
-            <h3 className="text-base font-bold text-muted-foreground mb-3 uppercase tracking-widest">A Note on Expectations</h3>
-            <p className="text-muted-foreground text-sm leading-relaxed mb-3">
-              The 222 Group Healing is a complementary healing experience. It is not a medical treatment, and we make no claim to diagnose, treat, or cure any physical or mental health condition.
-            </p>
-            <p className="text-muted-foreground text-sm leading-relaxed mb-3">
-              Every experience is unique. While the observations above are consistent and reported frequently, individual results will vary. What we can say with confidence is that people who arrive open and willing consistently report powerful shifts — often beyond what they expected.
-            </p>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              If you are under medical care, please continue your treatment plan and consult your healthcare provider. Star Magic Group Healing works most powerfully alongside, not instead of, professional medical care where needed.
-            </p>
-          </motion.div>
         </div>
       </section>
 
