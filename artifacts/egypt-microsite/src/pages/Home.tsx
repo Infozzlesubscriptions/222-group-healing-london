@@ -43,7 +43,7 @@ export default function Home() {
               <span className="text-sm sm:text-base font-sans tracking-[0.2em] sm:tracking-[0.3em] mb-4 block uppercase font-bold text-[#f7e7cb]" style={{ color: "#d39222" }}>
                 Jerry Sargeant Presents
               </span>
-              <h1 className="text-[clamp(2rem,5.5vw,5rem)] font-sans text-white font-bold mb-4 drop-shadow-2xl leading-tight whitespace-nowrap">
+              <h1 className="text-[clamp(1.8rem,5.5vw,5rem)] font-sans text-white font-bold mb-4 drop-shadow-2xl leading-tight">
                 222 GROUP HEALING
               </h1>
               <p className="text-sm sm:text-base md:text-xl text-white/90 mb-4 max-w-xl leading-relaxed drop-shadow-md">

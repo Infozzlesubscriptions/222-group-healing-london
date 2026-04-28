@@ -12,11 +12,11 @@ export default function Science() {
     <div className="min-h-screen bg-background w-full">
 
       {/* ─── PAGE HERO ─── */}
-      <section className="pt-40 pb-20 px-4 bg-background">
+      <section className="pt-28 sm:pt-32 md:pt-40 pb-16 md:pb-20 px-4 bg-background">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Backed by Data</span>
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight mb-6">What the Science is Showing Us</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-foreground leading-tight mb-6">What the Science is Showing Us</h1>
             <div className="h-px w-20 bg-primary mx-auto mb-8" />
             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
               We're not asking you to take this on faith alone. We've brought in scientists and neuroscientists to measure what is actually happening inside these sessions.

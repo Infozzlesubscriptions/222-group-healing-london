@@ -11,10 +11,15 @@ function WrittenCarousel() {
   const [activeIdx, setActiveIdx] = useState(0);
   const total = writtenTestimonials.length;
 
+  const getCardWidth = () => {
+    const card = scrollRef.current?.children[0] as HTMLElement | undefined;
+    return card ? card.offsetWidth + 24 : 404;
+  };
+
   const scrollTo = (idx: number) => {
     const next = Math.max(0, Math.min(idx, total - 1));
     setActiveIdx(next);
-    scrollRef.current?.scrollTo({ left: next * 404, behavior: "smooth" });
+    scrollRef.current?.scrollTo({ left: next * getCardWidth(), behavior: "smooth" });
   };
 
   return (
@@ -25,7 +30,7 @@ function WrittenCarousel() {
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         onScroll={() => {
           if (scrollRef.current) {
-            const idx = Math.round(scrollRef.current.scrollLeft / 404);
+            const idx = Math.round(scrollRef.current.scrollLeft / getCardWidth());
             setActiveIdx(idx);
           }
         }}
@@ -34,7 +39,7 @@ function WrittenCarousel() {
           <div
             key={i}
             className="rounded-2xl border border-border/50 bg-card p-6 sm:p-7 flex flex-col shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300 shrink-0"
-            style={{ width: 380 }}
+            style={{ width: "min(380px, 82vw)" }}
           >
             <div className="flex items-center gap-1 mb-4">
               {[...Array(5)].map((_, s) => <span key={s} className="text-primary text-sm">★</span>)}
@@ -79,11 +84,11 @@ export default function Stories() {
     <div className="min-h-screen bg-background w-full">
 
       {/* ─── PAGE HERO ─── */}
-      <section className="pt-40 pb-20 px-4 bg-background">
+      <section className="pt-28 sm:pt-32 md:pt-40 pb-16 md:pb-20 px-4 bg-background">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <span className="text-primary tracking-[0.35em] text-xs font-bold uppercase block mb-4">Real People. Real Results.</span>
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight mb-6">This Changed Everything</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-foreground leading-tight mb-6">This Changed Everything</h1>
             <div className="h-px w-20 bg-primary mx-auto mb-8" />
             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
               These are not curated success stories. These are the real, lived experiences of people who showed up — and left transformed. Watch, listen, and feel what's possible.
