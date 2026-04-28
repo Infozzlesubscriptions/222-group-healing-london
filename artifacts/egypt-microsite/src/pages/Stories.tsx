@@ -82,7 +82,6 @@ export default function Stories() {
 
   return (
     <div className="min-h-screen bg-background w-full">
-
       {/* ─── PAGE HERO ─── */}
       <section className="pt-28 sm:pt-32 md:pt-40 pb-16 md:pb-20 px-4 bg-background">
         <div className="max-w-4xl mx-auto text-center">
@@ -96,12 +95,11 @@ export default function Stories() {
           </motion.div>
         </div>
       </section>
-
       {/* ─── VIDEO TESTIMONIALS ─── */}
       <section className="py-16 px-4" style={{ backgroundColor: "#FDF6E9" }}>
         <div className="max-w-7xl mx-auto">
           <motion.div className="text-center mb-10" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <h2 className="text-2xl md:text-3xl font-bold mb-2" style={{ color: "#1a1208" }}>Video Stories</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-2" style={{ color: "#1a1208" }}>Video Transformations</h2>
             <p className="text-sm" style={{ color: "#7a6040" }}>Click any video to watch the full story</p>
           </motion.div>
 
@@ -135,7 +133,6 @@ export default function Stories() {
           </div>
         </div>
       </section>
-
       {/* ─── TRANSFORMATION CATEGORIES ─── */}
       <section className="py-24 px-4 bg-background">
         <div className="max-w-5xl mx-auto">
@@ -207,7 +204,6 @@ export default function Stories() {
           </div>
         </div>
       </section>
-
       {/* ─── BEFORE / AFTER ─── */}
       <section className="py-20 px-4 bg-secondary/20">
         <div className="max-w-4xl mx-auto">
@@ -232,7 +228,6 @@ export default function Stories() {
           </div>
         </div>
       </section>
-
       {/* ─── WRITTEN TESTIMONIALS ─── */}
       <section className="py-24 px-4" style={{ backgroundColor: "#FDF6E9" }}>
         <div className="max-w-7xl mx-auto">
@@ -243,7 +238,6 @@ export default function Stories() {
           <WrittenCarousel />
         </div>
       </section>
-
       {/* ─── STORIES CTA ─── */}
       <section className="py-20 px-4" style={{ background: "linear-gradient(135deg, #0a0e1a 0%, #1a1208 50%, #0a0e1a 100%)" }}>
         <div className="max-w-4xl mx-auto text-center">
@@ -268,7 +262,6 @@ export default function Stories() {
           </motion.div>
         </div>
       </section>
-
     </div>
   );
 }
