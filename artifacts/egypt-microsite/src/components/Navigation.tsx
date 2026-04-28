@@ -1,45 +1,35 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link, useLocation } from "wouter";
 import logoSrc from "@assets/live_site_logo_black_(1)_1775484379388.webp";
+import { goldBtn } from "@/lib/shared";
 
 const navLinks = [
-  { href: "hero", label: "Home" },
-  { href: "science", label: "The Science" },
-  { href: "testimonials", label: "Transformation Stories" },
-  { href: "faq", label: "FAQs" },
+  { href: "/", label: "Home" },
+  { href: "/experience", label: "The Experience" },
+  { href: "/stories", label: "Real Stories" },
+  { href: "/science", label: "The Science" },
+  { href: "/faq", label: "FAQ" },
 ];
-
-function scrollToSection(id: string) {
-  if (id === "hero") {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  } else {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  }
-}
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [active, setActive] = useState("hero");
+  const [location, navigate] = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-      const sections = ["hero", "science", "testimonials", "pricing", "faq"];
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const el = document.getElementById(sections[i]);
-        if (el && window.scrollY >= el.offsetTop - 120) {
-          setActive(sections[i]);
-          break;
-        }
-      }
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const showSolid = isScrolled;
+  useEffect(() => {
+    setIsOpen(false);
+    window.scrollTo({ top: 0 });
+  }, [location]);
+
+  const showSolid = isScrolled || location !== "/";
 
   return (
     <header
@@ -52,27 +42,22 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between">
 
-          {/* Logo */}
-          <button
-            onClick={() => scrollToSection("hero")}
-            className="hover:opacity-80 transition-opacity shrink-0"
-          >
+          <Link href="/" className="hover:opacity-80 transition-opacity shrink-0">
             <img
               src={logoSrc}
               alt="Star Magic"
               className={`w-auto transition-all duration-500 ${showSolid ? "h-10" : "h-14"}`}
               style={{ filter: showSolid ? "brightness(0)" : "brightness(0) invert(1)" }}
             />
-          </button>
+          </Link>
 
-          {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navLinks.map((link) => {
-              const isActive = active === link.href;
+              const isActive = location === link.href;
               return (
-                <button
+                <Link
                   key={link.href}
-                  onClick={() => { scrollToSection(link.href); }}
+                  href={link.href}
                   className={`relative text-sm font-medium tracking-wide transition-colors duration-300 group cursor-pointer ${
                     isActive
                       ? "text-primary"
@@ -87,24 +72,20 @@ export function Navigation() {
                       isActive ? "w-full bg-primary" : "w-0 group-hover:w-full bg-primary/60"
                     }`}
                   />
-                </button>
+                </Link>
               );
             })}
           </nav>
 
-          {/* CTA + Mobile toggle */}
           <div className="flex items-center gap-3">
-            <button
-              onClick={() => scrollToSection("pricing")}
-              className="hidden lg:block text-sm font-semibold px-5 py-2 rounded-lg tracking-wide transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97] cursor-pointer"
-              style={{
-                background: "linear-gradient(90deg, #d39222 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #d39222 100%)",
-                color: "#1a1208",
-                border: "none",
-              }}
-            >
-              Book Now
-            </button>
+            <Link href="/book">
+              <button
+                className="hidden lg:block text-sm font-semibold px-5 py-2 rounded-lg tracking-wide transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97] cursor-pointer"
+                style={goldBtn}
+              >
+                Book Now
+              </button>
+            </Link>
 
             <button
               className={`lg:hidden p-2 rounded-lg transition-colors duration-300 ${
@@ -120,7 +101,6 @@ export function Navigation() {
         </div>
       </div>
 
-      {/* Mobile Nav Drawer */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -133,26 +113,23 @@ export function Navigation() {
           >
             <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col gap-1">
               {navLinks.map((link) => (
-                <button
+                <Link
                   key={link.href}
-                  onClick={() => { scrollToSection(link.href); setIsOpen(false); }}
-                  className="text-base py-3 px-4 rounded-xl tracking-wide transition-colors duration-200 text-left text-foreground/80 hover:text-foreground hover:bg-secondary/60 cursor-pointer"
+                  href={link.href}
+                  className="text-base py-3 px-4 rounded-xl tracking-wide transition-colors duration-200 text-left text-foreground/80 hover:text-foreground hover:bg-secondary/60 cursor-pointer block"
                 >
                   {link.label}
-                </button>
+                </Link>
               ))}
               <div className="pt-3 mt-2 border-t border-border/30">
-                <button
-                  onClick={() => { scrollToSection("pricing"); setIsOpen(false); }}
-                  className="w-full text-base font-semibold py-3 rounded-xl tracking-wide cursor-pointer"
-                  style={{
-                    background: "linear-gradient(90deg, #d39222 0%, #FFECBA 24.52%, #F3D696 51.93%, #FFECBA 76.93%, #d39222 100%)",
-                    color: "#1a1208",
-                    border: "none",
-                  }}
-                >
-                  Book Now
-                </button>
+                <Link href="/book">
+                  <button
+                    className="w-full text-base font-semibold py-3 rounded-xl tracking-wide cursor-pointer"
+                    style={goldBtn}
+                  >
+                    Book Now
+                  </button>
+                </Link>
               </div>
             </div>
           </motion.div>
