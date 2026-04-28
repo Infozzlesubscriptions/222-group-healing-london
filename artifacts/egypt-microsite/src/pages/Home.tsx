@@ -14,7 +14,6 @@ const stats = [
   { value: "5 Hrs", label: "Radical Transformation" },
   { value: "85+", label: "Countries Reached" },
   { value: "500,000+", label: "Lives Healed" },
-  { value: "2 Dates", label: "September 2026" },
 ];
 
 export default function Home() {
@@ -85,7 +84,7 @@ export default function Home() {
       {/* ─── STATS BAR ─── */}
       <section className="py-10 sm:py-14 px-4 bg-secondary/30 border-y border-border/40">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6">
             {stats.map((stat, i) => (
               <motion.div
                 key={i}
