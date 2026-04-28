@@ -239,17 +239,17 @@ export default function Stories() {
         </div>
       </section>
       {/* ─── STORIES CTA ─── */}
-      <section className="py-20 px-4" style={{ background: "linear-gradient(135deg, #0a0e1a 0%, #1a1208 50%, #0a0e1a 100%)" }}>
+      <section className="py-20 px-4" style={{ backgroundColor: "#FDF6E9" }}>
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
             <div className="text-primary text-3xl mb-6">✦</div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-6">I Want This Experience</h2>
-            <p className="text-white/70 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-6" style={{ color: "#1a1208" }}>I Want This Experience</h2>
+            <p className="text-lg leading-relaxed mb-10 max-w-2xl mx-auto" style={{ color: "#5a4a30" }}>
               Every person in those videos was once sitting where you are now. The only difference between them and you is that they chose to show up.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
               <Link href="/experience">
-                <button className="text-base font-bold px-10 py-4 rounded-lg tracking-wide transition-all duration-200 hover:scale-[1.03] cursor-pointer" style={{ background: "transparent", color: "#ffffff", border: "2px solid rgba(211,146,34,0.8)" }}>
+                <button className="text-base font-bold px-10 py-4 rounded-lg tracking-wide transition-all duration-200 hover:scale-[1.03] cursor-pointer" style={{ background: "transparent", color: "#d39222", border: "2px solid #d39222" }}>
                   Explore The Experience
                 </button>
               </Link>
