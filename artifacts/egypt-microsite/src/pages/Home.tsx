@@ -7,6 +7,10 @@ import healingPhoto2 from "@assets/image_1777277164144.png";
 import healingPhoto3 from "@assets/image_1777277168745.png";
 import healingPhoto4 from "@assets/image_1777277173772.png";
 import spiritualActivationImg from "@assets/jerry-sargeant-group-healing-workshop_1777276863181.png";
+import groupEnergyImg1 from "@assets/community-group-ORD4DYoj_1776168740414.jpg";
+import groupEnergyImg2 from "@assets/Brain-Scan-1-scaled_1776168740415.webp";
+import groupEnergyImg3 from "@assets/Deep-Trauma-Release-scaled_1776168740416.webp";
+import groupEnergyImg4 from "@assets/Jerry-Sargeant-One-Love_1776160920406.webp";
 import { goldBtn, testimonialVideos, writtenTestimonials } from "@/lib/shared";
 import { VideoCard } from "@/components/VideoCard";
 
@@ -215,10 +219,10 @@ export default function Home() {
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-14">
             {[
-              { icon: "⚡", title: "Exponential Amplification", body: "When 100+ people focus their energy together in a healing state, the combined field is not additive — it's exponential. What takes months alone takes hours in a group." },
-              { icon: "🔗", title: "Quantum Entanglement", body: "Science shows us that consciousness is not isolated. Group fields create quantum coherence — a shared frequency that each person in the room both transmits and receives simultaneously." },
-              { icon: "💎", title: "Depth of Release", body: "The group container creates a profound sense of safety. When you feel held by a room of people, your nervous system relaxes at a level it never could alone — enabling deeper release." },
-              { icon: "🌍", title: "Planetary Impact", body: "Your healing doesn't stay in the room. Every shift you make ripples outward into the collective field, contributing to the global frequency shift happening right now." },
+              { img: groupEnergyImg1, title: "Exponential Amplification", body: "When 100+ people focus their energy together in a healing state, the combined field is not additive — it's exponential. What takes months alone takes hours in a group." },
+              { img: groupEnergyImg2, title: "Quantum Entanglement", body: "Science shows us that consciousness is not isolated. Group fields create quantum coherence — a shared frequency that each person in the room both transmits and receives simultaneously." },
+              { img: groupEnergyImg3, title: "Depth of Release", body: "The group container creates a profound sense of safety. When you feel held by a room of people, your nervous system relaxes at a level it never could alone — enabling deeper release." },
+              { img: groupEnergyImg4, title: "Planetary Impact", body: "Your healing doesn't stay in the room. Every shift you make ripples outward into the collective field, contributing to the global frequency shift happening right now." },
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -226,11 +230,16 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="rounded-2xl p-7 flex flex-col gap-3"
+                className="rounded-2xl overflow-hidden flex flex-col"
                 style={{ border: "1px solid rgba(211,146,34,0.3)", background: "rgba(211,146,34,0.05)" }}
               >
-                <h3 className="font-bold text-lg" style={{ color: "#1a1208" }}>{item.title}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: "#5a4a30" }}>{item.body}</p>
+                <div className="w-full aspect-[16/9] overflow-hidden">
+                  <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                </div>
+                <div className="p-6 flex flex-col gap-2">
+                  <h3 className="font-bold text-lg" style={{ color: "#1a1208" }}>{item.title}</h3>
+                  <p className="text-sm leading-relaxed" style={{ color: "#5a4a30" }}>{item.body}</p>
+                </div>
               </motion.div>
             ))}
           </div>
