@@ -68,15 +68,7 @@ export default function Home() {
           </div>
         </div>
 
-        <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-          style={{ opacity: 0.7 }}
-        >
-          <span className="text-white/60 text-xs tracking-widest uppercase">Scroll</span>
-          <div className="w-px h-8 bg-gradient-to-b from-white/40 to-transparent" />
-        </motion.div>
+
       </section>
       {/* ─── STATS BAR ─── */}
       <section className="py-10 sm:py-14 px-4 bg-secondary/30 border-y border-border/40">
