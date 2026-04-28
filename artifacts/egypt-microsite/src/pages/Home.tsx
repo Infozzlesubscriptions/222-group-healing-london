@@ -58,11 +58,6 @@ export default function Home() {
                     Explore The Experience
                   </button>
                 </Link>
-                <Link href="/stories">
-                  <button className="w-full sm:w-auto text-base font-bold px-8 py-3 rounded-lg tracking-wide transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97] cursor-pointer" style={{ background: "transparent", color: "#ffffff", border: "2px solid rgba(211,146,34,0.8)" }}>
-                    Watch Stories
-                  </button>
-                </Link>
                 <Link href="/book">
                   <button className="w-full sm:w-auto text-base font-bold px-8 py-3 rounded-lg tracking-wide transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97] cursor-pointer" style={{ background: "rgba(255,255,255,0.1)", color: "#ffffff", border: "2px solid rgba(255,255,255,0.3)", backdropFilter: "blur(8px)" }}>
                     Reserve Your Place
