@@ -10,7 +10,7 @@ import spiritualActivationImg from "@assets/jerry-sargeant-group-healing-worksho
 import groupEnergyImg1 from "@assets/community-group-ORD4DYoj_1776168740414.jpg";
 import groupEnergyImg2 from "@assets/Brain-Scan-1-scaled_1776168740415.webp";
 import groupEnergyImg3 from "@assets/Elite_Be_Superhuman_11-scaled_1776168428466.webp";
-import groupEnergyImg4 from "@assets/Jerry-Sargeant-One-Love_1776160920406.webp";
+import groupEnergyImg4 from "@assets/Copy_of_BCAM4866_1777383317799.jpg";
 import { goldBtn, testimonialVideos, writtenTestimonials } from "@/lib/shared";
 import { VideoCard } from "@/components/VideoCard";
 
