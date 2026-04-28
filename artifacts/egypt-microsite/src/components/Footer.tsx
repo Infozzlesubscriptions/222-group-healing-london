@@ -6,7 +6,7 @@ import { goldBtn } from "@/lib/shared";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "The Experience", href: "/experience" },
-  { label: "Real Stories", href: "/stories" },
+  { label: "Real Transformations", href: "/stories" },
   { label: "The Science", href: "/science" },
   { label: "Book Your Place", href: "/book" },
   { label: "FAQs", href: "/faq" },
