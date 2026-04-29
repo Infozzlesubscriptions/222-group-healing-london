@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "wouter";
 import mobileHeroBanner from "@assets/spiritual-enlightenment-through-meditation-awakening-ones-inne_1777277040113.jpg";
-import jerrySargeantImg from "@assets/StarMagicHealing-S2H09403-Jerry-Sargeant_1777275463000.webp";
+import jerrySargeantImg from "@assets/35_TBZOE1240_1777465141029.jpeg";
 import healingPhoto2 from "@assets/image_1777277164144.png";
 import healingPhoto3 from "@assets/image_1777277168745.png";
 import healingPhoto4 from "@assets/image_1777277173772.png";
