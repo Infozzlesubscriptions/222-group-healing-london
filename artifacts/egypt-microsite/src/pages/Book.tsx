@@ -127,15 +127,10 @@ export default function Book() {
                 </li>
               ))}
             </ul>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="flex justify-center">
               <a href="https://buy.stripe.com/28E4gzbCU8pT8obd6L9Zm1a" target="_blank" rel="noopener noreferrer">
-                <button className="w-full py-3.5 rounded-lg text-sm font-bold tracking-wide transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-md" style={goldBtn}>
-                  Book Saturday 5th Sept
-                </button>
-              </a>
-              <a href="https://buy.stripe.com/eVq4gz0Yg5dHawj3wb9Zm1b" target="_blank" rel="noopener noreferrer">
-                <button className="w-full py-3.5 rounded-lg text-sm font-bold tracking-wide transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-md" style={goldBtn}>
-                  Book Sunday 6th Sept
+                <button className="px-10 py-3.5 rounded-lg text-sm font-bold tracking-wide transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-md" style={goldBtn}>
+                  Book Your Place — 5th &amp; 6th September
                 </button>
               </a>
             </div>
