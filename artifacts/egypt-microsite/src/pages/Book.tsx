@@ -128,7 +128,7 @@ export default function Book() {
               ))}
             </ul>
             <div className="flex justify-center">
-              <a href="https://www.starmagichealing.org/event/222-group-healing-5th-6th-september-2026-london/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.starmagichealing.org/product/222-group-healing-5th-6th-september-2026-london/" target="_blank" rel="noopener noreferrer">
                 <button className="px-10 py-3.5 rounded-lg text-sm font-bold tracking-wide transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-md" style={goldBtn}>
                   Book Your Place — 5th &amp; 6th September
                 </button>
@@ -204,7 +204,7 @@ export default function Book() {
               </p>
               <p className="font-bold text-base italic mb-8" style={{ color: "#1a1208" }}>The only risk is not showing up.</p>
               <div className="flex justify-center">
-                <a href="https://www.starmagichealing.org/event/222-group-healing-5th-6th-september-2026-london/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.starmagichealing.org/product/222-group-healing-5th-6th-september-2026-london/" target="_blank" rel="noopener noreferrer">
                   <button className="px-10 py-3.5 rounded-lg text-sm font-bold tracking-wide transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-md" style={goldBtn}>
                     Book Your Place — 5th &amp; 6th September
                   </button>
