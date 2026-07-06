@@ -92,7 +92,7 @@ export default function FAQPage() {
               We're here to help. Reach out to the Star Magic team directly and we'll get back to you as soon as we can.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 items-center justify-center">
-              <a href="mailto:info@starmagichealing.com">
+              <a href="mailto:support@starmagichealing.org">
                 <button className="text-base font-bold px-8 py-3.5 rounded-lg tracking-wide transition-all duration-200 hover:scale-[1.02] cursor-pointer" style={{ background: "transparent", border: "2px solid rgba(211,146,34,0.7)", color: "#d39222" }}>
                   Email Us
                 </button>

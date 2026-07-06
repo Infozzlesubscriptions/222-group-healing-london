@@ -340,7 +340,7 @@ export default function FAQ() {
                 Reserve Your Seat
               </Button>
             </Link>
-            <a href="mailto:info@starmagichealing.com">
+            <a href="mailto:support@starmagichealing.org">
               <Button size="lg" variant="outline" className="border-border text-foreground hover:border-primary hover:text-primary font-semibold text-base px-10 py-2">
                 Contact Our Team
               </Button>
