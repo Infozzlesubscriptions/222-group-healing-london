@@ -30,13 +30,13 @@ export function Footer() {
               Star Magic · 222 Group Healing · London, September 2026
             </p>
             <a
-              href="https://www.starmagichealing.com"
+              href="https://www.starmagichealing.org"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm tracking-wide transition-colors hover:opacity-80"
               style={{ color: "#d39222" }}
             >
-              www.starmagichealing.com
+              www.starmagichealing.org
             </a>
           </div>
 
