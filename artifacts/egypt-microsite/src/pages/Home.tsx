@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "wouter";
 import mobileHeroBanner from "@assets/spiritual-enlightenment-through-meditation-awakening-ones-inne_1777277040113.jpg";
+import mobileHeroBannerNew from "@assets/Gemini_Generated_Image_tclflctclflctclf_1783322493265.png";
 import jerrySargeantImg from "@assets/35_TBZOE1240_1777465141029.jpeg";
 import healingPhoto2 from "@assets/image_1777277164144.png";
 import healingPhoto3 from "@assets/image_1777277168745.png";
@@ -33,7 +34,8 @@ export default function Home() {
       {/* ─── HERO ─── */}
       <section id="hero" className="relative overflow-hidden min-h-[70svh] flex items-center">
         <motion.div className="absolute inset-0 z-0" style={{ y: y1, opacity }}>
-          <img src={mobileHeroBanner} alt="222 Group Healing" className="w-full h-full object-cover object-center" />
+          <img src={mobileHeroBannerNew} alt="222 Group Healing" className="w-full h-full object-cover object-center md:hidden" />
+          <img src={mobileHeroBanner} alt="222 Group Healing" className="w-full h-full object-cover object-center hidden md:block" />
           <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(10,14,26,0.92) 0%, rgba(10,14,26,0.6) 60%, rgba(10,14,26,0.3) 100%)" }} />
         </motion.div>
 
