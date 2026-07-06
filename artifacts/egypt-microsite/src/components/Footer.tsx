@@ -81,7 +81,7 @@ export function Footer() {
 
         <div className="pt-8 flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left" style={{ borderTop: "1px solid rgba(211,146,34,0.2)" }}>
           <p className="text-xs tracking-widest uppercase" style={{ color: "#7a6040" }}>
-            ✦ Star Magic · One Love
+            ✦ Star Magic · One Love · One Heart · One Human Family
           </p>
           <p className="text-xs" style={{ color: "#9a8060" }}>
             © {new Date().getFullYear()} Star Magic. All rights reserved.
