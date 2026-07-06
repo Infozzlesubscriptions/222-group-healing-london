@@ -289,7 +289,6 @@ export default function Home() {
       <section className="py-24 md:py-32 px-4" style={{ background: "linear-gradient(135deg, #0a0e1a 0%, #1a1208 50%, #0a0e1a 100%)" }}>
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
-            <div className="text-primary text-3xl mb-6">✦ </div>
             <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
               Can you radically shift your entire life in 5 hours?
             </h2>
