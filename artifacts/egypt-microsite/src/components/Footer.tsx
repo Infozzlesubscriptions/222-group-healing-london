@@ -89,7 +89,7 @@ export function Footer() {
           <div className="flex items-center gap-4 text-xs" style={{ color: "#9a8060" }}>
             <a href="https://starmagichealing.com/cancellation-policy" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">Cancellation Policy</a>
             <span>·</span>
-            <a href="mailto:support@starmagichealing.org" className="hover:opacity-70 transition-opacity">Contact</a>
+            <a href="mailto:support@starmagichealing.org" className="hover:opacity-70 transition-opacity">Support</a>
           </div>
         </div>
       </div>
